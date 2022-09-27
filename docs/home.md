@@ -19,4 +19,4 @@ Want to quickly get started with Callbell? [Follow our guide here](/getting_star
 
 ## API Reference
 
-[Click here](/docs/api-reference) to access our public API reference documentation.
+[Click here](/api_reference/introduction) to access our public API reference documentation.
