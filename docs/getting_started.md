@@ -77,7 +77,7 @@ curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
   -H "Content-Type: application/json"
 ```
 
-Make sure to replace `<REPLACE_API_KEY_HERE>` with your API key and `REPLACE_UUID_HERE` with the message identifier obtained from the [Send a test message](#send-a-test-message-using-curl) step.
+Make sure to replace `REPLACE_API_KEY_HERE` with your API key and `REPLACE_UUID_HERE` with the message identifier obtained from the [Send a test message](#send-a-test-message-using-curl) step.
 
 You'll get back the following response:
 
