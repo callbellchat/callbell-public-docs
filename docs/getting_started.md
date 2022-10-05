@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started
 
-This step-to-step guide will walk you through using Callbell API to send a message
+This step-to-step guide will walk you through using Callbell API to send a message.
 
 ## Prerequisites
 
