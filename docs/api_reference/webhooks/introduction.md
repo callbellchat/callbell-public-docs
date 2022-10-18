@@ -20,6 +20,18 @@ In the URL field add your endpoint URL (e.g. `https://myapp.com/callbell_endpoin
 
 ![webhook_create](./assets/webhook_create.jpg)
 
+:::info
+Make sure to also **include** the protocol (`http` or `https`) inside your webhook endpoint:
+
+✅ **Good**:  `https://www.myexample.com`
+
+❌ **Bad**: `www.example.com`
+:::
+
 After clicking "Create new webhook" you should receive a success notification. You can always edit back the Webhook events in a later stage:
 
 ![webhook_edit](./assets/webhook_edit.jpg)
+
+:::caution
+Callbell doesn't support `localhost` as webhook URL. If you need to debug a local application use instead a service to expose your local dev environment like [Ngrok](https://ngrok.com).
+:::
