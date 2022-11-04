@@ -23,15 +23,17 @@ This event will be sent whenever a message gets **created**, for example when _r
 
 ```json title=payload.json
 {
-  "to": "331122334455",
-  "from": "335544332211",
-  "text": "Hello",
-  "status": "received",
-  "channel": "whatsapp",
-  "contact": {
-    "uuid": "eb2b914a977e4ab896e7b886698b3eac"
-  },
-  "createdAt": "2022-10-18T12:06:29.000+02:00"
+  "event": "message_created",
+  "payload": {
+    "to": "331122334455",
+    "from": "335544332211",
+    "text": "Hello",
+    "status": "received",
+    "channel": "whatsapp",
+    "contact": {
+      "uuid": "eb2b914a977e4ab896e7b886698b3eac"
+    },
+    "createdAt": "2022-10-18T12:06:29.000+02:00"
+  }
 }
 ```
-
