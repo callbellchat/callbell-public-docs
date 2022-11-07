@@ -3,17 +3,16 @@ title: POST /auth/me
 sidebar_position: 1
 ---
 
-# POST /auth/me
+# GET /auth/me
 
 Return a `200` status code if the `api_token` is valid.
 
 ### Example Request
 
 ```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/auth/me" \
+curl -X GET "https://api.callbell.eu/v1/auth/me" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
   -H "Content-Type: application/json"
-  -d '{}'
 ```
 
 ### Response
