@@ -12,6 +12,10 @@ Callbell API provides **HTTP Webhooks** for the most common application events:
 
 ## How to subscribe to events
 
+:::info
+This can be done also programmaticaly from [WebhooksEndpoint](./../webhooks_api/introduction.md)
+:::
+
 On your Callbell dashboard navigate to the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section and click on the "Webhooks" tab:
 
 ![webhook_tab](./assets/webhook_tab.jpg)
@@ -23,7 +27,7 @@ In the URL field add your endpoint URL (e.g. `https://myapp.com/callbell_endpoin
 :::info
 Make sure to also **include** the protocol (`http` or `https`) inside your webhook endpoint:
 
-✅ **Good**:  `https://www.myexample.com`
+✅ **Good**: `https://www.myexample.com`
 
 ❌ **Bad**: `www.example.com`
 :::

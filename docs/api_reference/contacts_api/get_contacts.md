@@ -18,7 +18,7 @@ List all contacts belonging to the account. A filter can be specified in order t
 ### Example Request
 
 ```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/contacts" \
+curl -X GET "https://api.callbell.eu/v1/contacts?page=1&source=whatsapp&tags=sales,lead" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
   -H "Content-Type: application/json"
 ```

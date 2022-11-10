@@ -1,6 +1,6 @@
 ---
 title: DELETE /webhooks/unsubscribe
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 # DELETE /contacts

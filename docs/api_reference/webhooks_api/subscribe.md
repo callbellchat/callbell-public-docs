@@ -1,11 +1,17 @@
 ---
 title: POST /webhooks/subscribe
-sidebar_position: 4
+sidebar_position: 2
 ---
 
-# POST /contacts
+# POST /subscriptions
 
-Creates a new webhook or updates an existing one. (Each account can have **only** one webhook at the time)
+Creates a new webhook or updates an existing one.
+
+:::caution
+
+Each account can **only** register 1 webhook.
+
+:::
 
 ### Required Parameters
 
