@@ -13,7 +13,7 @@ Callbell API provides **HTTP Webhooks** for the most common application events:
 ## How to subscribe to events
 
 :::info
-This can be done also programmaticaly from [WebhooksEndpoint](./../webhooks_api/introduction.md)
+This can be done also programmatically from [WebhooksEndpoint](./../webhooks_api/introduction.md)
 :::
 
 On your Callbell dashboard navigate to the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section and click on the "Webhooks" tab:
