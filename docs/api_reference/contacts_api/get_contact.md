@@ -13,7 +13,6 @@ Get a specific contact given a `uuid`.
 | :-------- | :----- | :---------------------- |
 | `uuid`    | string | The uuid of the contact |
 
-
 ### Example Request
 
 ```bash title=request.sh
@@ -41,10 +40,7 @@ curl -X GET "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c
       "createdAt": "2020-11-13T21:08:53Z",
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-      "tags": [
-        "sales",
-        "lead"
-      ]
+      "tags": ["sales", "lead"]
     }
   ]
 }

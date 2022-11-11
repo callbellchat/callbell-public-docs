@@ -1,4 +1,5 @@
 # Message Status Updated
+
 :::caution
 Note that **message deliver notifications** are only available on **WhatsApp Business API** and **WhatsApp QR API**.
 :::
@@ -16,7 +17,7 @@ This event will be sent whenever a message status gets an **update**. This can b
 
 ### Event Name
 
-`message_status_created`
+`message_status_updated`
 
 ### Payload Fields
 
@@ -25,13 +26,14 @@ This event will be sent whenever a message status gets an **update**. This can b
 | `uuid`   | string | The unique identifier of the message |
 | `status` | string | The delivery status of the message   |
 
-
 ### Example Payload
 
 ```json title=payload.json
 {
-  "uuid": "adf3d1216d4c4dcd908199d6700f2381",
-  "status": "read"
+  "event": "message_status_updated",
+  "payload": {
+    "uuid": "adf3d1216d4c4dcd908199d6700f2381",
+    "status": "read"
+  }
 }
 ```
-

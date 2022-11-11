@@ -1,5 +1,5 @@
 ---
-title: PATCH /contacts
+title: PATCH /contacts/:uuid
 sidebar_position: 5
 ---
 
@@ -31,7 +31,6 @@ curl -X PATCH "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d
 | Parameter | Type                                           | Description                         |
 | :-------- | :--------------------------------------------- | :---------------------------------- |
 | `contact` | [Contact](/api_reference/object_types/contact) | The contact which has been updated. |
-
 
 ### Example Response
 

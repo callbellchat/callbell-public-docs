@@ -3,7 +3,7 @@ title: GET /contacts
 sidebar_position: 2
 ---
 
-# GET /contacts/:uuid
+# GET /contacts
 
 List all contacts belonging to the account. A filter can be specified in order to get more specific results.
 
@@ -14,7 +14,6 @@ List all contacts belonging to the account. A filter can be specified in order t
 | `page`    | Integer  | The page of contacts. If not specified it will default to page 1.                  |
 | `source`  | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`    | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
-
 
 ### Example Request
 
@@ -29,7 +28,6 @@ curl -X GET "https://api.callbell.eu/v1/contacts?page=1&source=whatsapp&tags=sal
 | Parameter  | Type                                             | Description         |
 | :--------- | :----------------------------------------------- | :------------------ |
 | `contacts` | [Contact[]](/api_reference/object_types/contact) | A list of contacts. |
-
 
 ### Example Response
 
