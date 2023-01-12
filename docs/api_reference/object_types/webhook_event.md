@@ -1,9 +1,9 @@
 ---
-title: Webhook Event
+title: WebhookEvent
 sidebar_position: 4
 ---
 
-### Webhook Event Object
+### WebhookEvent Object
 
 | Field       | Type     | Description                                                                                  |
 | :---------- | :------- | :------------------------------------------------------------------------------------------- |
