@@ -4,4 +4,10 @@ sidebar_position: 1
 
 # Introduction
 
-Whatsapp Template Messages API allows to recover details regarding the Whatsapp template messages used on Callbell. These are the approved template messages for WhatsApp
+Templates API allows to recover details regarding the template messages used on Callbell.
+
+:::caution
+
+At the moment we **only** support template messages for Whatsapp API (Gupshup) integrations, therefore the only template messages available are the ones approved for WhatsApp.
+
+:::
