@@ -17,9 +17,9 @@ curl -X GET "https://api.callbell.eu/v1/templates" \
 
 ### Response
 
-| Parameter  | Type                                               | Description          |
-| :--------- | :------------------------------------------------- | :------------------- |
-| `template` | [Template[]](/api_reference/object_types/template) | A list of templates. |
+| Parameter   | Type                                               | Description          |
+| :---------- | :------------------------------------------------- | :------------------- |
+| `templates` | [Template[]](/api_reference/object_types/template) | A list of templates. |
 
 ### Example Response
 
