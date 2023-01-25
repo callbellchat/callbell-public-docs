@@ -15,10 +15,10 @@ title: POST /messages/send
 
 ### Optional Parameters
 
-| Parameter       | Type         | Description                                                       |
-| :-------------- | :----------- | :---------------------------------------------------------------- |
-| `template_uuid` | TemplateUUID | Unique identifier of the template message                         |
-| `optin_contact` | Boolean      | Confirmation that the contact has opted-in for receiving messages |
+| Parameter       | Type    | Description                                                       |
+| :-------------- | :------ | :---------------------------------------------------------------- |
+| `template_uuid` | string  | Unique identifier of the template message                         |
+| `optin_contact` | Boolean | Confirmation that the contact has opted-in for receiving messages |
 
 ### Example Request
 
@@ -150,14 +150,15 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
 
 ## Send Template Messages
 
+You can use the API to send an approved [Template](/api_reference/object_types/template) Message.
+
 :::info
 This is only available for accounts using the official **WhatsApp Business API** integration.
 :::
 
-You can use the API to send an approved [Template](/api_reference/object_types/template) Message
+:::caution
 In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
-
-Use the [Templates API](/api_reference/template_messages_api/introduction) to the get the `template_uuid`s
+:::
 
 ```bash title=request.sh
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
@@ -175,7 +176,7 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
   }'
 ```
 
-In this context `text` refers to the placeholder of the template message, let's say that you have a template message like this:
+In this context `text` refers to the placeholder of the template message, for example let's say you have a template message like this:
 
 ```bash title=template_example
 Hello {{1}}, this is a template message example
@@ -189,12 +190,16 @@ Hello John Doe, this is a template message example
 
 ## Send Template Messages with Media Attachments
 
+You can use the API to send an approved [Template](/api_reference/object_types/template) Message
+
 :::info
 This is only available for accounts using the official **WhatsApp Business API** integration.
 :::
 
-You can use the API to send an approved [Template](/api_reference/object_types/template) Message
+:::caution
 In order to send template messages `template_uuid` and `optin_contact` must be present in the payload.
+:::
+
 If you have media template messages approved, you can send them by including a valid `url` of the media
 
 ### Send Image Attachment
@@ -209,7 +214,7 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
     "type": "image",
     "content": {
       "text": "John Doe",
-      "url": "https://example.com/valid_image"
+      "url": "https://example.com/valid_image.jpeg"
     },
     "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
     "optin_contact": true
@@ -228,7 +233,7 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
     "type": "document",
     "content": {
       "text": "John Doe",
-      "url": "https://example.com/valid_image"
+      "url": "https://example.com/valid_document.pdf"
     },
     "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
     "optin_contact": true
@@ -247,9 +252,13 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
     "type": "video",
     "content": {
       "text": "John Doe",
-      "url": "https://example.com/valid_image"
+      "url": "https://example.com/valid_video.mp4"
     },
     "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
     "optin_contact": true
   }'
 ```
+
+:::info
+Use the [Templates API](/api_reference/template_messages_api/introduction) to the get the `template_uuid`s your templates.
+:::
