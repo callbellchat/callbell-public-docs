@@ -13,6 +13,12 @@ title: POST /messages/send
 | `type`    | MessageType    | Type of message to be sent           |
 | `content` | MessageContent | Content of the message               |
 
+### Optional Parameters
+
+| Parameter       | Type         | Description                                                       |
+| :-------------- | :----------- | :---------------------------------------------------------------- |
+| `template_uuid` | TemplateUUID | Unique identifier of the template message                         |
+| `optin_contact` | Boolean      | Confirmation that the contact has opted-in for receiving messages |
 
 ### Example Request
 
@@ -36,7 +42,6 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
 | :-------- | :--------------------------------------------------------------------- | :----------------------------------------------------------------------- |
 | message   | [MessageSendRequest](/api_reference/object_types/message_send_request) | The message send request. The system will initially enqueue the message. |
 
-
 ### Example Response
 
 ```json title=response.json
@@ -56,7 +61,6 @@ Is it also possible to add a _caption_ when sending `image` attachments (see the
 
 ### Send Image Attachment Example
 
-```bash title=request.sh
 ```bash title=request.sh
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
@@ -141,5 +145,111 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
     "content": {
       "url": "https://example.com/my_video.mp4"
     }
+  }'
+```
+
+## Send Template Messages
+
+:::info
+This is only available for accounts using the official **WhatsApp Business API** integration.
+:::
+
+You can use the API to send an approved [Template](/api_reference/object_types/template) Message
+In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
+
+Use the [Templates API](/api_reference/template_messages_api/introduction) to the get the `template_uuid`s
+
+```bash title=request.sh
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "text",
+    "content": {
+      "text": "John Doe"
+    },
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
+  }'
+```
+
+In this context `text` refers to the placeholder of the template message, let's say that you have a template message like this:
+
+```bash title=template_example
+Hello {{1}}, this is a template message example
+```
+
+After the request above the sent message will be the following:
+
+```bash title=template_example
+Hello John Doe, this is a template message example
+```
+
+## Send Template Messages with Media Attachments
+
+:::info
+This is only available for accounts using the official **WhatsApp Business API** integration.
+:::
+
+You can use the API to send an approved [Template](/api_reference/object_types/template) Message
+In order to send template messages `template_uuid` and `optin_contact` must be present in the payload.
+If you have media template messages approved, you can send them by including a valid `url` of the media
+
+### Send Image Attachment
+
+```bash title=request.sh
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "image",
+    "content": {
+      "text": "John Doe",
+      "url": "https://example.com/valid_image"
+    },
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
+  }'
+```
+
+### Send Document Attachment
+
+```bash title=request.sh
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "document",
+    "content": {
+      "text": "John Doe",
+      "url": "https://example.com/valid_image"
+    },
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
+  }'
+```
+
+### Send Video Attachment
+
+```bash title=request.sh
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "video",
+    "content": {
+      "text": "John Doe",
+      "url": "https://example.com/valid_image"
+    },
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
   }'
 ```
