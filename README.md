@@ -1,4 +1,6 @@
-# Website
+<p align="center"><img src="https://dash.callbell.eu/packs/media/images/logo-v2-64c057488b549be3f34e6e4460d288b5.svg" width="200" height="auto" /></p>
+
+# Public API docs
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
