@@ -182,7 +182,7 @@ In this context `text` refers to the placeholder of the template message, for ex
 Hello {{1}}, this is a template message example
 ```
 
-After the request above the sent message will be the following:
+The placeholder replacement will be done with the value passed in the payload, so in this case it will be the following:
 
 ```bash title=template_example
 Hello John Doe, this is a template message example
