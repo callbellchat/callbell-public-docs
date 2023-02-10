@@ -45,7 +45,11 @@ curl -X GET "https://api.callbell.eu/v1/contacts?page=1&source=whatsapp&tags=sal
       "tags": [
         "sales",
         "lead"
-      ]
+      ],
+      "customFields":{
+        "Stripe link": "https://stripe.com/contacts/cus1234567",
+        "Billing Address": "3 Abbey Rd, London"
+      }
     },
     ...
     {
@@ -60,7 +64,10 @@ curl -X GET "https://api.callbell.eu/v1/contacts?page=1&source=whatsapp&tags=sal
         "sales",
         "lead",
         "hot"
-      ]
+      ],
+      "customFields":{
+        "Stripe link": "https://stripe.com/contacts/cus124124153"
+      }
     }
   ]
 }

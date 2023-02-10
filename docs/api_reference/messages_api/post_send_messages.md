@@ -4,6 +4,10 @@ title: POST /messages/send
 
 # POST /messages/send
 
+:::caution
+After 24h without a reply from the customer, it is not possible to send regular messages, you'll need to use a [Template](#send-template-messages) message, see examples below.
+:::
+
 ### Required Parameters
 
 | Parameter | Type           | Description                          |
