@@ -1,9 +1,9 @@
 ---
-title: GET /contacts/phone/:phone
+title: GET /contacts/phone/:number
 sidebar_position: 4
 ---
 
-# GET /contacts/phone/:phone
+# GET /contacts/phone/:number
 
 Get a specific contact given a `phone_number`.
 
@@ -16,7 +16,7 @@ Get a specific contact given a `phone_number`.
 ### Example Request
 
 ```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/contacts/phone/579-037-2023" \
+curl -X GET "https://api.callbell.eu/v1/contacts/phone/5790372023" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
   -H "Content-Type: application/json"
 ```
