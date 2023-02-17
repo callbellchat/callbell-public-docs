@@ -3,7 +3,7 @@ title: DELETE /webhooks/unsubscribe
 sidebar_position: 3
 ---
 
-# DELETE /contacts
+# DELETE /webhooks/unsubscribe
 
 Deletes the webhook of the current account.
 

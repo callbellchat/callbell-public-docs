@@ -1,22 +1,22 @@
 ---
-title: GET /contacts/:uuid
-sidebar_position: 3
+title: GET /contacts/phone/:number
+sidebar_position: 4
 ---
 
-# GET /contact/:uuid
+# GET /contacts/phone/:number
 
-Get a specific contact given a `uuid`.
+Get a specific contact given a `phone_number`.
 
 ### Required Parameters
 
-| Parameter | Type   | Description             |
-| :-------- | :----- | :---------------------- |
-| `uuid`    | string | The uuid of the contact |
+| Parameter         | Type   | Description                     |
+| :-----------------| :----- | :------------------------------ |
+| `phone_number`    | string | The phone number of the contact |
 
 ### Example Request
 
 ```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8" \
+curl -X GET "https://api.callbell.eu/v1/contacts/phone/5790372023" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
   -H "Content-Type: application/json"
 ```
@@ -31,8 +31,7 @@ curl -X GET "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c
 
 ```json title=response.json
 {
-  "contact": [
-    {
+  "contact": {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
       "name": "John Doe",
       "phoneNumber": "+123 456 789",
@@ -47,6 +46,5 @@ curl -X GET "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c
         "VAT": "ABC123DCE456"
       }
     }
-  ]
 }
 ```
