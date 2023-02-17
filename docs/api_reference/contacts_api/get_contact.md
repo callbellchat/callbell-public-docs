@@ -3,7 +3,7 @@ title: GET /contacts/:uuid
 sidebar_position: 3
 ---
 
-# GET /contact
+# GET /contact/:uuid
 
 Get a specific contact given a `uuid`.
 
