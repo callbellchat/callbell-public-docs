@@ -1,0 +1,28 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+json_data = {
+    'to': '+31612345678',
+    'from': 'whatsapp',
+    'type': 'image',
+    'content': {
+        'text': 'John Doe',
+        'url': 'https://example.com/valid_image.jpeg',
+    },
+    'template_uuid': 'd980fb66fd5043d3ace1aa06ba044342',
+    'optin_contact': True,
+}
+
+response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "image",\n    "content": {\n      "text": "John Doe",\n      "url": "https://example.com/valid_image.jpeg"\n    },\n    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",\n    "optin_contact": true\n  }'
+#response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, data=data)
+
+```

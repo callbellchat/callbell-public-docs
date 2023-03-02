@@ -1,0 +1,15 @@
+```js
+const axios = require('axios');
+
+const response = await axios.post(
+    'https://api.callbell.eu/v1/messages/send',
+    '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "image",\n    "content": {\n      "url": "https://example.com/my_image.jpeg",\n      "text: "This is my caption"\n    }\n  }',
+    {
+        headers: {
+            'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+            'Content-Type': 'application/json'
+        }
+    }
+);
+
+```

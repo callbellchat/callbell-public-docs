@@ -1,0 +1,16 @@
+```ruby
+require 'net/http'
+
+uri = URI('https://api.callbell.eu/v1/messages/status/adf3d1216d4c4dcd908199d6700f2381')
+req = Net::HTTP::Get.new(uri)
+req.content_type = 'application/json'
+req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
+
+req_options = {
+  use_ssl: uri.scheme == 'https'
+}
+res = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  http.request(req)
+end
+
+```
