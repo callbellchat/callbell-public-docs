@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "code_snippets": "node src/scripts/generate_code_snippets.mjs"
+    "translate_snippets": "node src/scripts/generate_code_snippets.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "2.1.0",
