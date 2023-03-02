@@ -36,7 +36,6 @@ export default function RequestTabs(props) {
       value: "Python",
     },
   ];
-  console.log(snippets);
 
   return (
     <>
