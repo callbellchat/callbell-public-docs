@@ -3,6 +3,8 @@ title: POST /webhooks/subscribe
 sidebar_position: 2
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # POST /subscriptions
 
 Creates a new webhook or updates an existing one.
@@ -22,15 +24,7 @@ Each account can **only** register 1 webhook.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/webhooks/subscribe" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-  -d '{
-    	"url": "https://my-app.com/my-webhook-endpoint",
-        "subscriptions": ["message_created", "contact_created"]
-  }'
-```
+<RequestTabs endpoint='webhooks_api' request="post_webhooks_subscribe"/>
 
 ### Response
 

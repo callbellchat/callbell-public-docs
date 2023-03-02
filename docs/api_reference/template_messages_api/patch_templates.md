@@ -3,6 +3,8 @@ title: PATCH /templates/:uuid
 sidebar_position: 4
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # PATCH /templates/:uuid
 
 Updates an existing template.
@@ -21,12 +23,7 @@ Updates an existing template.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X PATCH "https://api.callbell.eu/v1/templates/414a6d692bd645ed803f2e7ce360d4c8" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-  -d '{"title": New title"}'
-```
+<RequestTabs endpoint='templates_api' request="patch_template"/>
 
 ### Response
 

@@ -3,23 +3,21 @@ title: GET /contacts/phone/:number
 sidebar_position: 4
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # GET /contacts/phone/:number
 
 Get a specific contact given a `phone_number`.
 
 ### Required Parameters
 
-| Parameter         | Type   | Description                     |
-| :-----------------| :----- | :------------------------------ |
-| `phone_number`    | string | The phone number of the contact |
+| Parameter      | Type   | Description                     |
+| :------------- | :----- | :------------------------------ |
+| `phone_number` | string | The phone number of the contact |
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/contacts/phone/5790372023" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='contacts_api' request="get_contact_by_phone"/>
 
 ### Response
 
@@ -32,19 +30,19 @@ curl -X GET "https://api.callbell.eu/v1/contacts/phone/5790372023" \
 ```json title=response.json
 {
   "contact": {
-      "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-      "name": "John Doe",
-      "phoneNumber": "+123 456 789",
-      "avatarUrl": null,
-      "createdAt": "2020-11-13T21:08:53Z",
-      "source": "whatsapp",
-      "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-      "tags": ["sales", "lead"],
-      "customFields": {
-        "Address": "Oxford Street 123",
-        "Billing Address": "Oxford Street 123",
-        "VAT": "ABC123DCE456"
-      }
+    "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
+    "name": "John Doe",
+    "phoneNumber": "+123 456 789",
+    "avatarUrl": null,
+    "createdAt": "2020-11-13T21:08:53Z",
+    "source": "whatsapp",
+    "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
+    "tags": ["sales", "lead"],
+    "customFields": {
+      "Address": "Oxford Street 123",
+      "Billing Address": "Oxford Street 123",
+      "VAT": "ABC123DCE456"
     }
+  }
 }
 ```

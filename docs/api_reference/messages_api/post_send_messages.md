@@ -2,6 +2,8 @@
 title: POST /messages/send
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # POST /messages/send
 
 :::caution
@@ -26,19 +28,7 @@ After 24h without a reply from the customer, it is not possible to send regular 
 
 ### Example Request
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "text",
-    "content": {
-      "text": "Hello!"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages"/>
 
 ### Response
 
@@ -65,52 +55,15 @@ Is it also possible to add a _caption_ when sending `image` attachments (see the
 
 ### Send Image Attachment Example
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "image",
-    "content": {
-      "url": "https://example.com/my_image.jpeg"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_image"/>
 
 ### Send Image Attachment & Caption Example
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "image",
-    "content": {
-      "url": "https://example.com/my_image.jpeg",
-      "text: "This is my caption"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_image_caption"/>
 
 ### Send Document Attachment Example
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "document",
-    "content": {
-      "url": "https://example.com/my_image.pdf"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_document"/>
 
 ### Send Audio Attachment Example
 
@@ -118,19 +71,7 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
 This is only available for accounts using the official **WhatsApp Business API** integration.
 :::
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "document",
-    "content": {
-      "url": "https://example.com/my_audio.mp3"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_audio"/>
 
 ### Send Video Attachment Example
 
@@ -138,19 +79,7 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
 This is only available for accounts using the official **WhatsApp Business API** integration.
 :::
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "document",
-    "content": {
-      "url": "https://example.com/my_video.mp4"
-    }
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_video"/>
 
 ## Send Template Messages
 
@@ -164,21 +93,7 @@ This is only available for accounts using the official **WhatsApp Business API**
 In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
 :::
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "text",
-    "content": {
-      "text": "John Doe"
-    },
-    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
-    "optin_contact": true
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_template"/>
 
 In this context `text` refers to the placeholder of the template message, for example let's say you have a template message like this:
 
@@ -208,60 +123,15 @@ If you have media template messages approved, you can send them by including a v
 
 ### Send Image Attachment
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "image",
-    "content": {
-      "text": "John Doe",
-      "url": "https://example.com/valid_image.jpeg"
-    },
-    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
-    "optin_contact": true
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_template_image"/>
 
 ### Send Document Attachment
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "document",
-    "content": {
-      "text": "John Doe",
-      "url": "https://example.com/valid_document.pdf"
-    },
-    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
-    "optin_contact": true
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_template_document"/>
 
 ### Send Video Attachment
 
-```bash title=request.sh
-curl -X POST "https://api.callbell.eu/v1/messages/send" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "to": "+31612345678",
-    "from": "whatsapp",
-    "type": "video",
-    "content": {
-      "text": "John Doe",
-      "url": "https://example.com/valid_video.mp4"
-    },
-    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
-    "optin_contact": true
-  }'
-```
+<RequestTabs endpoint='messages_api' request="post_messages_template_video"/>
 
 :::info
 Use the [Templates API](/api_reference/template_messages_api/introduction) to the get the `template_uuid`s your templates.

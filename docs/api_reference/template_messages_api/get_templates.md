@@ -3,17 +3,15 @@ title: GET /templates
 sidebar_position: 2
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # GET /templates
 
 List all templates belonging to the account.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/templates" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='templates_api' request="get_templates"/>
 
 ### Response
 
