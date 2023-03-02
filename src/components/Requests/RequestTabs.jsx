@@ -1,7 +1,6 @@
 import React from "react";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-import CodeBlock from "@theme/CodeBlock";
 
 export default function RequestTabs(props) {
   const snippets = [
@@ -50,13 +49,7 @@ export default function RequestTabs(props) {
               label={snippet.value}
               default
             >
-              <CodeBlock
-                language={snippet.key}
-                title="request.sh"
-                showLineNumbers
-              >
-                <Component.default />
-              </CodeBlock>
+              <Component.default />
             </TabItem>
           );
         })}
