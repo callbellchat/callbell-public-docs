@@ -1,0 +1,30 @@
+```ruby
+require 'net/http'
+require 'json'
+
+uri = URI('https://api.callbell.eu/v1/messages/send')
+req = Net::HTTP::Post.new(uri)
+req.content_type = 'application/json'
+req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
+
+# The object won't be serialized exactly like this
+# req.body = "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"John Doe\"\n    },\n    \"template_uuid\": \"d980fb66fd5043d3ace1aa06ba044342\",\n    \"optin_contact\": true\n  }"
+req.body = {
+  'to' => '+31612345678',
+  'from' => 'whatsapp',
+  'type' => 'text',
+  'content' => {
+    'text' => 'John Doe'
+  },
+  'template_uuid' => 'd980fb66fd5043d3ace1aa06ba044342',
+  'optin_contact' => true
+}.to_json
+
+req_options = {
+  use_ssl: uri.scheme == 'https'
+}
+res = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  http.request(req)
+end
+
+```

@@ -1,0 +1,13 @@
+```bash
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "document",
+    "content": {
+      "url": "https://example.com/my_audio.mp3"
+    }
+  }'
+```

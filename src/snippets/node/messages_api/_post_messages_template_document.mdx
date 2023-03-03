@@ -1,0 +1,26 @@
+```js
+const axios = require('axios');
+
+const response = await axios.post(
+    'https://api.callbell.eu/v1/messages/send',
+    // '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "document",\n    "content": {\n      "text": "John Doe",\n      "url": "https://example.com/valid_document.pdf"\n    },\n    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",\n    "optin_contact": true\n  }',
+    {
+        'to': '+31612345678',
+        'from': 'whatsapp',
+        'type': 'document',
+        'content': {
+            'text': 'John Doe',
+            'url': 'https://example.com/valid_document.pdf'
+        },
+        'template_uuid': 'd980fb66fd5043d3ace1aa06ba044342',
+        'optin_contact': true
+    },
+    {
+        headers: {
+            'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+            'Content-Type': 'application/json'
+        }
+    }
+);
+
+```

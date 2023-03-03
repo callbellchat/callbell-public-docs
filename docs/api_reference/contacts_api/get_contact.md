@@ -3,6 +3,8 @@ title: GET /contacts/:uuid
 sidebar_position: 3
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # GET /contact/:uuid
 
 Get a specific contact given a `uuid`.
@@ -15,11 +17,7 @@ Get a specific contact given a `uuid`.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='contacts_api' request="get_contact"/>
 
 ### Response
 

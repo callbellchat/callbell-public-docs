@@ -1,7 +1,9 @@
 ---
-title: POST /auth/me
+title: Get /auth/me
 sidebar_position: 1
 ---
+
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /auth/me
 
@@ -9,11 +11,7 @@ Return a `200` status code if the `api_token` is valid.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/auth/me" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='auth_api' request="get_me"/>
 
 ### Response
 

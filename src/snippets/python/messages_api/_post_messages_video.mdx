@@ -1,0 +1,25 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+json_data = {
+    'to': '+31612345678',
+    'from': 'whatsapp',
+    'type': 'document',
+    'content': {
+        'url': 'https://example.com/my_video.mp4',
+    },
+}
+
+response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "document",\n    "content": {\n      "url": "https://example.com/my_video.mp4"\n    }\n  }'
+#response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, data=data)
+
+```

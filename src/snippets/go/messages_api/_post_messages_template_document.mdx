@@ -1,0 +1,43 @@
+```go
+package main
+
+import (
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+	"strings"
+)
+
+func main() {
+	client := &http.Client{}
+	var data = strings.NewReader(`{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "document",
+    "content": {
+      "text": "John Doe",
+      "url": "https://example.com/valid_document.pdf"
+    },
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
+  }`)
+	req, err := http.NewRequest("POST", "https://api.callbell.eu/v1/messages/send", data)
+	if err != nil {
+		log.Fatal(err)
+	}
+	req.Header.Set("Authorization", "Bearer test_gshuPaZoeEG6ovbc8M79w0QyM")
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resp.Body.Close()
+	bodyText, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%s\n", bodyText)
+}
+
+```

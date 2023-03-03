@@ -1,0 +1,13 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+data = '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "image",\n    "content": {\n      "url": "https://example.com/my_image.jpeg",\n      "text: "This is my caption"\n    }\n  }'
+
+response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, data=data)
+
+```

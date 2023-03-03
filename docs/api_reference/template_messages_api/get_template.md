@@ -3,6 +3,8 @@ title: GET /templates/:uuid
 sidebar_position: 3
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # GET /templates/:uuid
 
 Get a specific template given a `uuid`.
@@ -15,11 +17,7 @@ Get a specific template given a `uuid`.
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/templates/ad42a09715814e6483b1c5debd6a2dbc" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='templates_api' request="get_template"/>
 
 ### Response
 

@@ -3,6 +3,8 @@ title: GET /webhooks/events
 sidebar_position: 4
 ---
 
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
+
 # GET /events
 
 List all events belonging to the webhook. A filter can be specified in order to get more specific results.
@@ -18,11 +20,7 @@ List all events belonging to the webhook. A filter can be specified in order to 
 
 ### Example Request
 
-```bash title=request.sh
-curl -X GET "https://api.callbell.eu/v1/webhooks/events" \
-  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
-```
+<RequestTabs endpoint='webhooks_api' request="get_webhooks_events"/>
 
 ### Response
 
