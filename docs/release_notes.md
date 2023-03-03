@@ -10,15 +10,15 @@ A list of all the changes and enhancements that are introduced to our API. Use t
 
 #### Changes
 
-- [Contact](/api_reference/object_type/contact) now includes `custom_fields`
+- [Contact](/api_reference/object_types/contact) now includes `custom_fields`
 - `custom_fields`, `tags` can be passed in the body when [creating](/api_reference/contacts_api/post_contacts) or [creating](/api_reference/contacts_api/post_contacts) a contact
-- `phone_number` of [Contact](/api_reference/object_type/contact) can't be updated anymore
+- `phone_number` of [Contact](/api_reference/object_types/contact) can't be updated anymore
 
 ### 01-2023
 
 #### What's New
 
-- Add [Templates API](/api_reference/templates_api/introduction)
+- Add [Templates API](/api_reference/template_messages_api/introduction)
 
 #### Changes
 
