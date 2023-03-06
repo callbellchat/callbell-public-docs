@@ -17,7 +17,17 @@ Updates an existing contact.
 
 ### Optional Parameters
 
-All parameters reported by [Contact](/api_reference/object_types/contact) _except_ `uuid`.
+### Optional Parameters
+
+| Parameter       | Type     | Description                                                                   |
+| :-------------- | :------- | :---------------------------------------------------------------------------- |
+| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
+| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
+| `name`          | string   | The name of the contact                                                       |
+
+:::caution
+When passing `custom_fields` or `tags` make sure that they already exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
+:::
 
 ### Example Request
 

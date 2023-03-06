@@ -17,6 +17,17 @@ Creates a new contact.
 | `source`     | Source | The source of the contact (e.g. `whatsapp`)                   |
 | `name`       | string | The name of the contact                                       |
 
+### Optional Parameters
+
+| Parameter       | Type     | Description                                                                   |
+| :-------------- | :------- | :---------------------------------------------------------------------------- |
+| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
+| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
+
+:::caution
+When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
+:::
+
 ### Example Request
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
