@@ -21,7 +21,7 @@ Updates an existing contact.
 
 | Parameter       | Type     | Description                                                                   |
 | :-------------- | :------- | :---------------------------------------------------------------------------- |
-| `tags`          | string[] | A list of comma separated values (e.g `['Call back', 'Interested']`)          |
+| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
 | `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
 | `name`          | string   | The name of the contact                                                       |
 

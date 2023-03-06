@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Release notes
 
-A list of all the changes and enhancements that are introduced to our API. Use them to check whether new endpoints are added, or changes are made.
+A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
 ### 02-2022
 
