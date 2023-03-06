@@ -19,8 +19,24 @@ const config = {
   organizationName: "callbellchat", // Usually your GitHub org/user name.
   projectName: "callbell-public-docs", // Usually your repo name.
 
-  plugins: [
-    [require.resolve("@cmfcmf/docusaurus-search-local"), { indexBlog: false }],
+  themes: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: "filename",
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: "/",
+        highlightSearchTermsOnTargetPage: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      },
+    ],
   ],
 
   // Even if you don't use internalization, you can use this field to set useful
