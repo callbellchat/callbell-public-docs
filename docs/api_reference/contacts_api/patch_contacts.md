@@ -24,9 +24,12 @@ Updates an existing contact.
 | `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
 | `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
 | `name`          | string   | The name of the contact                                                       |
+| `assigned_user` | String   | Email of the user that you want to assign to a contact                        |
+| `unassign_user` | Boolean  | `true` is you want to remone the assigned user from a contact                 |
 
 :::caution
 When passing `custom_fields` or `tags` make sure that they already exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
+Same applies for `assigned_user`, must be a valid email of a user in your account.
 :::
 
 ### Example Request
@@ -53,6 +56,7 @@ When passing `custom_fields` or `tags` make sure that they already exist in your
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "tags": [],
+      "assignedUser": "jane.doe@email.com",
       "customFields": {}
     }
   ]
