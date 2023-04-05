@@ -28,8 +28,8 @@ Updates an existing contact.
 | `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
 
 :::caution
-Ensure that custom_fields and tags already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
-Similarly, for assigned_user, use a valid email address associated with a user in your account.
+Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
+Similarly, for `assigned_user`, use a valid email address associated with a user in your account.
 
 ### Example Request
 
