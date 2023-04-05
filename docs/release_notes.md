@@ -10,9 +10,9 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 #### What's new
 
-- `assignedUser` is now present in the [Contact](/api_reference/object_types/contact)
-- You can now assign a user to a contact when creating or updating one. By passing `assigned_user` with the emai of the user eg. `john.doe@email.com` the contact will be assigned to that user. Make sure that the email belongs to a confirmed user in your account.
-- You can now remove an assigned user from a contact, when updating, by passing `unassign_user` in the body, with `true` it will remove the assigned user from the contact.
+- The `assignedUser` attribute has been added to the [Contact](/api_reference/object_types/contact) object
+- Users can now be assigned to a contact during creation or update by providing the assigned_user parameter with a user's email (eg. `john.doe@email.com`). Ensure that the provided email corresponds to a confirmed user in your account.
+- To unassign a user from a contact during an update, include the unassign_user parameter in the request body and set its value to true. This action will remove the assigned user from the contact.
 
 ### 02-2022
 
