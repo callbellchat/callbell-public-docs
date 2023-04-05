@@ -6,6 +6,14 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+### 3-2022
+
+#### What's new
+
+- The `assignedUser` attribute has been added to the [Contact](/api_reference/object_types/contact) object
+- Users can now be assigned to a contact during creation or update by providing the assigned_user parameter with a user's email (eg. `john.doe@email.com`). Ensure that the provided email corresponds to a confirmed user in your account.
+- To unassign a user from a contact during an update, include the unassign_user parameter in the request body and set its value to true. This action will remove the assigned user from the contact.
+
 ### 02-2022
 
 #### What's New

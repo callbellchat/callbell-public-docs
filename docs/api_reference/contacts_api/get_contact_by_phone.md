@@ -38,6 +38,7 @@ Get a specific contact given a `phone_number`.
     "source": "whatsapp",
     "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
     "tags": ["sales", "lead"],
+    "assignedUser": null,
     "customFields": {
       "Address": "Oxford Street 123",
       "Billing Address": "Oxford Street 123",
