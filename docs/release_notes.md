@@ -8,7 +8,7 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### April 5, 2023
 
-#### What's new
+#### ✨ What's new
 
 - The `assignedUser` attribute has been added to the [Contact](/api_reference/object_types/contact) object
 - Users can now be assigned to a contact during creation or update by providing the assigned_user parameter with a user's email (eg. `john.doe@email.com`). Ensure that the provided email corresponds to a confirmed user in your account.
@@ -16,12 +16,12 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### March 3, 2023
 
-#### What's New
+#### ✨ What's new
 
 - Multi-language code snippets (`curl`, `node`, `go`, `ruby`, `php`, `python`) for all the requests
 - Release Notes section
 
-#### Changes
+#### 🛠️ Changes
 
 - [Contact](/api_reference/object_types/contact) now includes `custom_fields`
 - `custom_fields`, `tags` can be passed in the body when [creating](/api_reference/contacts_api/post_contacts) or [creating](/api_reference/contacts_api/post_contacts) a contact
@@ -29,22 +29,22 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### January 17, 2023
 
-#### What's New
+#### ✨ What's new
 
 - [Templates API](/api_reference/template_messages_api/introduction)
 
-#### Changes
+#### 🛠️ Changes
 
 - Allow to send [Template Messages](/api_reference/messages_api/post_send_messages#send-template-messages)
 
 ### November 11, 2022
 
-#### What's new
+#### ✨ What's new
 
 - [Auth API](/api_reference/auth_api/introduction)
 
 ### October 18, 2022
 
-#### What's new
+#### ✨ What's new
 
 - [Webhooks API](/api_reference/webhooks_api/introduction)
