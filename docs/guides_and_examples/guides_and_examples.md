@@ -93,7 +93,7 @@ First we need to create a webhook endpoint to receive the events. We'll use [Req
 
 Now we have created a webhook endpoint that will receive the events. We can now use the Callbell API to send a message to the customer.
 
-See the [Messages API](/api_reference/messages/introduction) for more information on how to send messages.
+See the [Messages API](/api_reference/messages_api/introduction) for more information on how to send messages.
 
 In the following diagram we can see how the Callbell API is used to send a message to the customer when a new order is placed.
 
