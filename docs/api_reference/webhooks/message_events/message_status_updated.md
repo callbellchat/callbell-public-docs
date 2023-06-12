@@ -21,10 +21,11 @@ This event will be sent whenever a message status gets an **update**. This can b
 
 ### Payload Fields
 
-| Field    | Type   | Description                          |
-| :------- | :----- | :----------------------------------- |
-| `uuid`   | string | The unique identifier of the message |
-| `status` | string | The delivery status of the message   |
+| Field                  | Type   | Description                          |
+| :--------------------- | :----- | :----------------------------------- |
+| `uuid`                 | string | The unique identifier of the message |
+| `status`               | string | The delivery status of the message   |
+| `messageStatusPayload` | JSON   | The raw message status payload       |
 
 ### Example Payload
 
@@ -33,7 +34,16 @@ This event will be sent whenever a message status gets an **update**. This can b
   "event": "message_status_updated",
   "payload": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
-    "status": "read"
+    "status": "read",
+    "messageStatusPayload":{
+      "id":"gBGGM2MSRxl_Aglqmg5KQXU7ABC",
+      "gsId":"2b34bfb7-2631-4763-89fb-1b3c65a4babc",
+      "type":"read",
+      "payload":{
+        "ts":1686563913
+      },
+      "destination":"1122334455"
+    }
   }
 }
 ```
