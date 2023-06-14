@@ -6,6 +6,16 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## June 15, 2023
+
+### ✨ What's new
+
+
+- The [`MessageSendRequest`](/api_reference/object_types/message_send_request) object now includes a new attribute: `messageStatusPayload`. This attribute provides the status payload for the corresponding message, sourced directly from the integration.
+- This attribute is useful when [fetching status updates for a message](/api_reference/messages_api/get_message_status).
+- For troubleshooting purposes, `messageStatusPayload` can also be accessed via the [Message Status Update Webhook Event](/api_reference/webhooks/message_events/message_status_updated).
+
+
 ## April 5, 2023
 
 ### ✨ What's new

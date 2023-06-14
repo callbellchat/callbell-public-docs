@@ -29,7 +29,16 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 {
   "message": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
-    "status": "enqueued"
+    "status": "enqueued",
+    "messageStatusPayload":{
+      "id":"2b34bfb7-2631-4763-89fb-1b3c65a4baaa",
+      "type":"enqueued",
+      "payload":{
+        "type":"session",
+        "whatsappMessageId":"gBGGM2MSRxl_AAlqmG1KQXU7nz4"
+      },
+      "destination":"1122334455"
+    }
   }
 }
 ```
