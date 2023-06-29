@@ -46,6 +46,8 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 ### How to generate code snippets
 
+![Screenshot 2023-06-29 at 14 36 57](https://github.com/callbellchat/callbell-public-docs/assets/39624192/cec0b018-ee64-487d-a3e7-773d67f70978)
+
 1. Create a file in bash in this path `src/snippets/curl` according to the api changes you made;
 2. Run the following command in the terminal:
 
