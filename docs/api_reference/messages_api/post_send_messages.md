@@ -133,6 +133,10 @@ The placeholders replacements will be done with the values passed in the payload
 Hello Jack, this is a template message example. Cheers!
 ```
 
+:::info
+When `template_values` are valid, the values inside `content` will be ignored, since it is used for template messages with only one variable.
+:::
+
 ## Send Template Messages with Media Attachments
 
 You can use the API to send an approved [Template](/api_reference/object_types/template) Message
