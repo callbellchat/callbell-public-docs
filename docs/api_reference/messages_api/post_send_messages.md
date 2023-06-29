@@ -107,6 +107,32 @@ The placeholder replacement will be done with the value passed in the payload, s
 Hello John Doe, this is a template message example
 ```
 
+## Send Multi-variables Template Messages
+
+You can use the API to send an approved [Template](/api_reference/object_types/template) Message.
+
+:::info
+This is only available for accounts using the official **WhatsApp Business API** integration.
+:::
+
+:::caution
+In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
+:::
+
+<RequestTabs endpoint='messages_api' request="post_multi_variable_messages_template"/>
+
+In this context `template_values` refers to the placeholders of the template message, for example let's say you have a template message like this:
+
+```bash title=template_example
+Hello {{1}}, this is a template {{2}} example. {{3}}!
+```
+
+The placeholders replacements will be done with the values passed in the payload inside an array, so in this case it will be the following:
+
+```bash title=template_example
+Hello Jack, this is a template message example. Cheers!
+```
+
 ## Send Template Messages with Media Attachments
 
 You can use the API to send an approved [Template](/api_reference/object_types/template) Message

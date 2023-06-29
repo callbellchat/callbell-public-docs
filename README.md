@@ -4,6 +4,8 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+In order to run it, you will need to have Node.js version 16.14 or above.
+
 ### Installation
 
 ```
@@ -41,3 +43,14 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### How to generate code snippets
+
+1. Create a file in bash in this path `src/snippets/curl` according to the api changes you made;
+2. Run the following command in the terminal:
+
+```
+$ node src/scripts/generate_code_snippets.mjs
+```
+
+After that, you will see that other files were created in the folders for each language.

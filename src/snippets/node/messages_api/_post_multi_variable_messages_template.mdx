@@ -3,15 +3,19 @@ import axios from 'axios';
 
 const response = await axios.post(
   'https://api.callbell.eu/v1/messages/send',
-  // '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "video",\n    "content": {\n      "text": "John Doe",\n      "url": "https://example.com/valid_video.mp4"\n    },\n    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",\n    "optin_contact": true\n  }',
+  // '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "text",\n    "content": {\n      "text": "John Doe"\n    },\n    "template_values": ["Jack", "template", "Cheers"],\n    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",\n    "optin_contact": true\n  }',
   {
     'to': '+31612345678',
     'from': 'whatsapp',
-    'type': 'video',
+    'type': 'text',
     'content': {
-      'text': 'John Doe',
-      'url': 'https://example.com/valid_video.mp4'
+      'text': 'John Doe'
     },
+    'template_values': [
+      'Jack',
+      'template',
+      'Cheers'
+    ],
     'template_uuid': 'd980fb66fd5043d3ace1aa06ba044342',
     'optin_contact': true
   },
