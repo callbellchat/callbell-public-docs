@@ -1,0 +1,16 @@
+```bash
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "text",
+    "content": {
+      "text": "John Doe"
+    },
+    "template_values": ["Jack", "template", "Cheers"],
+    "template_uuid": "d980fb66fd5043d3ace1aa06ba044342",
+    "optin_contact": true
+  }'
+```
