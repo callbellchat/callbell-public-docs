@@ -16,7 +16,7 @@ func main() {
         "identifier": "123456789",
         "name": "John Doe"
     }`)
-	req, err := http.NewRequest("POST", "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8", data)
+	req, err := http.NewRequest("POST", "https://api.callbell.eu/v1/contacts", data)
 	if err != nil {
 		log.Fatal(err)
 	}
