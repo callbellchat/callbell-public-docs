@@ -6,6 +6,8 @@ req = Net::HTTP::Patch.new(uri)
 req.content_type = 'application/json'
 req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
 
+req.body = '{"title": New title"}'
+
 req_options = {
   use_ssl: uri.scheme == 'https'
 }

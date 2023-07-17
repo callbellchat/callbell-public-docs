@@ -6,6 +6,19 @@ headers = {
     'Content-Type': 'application/json',
 }
 
-response = requests.post('https://api.callbell.eu/v1/webhooks/subscribe', headers=headers)
+json_data = {
+    'url': 'https://my-app.com/my-webhook-endpoint',
+    'subscriptions': [
+        'message_created',
+        'contact_created',
+    ],
+}
+
+response = requests.post('https://api.callbell.eu/v1/webhooks/subscribe', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n        "url": "https://my-app.com/my-webhook-endpoint",\n        "subscriptions": ["message_created", "contact_created"]\n  }'
+#response = requests.post('https://api.callbell.eu/v1/webhooks/subscribe', headers=headers, data=data)
 
 ```

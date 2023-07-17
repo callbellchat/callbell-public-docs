@@ -1,15 +1,22 @@
 ```js
-const axios = require('axios');
+import axios from 'axios';
 
 const response = await axios.post(
-    'https://api.callbell.eu/v1/webhooks/subscribe',
-    '',
-    {
-        headers: {
-            'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
-            'Content-Type': 'application/json'
-        }
+  'https://api.callbell.eu/v1/webhooks/subscribe',
+  // '{\n        "url": "https://my-app.com/my-webhook-endpoint",\n        "subscriptions": ["message_created", "contact_created"]\n  }',
+  {
+    'url': 'https://my-app.com/my-webhook-endpoint',
+    'subscriptions': [
+      'message_created',
+      'contact_created'
+    ]
+  },
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
     }
+  }
 );
 
 ```

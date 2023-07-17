@@ -1,15 +1,20 @@
 ```js
-const axios = require('axios');
+import axios from 'axios';
 
 const response = await axios.post(
-    'https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8',
-    '',
-    {
-        headers: {
-            'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
-            'Content-Type': 'application/json'
-        }
+  'https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8',
+  // '{\n        "source": "whatsapp",\n        "identifier": "123456789",\n        "name": "John Doe"\n    }',
+  {
+    'source': 'whatsapp',
+    'identifier': '123456789',
+    'name': 'John Doe'
+  },
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
     }
+  }
 );
 
 ```

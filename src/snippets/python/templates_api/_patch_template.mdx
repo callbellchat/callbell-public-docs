@@ -6,6 +6,8 @@ headers = {
     'Content-Type': 'application/json',
 }
 
-response = requests.patch('https://api.callbell.eu/v1/templates/414a6d692bd645ed803f2e7ce360d4c8', headers=headers)
+data = '{"title": New title"}'
+
+response = requests.patch('https://api.callbell.eu/v1/templates/414a6d692bd645ed803f2e7ce360d4c8', headers=headers, data=data)
 
 ```

@@ -1,7 +1,7 @@
 ```bash
 curl -X POST "https://api.callbell.eu/v1/webhooks/subscribe" \
   -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
-  -H "Content-Type: application/json"
+  -H "Content-Type: application/json" \
   -d '{
         "url": "https://my-app.com/my-webhook-endpoint",
         "subscriptions": ["message_created", "contact_created"]

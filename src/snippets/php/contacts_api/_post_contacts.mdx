@@ -8,6 +8,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
     'Content-Type: application/json',
 ]);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n        \"source\": \"whatsapp\",\n        \"identifier\": \"123456789\",\n        \"name\": \"John Doe\"\n    }");
 
 $response = curl_exec($ch);
 
