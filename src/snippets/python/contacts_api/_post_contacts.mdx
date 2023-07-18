@@ -6,6 +6,17 @@ headers = {
     'Content-Type': 'application/json',
 }
 
-response = requests.post('https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8', headers=headers)
+json_data = {
+    'source': 'whatsapp',
+    'identifier': '123456789',
+    'name': 'John Doe',
+}
+
+response = requests.post('https://api.callbell.eu/v1/contacts', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n        "source": "whatsapp",\n        "identifier": "123456789",\n        "name": "John Doe"\n    }'
+#response = requests.post('https://api.callbell.eu/v1/contacts', headers=headers, data=data)
 
 ```

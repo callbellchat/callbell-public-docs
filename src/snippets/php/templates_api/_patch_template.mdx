@@ -8,6 +8,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
     'Content-Type: application/json',
 ]);
+curl_setopt($ch, CURLOPT_POSTFIELDS, '{"title": New title"}');
 
 $response = curl_exec($ch);
 

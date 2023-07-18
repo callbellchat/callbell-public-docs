@@ -6,11 +6,17 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"strings"
 )
 
 func main() {
 	client := &http.Client{}
-	req, err := http.NewRequest("POST", "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8", nil)
+	var data = strings.NewReader(`{
+        "source": "whatsapp",
+        "identifier": "123456789",
+        "name": "John Doe"
+    }`)
+	req, err := http.NewRequest("POST", "https://api.callbell.eu/v1/contacts", data)
 	if err != nil {
 		log.Fatal(err)
 	}
