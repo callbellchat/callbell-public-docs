@@ -21,10 +21,12 @@ After 24h without a reply from the customer, it is not possible to send regular 
 
 ### Optional Parameters
 
-| Parameter       | Type    | Description                                                       |
-| :-------------- | :------ | :---------------------------------------------------------------- |
-| `template_uuid` | string  | Unique identifier of the template message                         |
-| `optin_contact` | Boolean | Confirmation that the contact has opted-in for receiving messages |
+| Parameter         | Type    | Description                                                       |
+| :---------------- | :------ | :---------------------------------------------------------------- |
+| `template_uuid`   | String  | Unique identifier of the template message                         |
+| `optin_contact`   | Boolean | Confirmation that the contact has opted-in for receiving messages |
+| `template_values` | Array   | Values for multi-variable template message                        |
+| `assigned_user`   | String  | Message will be assigned to this collaborator's email             |
 
 ### Example Request
 
@@ -46,6 +48,16 @@ After 24h without a reply from the customer, it is not possible to send regular 
   }
 }
 ```
+
+## Send Message with Automatic User Assignment
+
+It is possible to send a message via API request with an assigned user by sending their email in the `assigned_user` parameter.
+
+:::caution
+The user has to be part of your team, otherwise the assignment will not work.
+:::
+
+<RequestTabs endpoint='messages_api' request="post_messages_with_user_assignment"/>
 
 ## Send Message with Media Attachments
 
