@@ -14,6 +14,44 @@ This event will be sent whenever a message status gets an **update**. This can b
 - `sent`
 - `delivered`
 - `read`
+- `failed`
+- `mismatch`
+- `deleted`
+
+
+### Message Statuses
+
+#### Enqueued
+
+Sent when the message is successfully sent to the WhatsApp Business API client or to the QR API client.
+
+#### Sent
+
+This status is sent whenever the message is sent to the end-user device.
+
+#### Delivered
+
+Sent when the message has finally been delivered to the end-user device.
+
+#### Read
+
+Represents that the message has been successfully read by the end-user.
+
+#### Failed
+
+This status is emitted whenever the delivery of the message wasn't possible. In the inner payload the failure reason is also specified (e.g. _"number does not exist on WhatsApp"_)
+
+#### Mismatch
+
+This event status is sent whenever WhatsApp Business API performs a phone number correction automatically. The corrected phone number identifier will be present inside the inner payload of the event.
+
+### Deleted 
+:::caution
+This event has been deprecated since it's not supported anymore by Meta.
+:::
+
+Represents a message deletion from the end-user, both for _"delete only for me"_ and _"delete for everyone"_.
+
 
 ### Event Name
 
