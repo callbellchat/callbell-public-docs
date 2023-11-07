@@ -1,0 +1,15 @@
+```js
+import axios from 'axios';
+
+const response = await axios.patch(
+  'https://api.callbell.eu/v1/teams/414a6d692bd645ed803f2e7ce360d4c8',
+  '{"name": New team name"}',
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
+    }
+  }
+);
+
+```
