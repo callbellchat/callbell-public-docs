@@ -15,7 +15,7 @@ You will need to create an account on Callbell and have configured a WhatsApp Bu
 
 ## Getting your API keys
 
-Navigate to Callbell API keys page in settings (https://dash.callbell.eu/settings/api_keys) in order to generate a new API key:
+Navigate to Callbell API keys page in settings (https://dash.callbell.eu/settings/api_settings/keys) in order to generate a new API key:
 
 ![create_api_key](./assets/create_api_key_1.jpg)
 
