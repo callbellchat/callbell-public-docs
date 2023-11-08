@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 7, 2023
+
+### ✨ What's new
+
+- [Teams API Endpoint](/api_reference/teams_api/introduction)
+
 ## June 29, 2023
 
 ### 🛠️ Changes
