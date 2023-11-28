@@ -15,7 +15,7 @@ Callbell is a _centralized_ inbox which allows teams to collaborate and reply to
 
 ## Getting Started
 
-Want to quickly get started with Callbell? [Follow our guide here](/getting_started)
+Want to quickly get started with Callbell? [Follow our guide here](/bot/getting_started)
 
 ## API Reference
 

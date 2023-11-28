@@ -8,7 +8,7 @@ This guide will show you how to use the Callbell API to send messages, get updat
 
 ## Getting Started with Callbell
 
-If you're new to Callbell, you can start with our [Getting Started with Callbell Guide](/getting_started).
+If you're new to Callbell, you can start with our [Getting Started with Callbell Guide](/bot/getting_started).
 We'll also look at some examples of using the Callbell API.
 
 The examples fall into two categories: **Events Caused by Actions** and **Actions Driven by Events**.

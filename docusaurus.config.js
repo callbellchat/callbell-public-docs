@@ -79,16 +79,16 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "home",
+            to: "/",
             position: "left",
             label: "Home",
+            activeBaseRegex: "^/$",
           },
           {
-            type: "doc",
-            docId: "api/reference/introduction",
+            to: "/api/reference/introduction",
             position: "left",
             label: "API Reference",
+            activeBasePath: "/api/reference/",
           },
           {
             href: "https://headwayapp.co/callbell-changelog",
