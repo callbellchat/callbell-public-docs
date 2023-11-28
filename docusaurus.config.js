@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Callbell Developers Documentation",
+  title: "Callbell Documentation",
   tagline: "",
   url: "https://www.callbell.eu",
   baseUrl: "/",
@@ -86,7 +86,7 @@ const config = {
           },
           {
             type: "doc",
-            docId: "api_reference/introduction",
+            docId: "api/reference/introduction",
             position: "left",
             label: "API Reference",
           },
