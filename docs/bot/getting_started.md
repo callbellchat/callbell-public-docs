@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Getting Started
 
-This step-to-step guid will walk you through building your first chatbot with Callbell.
+This step by step guide will walk you through building your first chatbot with Callbell.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ Click on the **Add new action** button and select the **Send Message** action:
 
 ![add_new_action](./assets/add_new_action.png)
 
-A panel will open you can use to configure the action. In this case we'll just add a simple text message:
+A panel will open so you can use to configure the action. In this case we'll just add a simple text message:
 
 ![add_new_action_panel](./assets/add_new_action_panel.png)
 
@@ -59,7 +59,7 @@ Once you're happy with your bot you can publish it by clicking on the **Publish 
 
 ![publish_bot](./assets/publish_bot.png)
 
-After clicking on the **Publish** button and confirming your bot flow will be published; at the same time you'll need to **enable your bot** in order to make it available to your customers. You can do this by navigating back to the "Bots" section in the left sidebar and clicking on the **Enable bot** button:
+After clicking on the **Publish draft** button and confirming, your bot flow will be published; at the same time you'll need to **enable your bot** in order to make it available to your customers. You can do this by navigating back to the "Bots" section in the left sidebar and clicking on the **Enable bot** button:
 
 ![enable_bot](./assets/enable_bot.png)
 
