@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Conversation Closed
 
-This event occurs when a new conversation is **closed**.
+This event occurs when a conversation is **closed**.
 
 ### Event Name
 

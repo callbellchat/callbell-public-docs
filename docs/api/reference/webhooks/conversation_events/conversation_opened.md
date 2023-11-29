@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Conversation Opened
 
-This event occurs when a new conversation is **opened**.
+This event occurs when a conversation is **opened** or **reopened**.
 
 ### Event Name
 
