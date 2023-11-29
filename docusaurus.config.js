@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Callbell Developers Documentation",
+  title: "Callbell Documentation",
   tagline: "",
   url: "https://www.callbell.eu",
   baseUrl: "/",
@@ -79,16 +79,16 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "home",
+            to: "/",
             position: "left",
             label: "Home",
+            activeBaseRegex: "^/$",
           },
           {
-            type: "doc",
-            docId: "api_reference/introduction",
+            to: "/api/reference/introduction",
             position: "left",
             label: "API Reference",
+            activeBasePath: "/api/reference/",
           },
           {
             href: "https://headwayapp.co/callbell-changelog",

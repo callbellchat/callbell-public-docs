@@ -5,9 +5,9 @@ sidebar_position: 1
 slug: /
 ---
 
-# Callbell Developer Documentation
+# Callbell Documentation
 
-Welcome to Callbell Developers' API documentation! In here you'll find a reference to use [Callbell](https://www.callbell.eu)
+Welcome to Callbell's documentation! In here you'll find a reference to use [Callbell](https://www.callbell.eu) and it's products.
 
 ## What's Callbell?
 
@@ -15,8 +15,8 @@ Callbell is a _centralized_ inbox which allows teams to collaborate and reply to
 
 ## Getting Started
 
-Want to quickly get started with Callbell? [Follow our guide here](/getting_started)
+Want to quickly get started with Callbell? [Follow our guide here](/bot/getting_started)
 
 ## API Reference
 
-[Click here](/api_reference/introduction) to access our public API reference documentation.
+[Click here](/api/reference/introduction) to access our public API reference documentation.
