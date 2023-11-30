@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 30, 2023
+
+### ✨ What's new
+
+- [Conversation Opened Webhook Event](/api/reference/webhooks/conversation_events/conversation_opened)
+- [Conversation Closed Webhook Event](/api/reference/webhooks/conversation_events/conversation_closed)
+
 ## November 7, 2023
 
 ### ✨ What's new
