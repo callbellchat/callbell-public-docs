@@ -1,5 +1,5 @@
 ---
-titolo: GET /teams/:uuid
+title: GET /teams/:uuid
 posizione_di_side: 3
 ---
 

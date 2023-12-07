@@ -1,5 +1,5 @@
 ---
-titolo: PATCH /teams/:uuid
+title: PATCH /teams/:uuid
 posizione della barra laterale: 4
 ---
 

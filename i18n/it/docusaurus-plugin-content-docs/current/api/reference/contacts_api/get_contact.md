@@ -1,5 +1,5 @@
 ---
-titolo: GET /contatti/:uuid
+title: GET /contatti/:uuid
 sidebar_position: 3
 ---
 

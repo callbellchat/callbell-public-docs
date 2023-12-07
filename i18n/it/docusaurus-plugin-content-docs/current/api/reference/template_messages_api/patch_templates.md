@@ -1,5 +1,5 @@
 ---
-titolo: PATCH /templates/:uuid
+title: PATCH /templates/:uuid
 posizione della barra laterale: 4
 ---
 

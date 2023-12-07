@@ -1,5 +1,5 @@
 ---
-titolo: GET /contatti/telefono/:numero
+title: GET /contatti/telefono/:numero
 sidebar_position: 4
 ---
 

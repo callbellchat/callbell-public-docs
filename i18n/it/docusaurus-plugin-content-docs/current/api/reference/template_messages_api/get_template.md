@@ -1,5 +1,5 @@
 ---
-titolo: GET /templates/:uuid
+title: GET /templates/:uuid
 posizione_barra_ laterale: 3
 ---
 

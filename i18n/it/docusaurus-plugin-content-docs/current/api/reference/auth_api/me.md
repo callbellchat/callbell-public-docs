@@ -1,5 +1,5 @@
 ---
-titolo: Ottieni /auth/me
+title: Ottieni /auth/me
 sidebar_position: 1
 ---
 

@@ -1,5 +1,5 @@
 ---
-titolo: GET /webhooks/events
+title: GET /webhooks/events
 sidebar_position: 4
 ---
 

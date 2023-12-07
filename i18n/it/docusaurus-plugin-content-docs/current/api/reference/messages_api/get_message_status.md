@@ -1,5 +1,5 @@
 ---
-titolo: GET /messaggi/stato/:uuid
+title: GET /messaggi/stato/:uuid
 sidebar_position: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-titolo: Casa
+title: Casa
 barra laterale: Home
 sidebar_position: 1
 slug: /

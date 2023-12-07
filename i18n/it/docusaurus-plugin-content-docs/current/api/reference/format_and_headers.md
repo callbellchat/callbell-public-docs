@@ -1,5 +1,5 @@
 ---
-titolo: Formato e intestazioni
+title: Formato e intestazioni
 sidebar_position: 4
 ---
 
