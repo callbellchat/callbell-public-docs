@@ -2,40 +2,40 @@
 sidebar_position: 1
 ---
 
-import interactionActionsUrl from './assets/interaction_actions.png';
-import contactActionsUrl from './assets/contact_actions.png';
-import logicActionsUrl from './assets/logic_actions.png';
+importare interactionActionsUrl da './assets/interaction_actions.png';
+importare contactActionsUrl da './assets/contact_actions.png';
+importare logicActionsUrl da './assets/logic_actions.png';
 
-# Overview
+# Panoramica
 
-Actions are the building blocks of your bot. They are the things your bot can do. For example, you can create an action that sends a message, or an action that waits for a reply.
+Le azioni sono gli elementi costitutivi del bot. Sono le cose che il bot può fare. Ad esempio, è possibile creare un'azione che invia un messaggio o un'azione che attende una risposta.
 
-## What kind of actions can I use in my bot flow?
+## Che tipo di azioni posso usare nel mio flusso bot?
 
-There are 3 types of actions you can use in your bot flow:
+Ci sono 3 tipi di azioni che si possono usare nel flusso del bot:
 
-- **Interaction** actions: these actions are used to interact with your customers. For example, you can use the "Send Message" action to send a message to your customers.
-- **Contact** actions: these actions are used to manage the conversation. For example, you can close the conversation or transfer it to a human agent.
-- **Logic** actions: these actions are used to add logic to your bot flow. For example, you can use **conditions** and **set variables** to guide the conversation.
+- Azioni di **interazione**: queste azioni sono utilizzate per interagire con i clienti. Ad esempio, è possibile utilizzare l'azione "Invia messaggio" per inviare un messaggio ai clienti.
+- Azioni di **contatto**: queste azioni sono utilizzate per gestire la conversazione. Ad esempio, è possibile chiudere la conversazione o trasferirla a un agente umano.
+- Azioni **Logiche**: queste azioni sono utilizzate per aggiungere logica al flusso del bot. Ad esempio, si possono usare **condizioni** e **impostazioni di variabili** per guidare la conversazione.
 
-## Interaction actions
+## Azioni di interazione
 
-Interaction actions are used to interact with your customers. For example, you can use the "Send Message" action to send a message to your customers.
+Le azioni di interazione sono utilizzate per interagire con i clienti. Ad esempio, si può usare l'azione "Invia messaggio" per inviare un messaggio ai clienti.
 
 <img src={interactionActionsUrl} width={400}/>
 
-## Contact actions
+## Azioni di contatto
 
-Contact actions are used to manage your contacts. For example, you can use the "Add Tag" action to add a tag to a contact.
+Le azioni sui contatti sono utilizzate per gestire i contatti. Ad esempio, si può usare l'azione "Aggiungi tag" per aggiungere un tag a un contatto.
 
-<img src={contactActionsUrl} width={400}/>
+<img src={contattoAzioniUrl} width={400}/>
 
-## Logic actions
+## Azioni logiche
 
-Logic actions are used to add logic to your bot flow. For example, you can use **conditions** and **set variables** to guide the conversation.
+Le azioni logiche sono utilizzate per aggiungere logica al flusso del bot. Ad esempio, si possono usare **condizioni** e **impostazioni di variabili** per guidare la conversazione.
 
 <img src={logicActionsUrl} width={400}/>
 
-## What's next?
+## Cosa c'è dopo?
 
-Check out the [Getting Started](/bot/getting_started) section to learn how to create your first bot or deep dive into this section to learn more about the actions available in the bot builder.
+Consultate la sezione [Getting Started](/bot/getting_started) per imparare a creare il vostro primo bot o approfondite questa sezione per saperne di più sulle azioni disponibili nel costruttore di bot.

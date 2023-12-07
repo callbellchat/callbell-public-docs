@@ -2,18 +2,18 @@
 sidebar_position: 5
 ---
 
-import sendInteractiveListReplyUrl from './assets/send_interactive_list_reply.png'
+importare sendInteractiveListReplyUrl da './assets/send_interactive_list_reply.png'.
 
-# Send Interactive List Reply
+# Invia risposta a elenco interattivo
 
 <img src={sendInteractiveListReplyUrl} width={180} />
 
-The **Send Interactive List Reply** action is used to send a list of items to your customers. 
+L'azione **Invia risposta elenco interattivo** è utilizzata per inviare un elenco di articoli ai clienti.
 
-You can create an interactive list reply from the [Quick Replies Section](https://dash.callbell.eu/settings/templates) of your Callbell dashboard.
+È possibile creare una risposta interattiva ad un elenco dalla [Sezione Risposte rapide](https://dash.callbell.eu/settings/templates) del cruscotto di Callbell.
 
-This action is useful when you want to give your customers the possibility to choose between different options (Maximum 10 options).
+Questa azione è utile quando si vuole dare ai clienti la possibilità di scegliere tra diverse opzioni (massimo 10 opzioni).
 
 :::info
-This action is available only on **WhatsApp Business API** bots.
+Questa azione è disponibile solo sui bot **WhatsApp Business API**.
 :::

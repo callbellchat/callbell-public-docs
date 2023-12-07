@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introduzione
 
-Contacts API allows to recover details regarding contacts created through Callbell.
+L'API Contatti consente di recuperare i dettagli relativi ai contatti creati tramite Callbell.

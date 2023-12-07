@@ -1,34 +1,34 @@
 ---
-title: GET /webhooks/events
+titolo: GET /webhooks/events
 sidebar_position: 4
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs".
 
-# GET /events
+# GET /eventi
 
-List all events belonging to the webhook. A filter can be specified in order to get more specific results.
+Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un filtro per ottenere risultati più specifici.
 
-### Optional Parameters
+### Parametri opzionali
 
-| Parameter       | Type     | Description                                                                               |
+| Parametro | Tipo | Descrizione |
 | :-------------- | :------- | :---------------------------------------------------------------------------------------- |
-| `status`        | string   | The event status (failed, success)                                                        |
-| `page`          | string   | The page number                                                                           |
-| `items`         | string   | The number of items per page                                                              |
-| `subscriptions` | string[] | Comma separated values of the events to subscribe on this webhook (e.g `message_created`) |
+| `status` | stringa | Lo stato dell'evento (fallito, successo) |
+| `pagina` | stringa | Il numero di pagina |
+| `items` | stringa | Il numero di elementi per pagina |
+| `subscriptions` | string[] | Valori separati da virgole degli eventi da sottoscrivere su questo webhook (ad esempio `message_created`) |
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='webhooks_api' request="get_webhooks_events"/>
+<RichiestaTabs endpoint='webhooks_api' request="get_webhooks_events" />
 
-### Response
+### Risposta
 
-| Parameter        | Type                                                      | Description             |
+| Parametro | Tipo | Descrizione |
 | :--------------- | :-------------------------------------------------------- | :---------------------- |
-| `webhook_events` | [WebhookEvent](/api/reference/object_types/webhook_event) | List of webhook events. |
+| `webhook_events` | [WebhookEvent](/api/reference/object_types/webhook_event) | Elenco di eventi webhook. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
@@ -36,7 +36,7 @@ List all events belonging to the webhook. A filter can be specified in order to 
     {
       "event": "message_created",
       "payload": "message_object",
-      "response": {
+      "risposta": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -45,9 +45,9 @@ List all events belonging to the webhook. A filter can be specified in order to 
       "createdAt": "2022-11-08T15:41:49Z"
     },
     {
-      "event": "message_created",
+      "evento": "message_created",
       "payload": "message_object",
-      "response": {
+      "risposta": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -56,9 +56,9 @@ List all events belonging to the webhook. A filter can be specified in order to 
       "createdAt": "2022-11-08T14:52:31Z"
     },
     {
-      "event": "message_created",
+      "evento": "message_created",
       "payload": "contact_object",
-      "response": {
+      "risposta": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -69,7 +69,7 @@ List all events belonging to the webhook. A filter can be specified in order to 
   ],
   "meta": {
     "page": 1,
-    "pages": 2
+    "pagine": 2
   }
 }
 ```

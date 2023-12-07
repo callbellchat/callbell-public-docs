@@ -2,14 +2,14 @@
 sidebar_position: 2
 ---
 
-import addTagsUrl from './assets/add_tags.png'
+importare addTagsUrl da './assets/add_tags.png'.
 
-# Add Tags
+# Aggiungi tag
 
 <img src={addTagsUrl} width={180} />
 
-This action allows you to add tags to the contact talking to the bot.
+Questa azione consente di aggiungere tag al contatto che parla con il bot.
 
-This is useful whenever you want to add a specific tag to the conversation (e.g. `new customer`, `premium customer`, `VIP customer`, etc.) for future reference.
+È utile quando si vuole aggiungere un tag specifico alla conversazione (ad esempio, "nuovo cliente", "cliente premium", "cliente VIP", ecc.
 
-The tag must be created from the [Tags Section](https://dash.callbell.eu/settings/tags) of your Callbell dashboard.
+Il tag deve essere creato dalla [Sezione tag] (https://dash.callbell.eu/settings/tags) del cruscotto di Callbell.

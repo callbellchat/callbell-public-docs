@@ -5,53 +5,53 @@ sidebar_position: 4
 import setVariableUrl from './assets/set_variable.png'
 import setVariableEditUrl from './assets/set_variable_edit.png'
 
-# Set Variable
+# Imposta variabile
 
 <img src={setVariableUrl} width={180} />
 
-The **Set Variable** action is used to set a variable to a specific value.
+L'azione **Set Variable** è usata per impostare una variabile a un valore specifico.
 
-## How to use it
+## Come usarla
 
-After adding the action you can either select an existing variable or create a new one. In the latter case, just type the variable name and then click on the **Create** button.
+Dopo aver aggiunto l'azione, è possibile selezionare una variabile esistente o crearne una nuova. In quest'ultimo caso, è sufficiente digitare il nome della variabile e poi fare clic sul pulsante **Crea**.
 
 <img src={setVariableEditUrl} width={400} />
 
-###  Creating a new variable
+### Creazione di una nuova variabile
 
-Creating a new variable will prompt you to select the variable type. You can choose between **String**, **Number** and **List**.
+La creazione di una nuova variabile richiede la selezione del tipo di variabile. È possibile scegliere tra **Stringa**, **Numero** e **Elenco**.
 
-After selecting the variable type, you can specify the variable value. Depending on the type of variable you selected, you will be able to specify an operation to apply to the variable.
+Dopo aver selezionato il tipo di variabile, è possibile specificare il valore della variabile. A seconda del tipo di variabile selezionata, sarà possibile specificare un'operazione da applicare alla variabile.
 
-### String variables
+### Variabili stringa
 
-If you created or selected a **String** variable, you can perform the following actions:
+Se è stata creata o selezionata una variabile **Stringa**, è possibile eseguire le seguenti operazioni:
 
-- **Replace text** - Replace the variable value with the specified text.
-- **Add to text** - Append the specified text to the variable value.
+- **Replace text** - Sostituisce il valore della variabile con il testo specificato.
+- **Aggiungi al testo** - Aggiunge il testo specificato al valore della variabile.
 
-### Number variables
+### Variabili numeriche
 
-If you created or selected a **Number** variable, you can perform the following actions:
+Se è stata creata o selezionata una variabile **Numero**, è possibile eseguire le seguenti azioni:
 
-- **Replace number** - Replace the variable value with the specified number.
-- **Add number** - Add the specified number to the variable value.
-- **Subtract number** - Subtract the specified number from the variable value.
-- **Multiply number** - Multiply the variable value by the specified number.
-- **Divide number** - Divide the variable value by the specified number.
+- **Replace number** - Sostituisce il valore della variabile con il numero specificato.
+- **Aggiungi numero** - Aggiunge il numero specificato al valore della variabile.
+- **Subtract number** - Sottrae il numero specificato dal valore della variabile.
+- **Moltiplica numero** - Moltiplica il valore della variabile per il numero specificato.
+- Dividere numero** - Divide il valore della variabile per il numero specificato.
 
 :::info
-By default, the variable value is set to `0`.
+Per impostazione predefinita, il valore della variabile è impostato su `0`.
 :::
 
-### List variables
+### Elenco variabili
 
-If you created or selected a **List** variable, you can perform the following actions:
+Se è stata creata o selezionata una variabile **Elenco**, è possibile eseguire le seguenti azioni:
 
-- **Add to list** - Add the specified text to the list.
-- **Remove from list** - Remove the specified text from the list.
-- **Empty list** - Empty the list.
+- **Aggiungi all'elenco** - Aggiunge il testo specificato all'elenco.
+- **Rimuovi da elenco** - Rimuove il testo specificato dall'elenco.
+- **Vuota elenco** - Svuota l'elenco.
 
-### Using variables with other variables
+### Utilizzo di variabili con altre variabili
 
-You can also use variables with other variables. For example, you can set a variable to the value of another variable. This is helpful if you're building a list of values and you want to add a new value to the list or, for example you want to keep track of the score of a user.
+È possibile utilizzare le variabili con altre variabili. Ad esempio, è possibile impostare una variabile sul valore di un'altra variabile. Questo è utile se si sta costruendo un elenco di valori e si vuole aggiungere un nuovo valore all'elenco o, ad esempio, se si vuole tenere traccia del punteggio di un utente.

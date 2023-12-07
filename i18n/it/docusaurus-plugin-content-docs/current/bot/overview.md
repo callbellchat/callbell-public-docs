@@ -2,10 +2,12 @@
 sidebar_position: 1
 ---
 
-# Overview
+# Panoramica
 
-Callbell offers a built-in bot builder that allows you to create a chatbot for WhatsApp, Facebook Messenger, Telegram and Instagram.
+Callbell offre un costruttore di bot integrato che consente di creare un chatbot per WhatsApp, Facebook Messenger, Telegram e Instagram.
 
-## What is a chatbot?
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/ceZHAuhlh2c" title="Crea il tuo primo bot In 5 minuti - Callbell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-A chatbot is a software that allows you to automate conversations with your customers. It can be used to answer frequently asked questions, collect leads, and more.
+## Cos'è un chatbot?
+
+Un chatbot è un software che consente di automatizzare le conversazioni con i clienti. Può essere utilizzato per rispondere alle domande più frequenti, raccogliere contatti e altro ancora.

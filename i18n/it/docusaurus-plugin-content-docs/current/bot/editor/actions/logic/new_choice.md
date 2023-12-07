@@ -2,57 +2,57 @@
 sidebar_position: 2
 ---
 
-import newChoiceUrl from './assets/new_choice.png'
-import newChoiceEditUrl from './assets/new_choice_edit.png'
-import newChoiceFallbackUrl from './assets/new_choice_fallback.png'
+importare newChoiceUrl da './assets/new_choice.png
+importare newChoiceEditUrl da './assets/new_choice_edit.png
+importare newChoiceFallbackUrl da './assets/new_choice_fallback.png'.
 
-# New Choice
+# Nuova scelta
 
 <img src={newChoiceUrl} width={180} />
 
-This action allows you to create a new choice in the current flow.
+Questa azione consente di creare una nuova scelta nel flusso corrente.
 
-## Configuration
+## Configurazione
 
-The action allows you to customize **how the flow should behave** depending on the last message sent by the user or by a variable value.
+L'azione consente di personalizzare **il comportamento del flusso** in base all'ultimo messaggio inviato dall'utente o a un valore variabile.
 
 <img src={newChoiceEditUrl} width={300} />
 
-### Choice triggers
+### Inneschi di scelta
 
-You can specify a **trigger** of the choice by using one of the following equality operators:
+È possibile specificare un **trigger** della scelta utilizzando uno dei seguenti operatori di uguaglianza:
 
-- **Equals** - The choice triggers if the value is equal to the value on the right field.
-- **Contains** - The choice triggers if the value contains the value on the right field.
-- **Starts with** - The choice triggers if the value starts with the value specified in the right field.
-- **Ends with** - The choice triggers if the value ends with the value specified in the right field.
-- **Different from** - The choice triggers if the value is different from the value in the right field.
-- **Greater than** - The choice triggers if the value is greater than the value in the right field.
-- **Less than** - The choice triggers if the value is less than the value in the right field.
-- **Greater than or equal to** - The choice triggers if the value is greater than or equal to the value in the right field.
-- **Less than or equal to** - The choice triggers if the value is less than or equal to the value in the right field.
-- **Is number** - The choice triggers if the value is a number.
-- **Is message** - The choice triggers if the value is a message.
+- **Equals** - La scelta si attiva se il valore è uguale al valore del campo di destra.
+- Contiene** - La scelta si attiva se il valore contiene il valore del campo di destra.
+- Inizia con** - La scelta si attiva se il valore inizia con il valore specificato nel campo di destra.
+- **Finisce con** - La scelta si attiva se il valore termina con il valore specificato nel campo di destra.
+- **Diversa da** - La scelta si attiva se il valore è diverso da quello specificato nel campo di destra.
+- **Maggiore di** - La scelta si attiva se il valore è maggiore di quello indicato nel campo di destra.
+- **Meno di** - La scelta si attiva se il valore è inferiore al valore nel campo di destra.
+- **Maggiore o uguale a** - La scelta si attiva se il valore è maggiore o uguale al valore nel campo di destra.
+- **Meno di o uguale a** - La scelta si attiva se il valore è minore o uguale al valore nel campo di destra.
+- **E' un numero** - La scelta si attiva se il valore è un numero.
+- **E' un messaggio** - La scelta si attiva se il valore è un messaggio.
 
-### Multiple Triggers
+### Trigger multipli
 
-You can specify multiple triggers on the same condition by clicking on the **Add condition** button.
+È possibile specificare più trigger sulla stessa condizione facendo clic sul pulsante **Aggiungi condizione**.
 
-You can decide how to join the multiple conditions by using the **AND** or **OR** operators. If you want to switch between the two operators, click on the **AND** or **OR** button.
+È possibile decidere come unire le condizioni multiple utilizzando gli operatori **AND** o **OR**. Per passare da un operatore all'altro, fare clic sul pulsante **AND** o **OR**.
 
-For example, using multiple **OR** you can build a list of synonyms for the same choice. This is helpful if you want to trigger the same choice for different words.
+Ad esempio, utilizzando più **OR** è possibile creare un elenco di sinonimi per la stessa scelta. Ciò è utile se si desidera attivare la stessa scelta per parole diverse.
 
-At the same time you can use multiple **AND** to build a list of conditions that must be satisfied to trigger the choice. For example, imagine checking the condition of a variable to be more of a certain value and less than another value.
+Allo stesso tempo, è possibile utilizzare più **AND** per creare un elenco di condizioni che devono essere soddisfatte per attivare la scelta. Ad esempio, immaginiamo di verificare la condizione che una variabile sia maggiore di un certo valore e minore di un altro valore.
 
 
-### Variables
+### Variabili
 
-You can compare variable values, meaning that you can take a decision based on the value of a variable. This is helpful when you want to route the bot to take a specific path without having to ask the user for input.
+È possibile confrontare i valori delle variabili, ossia prendere una decisione in base al valore di una variabile. Ciò è utile quando si vuole indirizzare il bot verso un percorso specifico, senza dover chiedere all'utente di fornire un input.
 
 ### Fallback
 
-If none of the conditions are satisfied, the bot will take the **Fallback** path.
+Se nessuna delle condizioni è soddisfatta, il bot prenderà il percorso **Fallback**.
 
 <img src={newChoiceFallbackUrl} width={500} />
 
-Fallbacks are useful when you want to handle all the cases that are not covered by the conditions.
+I fallback sono utili quando si vogliono gestire tutti i casi non coperti dalle condizioni.

@@ -1,45 +1,45 @@
 ---
-title: PATCH /templates/:uuid
-sidebar_position: 4
+titolo: PATCH /templates/:uuid
+posizione della barra laterale: 4
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs"
 
 # PATCH /templates/:uuid
 
-Updates an existing template.
+Aggiorna un template esistente.
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter | Type   | Description                    |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :----------------------------- |
-| `uuid`    | string | The identifier of the template |
+| `uuid` | stringa | L'identificatore del modello |
 
-### Optional Parameters
+### Parametri opzionali
 
-| Parameter | Type   | Description                                      |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :----------------------------------------------- |
-| `title`   | string | The new title that will be given to the template |
+| `title` | stringa | Il nuovo titolo che verrà dato al modello |
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='templates_api' request="patch_template"/>
+<RichiestaTabs endpoint='templates_api' request="patch_template" />
 
-### Response
+### Risposta
 
-| Parameter  | Type                                               | Description                                            |
+| Parametro | Tipo | Descrizione |
 | :--------- | :------------------------------------------------- | :----------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | The object representing the Whatsapp template message. |
+| `template` | [Template[]](/api/reference/object_types/template) | L'oggetto che rappresenta il messaggio del modello Whatsapp. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
   "templates": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "title": "New title",
+    "title": "Nuovo titolo",
     "templateType": "text",
-    "text": "Message text",
+    "text": "Testo del messaggio",
     "createdAt": "2020-11-13T21:08:53Z"
   }
 }

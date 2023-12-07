@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Base URL
+# URL di base
 
-The base API URL used in all the endpoints in this documentation is the following:
+L'URL API di base utilizzato in tutti gli endpoint di questa documentazione è il seguente:
 
 ```
 https://api.callbell.eu/v1

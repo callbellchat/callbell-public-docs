@@ -2,10 +2,10 @@
 sidebar_position: 5
 ---
 
-import assignUserUrl from './assets/assign_user.png'
+importare assignUserUrl da './assets/assign_user.png'.
 
-# Assign User
+# Assegna utente
 <img src={assignUserUrl} width={180} />
 
-This action allows you to assign a specific agent to the current contact.
+Questa azione consente di assegnare un agente specifico al contatto corrente.
 

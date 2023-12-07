@@ -2,19 +2,19 @@
 sidebar_position: 6
 ---
 
-# Postman Collection
+# Collezione Postino
 
-[Postman is a desktop application](https://www.postman.com/) that allows you to configure and intereact with HTTP-based APIs. Callbell REST API implements several endpoints that you can interact with. 
+[Postman è un'applicazione desktop](https://www.postman.com/) che consente di configurare e interagire con API basate su HTTP. Callbell REST API implementa diversi endpoint con cui è possibile interagire.
 
-To utilize our Postman collection click the button below:
+Per utilizzare la nostra collezione di Postman, fare clic sul pulsante sottostante:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4469469-67323d5f-a547-4b9d-ba96-cced69795917?action=collection%2Ffork&collection-url=/postman-collection.json)
+[![Esegui in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4469469-67323d5f-a547-4b9d-ba96-cced69795917?action=collection%2Ffork&collection-url=/postman-collection.json)
 
 
-Now that you have imported the collection, remember to configure the `CALLBELL_TOKEN` variable with your API Token.
+Dopo aver importato la collezione, ricordarsi di configurare la variabile `CALLBELL_TOKEN` con il proprio token API.
 
-If you are new to Postman you can also learn more about it:
+Se si è alle prime armi con Postman, si può anche imparare di più su di esso:
 
-- [Postman: Introduction](https://learning.postman.com/docs/getting-started/introduction/)
-- [Postman: Using variables](https://learning.postman.com/docs/sending-requests/variables/)
-- [Postman: Importing and exporting data](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)
+- [Postman: Introduzione](https://learning.postman.com/docs/getting-started/introduction/)
+- [Postman: Uso delle variabili](https://learning.postman.com/docs/sending-requests/variables/)
+- [Postman: Importare ed esportare dati](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)

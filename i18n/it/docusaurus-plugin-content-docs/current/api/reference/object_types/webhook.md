@@ -1,13 +1,13 @@
 ---
-title: Webhook
+titolo: Webhook
 sidebar_position: 3
 ---
 
-### Webhook Object
+### Oggetto Webhook
 
-| Field           | Type     | Description                                                                                                                                                                                            |
+| Campo | Tipo | Descrizione |
 | :-------------- | :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `url`           | string   | A valid url where the events will be sent from Callbell                                                                                                                                                |
-| `subscriptions` | string[] | List of subcriptions containing subscribed events (`message_created`, `message_status_updated`, `contact_created`, `contact_updated`, `contact_deleted`, `conversation_opened`, `conversation_closed`) |
-| `enabled`       | Boolean  | Boolean value which determins if the webhook is enabled                                                                                                                                                |
-| `createdAt`     | string   | Date of webhook creation (ISO 8601 formatted)                                                                                                                                                          |
+| `url` | stringa | Un url valido dove gli eventi saranno inviati da Callbell |
+| `subscriptions` | string[] | Elenco di sottoscrizioni contenenti gli eventi sottoscritti (`messaggio_creato`, `messaggio_stato_aggiornato`, `contatto_creato`, `contatto_aggiornato`, `contatto_cancellato`, `conversazione_aperta`, `conversazione_chiusa`) |
+| `enabled` | Boolean | Valore booleano che determina se il webhook è abilitato |
+| `createdAt` | stringa | Data di creazione del webhook (formattata ISO 8601) |

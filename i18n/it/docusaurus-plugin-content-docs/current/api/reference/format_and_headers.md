@@ -1,12 +1,12 @@
 ---
-title: Format and Headers
+titolo: Formato e intestazioni
 sidebar_position: 4
 ---
 
-All responses are returned in JSON format. On the other hand, the API accepts JSON payloads only, meaning that it’s the client responsibility to send an accept header like the following:
+Tutte le risposte sono restituite in formato JSON. D'altra parte, l'API accetta solo payload JSON, il che significa che è responsabilità del client inviare un'intestazione accept come la seguente:
 
 ```
-Accept: application/json
+Accetta: application/json
 ```
 
-Following the same logic, all body endpoints (e.g. in POST, PUT and PATCH requests) needs to be JSON-encoded accordingly.
+Seguendo la stessa logica, tutti i corpi degli endpoint (ad esempio nelle richieste POST, PUT e PATCH) devono essere codificati in JSON.

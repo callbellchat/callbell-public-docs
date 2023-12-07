@@ -2,6 +2,6 @@
 sidebar_position: 5
 ---
 
-# Rate Limits
+# Limiti di velocità
 
-Our API will start rejecting HTTP requests by returning 429 Too Many Requests in case that the RPS (_Requests per Seconds_) exceeds the limit of 300 RPS.
+La nostra API inizierà a rifiutare le richieste HTTP restituendo 429 Too Many Requests nel caso in cui l'RPS (_Requests per Seconds_) superi il limite di 300 RPS.

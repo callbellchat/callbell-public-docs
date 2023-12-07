@@ -1,60 +1,60 @@
 ---
-title: PATCH /contacts/:uuid
-sidebar_position: 5
+titolo: PATCH /contatti/:uuid
+posizione della barra laterale: 5
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs"
 
-# PATCH /contacts/:uuid
+# PATCH /contatti/:uuid
 
-Updates an existing contact.
+Aggiorna un contatto esistente.
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter | Type   | Description                                                   |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :------------------------------------------------------------ |
-| `uuid`    | string | The identifier of the contact (e.g. phone number in WhatsApp) |
+| `uuid` | stringa | L'identificativo del contatto (ad esempio il numero di telefono in WhatsApp) |
 
-### Optional Parameters
+### Parametri opzionali
 
-### Optional Parameters
+### Parametri opzionali
 
-| Parameter       | Type     | Description                                                                   |
+| Parametro | Tipo | Descrizione |
 | :-------------- | :------- | :---------------------------------------------------------------------------- |
-| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
-| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
-| `name`          | string   | The name of the contact                                                       |
-| `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact            |
-| `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
+| `tags` | string[] | Un elenco di valori separati da virgole (ad esempio `['Richiamato', 'Interessato']`) |
+| `custom_fields` | string{} | Un oggetto con i campi personalizzati (ad esempio, `{'Indirizzo di fatturazione': 'Main Street 1}`) |
+| `nome` | stringa | Il nome del contatto |
+| `assigned_user` | Stringa | Email del collaboratore che si vuole assegnare a un contatto |
+| `assegn_utente` | Booleano | `true` se si vuole rimuovere il collaboratore assegnato da un contatto |
 
-:::caution
-Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
+:::attenzione
+Assicurarsi che `custom_fields` e `tags` esistano già nel proprio account prima di passarli. Per ulteriori informazioni, visitare [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni.
 
-Similarly, for `assigned_user`, use a valid email address associated with a user in your account.
+Allo stesso modo, per `assigned_user`, utilizzare un indirizzo e-mail valido associato a un utente del proprio account.
 :::
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='contacts_api' request="patch_contacts"/>
+<RichiestaTabs endpoint='contacts_api' request="patch_contacts" />
 
-### Response
+### Risposta
 
-| Parameter | Type                                           | Description                         |
+| Parametro | Tipo | Descrizione |
 | :-------- | :--------------------------------------------- | :---------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The contact which has been updated. |
+| `contatto` | [Contatto](/api/reference/object_types/contatto) | Il contatto che è stato aggiornato. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
-  "contact": [
+  "contatto": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-      "name": "UPDATE Doe",
-      "phoneNumber": "123456789",
+      "nome": "UPDATE Doe",
+      "numero di telefono": "123456789",
       "avatarUrl": null,
       "createdAt": "2020-11-13T21:08:53Z",
-      "source": "whatsapp",
+      "fonte": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "tags": [],
       "assignedUser": "jane.doe@email.com",

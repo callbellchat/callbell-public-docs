@@ -1,38 +1,38 @@
 ---
-title: GET /contacts/phone/:number
+titolo: GET /contatti/telefono/:numero
 sidebar_position: 4
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs"
 
-# GET /contacts/phone/:number
+# GET /contatti/telefono/:numero
 
-Get a specific contact given a `phone_number`.
+Ottiene un contatto specifico dato un `numero_di_telefono`.
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter      | Type   | Description                     |
+| Parametro | Tipo | Descrizione |
 | :------------- | :----- | :------------------------------ |
-| `phone_number` | string | The phone number of the contact |
+| `numero_telefono` | stringa | Il numero di telefono del contatto |
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='contacts_api' request="get_contact_by_phone"/>
+<RichiestaTabs endpoint='contacts_api' request="get_contact_by_phone"/>
 
-### Response
+### Risposta
 
-| Parameter | Type                                           | Description                          |
+| Parametro | Tipo | Descrizione |
 | :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The object representing the contact. |
+| `contatto` | [Contatto](/api/reference/object_types/contatto) | L'oggetto che rappresenta il contatto. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
-  "contact": {
+  "contatto": {
     "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-    "name": "John Doe",
-    "phoneNumber": "+123 456 789",
+    "nome": "John Doe",
+    "numero di telefono": "+123 456 789",
     "avatarUrl": null,
     "createdAt": "2020-11-13T21:08:53Z",
     "source": "whatsapp",
@@ -41,8 +41,8 @@ Get a specific contact given a `phone_number`.
     "assignedUser": null,
     "customFields": {
       "Address": "Oxford Street 123",
-      "Billing Address": "Oxford Street 123",
-      "VAT": "ABC123DCE456"
+      "Indirizzo di fatturazione": "Oxford Street 123",
+      "IVA": "ABC123DCE456"
     }
   }
 }

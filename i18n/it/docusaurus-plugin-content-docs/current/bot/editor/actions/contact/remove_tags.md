@@ -2,11 +2,11 @@
 sidebar_position: 3
 ---
 
-import removeTagsUrl from './assets/remove_tags.png'
+importare removeTagsUrl da './assets/remove_tags.png'.
 
-# Remove Tags
+# Rimuovere i tag
 <img src={removeTagsUrl} width={180} />
 
-This action allows you to remove one or more tags from the current contact.
+Questa azione consente di rimuovere uno o più tag dal contatto corrente.
 
-If the tag is not present in the conversation, the action will be ignored.
+Se il tag non è presente nella conversazione, l'azione sarà ignorata.

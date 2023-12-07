@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introduzione
 
-Webhooks API allows to create a new webhook and subscribe to the available events.
+L'API Webhooks consente di creare un nuovo webhook e di sottoscrivere gli eventi disponibili.

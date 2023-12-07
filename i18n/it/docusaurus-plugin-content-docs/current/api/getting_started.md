@@ -2,74 +2,74 @@
 sidebar_position: 2
 ---
 
-# Getting Started
+# Come iniziare
 
-This step-to-step guide will walk you through using Callbell API to send a message.
+Questa guida passo passo vi guiderà nell'uso dell'API di Callbell per inviare un messaggio.
 
-## Prerequisites
+## Prerequisiti
 
-You will need to create an account on Callbell and have configured a WhatsApp Business channel in order to be able to follow this guide.
+Per poter seguire questa guida è necessario creare un account su Callbell e aver configurato un canale WhatsApp Business.
 
-- Sign up for [Callbell](https://dash.callbell.eu/users/sign_up)
-- See more information about our [WhatsApp Business API integration](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
+- Iscriviti a [Callbell](https://dash.callbell.eu/users/sign_up)
+- Maggiori informazioni sulla nostra [integrazione API WhatsApp Business](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
 
-## Getting your API keys
+## Ottenere le chiavi API
 
-Navigate to Callbell API keys page in settings (https://dash.callbell.eu/settings/api_settings/keys) in order to generate a new API key:
+Andate alla pagina delle chiavi API di Callbell nelle impostazioni (https://dash.callbell.eu/settings/api_settings/keys) per generare una nuova chiave API:
 
 ![create_api_key](./assets/create_api_key_1.jpg)
 
-After clicking on the **Create API Key** button make sure to copy the token and store it safely.
+Dopo aver cliccato sul pulsante **Create API Key** assicuratevi di copiare il token e di conservarlo in modo sicuro.
 
-:::caution
-The API key will be showed only on this screen. If you lose access to it you'll have to generate a new one.
+:::attenzione
+La chiave API verrà mostrata solo in questa schermata. Se si perde l'accesso alla chiave, è necessario generarne una nuova.
 :::
 
-## Send a test message using cURL
+## Inviare un messaggio di prova utilizzando cURL
 
-By using the [Messages API' send message method](/docs/api/reference/messages_api/post_send_messages.md) you can test if your API key is working as expected:
+Utilizzando il metodo [Messages API' send message] (/docs/api/reference/messages_api/post_send_messages.md) si può verificare se la chiave API funziona come previsto:
 
 ```bash
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
   -H "Authorization: Bearer <REPLACE_API_KEY_HERE>" \
   -H "Content-Type: application/json" \
   -d '{
-    "to": "<REPLACE_PHONE_NUMBER_HERE>",
-    "from": "whatsapp",
-    "type": "text",
-    "content": {
-      "text": "Hello from Callbell API!"
+    "to": "<SOSTITUIRE_IL_NUMERO_DI_TELEFONO_QUI>",
+    "da": "whatsapp",
+    "tipo": "text",
+    "contenuto": {
+      "text": "Ciao da Callbell API!"
     }
   }'
 ```
 
-Just replace `REPLACE_API_KEY_HERE` with the API Key generated on the [Getting your API keys](#getting-your-api-keys) step and the `REPLACE_PHONE_NUMBER_HERE` with the receiver's phone number.
+Basta sostituire `REPLACE_API_KEY_HERE` con la chiave API generata nel passaggio [Getting your API keys](#getting-your-api-keys) e `REPLACE_PHONE_NUMBER_HERE` con il numero di telefono del destinatario.
 
 :::info
-Make sure that the receiving phone number has _opted-in_ and you're **inside the 24 hours rule** of WhatsApp Business API.
+Assicurarsi che il numero di telefono del destinatario abbia effettuato l'accesso e che si sia **entro la regola delle 24 ore** di WhatsApp Business API.
 :::
 
-If the message went through correctly you will receive a response similar to this one:
+Se il messaggio è stato inviato correttamente, riceverete una risposta simile a questa:
 
 ```json
 {
   "message": {
     "uuid": "<MESSAGE_UUID>",
-    "status": "enqueued"
+    "stato": "enqueued"
   }
 }
 ```
 
-This means that the message has been _successfully enqueued_ for send to the desired phone number.
+Questo significa che il messaggio è stato _successivamente messo in attesa_ per essere inviato al numero di telefono desiderato.
 
-### Retrieve the status of a message
+### Recuperare lo stato di un messaggio
 
-In order to know if our test message was delivered successfully we can use either of the following methods:
+Per sapere se il nostro messaggio di prova è stato consegnato con successo, possiamo usare uno dei seguenti metodi:
 
-- Use the [get message status endpoint](api/reference/messages_api/get_message_status.md)
-- Enable **Webhooks** on the API keys section and subscribe to the `message_status_updated` event type
+- Utilizzare l'endpoint [get message status](api/reference/messages_api/get_message_status.md)
+- Abilitare **Webhooks** nella sezione delle chiavi API e sottoscrivere il tipo di evento `message_status_updated
 
-In this example we'll use the first method; in order to check the status of the test message just perform the following cURL from a terminal:
+In questo esempio utilizzeremo il primo metodo; per verificare lo stato del messaggio di prova è sufficiente eseguire il seguente cURL da un terminale:
 
 ```bash
 curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
@@ -77,21 +77,21 @@ curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
   -H "Content-Type: application/json"
 ```
 
-Make sure to replace `REPLACE_API_KEY_HERE` with your API key and `REPLACE_UUID_HERE` with the message identifier obtained from the [Send a test message](#send-a-test-message-using-curl) step.
+Assicurarsi di sostituire `REPLACE_API_KEY_HERE` con la propria chiave API e `REPLACE_UUID_HERE` con l'identificatore del messaggio ottenuto dal passo [Send a test message](#send-a-test-message-using-curl).
 
-You'll get back the following response:
+Si otterrà la seguente risposta:
 
 ```json
 {
-  "message": {
+  "messaggio": {
     "uuid": "<MESSAGE_UUID>",
-    "status": "delivered"
+    "stato": "delivered"
   }
 }
 ```
 
-This confirms that the message was successfully sent to the user but it hasn't been read yet.
+Questo conferma che il messaggio è stato inviato con successo all'utente, ma non è ancora stato letto.
 
-### Next Steps
+### Passi successivi
 
-Try exploring our [Messages](/docs/api/reference/messages_api/introduction.md) and [Contacts](/docs/api/reference/contacts_api/introduction.md) APIs for more examples.
+Provate a esplorare le nostre API [Messages](/docs/api/reference/messages_api/introduction.md) e [Contacts](/docs/api/reference/contacts_api/introduction.md) per ulteriori esempi.

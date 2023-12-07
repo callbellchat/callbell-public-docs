@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introduzione
 
-Messages API is a RESTful set of endpoints which allows you to _programmatically_ send messages to your customers through Callbell.
+L'API Messaggi è un insieme di endpoint RESTful che consente di inviare _programmaticamente_ messaggi ai propri clienti attraverso Callbell.

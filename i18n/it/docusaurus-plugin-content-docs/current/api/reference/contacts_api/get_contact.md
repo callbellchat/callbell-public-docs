@@ -1,39 +1,39 @@
 ---
-title: GET /contacts/:uuid
+titolo: GET /contatti/:uuid
 sidebar_position: 3
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs"
 
-# GET /contact/:uuid
+# GET /contatto/:uuid
 
-Get a specific contact given a `uuid`.
+Ottiene un contatto specifico, dato un `uuid`.
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter | Type   | Description             |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :---------------------- |
-| `uuid`    | string | The uuid of the contact |
+| `uuid` | stringa | L'uuid del contatto |
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='contacts_api' request="get_contact"/>
+<RichiestaTabs endpoint='contacts_api' request="get_contact" />
 
-### Response
+### Risposta
 
-| Parameter | Type                                           | Description                          |
+| Parametro | Tipo | Descrizione |
 | :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The object representing the contact. |
+| `contatto` | [Contatto](/api/reference/object_types/contatto) | L'oggetto che rappresenta il contatto. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
-  "contact": [
+  "contatto": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-      "name": "John Doe",
-      "phoneNumber": "+123 456 789",
+      "nome": "John Doe",
+      "numero di telefono": "+123 456 789",
       "avatarUrl": null,
       "createdAt": "2020-11-13T21:08:53Z",
       "source": "whatsapp",
@@ -42,8 +42,8 @@ Get a specific contact given a `uuid`.
       "assignedUser": null,
       "customFields": {
         "Address": "Oxford Street 123",
-        "Billing Address": "Oxford Street 123",
-        "VAT": "ABC123DCE456"
+        "Indirizzo di fatturazione": "Oxford Street 123",
+        "IVA": "ABC123DCE456"
       }
     }
   ]

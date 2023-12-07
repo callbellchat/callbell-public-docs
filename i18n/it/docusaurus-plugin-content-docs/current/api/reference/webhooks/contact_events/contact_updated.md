@@ -2,27 +2,27 @@
 sidebar_position: 2
 ---
 
-# Contact Updated
+# Contatto aggiornato
 
-This event will be sent whenever a contact is **updated**. This also includes _tag changes_.
+Questo evento sarà inviato ogni volta che un contatto viene **aggiornato**. Questo include anche le _modifiche dell'etichetta_.
 
-### Event Name
+### Nome evento
 
-`contact_updated`
+`contatto_aggiornato`
 
-### Payload Fields
+### Campi del carico utile
 
-See [Contact Object](./../../object_types/contact.md)
+Vedere [Oggetto Contatto](./../../object_types/contact.md)
 
-### Example Payload
+### Esempio di carico utile
 
-```json title=payload.json
+``json title=payload.json
 {
-  "event": "contact_updated",
+  "evento": "contact_updated",
   "payload": {
     "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
-    "name": "John Doe",
-    "tags": ["Lead"],
+    "nome": "John Doe",
+    "tag": ["Lead"],
     "uuid": "eb2b914a977e4ab896e7b886698b3eac",
     "source": "whatsapp",
     "avatarUrl": null,

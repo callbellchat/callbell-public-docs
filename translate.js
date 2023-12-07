@@ -7,7 +7,7 @@ const { readdir } = require("fs").promises;
 const authKey = process.env.DEEPL_AUTH_KEY;
 const translator = new deepl.Translator(authKey);
 
-const TARGET_LANGUAGES = ["es"];
+const TARGET_LANGUAGES = ["it"];
 const SOURCE_LANGUAGE = "en";
 const DEEPL_LANGUAGE_MAPPING = {
   en: "en-US",

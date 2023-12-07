@@ -1,82 +1,82 @@
-# Message Status Updated
+# Stato del messaggio aggiornato
 
-:::caution
-Note that **message deliver notifications** are only available on **WhatsApp Business API** and **WhatsApp QR API**.
+:::attenzione
+Si noti che le **notifiche di consegna dei messaggi** sono disponibili solo su **WhatsApp Business API** e **WhatsApp QR API**.
 :::
 
 :::info
-Events are only forwarded for **outgoing messages**. Incoming messages won't trigger any status updates.
+Gli eventi vengono inoltrati solo per i **messaggi in uscita**. I messaggi in arrivo non attivano alcun aggiornamento di stato.
 :::
 
-This event will be sent whenever a message status gets an **update**. This can be one of the following values:
+Questo evento viene inviato ogni volta che lo stato di un messaggio viene **aggiornato**. Può essere uno dei seguenti valori:
 
-- `enqueued`
-- `sent`
-- `delivered`
-- `read`
-- `failed`
+- `in attesa`
+- `inviato`
+- `consegnato`
+- `letto`
+- `inadempiuto`
 - `mismatch`
-- `deleted`
+- `cancellato`
 
 
-### Message Statuses
+### Stati dei messaggi
 
-#### Enqueued
+#### In attesa
 
-Sent when the message is successfully sent to the WhatsApp Business API client or to the QR API client.
+Inviato quando il messaggio è stato inviato con successo al client API di WhatsApp Business o al client API QR.
 
-#### Sent
+#### Inviato
 
-This status is sent whenever the message is sent to the end-user device.
+Questo stato viene inviato ogni volta che il messaggio viene inviato al dispositivo dell'utente finale.
 
-#### Delivered
+#### Consegnato
 
-Sent when the message has finally been delivered to the end-user device.
+Inviato quando il messaggio è stato finalmente consegnato al dispositivo dell'utente finale.
 
-#### Read
+#### Letto
 
-Represents that the message has been successfully read by the end-user.
+Rappresenta che il messaggio è stato letto con successo dall'utente finale.
 
-#### Failed
+#### Fallito
 
-This status is emitted whenever the delivery of the message wasn't possible. In the inner payload the failure reason is also specified (e.g. _"number does not exist on WhatsApp"_)
+Questo stato viene emesso quando la consegna del messaggio non è stata possibile. Nel payload interno viene specificato anche il motivo del fallimento (ad esempio _"il numero non esiste su WhatsApp"_).
 
 #### Mismatch
 
-This event status is sent whenever WhatsApp Business API performs a phone number correction automatically. The corrected phone number identifier will be present inside the inner payload of the event.
+Questo stato dell'evento viene inviato ogni volta che l'API di WhatsApp Business esegue automaticamente una correzione del numero di telefono. L'identificatore del numero di telefono corretto sarà presente nel payload interno dell'evento.
 
-### Deleted 
-:::caution
-This event has been deprecated since it's not supported anymore by Meta.
+### Soppresso
+:::attenzione
+Questo evento è stato deprecato perché non è più supportato da Meta.
 :::
 
-Represents a message deletion from the end-user, both for _"delete only for me"_ and _"delete for everyone"_.
+Rappresenta la cancellazione di un messaggio da parte dell'utente finale, sia per _"cancella solo per me"_ che per _"cancella per tutti"_.
 
 
-### Event Name
+### Nome evento
 
-`message_status_updated`
+Messaggio_stato_aggiornato
 
-### Payload Fields
+### Campi del carico utile
 
-| Field                  | Type   | Description                          |
+| Campo | Tipo | Descrizione |
 | :--------------------- | :----- | :----------------------------------- |
-| `uuid`                 | string | The unique identifier of the message |
-| `status`               | string | The delivery status of the message   |
-| `messageStatusPayload` | JSON   | The raw message status payload       |
+| `uuid` | stringa | L'identificativo univoco del messaggio |
+| `status` | stringa | Lo stato di consegna del messaggio |
+| `messageStatusPayload` | JSON | Il payload grezzo dello stato del messaggio |
 
-### Example Payload
+### Esempio di carico utile
 
 ```json title=payload.json
 {
-  "event": "message_status_updated",
+  "evento": "message_status_updated",
   "payload": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
     "status": "read",
     "messageStatusPayload":{
-      "id":"gBGGM2MSRxl_Aglqmg5KQXU7ABC",
+      "id": "gBGGM2MSRxl_Aglqmg5KQXU7ABC",
       "gsId":"2b34bfb7-2631-4763-89fb-1b3c65a4babc",
-      "type":"read",
+      "tipo: "read",
       "payload":{
         "ts":1686563913
       },

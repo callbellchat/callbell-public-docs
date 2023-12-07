@@ -1,29 +1,29 @@
 ---
-title: GET /messages/status/:uuid
+titolo: GET /messaggi/stato/:uuid
 sidebar_position: 3
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs"
 
 # GET /messages/status/:uuid
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter | Type   | Description                                           |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :---------------------------------------------------- |
-| `uuid`    | String | Identifier of the message which was sent through API. |
+| `uuid` | Stringa | Identificatore del messaggio inviato tramite API. 
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='messages_api' request="get_message_status"/>
+<RichiestaTabs endpoint='messages_api' request="get_message_status" />
 
-### Response
+### Risposta
 
-| Parameter | Type                                                                   | Description                                  |
+| Parametro | Tipo | Descrizione |
 | :-------- | :--------------------------------------------------------------------- | :------------------------------------------- |
-| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | The message details comprehensive of status. |
+| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | I dettagli del messaggio completi di stato. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
@@ -32,10 +32,10 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
     "status": "enqueued",
     "messageStatusPayload":{
       "id":"2b34bfb7-2631-4763-89fb-1b3c65a4baaa",
-      "type":"enqueued",
+      "type": "enqueued",
       "payload":{
-        "type":"session",
-        "whatsappMessageId":"gBGGM2MSRxl_AAlqmG1KQXU7nz4"
+        "type": "session",
+        "whatsappMessageId": "gBGGM2MSRxl_AAlqmG1KQXU7nz4".
       },
       "destination":"1122334455"
     }

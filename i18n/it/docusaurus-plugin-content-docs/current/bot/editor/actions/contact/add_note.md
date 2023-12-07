@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 
-import addNoteUrl from './assets/add_note.png'
+importare addNoteUrl da './assets/add_note.png'.
 
-# Add Note
+# Aggiungi nota
 
 <img src={addNoteUrl} width={180} />
 
-This action adds a note to the conversation.
+Questa azione aggiunge una nota alla conversazione.
 
-This action is useful when you want to add a note to the conversation. You can use variables to personalize the note or **tag a collaborator** by using the `@` symbol.
+Questa azione è utile quando si vuole aggiungere una nota alla conversazione. È possibile utilizzare le variabili per personalizzare la nota o **etichettare un collaboratore** utilizzando il simbolo `@`.

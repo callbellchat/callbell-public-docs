@@ -2,12 +2,12 @@
 sidebar_position: 3
 ---
 
-# Authorization
+# Autorizzazione
 
-It’s necessary to specify an access token for every requests sent to the API
+È necessario specificare un token di accesso per ogni richiesta inviata all'API
 
-More specifically, token will be generated and stored inside our dashboard and can be used by setting an authorization header like the following:
+In particolare, il token sarà generato e memorizzato all'interno della nostra dashboard e potrà essere utilizzato impostando un header di autorizzazione come il seguente:
 
 ```
-Authorization: Bearer <XXX-XXXXXXXXXX>
+Autorizzazione: Bearer <XXX-XXXXXXXXXX>
 ```

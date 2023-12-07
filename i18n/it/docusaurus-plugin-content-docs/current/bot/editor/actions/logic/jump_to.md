@@ -2,19 +2,19 @@
 sidebar_position: 3
 ---
 
-import jumpToUrl from './assets/jump_to.png'
-import jumpToEditUrl from './assets/jump_to_edit.png'
+importare jumpToUrl da './assets/jump_to.png'.
+importare jumpToEditUrl da './assets/jump_to_edit.png'.
 
-# Jump to
+# Salta a
 
-This action allows you to jump to a specific block of the bot sequence.
+Questa azione consente di saltare a un blocco specifico della sequenza bot.
 
 <img src={jumpToUrl} width={180} />
 
-This is useful when you want to jump to a specific point of the bot sequence, for example, when the user is not able to answer a question or when the user enters inside a fallback block.
+È utile quando si vuole saltare a un punto specifico della sequenza bot, ad esempio quando l'utente non è in grado di rispondere a una domanda o quando entra in un blocco di ripiego.
 
-## How to use it
+## Come usarlo
 
-To use this action, you need to select the block you want to jump to. You can do this by clicking on the **Jump to** action and then selecting the block you want to jump to.
+Per utilizzare questa azione, è necessario selezionare il blocco a cui si vuole saltare. Per farlo, si può fare clic sull'azione **Salta a** e poi selezionare il blocco a cui si vuole saltare.
 
 <img src={jumpToEditUrl} width={500} />

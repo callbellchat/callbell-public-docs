@@ -1,40 +1,40 @@
 ---
-title: GET /teams/:uuid
-sidebar_position: 3
+titolo: GET /teams/:uuid
+posizione_di_side: 3
 ---
 
-import RequestTabs from "@site/src/components/Requests/RequestTabs"
+importare RequestTabs da "@site/src/components/Requests/RequestTabs".
 
 # GET /teams/:uuid
 
-Get a specific team given a `uuid`.
+Ottiene un team specifico, dato un `uuid`.
 
-### Required Parameters
+### Parametri richiesti
 
-| Parameter | Type   | Description          |
+| Parametro | Tipo | Descrizione |
 | :-------- | :----- | :------------------- |
-| `uuid`    | string | The uuid of the team |
+| `uuid` | stringa | L'uuid della squadra |
 
-### Example Request
+### Esempio di richiesta
 
-<RequestTabs endpoint='teams_api' request="get_team"/>
+<RichiestaTabs endpoint='teams_api' request="get_team" />
 
-### Response
+### Risposta
 
-| Parameter | Type                                     | Description                        |
+| Parametro | Tipo | Descrizione |
 | :-------- | :--------------------------------------- | :--------------------------------- |
-| `team`    | [Team](/api/reference/object_types/team) | The object representing the  team. |
+| `team` | [Team](/api/reference/object_types/team) | L'oggetto che rappresenta il team. |
 
-### Example Response
+### Esempio di risposta
 
 ```json title=response.json
 {
   "team": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "name": "General",
+    "nome": "Generale",
     "createdAt": "2020-11-13T21:08:53Z",
     "default": true,
-    "members": 2
+    "membri": 2
   }
 }
 ```
