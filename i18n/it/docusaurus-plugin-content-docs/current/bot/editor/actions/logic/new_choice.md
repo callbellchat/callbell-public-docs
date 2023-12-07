@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-importare newChoiceUrl da './assets/new_choice.png
-importare newChoiceEditUrl da './assets/new_choice_edit.png
-importare newChoiceFallbackUrl da './assets/new_choice_fallback.png'.
+import newChoiceUrl from './assets/new_choice.png'
+import newChoiceEditUrl from './assets/new_choice_edit.png'
+import newChoiceFallbackUrl from './assets/new_choice_fallback.png'
 
 # Nuova scelta
 
@@ -23,8 +23,8 @@ L'azione consente di personalizzare **il comportamento del flusso** in base all'
 È possibile specificare un **trigger** della scelta utilizzando uno dei seguenti operatori di uguaglianza:
 
 - **Equals** - La scelta si attiva se il valore è uguale al valore del campo di destra.
-- Contiene** - La scelta si attiva se il valore contiene il valore del campo di destra.
-- Inizia con** - La scelta si attiva se il valore inizia con il valore specificato nel campo di destra.
+- **Contiene** - La scelta si attiva se il valore contiene il valore del campo di destra.
+- **Inizia con** - La scelta si attiva se il valore inizia con il valore specificato nel campo di destra.
 - **Finisce con** - La scelta si attiva se il valore termina con il valore specificato nel campo di destra.
 - **Diversa da** - La scelta si attiva se il valore è diverso da quello specificato nel campo di destra.
 - **Maggiore di** - La scelta si attiva se il valore è maggiore di quello indicato nel campo di destra.

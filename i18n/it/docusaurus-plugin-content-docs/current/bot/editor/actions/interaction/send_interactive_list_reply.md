@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-importare sendInteractiveListReplyUrl da './assets/send_interactive_list_reply.png'.
+import sendInteractiveListReplyUrl from './assets/send_interactive_list_reply.png'
 
 # Invia risposta a elenco interattivo
 

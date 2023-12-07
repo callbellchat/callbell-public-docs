@@ -3,7 +3,7 @@ titolo: GET /webhooks/events
 sidebar_position: 4
 ---
 
-importare RequestTabs da "@site/src/components/Requests/RequestTabs".
+import RequestTabs from"@site/src/components/Requests/RequestTabs"
 
 # GET /eventi
 
@@ -11,21 +11,21 @@ Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un fil
 
 ### Parametri opzionali
 
-| Parametro | Tipo | Descrizione |
-| :-------------- | :------- | :---------------------------------------------------------------------------------------- |
-| `status` | stringa | Lo stato dell'evento (fallito, successo) |
-| `pagina` | stringa | Il numero di pagina |
-| `items` | stringa | Il numero di elementi per pagina |
+| Parametro       | Tipo     | Descrizione                                                                                               |
+| :-------------- | :------- | :-------------------------------------------------------------------------------------------------------- |
+| `status`        | stringa  | Lo stato dell'evento (fallito, successo)                                                                  |
+| `pagina`        | stringa  | Il numero di pagina                                                                                       |
+| `items`         | stringa  | Il numero di elementi per pagina                                                                          |
 | `subscriptions` | string[] | Valori separati da virgole degli eventi da sottoscrivere su questo webhook (ad esempio `message_created`) |
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='webhooks_api' request="get_webhooks_events" />
+<RequestTabs endpoint='webhooks_api' request="get_webhooks_events" />
 
 ### Risposta
 
-| Parametro | Tipo | Descrizione |
-| :--------------- | :-------------------------------------------------------- | :---------------------- |
+| Parametro        | Tipo                                                      | Descrizione               |
+| :--------------- | :-------------------------------------------------------- | :------------------------ |
 | `webhook_events` | [WebhookEvent](/api/reference/object_types/webhook_event) | Elenco di eventi webhook. |
 
 ### Esempio di risposta

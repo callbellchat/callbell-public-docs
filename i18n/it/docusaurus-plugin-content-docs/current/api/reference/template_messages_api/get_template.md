@@ -3,7 +3,7 @@ titolo: GET /templates/:uuid
 posizione_barra_ laterale: 3
 ---
 
-importare RequestTabs da "@site/src/components/Requests/RequestTabs"
+import RequestTabs from"@site/src/components/Requests/RequestTabs"
 
 # GET /templates/:uuid
 
@@ -11,18 +11,18 @@ Ottiene un modello specifico, dato un `uuid`.
 
 ### Parametri richiesti
 
-| Parametro | Tipo | Descrizione |
-| :-------- | :----- | :----------------------- |
-| `uuid` | stringa | L'uuid del modello |
+| Parametro | Tipo    | Descrizione        |
+| :-------- | :------ | :----------------- |
+| `uuid`    | stringa | L'uuid del modello |
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='templates_api' request="get_template" />
+<RequestTabs endpoint='templates_api' request="get_template" />
 
 ### Risposta
 
-| Parametro | Tipo | Descrizione |
-| :--------- | :------------------------------------------------- | :----------------------------------------------------- |
+| Parametro  | Tipo                                               | Descrizione                                                  |
+| :--------- | :------------------------------------------------- | :----------------------------------------------------------- |
 | `template` | [Template[]](/api/reference/object_types/template) | L'oggetto che rappresenta il messaggio del modello Whatsapp. |
 
 ### Esempio di risposta

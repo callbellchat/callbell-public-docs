@@ -27,7 +27,7 @@ La chiave API verrà mostrata solo in questa schermata. Se si perde l'accesso al
 
 ## Inviare un messaggio di prova utilizzando cURL
 
-Utilizzando il metodo [Messages API' send message] (/docs/api/reference/messages_api/post_send_messages.md) si può verificare se la chiave API funziona come previsto:
+Utilizzando il metodo [Messages API' send message] (/api/reference/messages_api/post_send_messages.md) si può verificare se la chiave API funziona come previsto:
 
 ```bash
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
@@ -94,4 +94,4 @@ Questo conferma che il messaggio è stato inviato con successo all'utente, ma no
 
 ### Passi successivi
 
-Provate a esplorare le nostre API [Messages](/docs/api/reference/messages_api/introduction.md) e [Contacts](/docs/api/reference/contacts_api/introduction.md) per ulteriori esempi.
+Provate a esplorare le nostre API [Messages](/api/reference/messages_api/introduction.md) e [Contacts](/api/reference/contacts_api/introduction.md) per ulteriori esempi.

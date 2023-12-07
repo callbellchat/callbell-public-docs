@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-importare addTagsUrl da './assets/add_tags.png'.
+import addTagsUrl from './assets/add_tags.png'
 
 # Aggiungi tag
 

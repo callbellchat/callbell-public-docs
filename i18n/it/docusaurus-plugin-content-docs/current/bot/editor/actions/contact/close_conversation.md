@@ -2,7 +2,7 @@
 posizione_barra_ laterale: 8
 ---
 
-importare closeConversationUrl da './assets/close_conversation.png'.
+import closeConversationUrl from './assets/close_conversation.png'
 
 # Chiudere la conversazione
 

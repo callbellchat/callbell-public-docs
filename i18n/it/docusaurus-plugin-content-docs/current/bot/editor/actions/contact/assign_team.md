@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-importare assignTeamUrl da './assets/assign_team.png'.
+import assignTeamUrl from './assets/assign_team.png'
 
 # Assegna squadra
 <img src={assignTeamUrl} width={180} />

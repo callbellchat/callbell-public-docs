@@ -17,19 +17,19 @@ Esta operación es **irreversible**. Comprueba siempre que tu código es correct
 
 ### Parámetros requeridos
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :---------------------- |
-| `uuid` | string | El uuid del contacto |
+| Parámetro Tipo Descripción |
+| :------------------------- | :----- | :------------------- |
+| `uuid`                     | string | El uuid del contacto |
 
 ### Ejemplo de solicitud
 
-<RequestTabs endpoint='contacts_api' request='eliminar_contacto'/>
+<RequestTabs endpoint='contacts_api' request='delete_contact'/>
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :----------------------- |
-| `status` | string | Estado de la operación. |
+| Parámetro Tipo Descripción |
+| :------------------------- | :----- | :---------------------- |
+| `status`                   | string | Estado de la operación. |
 
 ### Ejemplo de respuesta
 

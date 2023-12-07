@@ -30,7 +30,7 @@ Dopo 24 ore senza risposta da parte del cliente, non è possibile inviare messag
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='messages_api' request="post_messages"/>
+<RequestTabs endpoint='messages_api' request="post_messages"/>
 
 ### Risposta
 
@@ -71,11 +71,11 @@ L'utente deve far parte del vostro team, altrimenti l'assegnazione non funzioner
 
 ### Esempio di invio dell'allegato immagine e della didascalia
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_image_caption"/>
+<RequestTabs endpoint='messages_api' request="post_messages_image_caption"/>
 
 ### Esempio di invio dell'allegato di un documento
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_document"/>
+<RequestTabs endpoint='messages_api' request="post_messages_document"/>
 
 ### Esempio di invio di un allegato audio
 
@@ -83,7 +83,7 @@ L'utente deve far parte del vostro team, altrimenti l'assegnazione non funzioner
 Questo è disponibile solo per gli account che utilizzano l'integrazione ufficiale **WhatsApp Business API**.
 :::
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_audio"/>
+<RequestTabs endpoint='messages_api' request="post_messages_audio"/>
 
 ### Esempio di invio di un allegato video
 
@@ -91,7 +91,7 @@ Questo è disponibile solo per gli account che utilizzano l'integrazione ufficia
 Questo è disponibile solo per gli account che utilizzano l'integrazione ufficiale **WhatsApp Business API**.
 :::
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_video"/>
+<RequestTabs endpoint='messages_api' request="post_messages_video"/>
 
 ## Inviare messaggi modello
 
@@ -105,7 +105,7 @@ Questa funzione è disponibile solo per gli account che utilizzano l'integrazion
 Per inviare messaggi modello, `template_uuid` e `optin_contact` **devono** essere presenti nel payload.
 :::
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_template" />
+<RequestTabs endpoint='messages_api' request="post_messages_template" />
 
 In questo contesto, `testo` si riferisce al segnaposto del messaggio modello, per esempio diciamo che abbiamo un messaggio modello come questo:
 
@@ -131,7 +131,7 @@ Questa funzione è disponibile solo per gli account che utilizzano l'integrazion
 Per inviare messaggi modello, `template_uuid` e `optin_contact` **devono** essere presenti nel payload.
 :::
 
-<RichiestaTabs endpoint='messages_api' request="post_multi_variable_messages_template"/>
+<RequestTabs endpoint='messages_api' request="post_multi_variable_messages_template"/>
 
 In questo contesto, `template_values` si riferisce ai segnaposto del messaggio modello, per esempio diciamo che abbiamo un messaggio modello come questo:
 
@@ -169,11 +169,11 @@ Se sono stati approvati dei messaggi modello di media, è possibile inviarli inc
 
 ### Invio di un documento allegato
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_template_document"/>
+<RequestTabs endpoint='messages_api' request="post_messages_template_document"/>
 
 ### Invio di un allegato video
 
-<RichiestaTabs endpoint='messages_api' request="post_messages_template_video"/>
+<RequestTabs endpoint='messages_api' request="post_messages_template_video"/>
 
 :::info
 Utilizzare le [Templates API] (/api/reference/template_messages_api/introduction) per ottenere il `template_uuid` dei propri template.

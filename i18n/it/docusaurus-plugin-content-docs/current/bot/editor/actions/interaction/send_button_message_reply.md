@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-importare sendButtonMessageReplyUrl da './assets/send_button_message_reply.png'.
+import sendButtonMessageReplyUrl from './assets/send_button_message_reply.png'
 
 # Pulsante di invio messaggio di risposta
 

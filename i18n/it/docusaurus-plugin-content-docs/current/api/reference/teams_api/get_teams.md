@@ -11,7 +11,7 @@ Elenca tutti i team appartenenti all'account.
 
 ### Richiesta di esempio
 
-<RichiestaTabs endpoint='teams_api' request="get_teams" />
+<RequestTabs endpoint='teams_api' request="get_teams" />
 
 ### Risposta
 

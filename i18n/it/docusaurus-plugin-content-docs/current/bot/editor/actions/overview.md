@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-importare interactionActionsUrl da './assets/interaction_actions.png';
-importare contactActionsUrl da './assets/contact_actions.png';
-importare logicActionsUrl da './assets/logic_actions.png';
+import interactionActionsUrl from './assets/interaction_actions.png';
+import contactActionsUrl from './assets/contact_actions.png';
+import logicActionsUrl from './assets/logic_actions.png';
 
 # Panoramica
 
@@ -28,7 +28,7 @@ Le azioni di interazione sono utilizzate per interagire con i clienti. Ad esempi
 
 Le azioni sui contatti sono utilizzate per gestire i contatti. Ad esempio, si può usare l'azione "Aggiungi tag" per aggiungere un tag a un contatto.
 
-<img src={contattoAzioniUrl} width={400}/>
+<img src={contactActionsUrl} width={400}/>
 
 ## Azioni logiche
 

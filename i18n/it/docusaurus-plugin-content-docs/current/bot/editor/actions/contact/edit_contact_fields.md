@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-importare editContactFieldsUrl da './assets/edit_contact_fields.png'.
+import editContactFieldsUrl from './assets/edit_contact_fields.png'
 
 # Modifica campi di contatto
 

@@ -23,7 +23,7 @@ Questa operazione è **irreversibile**. Verificare sempre la correttezza del cod
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='contacts_api' request='delete_contact'/>
+<RequestTabs endpoint='contacts_api' request='delete_contact'/>
 
 ### Risposta
 

@@ -58,7 +58,7 @@ Un elenco di tutte le modifiche e i miglioramenti introdotti nella nostra API. U
 
 ### ✨ Cosa c'è di nuovo
 
-- API dei template](/api/reference/template_messages_api/introduzione)
+- API dei template](/api/reference/template_messages_api/introduction)
 
 ### 🛠️ Modifiche
 
@@ -68,10 +68,10 @@ Un elenco di tutte le modifiche e i miglioramenti introdotti nella nostra API. U
 
 ### ✨ Cosa c'è di nuovo
 
-- [Auth API](/api/reference/auth_api/introduzione)
+- [Auth API](/api/reference/auth_api/introduction)
 
 ## 18 ottobre 2022
 
 ### ✨ Cosa c'è di nuovo
 
-- API Webhooks](/api/reference/webhooks_api/introduzione)
+- API Webhooks](/api/reference/webhooks_api/introduction)

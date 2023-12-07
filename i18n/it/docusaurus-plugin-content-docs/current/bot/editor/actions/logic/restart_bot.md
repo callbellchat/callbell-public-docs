@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-importare restartBotUrl da './assets/restart_bot.png'.
+import restartBotUrl from './assets/restart_bot.png'
 
 # Riavvia il Bot
 

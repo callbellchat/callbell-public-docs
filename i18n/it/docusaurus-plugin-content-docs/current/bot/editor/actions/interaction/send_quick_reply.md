@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-importare sendQuickReplyUrl da './assets/send_quick_reply.png'.
+import sendQuickReplyUrl from './assets/send_quick_reply.png'
 
 # Invia risposta rapida
 

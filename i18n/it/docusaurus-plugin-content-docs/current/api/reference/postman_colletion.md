@@ -17,4 +17,4 @@ Se si è alle prime armi con Postman, si può anche imparare di più su di esso:
 
 - [Postman: Introduzione](https://learning.postman.com/docs/getting-started/introduction/)
 - [Postman: Uso delle variabili](https://learning.postman.com/docs/sending-requests/variables/)
-- [Postman: Importare ed esportare dati](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)
+- [Postman: import ed esportare dati](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)

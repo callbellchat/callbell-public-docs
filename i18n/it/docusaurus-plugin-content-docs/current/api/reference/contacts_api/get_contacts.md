@@ -19,7 +19,7 @@ Elenca tutti i contatti appartenenti all'account. È possibile specificare un fi
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='contacts_api' request="get_contacts" />
+<RequestTabs endpoint='contacts_api' request="get_contacts" />
 
 ### Risposta
 

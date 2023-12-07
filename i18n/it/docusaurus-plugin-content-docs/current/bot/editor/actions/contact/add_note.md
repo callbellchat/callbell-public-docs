@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-importare addNoteUrl da './assets/add_note.png'.
+import addNoteUrl from './assets/add_note.png'
 
 # Aggiungi nota
 

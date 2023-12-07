@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-importare waitUserAnswerUrl da './assets/wait_user_answer.png'.
+import waitUserAnswerUrl from './assets/wait_user_answer.png'
 
 # Attendere la risposta dell'utente
 

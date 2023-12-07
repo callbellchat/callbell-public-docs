@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-importare removeTagsUrl da './assets/remove_tags.png'.
+import removeTagsUrl from './assets/remove_tags.png'
 
 # Rimuovere i tag
 <img src={removeTagsUrl} width={180} />

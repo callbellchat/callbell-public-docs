@@ -3,24 +3,24 @@ titolo: GET /messaggi/stato/:uuid
 sidebar_position: 3
 ---
 
-importare RequestTabs da "@site/src/components/Requests/RequestTabs"
+import RequestTabs from"@site/src/components/Requests/RequestTabs"
 
 # GET /messages/status/:uuid
 
 ### Parametri richiesti
 
-| Parametro | Tipo | Descrizione |
-| :-------- | :----- | :---------------------------------------------------- |
-| `uuid` | Stringa | Identificatore del messaggio inviato tramite API. 
+| Parametro | Tipo    | Descrizione                                       |
+| :-------- | :------ | :------------------------------------------------ |
+| `uuid`    | Stringa | Identificatore del messaggio inviato tramite API. |
 
 ### Esempio di richiesta
 
-<RichiestaTabs endpoint='messages_api' request="get_message_status" />
+<RequestTabs endpoint='messages_api' request="get_message_status" />
 
 ### Risposta
 
-| Parametro | Tipo | Descrizione |
-| :-------- | :--------------------------------------------------------------------- | :------------------------------------------- |
+| Parametro | Tipo                                                                   | Descrizione                                 |
+| :-------- | :--------------------------------------------------------------------- | :------------------------------------------ |
 | `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | I dettagli del messaggio completi di stato. |
 
 ### Esempio di risposta
