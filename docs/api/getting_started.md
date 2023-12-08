@@ -27,7 +27,7 @@ The API key will be showed only on this screen. If you lose access to it you'll 
 
 ## Send a test message using cURL
 
-By using the [Messages API' send message method](/docs/api/reference/messages_api/post_send_messages.md) you can test if your API key is working as expected:
+By using the [Messages API' send message method](/api/reference/messages_api/post_send_messages.md) you can test if your API key is working as expected:
 
 ```bash
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
@@ -94,4 +94,4 @@ This confirms that the message was successfully sent to the user but it hasn't b
 
 ### Next Steps
 
-Try exploring our [Messages](/docs/api/reference/messages_api/introduction.md) and [Contacts](/docs/api/reference/contacts_api/introduction.md) APIs for more examples.
+Try exploring our [Messages](/api/reference/messages_api/introduction.md) and [Contacts](/api/reference/contacts_api/introduction.md) APIs for more examples.

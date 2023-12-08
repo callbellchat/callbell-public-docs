@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Callbell offers a built-in bot builder that allows you to create a chatbot for WhatsApp, Facebook Messenger, Telegram and Instagram.
 
-<iframe width="1038" height="584" src="https://www.youtube.com/embed/e9EcR9gA6NI" title="Create your first bot in 5 minutes - Callbell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/e9EcR9gA6NI" title="Create your first bot in 5 minutes - Callbell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## What is a chatbot?
 

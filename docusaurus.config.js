@@ -44,7 +44,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "es", "pt", "it", "fr"],
   },
 
   presets: [
@@ -99,6 +99,10 @@ const config = {
             href: "https://status.callbell.eu",
             position: "left",
             label: "Service Status",
+          },
+          {
+            type: "localeDropdown",
+            position: "right",
           },
         ],
       },

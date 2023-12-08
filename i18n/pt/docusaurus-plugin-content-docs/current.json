@@ -1,0 +1,82 @@
+{
+  "version.label": {
+    "message": "Próximo",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Callbell API": {
+    "message": "Callbell API",
+    "description": "The label for category Callbell API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API Reference": {
+    "message": "Referência da API",
+    "description": "The label for category API Reference in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Auth API": {
+    "message": "API de Autenticação",
+    "description": "The label for category Auth API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Messages API": {
+    "message": "API de Mensagens",
+    "description": "The label for category Messages API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contacts API": {
+    "message": "API de Contatos",
+    "description": "The label for category Contacts API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Teams API": {
+    "message": "API de Equipes",
+    "description": "The label for category Teams API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Templates API": {
+    "message": "API de Modelos",
+    "description": "The label for category Templates API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Webhooks API": {
+    "message": "API de Webhooks",
+    "description": "The label for category Webhooks API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Webhooks": {
+    "message": "Webhooks",
+    "description": "The label for category Webhooks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Message Events": {
+    "message": "Eventos de Mensagens",
+    "description": "The label for category Message Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contact Events": {
+    "message": "Eventos de Contato",
+    "description": "The label for category Contact Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Conversation Events": {
+    "message": "Eventos de Conversa",
+    "description": "The label for category Conversation Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Object Types": {
+    "message": "Tipos de Objeto",
+    "description": "The label for category Object Types in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bot Flow Builder": {
+    "message": "Construtor de Fluxo de Bot",
+    "description": "The label for category Bot Flow Builder in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Editor": {
+    "message": "Editor",
+    "description": "The label for category Editor in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Actions": {
+    "message": "Ações",
+    "description": "The label for category Actions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Interaction": {
+    "message": "Interação",
+    "description": "The label for category Interaction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contact": {
+    "message": "Contato",
+    "description": "The label for category Contact in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Logic": {
+    "message": "Lógica",
+    "description": "The label for category Logic in sidebar tutorialSidebar"
+  }
+}
