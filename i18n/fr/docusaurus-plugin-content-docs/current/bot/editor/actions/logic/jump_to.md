@@ -5,16 +5,16 @@ sidebar_position: 3
 import jumpToUrl from './assets/jump_to.png'
 import jumpToEditUrl from './assets/jump_to_edit.png'
 
-# Jump to
+# Sauter vers
 
-This action allows you to jump to a specific block of the bot sequence.
+Cette action vous permet de sauter vers un bloc spécifique de la séquence du bot.
 
 <img src={jumpToUrl} width={180} />
 
-This is useful when you want to jump to a specific point of the bot sequence, for example, when the user is not able to answer a question or when the user enters inside a fallback block.
+C'est utile lorsque vous souhaitez sauter vers un point spécifique de la séquence du bot, par exemple lorsque l'utilisateur n'est pas en mesure de répondre à une question ou lorsque l'utilisateur entre dans un bloc de secours.
 
-## How to use it
+## Comment l'utiliser
 
-To use this action, you need to select the block you want to jump to. You can do this by clicking on the **Jump to** action and then selecting the block you want to jump to.
+Pour utiliser cette action, vous devez sélectionner le bloc vers lequel vous souhaitez sauter. Vous pouvez le faire en cliquant sur l'action **Sauter vers** et en sélectionnant ensuite le bloc vers lequel vous souhaitez sauter.
 
 <img src={jumpToEditUrl} width={500} />

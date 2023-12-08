@@ -2,19 +2,19 @@
 sidebar_position: 1
 ---
 
-# Contact Created
+# Contact Créé
 
-This event will be sent whenever a contact is **created**.
+Cet événement sera envoyé chaque fois qu'un contact est **créé**.
 
-### Event Name
+### Nom de l'événement
 
 `contact_created`
 
-### Payload Fields
+### Champs du payload
 
-See [Contact Object](./../../object_types/contact.md)
+Voir [Objet Contact](./../../object_types/contact.md)
 
-### Example Payload
+### Exemple de payload
 
 ```json title=payload.json
 {

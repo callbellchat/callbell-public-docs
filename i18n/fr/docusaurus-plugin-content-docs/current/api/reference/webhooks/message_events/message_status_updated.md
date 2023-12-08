@@ -1,71 +1,72 @@
-# Message Status Updated
+# État du message mis à jour
 
 :::caution
-Note that **message deliver notifications** are only available on **WhatsApp Business API** and **WhatsApp QR API**.
+Notez que les **notifications de remise de message** sont disponibles uniquement sur les API WhatsApp Business et WhatsApp QR.
 :::
 
 :::info
-Events are only forwarded for **outgoing messages**. Incoming messages won't trigger any status updates.
+Les événements sont uniquement transférés pour les **messages sortants**. Les messages entrants ne déclenchent aucune mise à jour d'état.
 :::
 
-This event will be sent whenever a message status gets an **update**. This can be one of the following values:
+Cet événement est envoyé chaque fois qu'un statut de message est **mis à jour**. Il peut prendre l'une des valeurs suivantes :
 
-- `enqueued`
-- `sent`
-- `delivered`
-- `read`
-- `failed`
-- `mismatch`
-- `deleted`
+- `enqueued` (en attente)
+- `sent` (envoyé)
+- `delivered` (livré)
+- `read` (lu)
+- `failed` (échec)
+- `mismatch` (erreur de correspondance)
+- `deleted` (supprimé)
 
 
-### Message Statuses
+### Statuts du message
 
-#### Enqueued
+#### En attente (enqueued)
 
-Sent when the message is successfully sent to the WhatsApp Business API client or to the QR API client.
+Envoyé lorsque le message est envoyé avec succès au client de l'API WhatsApp Business ou au client de l'API QR.
 
-#### Sent
+#### Envoyé (sent)
 
-This status is sent whenever the message is sent to the end-user device.
+Ce statut est envoyé chaque fois que le message est envoyé à l'appareil de l'utilisateur final.
 
-#### Delivered
+#### Livré (delivered)
 
-Sent when the message has finally been delivered to the end-user device.
+Envoyé lorsque le message a finalement été livré à l'appareil de l'utilisateur final.
 
-#### Read
+#### Lu (read)
 
-Represents that the message has been successfully read by the end-user.
+Indique que le message a été lu avec succès par l'utilisateur final.
 
-#### Failed
+#### Échec (failed)
 
-This status is emitted whenever the delivery of the message wasn't possible. In the inner payload the failure reason is also specified (e.g. _"number does not exist on WhatsApp"_)
+Ce statut est émis lorsque la livraison du message n'a pas été possible. La raison de l'échec est également spécifiée dans la charge utile interne (par exemple, "le numéro n'existe pas sur WhatsApp").
 
-#### Mismatch
+#### Erreur de correspondance (mismatch)
 
-This event status is sent whenever WhatsApp Business API performs a phone number correction automatically. The corrected phone number identifier will be present inside the inner payload of the event.
+Cet événement de statut est envoyé chaque fois que l'API WhatsApp Business effectue une correction automatique du numéro de téléphone. L'identifiant du numéro de téléphone corrigé sera présent à l'intérieur de la charge utile interne de l'événement.
 
-### Deleted 
+### Supprimé
+
 :::caution
-This event has been deprecated since it's not supported anymore by Meta.
+Cet événement a été abandonné car il n'est plus pris en charge par Meta.
 :::
 
-Represents a message deletion from the end-user, both for _"delete only for me"_ and _"delete for everyone"_.
+Représente la suppression d'un message par l'utilisateur final, à la fois pour "supprimer uniquement pour moi" et "supprimer pour tout le monde".
 
 
-### Event Name
+### Nom de l'événement
 
 `message_status_updated`
 
-### Payload Fields
+### Champs de la charge utile
 
-| Field                  | Type   | Description                          |
-| :--------------------- | :----- | :----------------------------------- |
-| `uuid`                 | string | The unique identifier of the message |
-| `status`               | string | The delivery status of the message   |
-| `messageStatusPayload` | JSON   | The raw message status payload       |
+| Champ                  | Type   | Description                                 |
+| :--------------------- | :----- | :------------------------------------------ |
+| `uuid`                 | string | L'identifiant unique du message               |
+| `status`               | string | Le statut de livraison du message             |
+| `messageStatusPayload` | JSON   | La charge utile brute du statut du message    |
 
-### Example Payload
+### Exemple de charge utile
 
 ```json title=payload.json
 {

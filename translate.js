@@ -3,11 +3,46 @@ const path = require("path");
 const deepl = require("deepl-node");
 const { resolve } = require("path");
 const { readdir } = require("fs").promises;
+const OpenAI = require("openai");
 
-const authKey = process.env.DEEPL_AUTH_KEY;
-const translator = new deepl.Translator(authKey);
+// const authKey = process.env.DEEPL_AUTH_KEY;
+// const translator = new deepl.Translator(authKey);
 
-const TARGET_LANGUAGES = ["it"];
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEYs,
+});
+
+const SYSTEM_MESSAGE = `
+You are a helpful AI translator. Given a text, which is always in english, you should use the first line to detect the target language and
+return the translated text without the first line. If you encounter "import" statement do not translate the text contained within those markers. Keep the markdown formatting intact.
+Keep the values in the frontmatter intact (the part between the two --- markers).
+
+For example, if the input is:
+
+pt-BR
+---
+title: Hello world!
+sidebar_position: 1
+---
+
+import assignTeamUrl from './assets/assign_team.png'
+
+Hello world!
+
+You should return:
+
+---
+title: Olá mundo!
+sidebar_position: 1
+---
+
+import assignTeamUrl from './assets/assign_team.png'
+
+
+Olá mundo!
+`;
+
+const TARGET_LANGUAGES = ["fr"];
 const SOURCE_LANGUAGE = "en";
 const DEEPL_LANGUAGE_MAPPING = {
   en: "en-US",
@@ -16,6 +51,24 @@ const DEEPL_LANGUAGE_MAPPING = {
   it: "it",
   fr: "fr",
 };
+
+async function openAITranslate({ text, sourceLanguage, targetLanguage }) {
+  let translation = "";
+
+  const completion = await openai.chat.completions.create({
+    messages: [
+      { role: "system", content: SYSTEM_MESSAGE },
+      {
+        role: "user",
+        content: `${DEEPL_LANGUAGE_MAPPING[targetLanguage]}\n${text}`,
+      },
+    ],
+    model: "gpt-3.5-turbo",
+    maxTokens: 4000,
+  });
+
+  return completion.choices[0].message.content;
+}
 
 async function* getFiles(dir) {
   const dirents = await readdir(dir, { withFileTypes: true });
@@ -61,7 +114,7 @@ async function generateFileTranslation({
 
   const text = await readFile(sourcePath);
 
-  const translation = await translate({
+  const translation = await openAITranslate({
     text,
     sourceLanguage,
     targetLanguage,

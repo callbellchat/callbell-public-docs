@@ -4,16 +4,16 @@ sidebar_position: 4
 
 import sendButtonMessageReplyUrl from './assets/send_button_message_reply.png'
 
-# Send Button Message Reply
+# Envoyer un message de réponse bouton
 
 <img src={sendButtonMessageReplyUrl} width={180} />
 
-The **Send Button Message Reply** action is used to send a message with buttons to your customers.
+L'action **Envoyer un message de réponse bouton** est utilisée pour envoyer un message avec des boutons à vos clients.
 
-You can create a button reply from the [Quick Replies Section](https://dash.callbell.eu/settings/templates) of your Callbell dashboard.
+Vous pouvez créer une réponse bouton depuis la section [Réponses rapides](https://dash.callbell.eu/settings/templates) de votre tableau de bord Callbell.
 
-This action is useful when you want to give your customers the possibility to choose between different options (Maximum 3 options).
+Cette action est utile lorsque vous souhaitez donner à vos clients la possibilité de choisir entre différentes options (maximum 3 options).
 
 :::info
-This action is available only on **WhatsApp Business API** bots.
+Cette action est disponible uniquement sur les bots **WhatsApp Business API**.
 :::

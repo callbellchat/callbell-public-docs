@@ -7,25 +7,25 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /teams/:uuid
 
-Get a specific team given a `uuid`.
+Obtenez une équipe spécifique en utilisant un `uuid`.
 
-### Required Parameters
+### Paramètres Requis
 
-| Parameter | Type   | Description          |
+| Paramètre | Type   | Description          |
 | :-------- | :----- | :------------------- |
-| `uuid`    | string | The uuid of the team |
+| `uuid`    | string | L'uuid de l'équipe   |
 
-### Example Request
+### Exemple de Requête
 
 <RequestTabs endpoint='teams_api' request="get_team"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                     | Description                        |
-| :-------- | :--------------------------------------- | :--------------------------------- |
-| `team`    | [Team](/api/reference/object_types/team) | The object representing the  team. |
+| Paramètre | Type                                     | Description                             |
+| :-------- | :--------------------------------------- | :-------------------------------------- |
+| `team`    | [Team](/api/reference/object_types/team) | L'objet représentant l'équipe.           |
 
-### Example Response
+### Exemple de Réponse
 
 ```json title=response.json
 {
@@ -38,4 +38,3 @@ Get a specific team given a `uuid`.
   }
 }
 ```
-

@@ -4,8 +4,7 @@ sidebar_position: 5
 
 import assignUserUrl from './assets/assign_user.png'
 
-# Assign User
+# Affecter un utilisateur
 <img src={assignUserUrl} width={180} />
 
-This action allows you to assign a specific agent to the current contact.
-
+Cette action vous permet d'affecter un agent spécifique au contact actuel.

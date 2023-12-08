@@ -2,19 +2,19 @@
 sidebar_position: 2
 ---
 
-# Contact Updated
+# Contact Mis à jour
 
-This event will be sent whenever a contact is **updated**. This also includes _tag changes_.
+Cet événement sera envoyé chaque fois qu'un contact est **mis à jour**. Cela inclut également les _changements d'étiquette_.
 
-### Event Name
+### Nom de l'événement
 
 `contact_updated`
 
-### Payload Fields
+### Champs de la charge utile
 
-See [Contact Object](./../../object_types/contact.md)
+Voir [Objet Contact](./../../object_types/contact.md)
 
-### Example Payload
+### Exemple de charge utile
 
 ```json title=payload.json
 {

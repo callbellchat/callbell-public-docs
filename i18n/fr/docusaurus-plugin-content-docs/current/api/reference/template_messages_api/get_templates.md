@@ -16,7 +16,7 @@ List all templates belonging to the account.
 ### Response
 
 | Parameter   | Type                                               | Description          |
-| :---------- | :------------------------------------------------- | :------------------- |
+| ------------- |:-------------------------------------------------:| ---------------------------------------------------:|
 | `templates` | [Template[]](/api/reference/object_types/template) | A list of templates. |
 
 ### Example Response
@@ -26,16 +26,16 @@ List all templates belonging to the account.
   "templates": [
     {
       "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-      "title": "Template title",
-      "templateType": "text",
-      "text": "Message text",
+      "title": "Titre du modèle",
+      "templateType": "texte",
+      "text": "Texte du message",
       "createdAt": "2020-11-13T21:08:53Z"
     },
     {
       "uuid": "47aad5f9b4ca423c9d630f06ab93fe1f",
-      "title": "Another Template title",
-      "templateType": "text",
-      "text": "Another Message text",
+      "title": "Autre titre du modèle",
+      "templateType": "texte",
+      "text": "Autre texte du message",
       "createdAt": "2020-11-13T21:10:33Z"
     }
   ],

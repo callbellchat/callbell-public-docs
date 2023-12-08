@@ -7,23 +7,23 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /messages/status/:uuid
 
-### Required Parameters
+### Paramètres requis
 
-| Parameter | Type   | Description                                           |
+| Paramètre | Type   | Description                                           |
 | :-------- | :----- | :---------------------------------------------------- |
-| `uuid`    | String | Identifier of the message which was sent through API. |
+| `uuid`    | String | Identifiant du message envoyé via l'API.              |
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='messages_api' request="get_message_status"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                                                   | Description                                  |
-| :-------- | :--------------------------------------------------------------------- | :------------------------------------------- |
-| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | The message details comprehensive of status. |
+| Paramètre | Type                                                                   | Description                                     |
+| :-------- | :--------------------------------------------------------------------- | :---------------------------------------------- |
+| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | Les détails du message, y compris le statut.     |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {

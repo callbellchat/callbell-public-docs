@@ -2,136 +2,136 @@
 sidebar_position: 4
 ---
 
-# How-to and Examples
+# Comment faire et exemples
 
-This guide will show you how to use the Callbell API to send messages, get updates, and keep contact info up to date.
+Ce guide vous montrera comment utiliser l'API Callbell pour envoyer des messages, obtenir des mises à jour et maintenir les informations de contact à jour.
 
-## Getting Started with Callbell
+## Débuter avec Callbell
 
-If you're new to Callbell, you can start with our [Getting Started with Callbell Guide](/bot/getting_started).
-We'll also look at some examples of using the Callbell API.
+Si vous êtes nouveau dans Callbell, vous pouvez commencer avec notre [Guide de démarrage avec Callbell](/bot/getting_started).
+Nous examinerons également quelques exemples d'utilisation de l'API Callbell.
 
-The examples fall into two categories: **Events Caused by Actions** and **Actions Driven by Events**.
+Les exemples se divisent en deux catégories : **Événements causés par des actions** et **Actions déclenchées par des événements**.
 
-## Events Caused by Actions
+## Événements causés par des actions
 
-Events Caused by Actions are updates that happen because of an action. Like when someone new joins your website, it triggers a new event. You can sign up for these events and get a notice when they happen.
+Les événements causés par des actions sont des mises à jour qui se produisent en raison d'une action. Par exemple, lorsque quelqu'un rejoint votre site web, cela déclenche un nouvel événement. Vous pouvez vous inscrire à ces événements et être averti lorsqu'ils se produisent.
 
-Here you'll find examples of events that the Callbell API can trigger. Use these examples to understand how to use Callbell API to send messages and update contact info when a new event happens.
+Vous trouverez ici des exemples d'événements que l'API Callbell peut déclencher. Utilisez ces exemples pour comprendre comment utiliser l'API Callbell pour envoyer des messages et mettre à jour les informations de contact lorsqu'un nouvel événement se produit.
 
 :::info
-For the webhook endpoint, you can use a service like [RequestBin](https://requestbin.com/) or [Webhook.site](https://webhook.site/). These are temporary endpoints for testing your setup. For actual use, you'll need to create your own endpoint. You'll need a webserver to receive the events and send messages to your customers using your own endpoint. You can use any programming language to do this.
+Pour l'endpoint webhook, vous pouvez utiliser un service tel que [RequestBin](https://requestbin.com/) ou [Webhook.site](https://webhook.site/). Ce sont des endpoints temporaires pour tester votre configuration. Pour une utilisation réelle, vous devrez créer votre propre endpoint. Vous aurez besoin d'un serveur web pour recevoir les événements et envoyer des messages à vos clients à l'aide de votre propre endpoint. Vous pouvez utiliser n'importe quel langage de programmation pour cela.
 :::
 
-### Message Events
+### Événements de messages
 
-You can use the Callbell API to send messages when a new event happens.
-We'll use the [Messages API](/api/reference/messages_api/introduction) to send messages. Check out the [Webhooks](/api/reference/webhooks/introduction) section for more info on signing up for events.
+Vous pouvez utiliser l'API Callbell pour envoyer des messages lorsque se produit un nouvel événement.
+Nous utiliserons l'[API Messages](/api/reference/messages_api/introduction) pour envoyer des messages. Consultez la section [Webhooks](/api/reference/webhooks/introduction) pour en savoir plus sur l'inscription aux événements.
 
-First, we need to set up a webhook endpoint to get the events. We'll use [RequestBin](https://requestbin.com/) to create a temporary endpoint.
+Tout d'abord, nous devons configurer un endpoint webhook pour obtenir les événements. Nous utiliserons [RequestBin](https://requestbin.com/) pour créer un endpoint temporaire.
 
-1. Go to [RequestBin](https://requestbin.com/) and click on **Create a RequestBin**.
-2. Copy the URL of the new RequestBin you just created.
-3. Set up your webhook endpoint on Callbell. See [Webhooks](/api/reference/webhooks/introduction) for more info.
+1. Allez sur [RequestBin](https://requestbin.com/) et cliquez sur **Créer un RequestBin**.
+2. Copiez l'URL du nouveau RequestBin que vous venez de créer.
+3. Configurez votre endpoint webhook sur Callbell. Consultez la section [Webhooks](/api/reference/webhooks/introduction) pour plus d'informations.
 
-#### 🤖 Send a message with a chatbot when a new message comes in
+#### 🤖 Envoyer un message avec un chatbot lors de l'arrivée d'un nouveau message
 
-In this example, we'll look at how to use the Callbell API to send a message with a chatbot when a new event happens. Let's say we want to send a chatbot message when a new message comes in. We'll follow the steps from the previous example to set up a webhook endpoint and get the events.
+Dans cet exemple, nous verrons comment utiliser l'API Callbell pour envoyer un message avec un chatbot lorsqu'un nouvel événement se produit. Supposons que nous voulions envoyer un message de chatbot lorsqu'un nouveau message arrive. Nous suivrons les étapes de l'exemple précédent pour configurer un endpoint webhook et obtenir les événements.
 
-After setting up the webhook endpoint, we can use the Callbell API to send a chatbot message when a new message comes in. Check out the [Messages API](/api/reference/messages_api/introduction) for more info on sending messages.
+Après avoir configuré le endpoint webhook, nous pouvons utiliser l'API Callbell pour envoyer un message de chatbot lorsqu'un nouveau message arrive. Consultez l'[API Messages](/api/reference/messages_api/introduction) pour en savoir plus sur l'envoi de messages.
 
-Here's a diagram of how the Callbell API sends a chatbot message when a new message comes in.
+Voici un diagramme montrant comment l'API Callbell envoie un message de chatbot lorsqu'un nouveau message arrive.
 
 ![message_based_messaging](./assets/message_chatbot.png)
 
-### Contact Updates
+### Mise à jour des contacts
 
-You can also use the Callbell API to keep contact info up to date.
-We'll use the [Contacts API](/api/reference/contacts_api/introduction) to make and update contacts.
+Vous pouvez également utiliser l'API Callbell pour maintenir les informations de contact à jour.
+Nous utiliserons l'[API Contacts](/api/reference/contacts_api/introduction) pour créer et mettre à jour des contacts.
 
-#### 📝 Add a contact to a CRM when a new contact is made
+#### 📝 Ajout d'un contact dans un CRM lorsqu'un nouveau contact est créé
 
-In this example, we'll look at how to use the Callbell API to add a contact when a new user joins.
+Dans cet exemple, nous verrons comment utiliser l'API Callbell pour ajouter un contact lorsqu'un nouvel utilisateur rejoint.
 
-Let's say we want to add a contact to a CRM when a new contact is made in Callbell. We'll follow the steps from the previous example to set up a webhook endpoint and get the events.
+Supposons que nous voulions ajouter un contact dans un CRM lorsqu'un nouveau contact est créé dans Callbell. Nous suivrons les étapes de l'exemple précédent pour configurer un endpoint webhook et obtenir les événements.
 
-After setting up the webhook endpoint, we can use the Callbell API to add a contact to a CRM when a new contact is made in Callbell. Check out the [Contacts API](/api/reference/contacts_api/introduction) for more info on making contacts.
+Après avoir configuré le endpoint webhook, nous pouvons utiliser l'API Callbell pour ajouter un contact dans un CRM lorsqu'un nouveau contact est créé dans Callbell. Consultez l'[API Contacts](/api/reference/contacts_api/introduction) pour en savoir plus sur la création de contacts.
 
 :::info
-You can use the same steps to update a contact when a user changes their profile.
+Vous pouvez utiliser les mêmes étapes pour mettre à jour un contact lorsque l'utilisateur modifie son profil.
 :::
 
-Here's a diagram of how the Callbell API adds a contact to a CRM when a new contact is made in Callbell.
+Voici un diagramme montrant comment l'API Callbell ajoute un contact dans un CRM lorsqu'un nouveau contact est créé dans Callbell.
 
 ![contact_creation](./assets/create_contact.png)
 
-## Actions Driven by Events
+## Actions déclenchées par des événements
 
-Actions Driven by Events are things that happen because of an update. Like when a new message comes in, you can send a message to the customer. You can use the Callbell API to send messages and keep contact info up to date when a new event happens.
+Les actions déclenchées par des événements sont des actions qui se produisent en raison d'une mise à jour. Par exemple, lorsque un nouveau message arrive, vous pouvez envoyer un message au client. Vous pouvez utiliser l'API Callbell pour envoyer des messages et maintenir les informations de contact à jour lorsqu'un nouvel événement se produit.
 
-### Send a message
+### Envoyer un message
 
-Here, we'll look at how to use the Callbell API to send messages when a new event happens. As shown in the [Webhooks](/api/reference/webhooks/introduction) section, you can sign up for various events and get a notice when they happen.
+Ici, nous verrons comment utiliser l'API Callbell pour envoyer des messages lorsqu'un nouvel événement se produit. Comme indiqué dans la section [Webhooks](/api/reference/webhooks/introduction), vous pouvez vous inscrire à différents événements et être averti lorsqu'ils se produisent.
 
-You'll need to set up a webhook endpoint to get the events, and then use the Callbell API to send messages to your customers.
+Vous devrez configurer un endpoint webhook pour obtenir les événements, puis utiliser l'API Callbell pour envoyer des messages à vos clients.
 
 :::info
-For the webhook endpoint, you can use a service like [RequestBin](https://requestbin.com/) or [Webhook.site](https://webhook.site/). These are temporary endpoints for testing your setup. For actual use, you'll need to create your own endpoint.
-You'll need a webserver to receive the events and send messages to your customers using your own endpoint. You can use any programming language to do this.
+Pour l'endpoint webhook, vous pouvez utiliser un service tel que [RequestBin](https://requestbin.com/) ou [Webhook.site](https://webhook.site/). Ce sont des endpoints temporaires pour tester votre configuration. Pour une utilisation réelle, vous devrez créer votre propre endpoint.
+Vous aurez besoin d'un serveur web pour recevoir les événements et envoyer des messages à vos clients à l'aide de votre propre endpoint. Vous pouvez utiliser n'importe quel langage de programmation pour cela.
 :::
 
-#### 🛒 Send a message when a new order comes in
+#### 🛒 Envoyer un message lorsqu'une nouvelle commande est passée
 
-In this example, we'll look at how to use the Callbell API to send a message to a customer when a new event happens.
-Let's say we want to send a message to a customer when a new order is made on our online store.
+Dans cet exemple, nous verrons comment utiliser l'API Callbell pour envoyer un message à un client lorsqu'un nouvel événement se produit.
+Supposons que nous voulions envoyer un message à un client lorsqu'une nouvelle commande est passée sur notre boutique en ligne.
 
-First, we need to set up a webhook endpoint to get the events. We'll use [RequestBin](https://requestbin.com/) to create a temporary endpoint.
+Tout d'abord, nous devons configurer un endpoint webhook pour obtenir les événements. Nous utiliserons [RequestBin](https://requestbin.com/) pour créer un endpoint temporaire.
 
-1. Go to [RequestBin](https://requestbin.com/) and click on **Create a RequestBin**.
-2. Copy the URL of the new RequestBin you just created.
-3. Set up your webhook endpoint on Callbell. See [Webhooks](/api/reference/webhooks/introduction) for more info.
+1. Allez sur [RequestBin](https://requestbin.com/) et cliquez sur **Créer un RequestBin**.
+2. Copiez l'URL du nouveau RequestBin que vous venez de créer.
+3. Configurez votre endpoint webhook sur Callbell. Consultez la section [Webhooks](/api/reference/webhooks/introduction) pour plus d'informations.
 
-Now we've set up a webhook endpoint that'll get the events. We can now use the Callbell API to send a message to the customer.
+Maintenant que nous avons configuré un endpoint webhook qui recevra les événements, nous pouvons utiliser l'API Callbell pour envoyer un message au client.
 
-Check out the [Messages API](/api/reference/messages_api/introduction) for more info on sending messages.
+Consultez l'[API Messages](/api/reference/messages_api/introduction) pour en savoir plus sur l'envoi de messages.
 
-Here's a diagram of how the Callbell API sends a message to the customer when a new order comes in.
+Voici un diagramme montrant comment l'API Callbell envoie un message au client lorsqu'une nouvelle commande est passée.
 
 ![event_based_messaging](./assets/orders_example.png)
 
-#### 📅 Send a message when a new appointment is set
+#### 📅 Envoyer un message lorsqu'un nouveau rendez-vous est fixé
 
-In this example, we'll look at how to use the Callbell API to send a message to a customer when a new event happens.
-Let's say we want to send a message to a customer when a new appointment is set.
+Dans cet exemple, nous verrons comment utiliser l'API Callbell pour envoyer un message à un client lorsqu'un nouvel événement se produit.
+Supposons que nous voulions envoyer un message à un client lorsqu'un nouveau rendez-vous est fixé.
 
-We'll follow the steps from the previous example to set up a webhook endpoint and get the events.
+Nous suivrons les étapes de l'exemple précédent pour configurer un endpoint webhook et obtenir les événements.
 
-Now we've set up a webhook endpoint that'll get the events. We can now use the Callbell API to send a message to the customer when a new appointment is set. Check out the [Messages API](/api/reference/messages_api/introduction) for more info on sending messages. Here's a diagram of how the Callbell API sends a message to the customer when a new appointment is set.
+Maintenant que nous avons configuré un endpoint webhook qui recevra les événements, nous pouvons utiliser l'API Callbell pour envoyer un message au client lorsqu'un nouveau rendez-vous est fixé. Consultez l'[API Messages](/api/reference/messages_api/introduction) pour en savoir plus sur l'envoi de messages. Voici un diagramme montrant comment l'API Callbell envoie un message au client lorsqu'un nouveau rendez-vous est fixé.
 
 ![event_based_messaging](./assets/appointments_example.png)
 
-### Using Zapier
+### Utilisation de Zapier
 
-You can use Zapier to link Callbell with thousands of other apps. Zapier is a tool that helps you link apps together and automate tasks. You can use Zapier to link Callbell with other apps like Slack, Gmail, Google Sheets, and more.
+Vous pouvez utiliser Zapier pour lier Callbell à des milliers d'autres applications. Zapier est un outil qui vous aide à relier des applications ensemble et à automatiser des tâches. Vous pouvez utiliser Zapier pour lier Callbell à d'autres applications telles que Slack, Gmail, Google Sheets, et bien d'autres.
 
-There are already many integrations available on Zapier that you can use to link Callbell with other apps. You can also make your own integrations using Zapier.
+Il existe déjà de nombreuses intégrations disponibles sur Zapier que vous pouvez utiliser pour lier Callbell à d'autres applications. Vous pouvez également créer vos propres intégrations à l'aide de Zapier.
 
-Here are some examples of Zaps you can make with Zapier:
+Voici quelques exemples de Zaps que vous pouvez créer avec Zapier:
 
-- Send a message when a new email comes in (Gmail)
-- Send a message when a new appointment is set (Calendly)
-- Send a message when a new order comes in (Shopify)
-- Send a message when a new contact is made (HubSpot)
-- Send a message when a new contact is made (Mailchimp)
-- Send a message when a new contact is made (Salesforce)
-- Send a message when a new contact is made (Zendesk)
-- Send a message when a new contact is made (Intercom)
-- Send a message when a new contact is made (Pipedrive)
-- Send a message when a new form is filled out (Typeform)
-- Add a contact when a new form is filled out (Typeform)
-- Send a message when a new form is filled out (Google Forms)
-- Add a contact when a new form is filled out (Google Forms)
+- Envoyer un message lorsqu'un nouvel e-mail arrive (Gmail)
+- Envoyer un message lorsqu'un nouveau rendez-vous est fixé (Calendly)
+- Envoyer un message lorsqu'une nouvelle commande est passée (Shopify)
+- Envoyer un message lorsqu'un nouveau contact est créé (HubSpot)
+- Envoyer un message lorsqu'un nouveau contact est créé (Mailchimp)
+- Envoyer un message lorsqu'un nouveau contact est créé (Salesforce)
+- Envoyer un message lorsqu'un nouveau contact est créé (Zendesk)
+- Envoyer un message lorsqu'un nouveau contact est créé (Intercom)
+- Envoyer un message lorsqu'un nouveau contact est créé (Pipedrive)
+- Envoyer un message lorsqu'un nouveau formulaire est rempli (Typeform)
+- Ajouter un contact lorsqu'un nouveau formulaire est rempli (Typeform)
+- Envoyer un message lorsqu'un nouveau formulaire est rempli (Google Forms)
+- Ajouter un contact lorsqu'un nouveau formulaire est rempli (Google Forms)
 
-And many more...
+Et bien d'autres...
 
-You can also make your own integrations using Zapier. Check out the [Zapier Developer Platform](https://zapier.com/developer) for more info.
+Vous pouvez également créer vos propres intégrations à l'aide de Zapier. Consultez la [Plateforme de développeur Zapier](https://zapier.com/developer) pour plus d'informations.

@@ -7,25 +7,25 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contact/:uuid
 
-Get a specific contact given a `uuid`.
+Obtenez un contact spécifique en utilisant un `uuid`.
 
-### Required Parameters
+### Paramètres requis
 
-| Parameter | Type   | Description             |
+| Paramètre | Type   | Description             |
 | :-------- | :----- | :---------------------- |
-| `uuid`    | string | The uuid of the contact |
+| `uuid`    | string | L'uuid du contact       |
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='contacts_api' request="get_contact"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                           | Description                          |
+| Paramètre | Type                                           | Description                          |
 | :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The object representing the contact. |
+| `contact` | [Contact](/api/reference/object_types/contact) | L'objet représentant le contact.     |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {

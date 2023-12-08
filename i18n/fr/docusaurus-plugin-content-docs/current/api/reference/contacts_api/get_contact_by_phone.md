@@ -7,25 +7,25 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts/phone/:number
 
-Get a specific contact given a `phone_number`.
+Obtenez un contact spécifique en spécifiant un `numéro de téléphone`.
 
-### Required Parameters
+### Paramètres requis
 
-| Parameter      | Type   | Description                     |
-| :------------- | :----- | :------------------------------ |
-| `phone_number` | string | The phone number of the contact |
+| Paramètre     | Type   | Description                        |
+| :------------ | :----- | :--------------------------------- |
+| `phone_number`| string | Le numéro de téléphone du contact   |
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='contacts_api' request="get_contact_by_phone"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                           | Description                          |
-| :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The object representing the contact. |
+| Paramètre   | Type                                           | Description                   |
+| :---------- | :--------------------------------------------- | :---------------------------- |
+| `contact`   | [Contact](/api/reference/object_types/contact) | L'objet représentant le contact. |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {

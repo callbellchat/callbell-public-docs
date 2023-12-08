@@ -1,33 +1,33 @@
 ---
-title: GET /teams
+title: GET /équipes
 sidebar_position: 2
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /teams
+# GET /équipes
 
-List all teams belonging to the account.
+Listez toutes les équipes appartenant au compte.
 
-### Example Request
+### Exemple de requête
 
-<RequestTabs endpoint='teams_api' request="get_teams"/>
+<RequestTabs endpoint="teams_api" request="get_teams"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                       | Description      |
+| Paramètre | Type                                       | Description      |
 | :-------- | :----------------------------------------- | :--------------- |
-| `teams`   | [Team[]](/api/reference/object_types/team) | A list of teams. |
+| `teams`   | [Équipe[]](/api/reference/object_types/team) | Une liste d'équipes. |
 
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {
   "teams": [
     {
       "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-      "name": "General",
+      "name": "Général",
       "createdAt": "2020-11-13T21:08:53Z",
       "default": true,
       "members": 2
@@ -45,4 +45,4 @@ List all teams belonging to the account.
     "pages": 1
   }
 }
-``` 
+```

@@ -4,8 +4,7 @@ sidebar_position: 6
 
 import unAssignUserUrl from './assets/unassign_user.png'
 
-# Unassign User
+# Désassigner l'utilisateur
 <img src={unAssignUserUrl} width={180} />
 
-This action allows you to unassign a specific agent to the current contact.
-
+Cette action vous permet de désassigner un agent spécifique du contact actuel.

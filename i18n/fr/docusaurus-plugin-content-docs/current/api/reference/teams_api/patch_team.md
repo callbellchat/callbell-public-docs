@@ -7,37 +7,37 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # PATCH /teams/:uuid
 
-Updates an existing team.
+Mises à jour d'une équipe existante.
 
-### Required Parameters
+### Paramètres requis
 
-| Parameter | Type   | Description                |
+| Paramètre | Type   | Description                |
 | :-------- | :----- | :------------------------- |
-| `uuid`    | string | The identifier of the team |
+| `uuid`    | string | L'identifiant de l'équipe  |
 
-### Optional Parameters
+### Paramètres optionnels
 
-| Parameter | Type   | Description                                 |
+| Paramètre | Type   | Description                                 |
 | :-------- | :----- | :------------------------------------------ |
-| `name`    | string | The new name that will be given to the team |
+| `name`    | string | Le nouveau nom qui sera donné à l'équipe     |
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='teams_api' request="patch_team"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                     | Description                        |
+| Paramètre | Type                                     | Description                        |
 | :-------- | :--------------------------------------- | :--------------------------------- |
-| `team`    | [Team](/api/reference/object_types/team) | The object representing the  team. |
+| `team`    | [Team](/api/reference/object_types/team) | L'objet représentant l'équipe.     |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {
   "team": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "name": "New name",
+    "name": "Nouveau nom",
     "createdAt": "2020-11-13T21:08:53Z",
     "default": true,
     "members": 2

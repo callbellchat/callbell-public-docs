@@ -7,43 +7,43 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # PATCH /contacts/:uuid
 
-Updates an existing contact.
+Met à jour un contact existant.
 
-### Required Parameters
+### Paramètres obligatoires
 
-| Parameter | Type   | Description                                                   |
-| :-------- | :----- | :------------------------------------------------------------ |
-| `uuid`    | string | The identifier of the contact (e.g. phone number in WhatsApp) |
+| Paramètre | Type   | Description                                                                  |
+| :-------- | :----- | :--------------------------------------------------------------------------- |
+| `uuid`    | string | L'identifiant du contact (par exemple, le numéro de téléphone dans WhatsApp) |
 
-### Optional Parameters
+### Paramètres facultatifs
 
-### Optional Parameters
+### Paramètres facultatifs
 
-| Parameter       | Type     | Description                                                                   |
-| :-------------- | :------- | :---------------------------------------------------------------------------- |
-| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
-| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
-| `name`          | string   | The name of the contact                                                       |
-| `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact            |
-| `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
+| Paramètre       | Type     | Description                                                                      |
+| :-------------- | :------- | :------------------------------------------------------------------------------- |
+| `tags`          | string[] | Une liste de valeurs séparées par des virgules (par exemple, `['Call back', 'Interested']`) |
+| `custom_fields` | string{} | Un objet avec les champs personnalisés (par exemple, `{'Adresse de facturation': 'Rue principale 1}`) |
+| `name`          | string   | Le nom du contact                                                                |
+| `assigned_user` | String   | L'e-mail du collaborateur que vous souhaitez attribuer à un contact                |
+| `unassign_user` | Boolean  | `true` si vous souhaitez supprimer le collaborateur attribué d'un contact         |
 
 :::caution
-Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
+Assurez-vous que `custom_fields` et `tags` existent déjà dans votre compte avant de les transmettre. Rendez-vous sur [tags](https://dash.callbell.eu/settings/tags) et [custom_fields](https://dash.callbell.eu/settings/custom_fields) dans vos paramètres pour plus d'informations.
 
-Similarly, for `assigned_user`, use a valid email address associated with a user in your account.
+De même, pour `assigned_user`, utilisez une adresse e-mail valide associée à un utilisateur de votre compte.
 :::
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='contacts_api' request="patch_contacts"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                           | Description                         |
-| :-------- | :--------------------------------------------- | :---------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The contact which has been updated. |
+| Paramètre | Type                                             | Description                              |
+| :-------- | :----------------------------------------------- | :--------------------------------------- |
+| `contact` | [Contact](/api/reference/object_types/contact) | Le contact qui a été mis à jour. |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {

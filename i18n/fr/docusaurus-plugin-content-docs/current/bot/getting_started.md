@@ -2,77 +2,77 @@
 sidebar_position: 2
 ---
 
-# Getting Started
+# Commencer
 
-This step by step guide will walk you through building your first chatbot with Callbell.
+Ce guide étape par étape vous guidera dans la création de votre premier chatbot avec Callbell.
 
-## Prerequisites
+## Prérequis
 
-You will need to create an account on Callbell and have configured at least **1 channel** in order to be able to follow this guide.
+Vous devez créer un compte sur Callbell et avoir configuré au moins **1 canal** afin de pouvoir suivre ce guide.
 
-- Sign up for [Callbell](https://dash.callbell.eu/users/sign_up)
-- See more information about our [WhatsApp Business API integration](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs) for using the bot flow builder with WhatsApp.
+- Inscrivez-vous sur [Callbell](https://dash.callbell.eu/users/sign_up)
+- Consultez plus d'informations sur notre [intégration de l'API WhatsApp Business](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs) pour utiliser le générateur de flux du bot avec WhatsApp.
 
-## Creating your first chatbot
+## Créer votre premier chatbot
 
-Navigate to the **Bot Builder** section in the left sidebar and click on the **Create new bot** button:
+Accédez à la section **Bot Builder** dans la barre latérale gauche et cliquez sur le bouton **Créer un nouveau bot**:
 
 ![create_new_bot](./assets/create_new_bot.png)
 
-A modal will pop up asking you to choose a name for your bot and the channel you want to use it with:
+Une fenêtre modale s'ouvrira vous demandant de choisir un nom pour votre bot et le canal que vous souhaitez utiliser avec celui-ci:
 
 ![create_new_bot_modal](./assets/create_new_bot_modal.png)
 
-After clicking on the **Create bot** button you'll be redirected to the bot builder page where you can start building your first chatbot:
+Après avoir cliqué sur le bouton **Créer bot**, vous serez redirigé vers la page du générateur de bot où vous pourrez commencer à créer votre premier chatbot:
 
 ![bot_builder](./assets/bot_builder.png)
 
-## Adding a new action
+## Ajouter une nouvelle action
 
-In order for the bot to work you'll have to add at least one action. For example, let's reply to the user with a message when he/she sends a message to the bot.
+Pour que le bot fonctionne, vous devrez ajouter au moins une action. Par exemple, répondons à l'utilisateur avec un message lorsqu'il envoie un message au bot.
 
-Click on the **Add new action** button and select the **Send Message** action:
+Cliquez sur le bouton **Ajouter une nouvelle action** et sélectionnez l'action **Envoyer un message**:
 
 ![add_new_action](./assets/add_new_action.png)
 
-A panel will open so you can use to configure the action. In this case we'll just add a simple text message:
+Un panneau s'ouvrira vous permettant de configurer l'action. Dans ce cas, nous ajouterons simplement un message texte simple:
 
 ![add_new_action_panel](./assets/add_new_action_panel.png)
 
-After clicking on the **Save** button you'll be redirected to the bot builder page where you can see the action you just created:
+Après avoir cliqué sur le bouton **Enregistrer**, vous serez redirigé vers la page du générateur de bot où vous pourrez voir l'action que vous venez de créer:
 
 ![bot_builder_action](./assets/bot_builder_action.png)
 
-## Test your bot
+## Testez votre bot
 
-In order to test your bot you'll have to click on the **Run Simulator** button on the top right corner of the page. This will open a panel where you can test your new flow:
+Pour tester votre bot, vous devez cliquer sur le bouton **Exécuter le simulateur** dans le coin supérieur droit de la page. Cela ouvrira un panneau où vous pourrez tester votre nouveau flux:
 
 ![run_simulator](./assets/run_simulator.png)
 
-Just click on the **Send** button and you'll see the bot replying with the message you just configured:
+Cliquez simplement sur le bouton **Envoyer** et vous verrez le bot répondre avec le message que vous venez de configurer:
 
 ![run_simulator_reply](./assets/run_simulator_reply.png)
 
-## Publish your bot
+## Publiez votre bot
 
-Once you're happy with your bot you can publish it by clicking on the **Publish Draft** button on the top right corner of the page:
+Une fois satisfait de votre bot, vous pouvez le publier en cliquant sur le bouton **Publier le brouillon** dans le coin supérieur droit de la page:
 
 ![publish_bot](./assets/publish_bot.png)
 
-After clicking on the **Publish draft** button and confirming, your bot flow will be published; at the same time you'll need to **enable your bot** in order to make it available to your customers. You can do this by navigating back to the "Bots" section in the left sidebar and clicking on the **Enable bot** button:
+Après avoir cliqué sur le bouton **Publier le brouillon** et confirmé, votre flux de bot sera publié; en même temps, vous devrez **activer votre bot** pour le rendre disponible à vos clients. Vous pouvez le faire en revenant à la section "Bots" dans la barre latérale droite et en cliquant sur le bouton **Activer le bot**:
 
 ![enable_bot](./assets/enable_bot.png)
 
-You can confirm that the bot is enabled by checking the status in the "Bots" section:
+Vous pouvez confirmer que le bot est activé en vérifiant son statut dans la section "Bots":
 
 ![bot_enabled](./assets/bot_enabled.png)
 
-## Test your bot in production
+## Testez votre bot en production
 
-Now that your bot is enabled you can test it in production by sending a message to the channel you configured it with. In this case we'll send a message to the WhatsApp number we configured in the [Prerequisites](#prerequisites) section:
+Maintenant que votre bot est activé, vous pouvez le tester en production en envoyant un message sur le canal que vous avez configuré. Dans ce cas, nous enverrons un message au numéro WhatsApp que nous avons configuré dans la section [Prérequis](#prerequisites):
 
 ![test_bot_in_production](./assets/test_bot_in_production.gif)
 
-## What's next?
+## Et ensuite?
 
-Now that you've created your first chatbot you can start exploring the other actions available in the bot builder.
+Maintenant que vous avez créé votre premier chatbot, vous pouvez commencer à explorer les autres actions disponibles dans le générateur de bot.

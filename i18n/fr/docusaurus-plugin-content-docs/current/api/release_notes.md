@@ -2,76 +2,76 @@
 sidebar_position: 4
 ---
 
-# Release notes
+# Notes de publication
 
-A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
+Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier chaque fois que de nouveaux points de terminaison sont ajoutés ou des changements sont apportés.
 
-## November 30, 2023
+## 30 novembre 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- [Conversation Opened Webhook Event](/api/reference/webhooks/conversation_events/conversation_opened)
-- [Conversation Closed Webhook Event](/api/reference/webhooks/conversation_events/conversation_closed)
+- [Événement de rappel de conversation ouverte](/api/reference/webhooks/conversation_events/conversation_opened)
+- [Événement de rappel de conversation fermée](/api/reference/webhooks/conversation_events/conversation_closed)
 
-## November 7, 2023
+## 7 novembre 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- [Teams API Endpoint](/api/reference/teams_api/introduction)
+- [Point de terminaison de l'API des équipes](/api/reference/teams_api/introduction)
 
-## June 29, 2023
+## 29 juin 2023
 
-### 🛠️ Changes
+### 🛠️ Changements
 
-- Allow to send [Multi-Variables Template Messages](/api/reference/messages_api/post_send_messages#send-multi-variables-template-messages)
+- Permettre d'envoyer des [messages de modèle à variables multiples](/api/reference/messages_api/post_send_messages#send-multi-variables-template-messages)
 
-## June 15, 2023
+## 15 juin 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- The [`MessageSendRequest`](/api/reference/object_types/message_send_request) object now includes a new attribute: `messageStatusPayload`. This attribute provides the status payload for the corresponding message, sourced directly from the integration.
-- This attribute is useful when [fetching status updates for a message](/api/reference/messages_api/get_message_status).
-- For troubleshooting purposes, `messageStatusPayload` can also be accessed via the [Message Status Update Webhook Event](/api/reference/webhooks/message_events/message_status_updated).
+- L'objet [`MessageSendRequest`](/api/reference/object_types/message_send_request) comprend désormais un nouvel attribut : `messageStatusPayload`. Cet attribut fournit la charge utile de l'état pour le message correspondant, provenant directement de l'intégration.
+- Cet attribut est utile lors de la [récupération des mises à jour d'état pour un message](/api/reference/messages_api/get_message_status).
+- À des fins de dépannage, `messageStatusPayload` peut également être consulté via l'[événement de rappel de mise à jour d'état du message](/api/reference/webhooks/message_events/message_status_updated).
 
-## April 5, 2023
+## 5 avril 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- The `assignedUser` attribute has been added to the [Contact](/api/reference/object_types/contact) object
-- Users can now be assigned to a contact during creation or update by providing the assigned_user parameter with a user's email (eg. `john.doe@email.com`). Ensure that the provided email corresponds to a confirmed user in your account.
-- To unassign a user from a contact during an update, include the unassign_user parameter in the request body and set its value to true. This action will remove the assigned user from the contact.
+- L'attribut `assignedUser` a été ajouté à l'objet [Contact](/api/reference/object_types/contact)
+- Les utilisateurs peuvent désormais être assignés à un contact lors de sa création ou de sa mise à jour en fournissant le paramètre assigned_user avec l'e-mail d'un utilisateur (par exemple `john.doe@email.com`). Assurez-vous que l'e-mail fourni correspond à un utilisateur confirmé dans votre compte.
+- Pour désassigner un utilisateur d'un contact lors d'une mise à jour, incluez le paramètre unassign_user dans le corps de la requête et définissez sa valeur sur true. Cette action supprimera l'utilisateur assigné du contact.
 
-## March 3, 2023
+## 3 mars 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- Multi-language code snippets (`curl`, `node`, `go`, `ruby`, `php`, `python`) for all the requests
-- Release Notes section
+- Extraits de code multilingues (`curl`, `node`, `go`, `ruby`, `php`, `python`) pour toutes les requêtes
+- Section Notes de publication
 
-### 🛠️ Changes
+### 🛠️ Changements
 
-- [Contact](/api/reference/object_types/contact) now includes `custom_fields`
-- `custom_fields`, `tags` can be passed in the body when [creating](/api/reference/contacts_api/post_contacts) or [creating](/api/reference/contacts_api/post_contacts) a contact
-- `phone_number` of [Contact](/api/reference/object_types/contact) can't be updated anymore
+- [Contact](/api/reference/object_types/contact) inclut maintenant `custom_fields`
+- `custom_fields`, `tags` peuvent être transmis dans le corps lors de la [création](/api/reference/contacts_api/post_contacts) ou de la [mise à jour](/api/reference/contacts_api/post_contacts) d'un contact
+- Le `phone_number` de [Contact](/api/reference/object_types/contact) ne peut plus être mis à jour
 
-## January 17, 2023
+## 17 janvier 2023
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- [Templates API](/api/reference/template_messages_api/introduction)
+- [API des modèles](/api/reference/template_messages_api/introduction)
 
-### 🛠️ Changes
+### 🛠️ Changements
 
-- Allow to send [Template Messages](/api/reference/messages_api/post_send_messages#send-template-messages)
+- Permettre d'envoyer des [messages de modèle](/api/reference/messages_api/post_send_messages#send-template-messages)
 
-## November 11, 2022
+## 11 novembre 2022
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- [Auth API](/api/reference/auth_api/introduction)
+- [API d'authentification](/api/reference/auth_api/introduction)
 
-## October 18, 2022
+## 18 octobre 2022
 
-### ✨ What's new
+### ✨ Quoi de neuf
 
-- [Webhooks API](/api/reference/webhooks_api/introduction)
+- [API des rappels](/api/reference/webhooks_api/introduction)

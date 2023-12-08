@@ -5,12 +5,12 @@ sidebar_position: 2
 import sendMessageUrl from './assets/send_message.png'
 import sendMessageEditUrl from './assets/send_message_edit.png'
 
-# Send Message
+# Envoyer un message
 
 <img src={sendMessageUrl} width={180} />
 
-The **Send Message** action is used to send a message to your customers.
+L'action **Envoyer un message** est utilisée pour envoyer un message à vos clients.
 
-You can specify the message you want to send in the **Message** field. You can also use variables to personalize the message.
+Vous pouvez spécifier le message que vous souhaitez envoyer dans le champ **Message**. Vous pouvez également utiliser des variables pour personnaliser le message.
 
 <img src={sendMessageEditUrl} width={400} />

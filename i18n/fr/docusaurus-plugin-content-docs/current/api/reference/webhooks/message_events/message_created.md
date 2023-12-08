@@ -1,25 +1,25 @@
-# Message Created
+# Message Créé
 
-This event will be sent whenever a message gets **created**, for example when _receiving_ or _sending_ a message from/to a customer.
+Cet événement sera envoyé chaque fois qu'un message est **créé**, par exemple lors de la réception ou de l'envoi d'un message d'un client.
 
-### Event Name
+### Nom de l'événement
 
 `message_created`
 
-### Payload Fields
+### Champ de la charge utile
 
-| Field          | Type     | Description                                                    |
+| Champ          | Type     | Description                                                    |
 | :------------- | :------- | :------------------------------------------------------------- |
-| `to`           | string   | The channel-specific identifier of the message receiver        |
-| `from`         | string   | The channel-specific identifier of the message sender          |
-| `text`         | string   | The text of the message                                        |
-| `attachments`  | string[] | The attachments of the message                                 |
-| `status`       | string   | The status of the message. Can be only be `received` or `sent` |
-| `channel`      | string   | Channel identifier (e.g. `whatsapp`)                           |
-| `contact.uuid` | string   | The uuid of the contact associated to the message              |
-| `createdAt`    | string   | Date of contact creation (ISO 8601 formatted)                  |
+| `to`           | string   | L'identifiant spécifique au canal du destinataire du message    |
+| `from`         | string   | L'identifiant spécifique au canal de l'expéditeur du message    |
+| `text`         | string   | Le texte du message                                            |
+| `attachments`  | string[] | Les pièces jointes du message                                  |
+| `status`       | string   | Le statut du message. Ne peut être que `received` ou `sent`    |
+| `channel`      | string   | Identifiant du canal (par exemple `whatsapp`)                   |
+| `contact.uuid` | string   | L'UUID du contact associé au message                           |
+| `createdAt`    | string   | Date de création du contact (au format ISO 8601)                |
 
-### Example Payload
+### Exemple de charge utile
 
 ```json title=payload.json
 {
@@ -27,7 +27,7 @@ This event will be sent whenever a message gets **created**, for example when _r
   "payload": {
     "to": "331122334455",
     "from": "335544332211",
-    "text": "Hello",
+    "text": "Bonjour",
     "status": "received",
     "channel": "whatsapp",
     "contact": {

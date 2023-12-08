@@ -1,12 +1,12 @@
 ---
-title: Conversation
+title: Objet Conversation
 sidebar_position: 5
 ---
 
-### Conversation Object
+### Objet Conversation
 
-| Field       | Type                    | Description                                        |
+| Champ       | Type                    | Description                                        |
 | :---------- | :---------------------- | :------------------------------------------------- |
-| `createdAt` | string                  | Date of conversation creation (ISO 8601 formatted) |
-| `closedAt`  | string                  | Date of conversation closure (ISO 8601 formatted)  |
-| `contact`   | [Contact](./contact.md) | Contact currently associated to the conversation   |
+| `createdAt` | chaîne de caractères    | Date de création de la conversation (au format ISO 8601) |
+| `closedAt`  | chaîne de caractères    | Date de fermeture de la conversation (au format ISO 8601)  |
+| `contact`   | [Contact](./contact.md) | Contact actuellement associé à la conversation   |

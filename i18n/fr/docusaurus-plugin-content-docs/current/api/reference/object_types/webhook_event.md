@@ -1,14 +1,14 @@
 ---
-title: WebhookEvent
+title: Objet WebhookEvent
 sidebar_position: 4
 ---
 
-### WebhookEvent Object
+### Objet WebhookEvent
 
-| Field       | Type     | Description                                                                                  |
+| Champs      | Type     | Description                                                                                  |
 | :---------- | :------- | :------------------------------------------------------------------------------------------- |
-| `event`     | string   | Event type                                                                                   |
-| `response`  | string{} | Response body returned from external webhook endpoints                                       |
-| `payload`   | string{} | Payload object containing the subject of the event (message, contact)                        |
-| `success`   | boolean  | Boolean value representing the status of the event request (`true` if status code was `200`) |
-| `createdAt` | string   | Date of webhook creation (ISO 8601 formatted)                                                |
+| `event`     | string   | Type d'événement                                                                             |
+| `response`  | string{} | Corps de la réponse retourné par les points de terminaison de webhook externes                |
+| `payload`   | string{} | Objet de chargement contenant le sujet de l'événement (message, contact)                       |
+| `success`   | boolean  | Valeur booléenne représentant l'état de la demande d'événement (`true` si le code de statut était `200`) |
+| `createdAt` | string   | Date de création du webhook (format ISO 8601)                                                |

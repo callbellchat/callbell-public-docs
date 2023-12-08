@@ -2,12 +2,12 @@
 sidebar_position: 6
 ---
 
-# Errors
+# Erreurs
 
-Callbell uses standard HTTP response codes:
+Callbell utilise les codes de réponse HTTP standard :
 
-- Responses in the **2xx** range means that the request has been executed successfully
+- Les réponses dans la plage **2xx** signifie que la requête a été exécutée avec succès
 
-- Responses in the **4xx** range means that the request has been not successful because of a client error like authentication, rate limit reached or wrong params
+- Les réponses dans la plage **4xx** signifie que la requête n'a pas été réussie en raison d'une erreur du client, comme une erreur d'authentification, une limite de taux atteinte ou des paramètres incorrects
 
-- Responses in the **5xx** range means that the request hasn’t been successful because of an internal server error. It’s usually safe to retry those requests with a delay or at a later time
+- Les réponses dans la plage **5xx** signifie que la requête n'a pas été réussie en raison d'une erreur interne du serveur. Il est généralement sûr de réessayer ces requêtes avec un délai ou ultérieurement

@@ -2,19 +2,19 @@
 sidebar_position: 6
 ---
 
-# Postman Collection
+# Collection Postman
 
-[Postman is a desktop application](https://www.postman.com/) that allows you to configure and intereact with HTTP-based APIs. Callbell REST API implements several endpoints that you can interact with. 
+[Postman est une application de bureau](https://www.postman.com/) qui vous permet de configurer et d'interagir avec des API basées sur HTTP. L'API REST de Callbell implémente plusieurs endpoints avec lesquels vous pouvez interagir.
 
-To utilize our Postman collection click the button below:
+Pour utiliser notre collection Postman, cliquez sur le bouton ci-dessous :
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4469469-67323d5f-a547-4b9d-ba96-cced69795917?action=collection%2Ffork&collection-url=/postman-collection.json)
+[![Exécuter dans Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4469469-67323d5f-a547-4b9d-ba96-cced69795917?action=collection%2Ffork&collection-url=/postman-collection.json)
 
 
-Now that you have imported the collection, remember to configure the `CALLBELL_TOKEN` variable with your API Token.
+Maintenant que vous avez importé la collection, n'oubliez pas de configurer la variable `CALLBELL_TOKEN` avec votre API Token.
 
-If you are new to Postman you can also learn more about it:
+Si vous êtes nouveau avec Postman, vous pouvez également en apprendre davantage à son sujet :
 
-- [Postman: Introduction](https://learning.postman.com/docs/getting-started/introduction/)
-- [Postman: Using variables](https://learning.postman.com/docs/sending-requests/variables/)
-- [Postman: Importing and exporting data](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)
+- [Postman : Introduction](https://learning.postman.com/docs/getting-started/introduction/)
+- [Postman : Utilisation des variables](https://learning.postman.com/docs/sending-requests/variables/)
+- [Postman : Importation et exportation de données](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/)

@@ -59,7 +59,7 @@ Once you're happy with your bot you can publish it by clicking on the **Publish 
 
 ![publish_bot](./assets/publish_bot.png)
 
-After clicking on the **Publish draft** button and confirming, your bot flow will be published; at the same time you'll need to **enable your bot** in order to make it available to your customers. You can do this by navigating back to the "Bots" section in the left sidebar and clicking on the **Enable bot** button:
+After clicking on the **Publish draft** button and confirming, your bot flow will be published; at the same time you'll need to **enable your bot** in order to make it available to your customers. You can do this by navigating back to the "Bots" section in the right sidebar and clicking on the **Enable bot** button:
 
 ![enable_bot](./assets/enable_bot.png)
 

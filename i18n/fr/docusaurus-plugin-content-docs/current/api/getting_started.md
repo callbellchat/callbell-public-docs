@@ -2,32 +2,32 @@
 sidebar_position: 2
 ---
 
-# Getting Started
+# Commencer
 
-This step-to-step guide will walk you through using Callbell API to send a message.
+Ce guide étape par étape vous guidera dans l'utilisation de l'API Callbell pour envoyer un message.
 
-## Prerequisites
+## Prérequis
 
-You will need to create an account on Callbell and have configured a WhatsApp Business channel in order to be able to follow this guide.
+Vous devrez créer un compte sur Callbell et avoir configuré un canal WhatsApp Business pour pouvoir suivre ce guide.
 
-- Sign up for [Callbell](https://dash.callbell.eu/users/sign_up)
-- See more information about our [WhatsApp Business API integration](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
+- [Inscrivez-vous sur Callbell](https://dash.callbell.eu/users/sign_up)
+- Consultez plus d'informations sur notre [intégration de l'API WhatsApp Business](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
 
-## Getting your API keys
+## Obtenir vos clés d'API
 
-Navigate to Callbell API keys page in settings (https://dash.callbell.eu/settings/api_settings/keys) in order to generate a new API key:
+Accédez à la page des clés d'API Callbell dans les paramètres (https://dash.callbell.eu/settings/api_settings/keys) afin de générer une nouvelle clé d'API :
 
 ![create_api_key](./assets/create_api_key_1.jpg)
 
-After clicking on the **Create API Key** button make sure to copy the token and store it safely.
+Après avoir cliqué sur le bouton **Créer une clé API**, assurez-vous de copier le jeton et de le stocker en lieu sûr.
 
 :::caution
-The API key will be showed only on this screen. If you lose access to it you'll have to generate a new one.
+La clé d'API ne sera affichée que sur cet écran. Si vous perdez l'accès, vous devrez en générer une nouvelle.
 :::
 
-## Send a test message using cURL
+## Envoyer un message de test en utilisant cURL
 
-By using the [Messages API' send message method](/api/reference/messages_api/post_send_messages.md) you can test if your API key is working as expected:
+En utilisant la méthode d'envoi du message de l'API Messages (post_send_messages.md), vous pouvez tester si votre clé d'API fonctionne comme prévu :
 
 ```bash
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
@@ -43,13 +43,13 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
   }'
 ```
 
-Just replace `REPLACE_API_KEY_HERE` with the API Key generated on the [Getting your API keys](#getting-your-api-keys) step and the `REPLACE_PHONE_NUMBER_HERE` with the receiver's phone number.
+Remplacez simplement `REPLACE_API_KEY_HERE` par la clé API générée à l'étape [Obtenir vos clés d'API](#obtenir-vos-clés-dapi) et `REPLACE_PHONE_NUMBER_HERE` par le numéro de téléphone du destinataire.
 
 :::info
-Make sure that the receiving phone number has _opted-in_ and you're **inside the 24 hours rule** of WhatsApp Business API.
+Assurez-vous que le numéro de téléphone de réception est _opt-in_ et que vous êtes **dans la règle des 24 heures** de l'API WhatsApp Business.
 :::
 
-If the message went through correctly you will receive a response similar to this one:
+Si le message a été correctement envoyé, vous recevrez une réponse similaire à celle-ci :
 
 ```json
 {
@@ -60,16 +60,16 @@ If the message went through correctly you will receive a response similar to thi
 }
 ```
 
-This means that the message has been _successfully enqueued_ for send to the desired phone number.
+Cela signifie que le message a été _enregistré avec succès_ pour être envoyé au numéro de téléphone souhaité.
 
-### Retrieve the status of a message
+### Récupérer le statut d'un message
 
-In order to know if our test message was delivered successfully we can use either of the following methods:
+Pour savoir si notre message de test a été livré avec succès, nous pouvons utiliser l'une ou l'autre des méthodes suivantes :
 
-- Use the [get message status endpoint](api/reference/messages_api/get_message_status.md)
-- Enable **Webhooks** on the API keys section and subscribe to the `message_status_updated` event type
+- Utiliser le point de terminaison [get message status](/api/reference/messages_api/get_message_status.md)
+- Activer **Webhooks** dans la section des clés d'API et vous abonner à l'événement de type `message_status_updated`
 
-In this example we'll use the first method; in order to check the status of the test message just perform the following cURL from a terminal:
+Dans cet exemple, nous utiliserons la première méthode ; pour vérifier le statut du message de test, effectuez simplement le cURL suivant à partir d'un terminal :
 
 ```bash
 curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
@@ -77,9 +77,9 @@ curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
   -H "Content-Type: application/json"
 ```
 
-Make sure to replace `REPLACE_API_KEY_HERE` with your API key and `REPLACE_UUID_HERE` with the message identifier obtained from the [Send a test message](#send-a-test-message-using-curl) step.
+Assurez-vous de remplacer `REPLACE_API_KEY_HERE` par votre clé API et `REPLACE_UUID_HERE` par l'identifiant du message obtenu à partir de l'étape [Envoyer un message de test](#envoyer-un-message-de-test-en-utilisant-curl).
 
-You'll get back the following response:
+Vous obtiendrez la réponse suivante :
 
 ```json
 {
@@ -90,8 +90,8 @@ You'll get back the following response:
 }
 ```
 
-This confirms that the message was successfully sent to the user but it hasn't been read yet.
+Cela confirme que le message a été envoyé avec succès à l'utilisateur mais il n'a pas encore été lu.
 
-### Next Steps
+### Étapes suivantes
 
-Try exploring our [Messages](/api/reference/messages_api/introduction.md) and [Contacts](/api/reference/contacts_api/introduction.md) APIs for more examples.
+Essayez d'explorer nos API [Messages](/api/reference/messages_api/introduction.md) et [Contacts](/api/reference/contacts_api/introduction.md) pour plus d'exemples.

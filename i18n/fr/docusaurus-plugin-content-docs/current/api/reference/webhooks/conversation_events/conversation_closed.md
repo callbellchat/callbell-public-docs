@@ -2,19 +2,19 @@
 sidebar_position: 2
 ---
 
-# Conversation Closed
+# Conversation fermée
 
-This event occurs when a conversation is **closed**.
+Cet événement se produit lorsque une conversation est **fermée**.
 
-### Event Name
+### Nom de l'événement
 
 `conversation_closed`
 
-### Payload Fields
+### Champs de la charge utile
 
-See [Conversation Object](/api/reference/object_types/conversation)
+Voir [Objet Conversation](/api/reference/object_types/conversation)
 
-### Example Payload
+### Exemple de charge utile
 
 ```json title=payload.json
 {

@@ -4,14 +4,14 @@ sidebar_position: 7
 
 import editContactFieldsUrl from './assets/edit_contact_fields.png'
 
-# Edit Contact Fields
+# Modifier les champs de contact
 
 <img src={editContactFieldsUrl} width={180} />
 
-This action allows you to edit the custom fields of the current contact.
+Cette action vous permet de modifier les champs personnalisés du contact actuel.
 
-The custom fields must be created from the [Custom Fields Section](https://dash.callbell.eu/settings/custom_fields) of your Callbell dashboard.
+Les champs personnalisés doivent être créés à partir de la [section Champs personnalisés](https://dash.callbell.eu/settings/custom_fields) de votre tableau de bord Callbell.
 
 :::tip
-If you need to update multiple custom fields, you can add multiple **Edit Contact Fields** actions in sequence.
+Si vous avez besoin de mettre à jour plusieurs champs personnalisés, vous pouvez ajouter plusieurs actions **Modifier les champs de contact** en séquence.
 :::
