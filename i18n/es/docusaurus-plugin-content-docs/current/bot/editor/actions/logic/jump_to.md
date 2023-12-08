@@ -2,8 +2,8 @@
 sidebar_position: 3
 ---
 
-importar jumpToUrl de './assets/jump_to.png'
-importar jumpToEditUrl de './assets/jump_to_edit.png'
+import jumpToUrl from './assets/jump_to.png'
+import jumpToEditUrl from './assets/jump_to_edit.png'
 
 # Ir para
 

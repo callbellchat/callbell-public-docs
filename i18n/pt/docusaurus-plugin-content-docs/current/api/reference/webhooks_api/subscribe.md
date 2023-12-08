@@ -1,5 +1,5 @@
 ---
-title: POST /webhooks/inscrever
+title: POST /webhooks/subscribe
 sidebar_position: 2
 ---
 
@@ -17,10 +17,10 @@ Cada conta pode **apenas** registrar 1 webhook.
 
 ### Parâmetros obrigatórios
 
-| Parâmetro       | Tipo       | Descrição                                                                                          |
-| :-------------- | :--------- | :------------------------------------------------------------------------------------------------- |
-| `url`           | string     | O identificador do contato (por exemplo, número de telefone no WhatsApp)                            |
-| `subscriptions` | string[]   | Valores separados por vírgula dos eventos para se inscrever neste webhook (por exemplo, `message_created`) |
+| Parâmetro       | Tipo     | Descrição                                                                                                  |
+| :-------------- | :------- | :--------------------------------------------------------------------------------------------------------- |
+| `url`           | string   | O identificador do contato (por exemplo, número de telefone no WhatsApp)                                   |
+| `subscriptions` | string[] | Valores separados por vírgula dos eventos para se inscrever neste webhook (por exemplo, `message_created`) |
 
 ### Exemplo de Requisição
 
@@ -28,16 +28,16 @@ Cada conta pode **apenas** registrar 1 webhook.
 
 ### Resposta
 
-| Parâmetro | Tipo                                               | Descrição                                                            |
-| :-------- | :------------------------------------------------- | :------------------------------------------------------------------- |
-| `contact` | [Webhook](/api/reference/object_types/webhook/pt-BR)| O webhook que foi criado ou atualizado.                              |
+| Parâmetro | Tipo                                           | Descrição                               |
+| :-------- | :--------------------------------------------- | :-------------------------------------- |
+| `contact` | [Webhook](/api/reference/object_types/webhook) | O webhook que foi criado ou atualizado. |
 
 ### Exemplo de Resposta
 
 ```json title=response.json
 {
     "webhook": {
-        "url": "https://my-app.com/my-webhook-endpoint",,
+        "url": "https://my-app.com/my-webhook-endpoint",
         "subscriptions": [
             "message_created"
         ],

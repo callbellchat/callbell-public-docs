@@ -8,7 +8,7 @@ Questa guida ti mostrerà come utilizzare l'API di Callbell per inviare messaggi
 
 ## Iniziare con Callbell
 
-Se sei nuovo su Callbell, puoi iniziare con la nostra [Guida introduttiva a Callbell](/bot/introduzione).
+Se sei nuovo su Callbell, puoi iniziare con la nostra [Guida introduttiva a Callbell](/api/getting_started).
 Analizzeremo anche alcuni esempi di utilizzo dell'API di Callbell.
 
 Gli esempi si dividono in due categorie: **Eventi causati da Azioni** e **Azioni guidate da Eventi**.

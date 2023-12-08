@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Suivant",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Callbell API": {
@@ -8,7 +8,7 @@
     "description": "The label for category Callbell API in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.API Reference": {
-    "message": "API Reference",
+    "message": "Référence API",
     "description": "The label for category API Reference in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Auth API": {
@@ -40,27 +40,27 @@
     "description": "The label for category Webhooks in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Message Events": {
-    "message": "Message Events",
+    "message": "Événements de Message",
     "description": "The label for category Message Events in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Contact Events": {
-    "message": "Contact Events",
+    "message": "Événements de Contact",
     "description": "The label for category Contact Events in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Conversation Events": {
-    "message": "Conversation Events",
+    "message": "Événements de Conversation",
     "description": "The label for category Conversation Events in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Object Types": {
-    "message": "Object Types",
+    "message": "Types d'Objet",
     "description": "The label for category Object Types in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Bot Flow Builder": {
-    "message": "Bot Flow Builder",
+    "message": "Constructeur de Flux de Bot",
     "description": "The label for category Bot Flow Builder in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Editor": {
-    "message": "Editor",
+    "message": "Éditeur",
     "description": "The label for category Editor in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Actions": {
@@ -76,7 +76,7 @@
     "description": "The label for category Contact in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Logic": {
-    "message": "Logic",
+    "message": "Logique",
     "description": "The label for category Logic in sidebar tutorialSidebar"
   }
 }

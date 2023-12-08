@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Callbell Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "My Site Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.API Reference": {
+    "message": "API Reference",
+    "description": "Navbar item with label API Reference"
+  },
+  "item.label.Product Updates": {
+    "message": "Product Updates",
+    "description": "Navbar item with label Product Updates"
+  },
+  "item.label.Service Status": {
+    "message": "Service Status",
+    "description": "Navbar item with label Service Status"
+  }
+}
