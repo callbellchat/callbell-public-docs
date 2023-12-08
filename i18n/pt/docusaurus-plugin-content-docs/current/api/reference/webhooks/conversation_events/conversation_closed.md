@@ -2,19 +2,19 @@
 sidebar_position: 2
 ---
 
-# Conversation Closed
+# Conversa Fechada
 
-This event occurs when a conversation is **closed**.
+Esse evento ocorre quando uma conversa é **fechada**.
 
-### Event Name
+### Nome do Evento
 
 `conversation_closed`
 
-### Payload Fields
+### Campos do Payload
 
-See [Conversation Object](/api/reference/object_types/conversation)
+Veja [Objeto de Conversa](/api/reference/object_types/conversation)
 
-### Example Payload
+### Exemplo de Payload
 
 ```json title=payload.json
 {

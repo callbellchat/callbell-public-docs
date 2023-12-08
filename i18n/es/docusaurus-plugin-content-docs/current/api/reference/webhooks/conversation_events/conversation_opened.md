@@ -2,31 +2,31 @@
 sidebar_position: 1
 ---
 
-# Conversación abierta
+# Chat abierto
 
-Este evento se produce cuando se **abre** o **reabre** una conversación.
+Este evento ocurre cuando se **abre** o **reabre** un chat.
 
-### Nombre del Evento
+### Nombre del evento
 
-conversación_abierta
+`chat_abierto`
 
-### Payload Fields
+### Campos del payload
 
-Ver [Conversation Object](/api/reference/object_types/conversation)
+Ver [Objeto de chat](/api/reference/object_types/conversation)
 
-### Ejemplo de carga útil
+### Ejemplo de payload
 
-```json title=carga.json
+```json title=payload.json
 {
-  "evento": "conversación_abierta",
+  "event": "chat_abierto",
   "payload": {
-    "fuente": "whatsapp",
+    "source": "whatsapp",
     "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
-      "name": "Juan Pérez",
+      "name": "John Doe",
       "tags": ["Lead"],
       "uuid": "eb2b914a977e4ab896e7b886698b3eac",
-      "fuente": "whatsapp",
+      "source": "whatsapp",
       "avatarUrl": null,
       "createdAt": "2022-10-12T15:57:16Z",
       "phoneNumber": "331122334455"

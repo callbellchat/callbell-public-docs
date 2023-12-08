@@ -1,14 +1,14 @@
 ---
-título: MessageSendRequest
+title: Objeto MessageSendRequest
 sidebar_position: 2
 ---
 
 ### Objeto MessageSendRequest
 
-MessageSendRequest` representa una solicitud de envío de mensaje. Puede ser identificado y recuperado posteriormente utilizando el campo `uuid`.
+`MessageSendRequest` representa uma solicitação de envio de mensagem. Ele pode ser identificado e recuperado posteriormente usando o campo `uuid`.
 
-| Campo Tipo Descripción
+| Campo                  | Tipo          | Descrição                          |
 | :--------------------- | :------------ | :--------------------------------- |
-| `uuid` | string | Un ID único generado por Callbell |
-| Estado del mensaje: Estado del mensaje.
-| `messageStatusPayload` | JSON | La carga útil del estado del mensaje | | JSON
+| `uuid`                 | string        | Um ID exclusivo gerado pelo Callbell |
+| `status`               | MessageStatus | O status da mensagem                |
+| `messageStatusPayload` | JSON          | O payload bruto do status da mensagem |

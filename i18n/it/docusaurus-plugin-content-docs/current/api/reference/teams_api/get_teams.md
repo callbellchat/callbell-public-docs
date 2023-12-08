@@ -7,42 +7,42 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /teams
 
-Elenca tutti i team appartenenti all'account.
+Elenco di tutte le squadre appartenenti all'account.
 
-### Richiesta di esempio
+### Esempio di richiesta
 
-<RequestTabs endpoint='teams_api' request="get_teams" />
+<RequestTabs endpoint='teams_api' request="get_teams"/>
 
 ### Risposta
 
-| Parametro | Tipo                                       | Descrizione         |
-| :-------- | :----------------------------------------- | :------------------ |
-| `teams`   | [Team[]](/api/reference/object_types/team) | Un elenco di teams. |
+| Parametro | Tipo                                         | Descrizione   |
+| :-------- | :------------------------------------------- | :------------ |
+| `teams`   | [Team[]](/api/reference/object_types/team)   | Una lista di squadre.  |
 
 
 ### Esempio di risposta
 
-``json title=response.json
+```json title=response.json
 {
   "teams": [
     {
       "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-      "nome": "Generale",
+      "name": "General",
       "createdAt": "2020-11-13T21:08:53Z",
       "default": true,
-      "membri": 2
+      "members": 2
     },
     {
       "uuid": "47aad5f9b4ca423c9d630f06ab93fe1f",
-      "nome": "Supporto",
+      "name": "Support",
       "createdAt": "2020-11-13T21:10:33Z",
       "default": false,
-      "membri": 1
+      "members": 1
     }
   ],
   "meta": {
     "page": 1,
-    "pagine": 1
+    "pages": 1
   }
 }
 ```

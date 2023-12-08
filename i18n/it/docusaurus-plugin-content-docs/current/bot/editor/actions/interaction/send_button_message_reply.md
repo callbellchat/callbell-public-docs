@@ -4,16 +4,16 @@ sidebar_position: 4
 
 import sendButtonMessageReplyUrl from './assets/send_button_message_reply.png'
 
-# Pulsante di invio messaggio di risposta
+# Invia Risposta con Pulsante
 
 <img src={sendButtonMessageReplyUrl} width={180} />
 
-L'azione **Invia messaggio pulsante di risposta** è utilizzata per inviare un messaggio con pulsanti ai clienti.
+L'azione **Invia Risposta con Pulsante** viene utilizzata per inviare un messaggio con pulsanti ai tuoi clienti.
 
-È possibile creare un pulsante di risposta dalla [Sezione Risposte rapide] (https://dash.callbell.eu/settings/templates) del cruscotto di Callbell.
+Puoi creare una risposta con pulsante dalla sezione [Risposte Rapide](https://dash.callbell.eu/settings/templates) del tuo dashboard Callbell.
 
-Questa azione è utile quando si vuole dare ai clienti la possibilità di scegliere tra diverse opzioni (massimo 3 opzioni).
+Questa azione è utile quando vuoi dare ai tuoi clienti la possibilità di scegliere tra diverse opzioni (massimo 3 opzioni).
 
 :::info
-Questa azione è disponibile solo sui bot **WhatsApp Business API**.
+Questa azione è disponibile solo su **WhatsApp Business API**.
 :::

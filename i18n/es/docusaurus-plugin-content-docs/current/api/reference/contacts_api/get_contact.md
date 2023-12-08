@@ -1,33 +1,33 @@
 ---
-título: GET /contactos/:uuid
+title: GET /contacts/:uuid
 sidebar_position: 3
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contacto/:uuid
+# GET /contact/:uuid
 
-Obtener un contacto específico dado un `uuid`.
+Obtenga un contacto específico dado un `uuid`.
 
-### Parámetros obligatorios
+### Parámetros Requeridos
 
-| Parámetro Tipo Descripción
+| Parámetro | Tipo   | Descripción             |
 | :-------- | :----- | :---------------------- |
-| `uuid` | string | El uuid del contacto |
+| `uuid`    | string | El uuid del contacto     |
 
-### Ejemplo de solicitud
+### Solicitud de ejemplo
 
 <RequestTabs endpoint='contacts_api' request="get_contact"/>
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
+| Parámetro | Tipo                                           | Descripción                          |
 | :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | El objeto que representa al contacto. |
+| `contact` | [Contact](/api/reference/object_types/contact) | El objeto que representa el contacto. |
 
 ### Ejemplo de respuesta
 
-```json title=respuesta.json
+```json title=response.json
 {
   "contact": [
     {
@@ -38,12 +38,12 @@ Obtener un contacto específico dado un `uuid`.
       "createdAt": "2020-11-13T21:08:53Z",
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-      "tags": ["ventas", "lead"],
+      "tags": ["sales", "lead"],
       "assignedUser": null,
       "customFields": {
         "Address": "Oxford Street 123",
         "Billing Address": "Oxford Street 123",
-        "IVA": "ABC123DCE456"
+        "VAT": "ABC123DCE456"
       }
     }
   ]

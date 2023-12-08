@@ -1,29 +1,29 @@
 ---
-title: GET /messaggi/stato/:uuid
+title: GET /messages/status/:uuid
 sidebar_position: 3
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /messages/status/:uuid
 
-### Parametri richiesti
+### Required Parameters
 
-| Parametro | Tipo    | Descrizione                                       |
-| :-------- | :------ | :------------------------------------------------ |
-| `uuid`    | Stringa | Identificatore del messaggio inviato tramite API. |
+| Parameter | Type   | Description                                           |
+| :-------- | :----- | :---------------------------------------------------- |
+| `uuid`    | String | Identifier of the message which was sent through API. |
 
-### Esempio di richiesta
+### Example Request
 
-<RequestTabs endpoint='messages_api' request="get_message_status" />
+<RequestTabs endpoint='messages_api' request="get_message_status"/>
 
-### Risposta
+### Response
 
-| Parametro | Tipo                                                                   | Descrizione                                 |
-| :-------- | :--------------------------------------------------------------------- | :------------------------------------------ |
-| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | I dettagli del messaggio completi di stato. |
+| Parameter | Type                                                                   | Description                                  |
+| :-------- | :--------------------------------------------------------------------- | :------------------------------------------- |
+| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | The message details comprehensive of status. |
 
-### Esempio di risposta
+### Example Response
 
 ```json title=response.json
 {
@@ -32,10 +32,10 @@ import RequestTabs from"@site/src/components/Requests/RequestTabs"
     "status": "enqueued",
     "messageStatusPayload":{
       "id":"2b34bfb7-2631-4763-89fb-1b3c65a4baaa",
-      "type": "enqueued",
+      "type":"enqueued",
       "payload":{
-        "type": "session",
-        "whatsappMessageId": "gBGGM2MSRxl_AAlqmG1KQXU7nz4".
+        "type":"session",
+        "whatsappMessageId":"gBGGM2MSRxl_AAlqmG1KQXU7nz4"
       },
       "destination":"1122334455"
     }

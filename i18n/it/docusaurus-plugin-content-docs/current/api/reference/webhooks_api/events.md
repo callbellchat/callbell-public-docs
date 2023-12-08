@@ -1,26 +1,26 @@
 ---
-title: GET /webhooks/events
+title: GET /webhooks/eventi
 sidebar_position: 4
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /eventi
 
-Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un filtro per ottenere risultati più specifici.
+Elencare tutti gli eventi appartenenti al webhook. È possibile specificare un filtro per ottenere risultati più specifici.
 
 ### Parametri opzionali
 
-| Parametro       | Tipo     | Descrizione                                                                                               |
-| :-------------- | :------- | :-------------------------------------------------------------------------------------------------------- |
-| `status`        | stringa  | Lo stato dell'evento (fallito, successo)                                                                  |
-| `pagina`        | stringa  | Il numero di pagina                                                                                       |
-| `items`         | stringa  | Il numero di elementi per pagina                                                                          |
-| `subscriptions` | string[] | Valori separati da virgole degli eventi da sottoscrivere su questo webhook (ad esempio `message_created`) |
+| Parametro        | Tipo      | Descrizione                                                                                        |
+| :--------------- | :-------- | :------------------------------------------------------------------------------------------------- |
+| `status`         | stringa   | Lo stato dell'evento (fallito, successo)                                                           |
+| `page`           | stringa   | Il numero di pagina                                                                                |
+| `items`          | stringa   | Il numero di elementi per pagina                                                                   |
+| `sottoscrizioni` | stringa[] | Valori separati da virgola degli eventi da sottoscrivere su questo webhook (es. `message_created`) |
 
 ### Esempio di richiesta
 
-<RequestTabs endpoint='webhooks_api' request="get_webhooks_events" />
+<RequestTabs endpoint='webhooks_api' request="get_webhooks_events"/>
 
 ### Risposta
 
@@ -36,7 +36,7 @@ Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un fil
     {
       "event": "message_created",
       "payload": "message_object",
-      "risposta": {
+      "response": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -45,9 +45,9 @@ Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un fil
       "createdAt": "2022-11-08T15:41:49Z"
     },
     {
-      "evento": "message_created",
+      "event": "message_created",
       "payload": "message_object",
-      "risposta": {
+      "response": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -56,9 +56,9 @@ Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un fil
       "createdAt": "2022-11-08T14:52:31Z"
     },
     {
-      "evento": "message_created",
+      "event": "message_created",
       "payload": "contact_object",
-      "risposta": {
+      "response": {
         "body": {},
         "code": 200,
         "headers": {}
@@ -69,7 +69,7 @@ Elenca tutti gli eventi appartenenti al webhook. È possibile specificare un fil
   ],
   "meta": {
     "page": 1,
-    "pagine": 2
+    "pages": 2
   }
 }
 ```

@@ -7,22 +7,22 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /auth/me
 
-Return a `200` status code if the `api_token` is valid.
+Retorna um código de status `200` se o `api_token` for válido.
 
-### Example Request
+### Exemplo de Requisição
 
 <RequestTabs endpoint='auth_api' request="get_me"/>
 
-### Response
+### Resposta
 
-| Parameter    | Type   | Description                                            |
-| :----------- | :----- | :----------------------------------------------------- |
-| `status`     | string | The status of the request (`ok`)                       |
-| `user_email` | string | Email of the account user                              |
-| `user_name`  | string | Name of the account user                               |
-| `api_key`    | string | API key which generated the token used for the request |
+| Parâmetro     | Tipo   | Descrição                                                          |
+| :------------ | :----- | :----------------------------------------------------------------- |
+| `status`      | string | O status da requisição (`ok`)                                      |
+| `user_email`  | string | Email do usuário da conta                                          |
+| `user_name`   | string | Nome do usuário da conta                                           |
+| `api_key`     | string | Chave API que gerou o token usado para a requisição                 |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {

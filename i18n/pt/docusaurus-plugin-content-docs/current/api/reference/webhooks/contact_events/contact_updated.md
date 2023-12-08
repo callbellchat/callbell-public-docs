@@ -2,23 +2,23 @@
 sidebar_position: 2
 ---
 
-# Contact Updated
+# Contato Atualizado
 
-This event will be sent whenever a contact is **updated**. This also includes _tag changes_.
+Este evento será enviado sempre que um contato for **atualizado**. Isso inclui também as _mudanças de tag_.
 
-### Event Name
+### Nome do Evento
 
-`contact_updated`
+`contato_atualizado`
 
-### Payload Fields
+### Campos de Payload
 
-See [Contact Object](./../../object_types/contact.md)
+Veja [Objeto Contato](./../../object_types/contact.md)
 
-### Example Payload
+### Exemplo de Payload
 
 ```json title=payload.json
 {
-  "event": "contact_updated",
+  "event": "contato_atualizado",
   "payload": {
     "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
     "name": "John Doe",

@@ -5,45 +5,45 @@ sidebar_position: 5
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# PATCH /contacts/:uuid
+# ATUALIZAÇÃO /contatos/:uuid
 
-Updates an existing contact.
+Atualiza um contato existente.
 
-### Required Parameters
+### Parâmetros Obrigatórios
 
-| Parameter | Type   | Description                                                   |
+| Parâmetro | Tipo   | Descrição                                                     |
 | :-------- | :----- | :------------------------------------------------------------ |
-| `uuid`    | string | The identifier of the contact (e.g. phone number in WhatsApp) |
+| `uuid`    | string | O identificador do contato (por exemplo, número de telefone no WhatsApp) |
 
-### Optional Parameters
+### Parâmetros Opcionais
 
-### Optional Parameters
+### Parâmetros Opcionais
 
-| Parameter       | Type     | Description                                                                   |
+| Parâmetro       | Tipo     | Descrição                                                                   |
 | :-------------- | :------- | :---------------------------------------------------------------------------- |
-| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
-| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
-| `name`          | string   | The name of the contact                                                       |
-| `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact            |
-| `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
+| `tags`          | string[] | Uma lista de valores separados por vírgula (por exemplo, `['Retorno', 'Interessado']`) |
+| `custom_fields` | string{} | Um objeto com os campos personalizados (por exemplo, `{'Endereço de cobrança': 'Rua Principal 1'}`) |
+| `name`          | string   | O nome do contato                                                       |
+| `assigned_user` | String   | Email do colaborador que deseja atribuir a um contato            |
+| `unassign_user` | Boolean  | `true` se você deseja remover o colaborador atribuído de um contato         |
 
 :::caution
-Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
+Certifique-se de que `custom_fields` e `tags` já existam em sua conta antes de passá-los. Visite [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) em suas configurações para obter mais informações.
 
-Similarly, for `assigned_user`, use a valid email address associated with a user in your account.
+Da mesma forma, para `assigned_user`, use um endereço de e-mail válido associado a um usuário em sua conta.
 :::
 
-### Example Request
+### Exemplo de Solicitação
 
 <RequestTabs endpoint='contacts_api' request="patch_contacts"/>
 
-### Response
+### Resposta
 
-| Parameter | Type                                           | Description                         |
+| Parâmetro | Tipo                                           | Descrição                         |
 | :-------- | :--------------------------------------------- | :---------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The contact which has been updated. |
+| `contact` | [Contact](/api/reference/object_types/contact) | O contato que foi atualizado. |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {
@@ -57,7 +57,7 @@ Similarly, for `assigned_user`, use a valid email address associated with a user
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "tags": [],
-      "assignedUser": "jane.doe@email.com",
+      "assignedUser": "user_email@example.com",
       "customFields": {}
     }
   ]

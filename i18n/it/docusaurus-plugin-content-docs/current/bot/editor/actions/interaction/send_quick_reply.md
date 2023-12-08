@@ -8,8 +8,8 @@ import sendQuickReplyUrl from './assets/send_quick_reply.png'
 
 <img src={sendQuickReplyUrl} width={180} />
 
-L'azione **Invia risposta rapida** serve per inviare una risposta rapida ai clienti.
+L'azione **Invia risposta rapida** è utilizzata per inviare una risposta rapida ai tuoi clienti.
 
-Una risposta rapida è una risposta in scatola che si può creare dalla propria [Callbell dashboard](https://dash.callbell.eu/settings/templates) e che può essere un testo, un'immagine o un testo con un'immagine.
+Una risposta rapida è una risposta predefinita che puoi creare dal tuo [dashboard di Callbell](https://dash.callbell.eu/settings/templates) che può essere un testo, un'immagine o un testo con un'immagine.
 
-L'uso di questa azione consente di evitare di ripetere sempre gli stessi messaggi.
+Utilizzare questa azione ti permette di evitare di ripetere gli stessi messaggi più e più volte.

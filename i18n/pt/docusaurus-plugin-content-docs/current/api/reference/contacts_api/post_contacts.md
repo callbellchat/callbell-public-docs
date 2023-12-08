@@ -7,40 +7,40 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # POST /contacts
 
-Creates a new contact.
+Cria um novo contato.
 
-### Required Parameters
+### Parâmetros obrigatórios
 
-| Parameter    | Type   | Description                                                   |
-| :----------- | :----- | :------------------------------------------------------------ |
-| `identifier` | String | The identifier of the contact (e.g. phone number in WhatsApp) |
-| `source`     | Source | The source of the contact (e.g. `whatsapp`)                   |
-| `name`       | String | The name of the contact                                       |
+| Parâmetro    | Tipo   | Descrição                                                                        |
+| :----------- | :----- | :------------------------------------------------------------------------------- |
+| `identifier` | String | O identificador do contato (por exemplo, número de telefone no WhatsApp)          |
+| `source`     | Source | A origem do contato (por exemplo, `whatsapp`)                                    |
+| `name`       | String | O nome do contato                                                               |
 
-### Optional Parameters
+### Parâmetros opcionais
 
-| Parameter       | Type     | Description                                                                    |
-| :-------------- | :------- | :----------------------------------------------------------------------------- |
-| `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)           |
-| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`) |
-| `assigned_user` | String   | Email of the user that you want to assign to a contact                         |
+| Parâmetro       | Tipo     | Descrição                                                                                  |
+| :-------------- | :------- | :--------------------------------------------------------------------------------------- |
+| `tags`          | String[] | Uma lista de valores separados por vírgula (por exemplo, `['Retorno de ligação', 'Interessado']`) |
+| `custom_fields` | String{} | Um objeto com os campos personalizados (por exemplo, `{'Endereço de cobrança': 'Rua Principal 1'}`)   |
+| `assigned_user` | String   | E-mail do usuário que você deseja atribuir a um contato                                     |
 
 :::caution
-When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
-Same applies for `assigned_user`, must be a valid email of a user in your account.
+Ao passar `custom_fields` ou `tags`, certifique-se de que eles existem em sua conta. Consulte [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) em suas configurações.
+O mesmo se aplica a `assigned_user`, deve ser um e-mail válido de um usuário em sua conta.
 :::
 
-### Example Request
+### Exemplo de requisição
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
 
-### Response
+### Resposta
 
-| Parameter | Type                                           | Description                    |
-| :-------- | :--------------------------------------------- | :----------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The contact which was created. |
+| Parâmetro | Tipo                                           | Descrição                         |
+| :-------- | :--------------------------------------------- | :-------------------------------- |
+| `contact` | [Contact](/api/reference/object_types/contact) | O contato que foi criado.          |
 
-### Example Response
+### Exemplo de resposta
 
 ```json title=response.json
 {

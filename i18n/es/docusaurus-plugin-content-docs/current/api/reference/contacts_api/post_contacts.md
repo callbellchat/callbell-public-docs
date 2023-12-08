@@ -1,5 +1,5 @@
 ---
-título: POST /contactos
+title: POST /contacts
 sidebar_position: 4
 ---
 
@@ -7,40 +7,40 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # POST /contacts
 
-Crea un nuevo contacto.
+Creates a new contact.
 
-### Parámetros requeridos
+### Required Parameters
 
-| Parámetro Tipo Descripción
+| Parameter    | Type   | Description                                                   |
 | :----------- | :----- | :------------------------------------------------------------ |
-| `identifier` | String | El identificador del contacto (por ejemplo, número de teléfono en WhatsApp) | |
-| Fuente: Fuente del contacto (por ejemplo, WhatsApp).
-| Nombre Cadena Nombre del contacto
+| `identifier` | String | The identifier of the contact (e.g. phone number in WhatsApp) |
+| `source`     | Source | The source of the contact (e.g. `whatsapp`)                   |
+| `name`       | String | The name of the contact                                       |
 
-### Parámetros opcionales
+### Optional Parameters
 
-| Parámetro Tipo Descripción
+| Parameter       | Type     | Description                                                                    |
 | :-------------- | :------- | :----------------------------------------------------------------------------- |
-| `tags` | String[] | Una lista de valores separados por comas (p. ej. `['Call back', 'Interested']`) | | `custom_fields` | String{}
-| `custom_fields` | String{} | Un objeto con los campos personalizados (por ejemplo, `{'Dirección de facturación': 'Calle principal 1'}`).
-| `assigned_user` | String | Email del usuario que se quiere asignar a un contacto | String
+| `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)           |
+| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`) |
+| `assigned_user` | String   | Email of the user that you want to assign to a contact                         |
 
-:::precaución
-Cuando pases `custom_fields` o `tags` asegúrate de que existen en tu cuenta. Vea [tags](https://dash.callbell.eu/settings/tags) y [custom_fields](https://dash.callbell.eu/settings/custom_fields) en su configuración.
-Lo mismo aplica para `assigned_user`, debe ser un email válido de un usuario en tu cuenta.
+:::caution
+When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
+Same applies for `assigned_user`, must be a valid email of a user in your account.
 :::
 
-### Ejemplo de solicitud
+### Example Request
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
 
-### Respuesta
+### Response
 
-| Parámetro Tipo Descripción
+| Parameter | Type                                           | Description                    |
 | :-------- | :--------------------------------------------- | :----------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | El contacto que se ha creado. |
+| `contact` | [Contact](/api/reference/object_types/contact) | The contact which was created. |
 
-### Ejemplo de respuesta
+### Example Response
 
 ```json title=response.json
 {

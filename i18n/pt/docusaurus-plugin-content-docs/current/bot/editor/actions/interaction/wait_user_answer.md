@@ -4,8 +4,8 @@ sidebar_position: 1
 
 import waitUserAnswerUrl from './assets/wait_user_answer.png'
 
-# Wait User Answer
+# Aguardar Resposta do Usuário
 
 <img src={waitUserAnswerUrl} width={180} />
 
-The **Wait User Answer** action is used to wait for a user's reply before continuing the flow. Use this action whenever you want ask a question to your customers and wait for their reply.
+A ação **Aguardar Resposta do Usuário** é usada para aguardar a resposta de um usuário antes de continuar o fluxo. Use essa ação sempre que você quiser fazer uma pergunta aos seus clientes e aguardar por sua resposta.

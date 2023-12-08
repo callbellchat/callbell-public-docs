@@ -1,33 +1,32 @@
----
 sidebar_position: 2
 ---
 
-# Getting Started
+# Começando
 
-This step-to-step guide will walk you through using Callbell API to send a message.
+Este guia passo a passo o guiará no uso da API do Callbell para enviar uma mensagem.
 
-## Prerequisites
+## Pré-requisitos
 
-You will need to create an account on Callbell and have configured a WhatsApp Business channel in order to be able to follow this guide.
+Você precisará criar uma conta no Callbell e ter configurado um canal do WhatsApp Business para poder seguir este guia.
 
-- Sign up for [Callbell](https://dash.callbell.eu/users/sign_up)
-- See more information about our [WhatsApp Business API integration](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
+- Cadastre-se no [Callbell](https://dash.callbell.eu/users/sign_up)
+- Veja mais informações sobre nossa [integração com a API do WhatsApp Business](https://callbellsupport.zendesk.com/hc/en-us/articles/360007805898-How-to-integrate-WhatsApp-into-Callbell-through-the-WhatsApp-Business-APIs)
 
-## Getting your API keys
+## Obtendo suas chaves de API
 
-Navigate to Callbell API keys page in settings (https://dash.callbell.eu/settings/api_settings/keys) in order to generate a new API key:
+Acesse a página de chaves de API do Callbell nas configurações (https://dash.callbell.eu/settings/api_settings/keys) para gerar uma nova chave de API:
 
 ![create_api_key](./assets/create_api_key_1.jpg)
 
-After clicking on the **Create API Key** button make sure to copy the token and store it safely.
+Depois de clicar no botão **Criar chave de API**, certifique-se de copiar o token e armazená-lo com segurança.
 
 :::caution
-The API key will be showed only on this screen. If you lose access to it you'll have to generate a new one.
+A chave da API será mostrada apenas nesta tela. Se você perder o acesso a ela, será necessário gerar uma nova.
 :::
 
-## Send a test message using cURL
+## Enviar uma mensagem de teste usando cURL
 
-By using the [Messages API' send message method](/api/reference/messages_api/post_send_messages.md) you can test if your API key is working as expected:
+Ao usar o método de envio de mensagem da [API de Mensagens](/api/reference/messages_api/post_send_messages.md), você pode testar se sua chave de API está funcionando como esperado:
 
 ```bash
 curl -X POST "https://api.callbell.eu/v1/messages/send" \
@@ -38,18 +37,18 @@ curl -X POST "https://api.callbell.eu/v1/messages/send" \
     "from": "whatsapp",
     "type": "text",
     "content": {
-      "text": "Hello from Callbell API!"
+      "text": "Olá a partir da API do Callbell!"
     }
   }'
 ```
 
-Just replace `REPLACE_API_KEY_HERE` with the API Key generated on the [Getting your API keys](#getting-your-api-keys) step and the `REPLACE_PHONE_NUMBER_HERE` with the receiver's phone number.
+Apenas substitua `REPLACE_API_KEY_HERE` pela chave da API gerada na etapa [Obtendo suas chaves de API](#obtendo-suas-chaves-de-api) e `REPLACE_PHONE_NUMBER_HERE` pelo número de telefone do destinatário.
 
 :::info
-Make sure that the receiving phone number has _opted-in_ and you're **inside the 24 hours rule** of WhatsApp Business API.
+Verifique se o número de telefone de destino _optou por receber_ e que você está **dentro da regra de 24 horas** do WhatsApp Business API.
 :::
 
-If the message went through correctly you will receive a response similar to this one:
+Se a mensagem for enviada corretamente, você receberá uma resposta semelhante a esta:
 
 ```json
 {
@@ -60,16 +59,16 @@ If the message went through correctly you will receive a response similar to thi
 }
 ```
 
-This means that the message has been _successfully enqueued_ for send to the desired phone number.
+Isso significa que a mensagem foi enfileirada com sucesso para envio ao número de telefone desejado.
 
-### Retrieve the status of a message
+### Verificar o status de uma mensagem
 
-In order to know if our test message was delivered successfully we can use either of the following methods:
+Para saber se nossa mensagem de teste foi entregue com sucesso, podemos usar um dos seguintes métodos:
 
-- Use the [get message status endpoint](api/reference/messages_api/get_message_status.md)
-- Enable **Webhooks** on the API keys section and subscribe to the `message_status_updated` event type
+- Use o [endpoint de status da mensagem](api/reference/messages_api/get_message_status.md)
+- Ative os **Webhooks** na seção de chaves da API e se inscreva no evento `message_status_updated`
 
-In this example we'll use the first method; in order to check the status of the test message just perform the following cURL from a terminal:
+Neste exemplo, usaremos o primeiro método; para verificar o status da mensagem de teste, execute o seguinte cURL a partir de um terminal:
 
 ```bash
 curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
@@ -77,9 +76,9 @@ curl -X GET "https://api.callbell.eu/v1/messages/status/<REPLACE_UUID_HERE>" \
   -H "Content-Type: application/json"
 ```
 
-Make sure to replace `REPLACE_API_KEY_HERE` with your API key and `REPLACE_UUID_HERE` with the message identifier obtained from the [Send a test message](#send-a-test-message-using-curl) step.
+Certifique-se de substituir `REPLACE_API_KEY_HERE` pela sua chave de API e `REPLACE_UUID_HERE` pelo identificador da mensagem obtido na etapa [Enviar uma mensagem de teste](#enviar-uma-mensagem-de-teste-usando-curl).
 
-You'll get back the following response:
+Você receberá a seguinte resposta:
 
 ```json
 {
@@ -90,8 +89,8 @@ You'll get back the following response:
 }
 ```
 
-This confirms that the message was successfully sent to the user but it hasn't been read yet.
+Isso confirma que a mensagem foi enviada com sucesso para o usuário, mas ainda não foi lida.
 
-### Next Steps
+### Próximos passos
 
-Try exploring our [Messages](/api/reference/messages_api/introduction.md) and [Contacts](/api/reference/contacts_api/introduction.md) APIs for more examples.
+Tente explorar nossas APIs de [Mensagens](/api/reference/messages_api/introduction.md) e [Contatos](/api/reference/contacts_api/introduction.md) para obter mais exemplos.

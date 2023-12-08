@@ -7,31 +7,31 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-Elenca tutti i contatti appartenenti all'account. È possibile specificare un filtro per ottenere risultati più specifici.
+Elencare tutti i contatti appartenenti all'account. È possibile specificare un filtro per ottenere risultati più specifici.
 
-### Parametri opzionali
+### Parametri Opzionali
 
-| Parametro | Tipo     | Descrizione                                                                                        |
-| :-------- | :------- | :------------------------------------------------------------------------------------------------- |
-| `pagina`  | Intero   | La pagina dei contatti. Se non viene specificata, la pagina predefinita sarà la pagina 1.          |
-| `source`  | Source   | Il tipo di integrazione (ad esempio, `whatsapp`)                                                   |
-| `tags`    | string[] | I tag corrispondenti, separati da virgole (ad esempio, `sales,lead`). I tag sono _case-insentive_. |
+| Parametro | Tipo     | Descrizione                                                                                      |
+| :-------- | :------- | :----------------------------------------------------------------------------------------------- |
+| `page`    | Integer  | La pagina dei contatti. Se non specificato, sarà impostata di default a pagina 1.                |
+| `source`  | Source   | Il tipo di integrazione (ad esempio, `whatsapp`)                                                 |
+| `tags`    | string[] | Tag corrispondenti, separati da virgola (ad esempio, `sales,lead`). I tag sono _case-insentive_. |
 
-### Esempio di richiesta
+### Esempio di Richiesta
 
-<RequestTabs endpoint='contacts_api' request="get_contacts" />
+<RequestTabs endpoint='contacts_api' request="get_contacts"/>
 
 ### Risposta
 
-| Parametro  | Tipo                                              | Descrizione            |
-| :--------- | :------------------------------------------------ | :--------------------- |
-| `contacts` | [Contacts[]](/api/reference/object_types/contact) | Un elenco di contatti. |
+| Parametro  | Tipo                                             | Descrizione            |
+| :--------- | :----------------------------------------------- | :--------------------- |
+| `contacts` | [Contact[]](/api/reference/object_types/contact) | Una lista di contatti. |
 
-### Esempio di risposta
+### Esempio di Risposta
 
 ```json title=response.json
 {
-  "contatti": [
+  "contacts": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
       "name": "John Doe",
@@ -47,7 +47,7 @@ Elenca tutti i contatti appartenenti all'account. È possibile specificare un fi
       ],
       "customFields":{
         "Stripe link": "https://stripe.com/contacts/cus1234567",
-        "Indirizzo di fatturazione": "3 Abbey Rd, London"
+        "Billing Address": "3 Abbey Rd, London"
       }
     },
     ...

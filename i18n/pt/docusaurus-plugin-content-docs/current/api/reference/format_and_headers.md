@@ -1,12 +1,12 @@
 ---
-title: Format and Headers
+title: Formato e Cabeçalhos
 sidebar_position: 4
 ---
 
-All responses are returned in JSON format. On the other hand, the API accepts JSON payloads only, meaning that it’s the client responsibility to send an accept header like the following:
+Todos os retornos são feitos no formato JSON. Por outro lado, a API aceita apenas carregamentos em JSON, o que significa que é responsabilidade do cliente enviar um cabeçalho de aceitação como o seguinte:
 
 ```
 Accept: application/json
 ```
 
-Following the same logic, all body endpoints (e.g. in POST, PUT and PATCH requests) needs to be JSON-encoded accordingly.
+Seguindo a mesma lógica, todos os endpoints que enviam dados no corpo da requisição (por exemplo, em requisições POST, PUT e PATCH) precisam estar codificados em JSON adequadamente.

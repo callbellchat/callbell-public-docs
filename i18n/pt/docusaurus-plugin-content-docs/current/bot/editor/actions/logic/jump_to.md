@@ -5,16 +5,16 @@ sidebar_position: 3
 import jumpToUrl from './assets/jump_to.png'
 import jumpToEditUrl from './assets/jump_to_edit.png'
 
-# Jump to
+# Pular para
 
-This action allows you to jump to a specific block of the bot sequence.
+Esta ação permite que você pule para um bloco específico da sequência do bot.
 
 <img src={jumpToUrl} width={180} />
 
-This is useful when you want to jump to a specific point of the bot sequence, for example, when the user is not able to answer a question or when the user enters inside a fallback block.
+Isso é útil quando você deseja saltar para um ponto específico da sequência do bot, por exemplo, quando o usuário não consegue responder a uma pergunta ou quando o usuário entra em um bloco de fallback.
 
-## How to use it
+## Como usar
 
-To use this action, you need to select the block you want to jump to. You can do this by clicking on the **Jump to** action and then selecting the block you want to jump to.
+Para usar essa ação, você precisa selecionar o bloco para o qual deseja pular. Você pode fazer isso clicando na ação **Pular para** e, em seguida, selecionando o bloco para o qual deseja pular.
 
 <img src={jumpToEditUrl} width={500} />

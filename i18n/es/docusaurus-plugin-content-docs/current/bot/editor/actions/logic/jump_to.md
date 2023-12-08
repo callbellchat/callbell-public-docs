@@ -2,19 +2,19 @@
 sidebar_position: 3
 ---
 
-import jumpToUrl from './assets/jump_to.png'
-import jumpToEditUrl from './assets/jump_to_edit.png'
+importar jumpToUrl de './assets/jump_to.png'
+importar jumpToEditUrl de './assets/jump_to_edit.png'
 
-# Saltar a
+# Ir para
 
-Esta acción permite saltar a un bloque específico de la secuencia de bots.
+Esta ação permite que você vá para um bloco específico da sequência do bot.
 
 <img src={jumpToUrl} width={180} />
 
-Esto es útil cuando se quiere saltar a un punto específico de la secuencia del bot, por ejemplo, cuando el usuario no es capaz de responder a una pregunta o cuando el usuario entra dentro de un bloque fallback.
+Isso é útil quando você deseja saltar para um ponto específico da sequência do bot, por exemplo, quando o usuário não consegue responder uma pergunta ou quando o usuário entra em um bloco de fallback.
 
-## Cómo usarlo
+## Como usar
 
-Para utilizar esta acción, debes seleccionar el bloque al que quieres saltar. Para ello, haga clic en la acción **Saltar a** y seleccione el bloque al que desea saltar.
+Para usar esta ação, você precisa selecionar o bloco para o qual deseja ir. Você pode fazer isso clicando na ação **Ir para** e, em seguida, selecionando o bloco no qual deseja ir.
 
 <img src={jumpToEditUrl} width={500} />

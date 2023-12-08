@@ -2,41 +2,41 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introdução
 
-Callbell API provides **HTTP Webhooks** for the most common application events:
+A API do Callbell fornece **Webhooks HTTP** para os eventos mais comuns de aplicativos:
 
-- **Message events**
-- **Message notification status events**
-- **Contact events**
-- **Conversation events**
+- **Eventos de Mensagem**
+- **Eventos de Status de Notificação de Mensagem**
+- **Eventos de Contato**
+- **Eventos de Conversa**
 
-## How to subscribe to events
+## Como se inscrever em eventos
 
 :::info
-This can be done also programmatically from [WebhooksEndpoint](./../webhooks_api/introduction.md)
+Isso também pode ser feito programaticamente a partir de [WebhooksEndpoint](./../webhooks_api/introduction.md)
 :::
 
-On your Callbell dashboard navigate to the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section and click on the "Webhooks" tab:
+No painel do Callbell, navegue até a seção [**"Configurações da API"**](https://dash.callbell.eu/settings/api_settings/webhooks) e clique na aba "Webhooks":
 
 ![webhook_tab](./assets/webhook_tab.jpg)
 
-In the URL field add your endpoint URL (e.g. `https://myapp.com/callbell_endpoint`) and select the events you want to get subscriptions for:
+No campo URL, adicione a URL do seu endpoint (por exemplo, `https://myapp.com/callbell_endpoint`) e selecione os eventos para os quais deseja se inscrever:
 
 ![webhook_create](./assets/webhook_create.jpg)
 
 :::info
-Make sure to also **include** the protocol (`http` or `https`) inside your webhook endpoint:
+Certifique-se também de **incluir** o protocolo (`http` ou `https`) dentro do seu endpoint de webhook:
 
-✅ **Good**: `https://www.myexample.com`
+✅ **Bom**: `https://www.myexample.com`
 
-❌ **Bad**: `www.example.com`
+❌ **Ruim**: `www.example.com`
 :::
 
-After clicking "Create new webhook" you should receive a success notification. You can always edit back the Webhook events in a later stage:
+Após clicar em "Criar novo webhook", você deve receber uma notificação de sucesso. Você sempre pode editar os eventos do Webhook posteriormente:
 
 ![webhook_edit](./assets/webhook_edit.jpg)
 
 :::caution
-Callbell doesn't support `localhost` as webhook URL. If you need to debug a local application use instead a service to expose your local dev environment like [Ngrok](https://ngrok.com).
+Callbell não suporta `localhost` como URL de webhook. Se você precisar depurar um aplicativo local, use um serviço para expor seu ambiente de desenvolvimento local como o [Ngrok](https://ngrok.com).
 :::

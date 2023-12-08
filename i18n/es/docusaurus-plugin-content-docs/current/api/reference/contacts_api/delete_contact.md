@@ -1,5 +1,5 @@
 ---
-título: DELETE /contactos/:uuid
+title: DELETE /contacts/:uuid
 sidebar_position: 6
 ---
 
@@ -7,33 +7,33 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # DELETE /contacts/:uuid
 
-Elimina un contacto específico dado un `uuid`.
+Deletes a specific contact given a `uuid`.
 
-:::precaución
+:::caution
 
-Esta operación es **irreversible**. Comprueba siempre que tu código es correcto.
+This operation is **unreversible**. Always double-check the correctness of your code.
 
 :::
 
-### Parámetros requeridos
+### Required Parameters
 
-| Parámetro Tipo Descripción |
-| :------------------------- | :----- | :------------------- |
-| `uuid`                     | string | El uuid del contacto |
+| Parameter | Type   | Description             |
+| :-------- | :----- | :---------------------- |
+| `uuid`    | string | The uuid of the contact |
 
-### Ejemplo de solicitud
+### Example Request
 
 <RequestTabs endpoint='contacts_api' request='delete_contact'/>
 
-### Respuesta
+### Response
 
-| Parámetro Tipo Descripción |
-| :------------------------- | :----- | :---------------------- |
-| `status`                   | string | Estado de la operación. |
+| Parameter | Type   | Description              |
+| :-------- | :----- | :----------------------- |
+| `status`  | string | Status of the operation. |
 
-### Ejemplo de respuesta
+### Example Response
 
-```json title=respuesta.json
+```json title=response.json
 {
   "status": "contact was destroyed"
 }

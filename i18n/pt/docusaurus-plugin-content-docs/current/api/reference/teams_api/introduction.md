@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introdução
 
-Teams API allows you to programmatically manage your teams and their members. Use this endpoint to list, show and update your teams.
+A API de equipes permite que você gerencie programaticamente suas equipes e seus membros. Use este endpoint para listar, exibir e atualizar suas equipes.

@@ -1,37 +1,37 @@
 ---
 title: PATCH /templates/:uuid
-posizione della barra laterale: 4
+sidebar_position: 4
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # PATCH /templates/:uuid
 
 Aggiorna un template esistente.
 
-### Parametri richiesti
+### Parametri Richiesti
 
-| Parametro | Tipo    | Descrizione                  |
-| :-------- | :------ | :--------------------------- |
-| `uuid`    | stringa | L'identificatore del modello |
+| Parametro | Tipo   | Descrizione                   |
+| :-------- | :----- | :---------------------------- |
+| `uuid`    | string | L'identificatore del template |
 
-### Parametri opzionali
+### Parametri Opzionali
 
-| Parametro | Tipo    | Descrizione                               |
-| :-------- | :------ | :---------------------------------------- |
-| `title`   | stringa | Il nuovo titolo che verrà dato al modello |
+| Parametro | Tipo   | Descrizione                                |
+| :-------- | :----- | :----------------------------------------- |
+| `title`   | string | Il nuovo titolo che verrà dato al template |
 
-### Esempio di richiesta
+### Esempio di Richiesta
 
-<RequestTabs endpoint='templates_api' request="patch_template" />
+<RequestTabs endpoint='templates_api' request="patch_template"/>
 
 ### Risposta
 
 | Parametro  | Tipo                                               | Descrizione                                                  |
 | :--------- | :------------------------------------------------- | :----------------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | L'oggetto che rappresenta il messaggio del modello Whatsapp. |
+| `template` | [Template[]](/api/reference/object_types/template) | L'oggetto che rappresenta il messaggio template di Whatsapp. |
 
-### Esempio di risposta
+### Esempio di Risposta
 
 ```json title=response.json
 {

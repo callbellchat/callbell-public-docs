@@ -7,22 +7,22 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # DELETE /webhooks/unsubscribe
 
-Elimina il webhook dell'account corrente.
+Rimuove il webhook dell'account corrente.
 
-### Richiesta di esempio
+### Esempio di richiesta
 
-<RequestTabs endpoint='webhooks_api' request="delete_webhooks_unsubscribe" />
+<RequestTabs endpoint='webhooks_api' request="delete_webhooks_unsubscribe"/>
 
 ### Risposta
 
-| Parametro | Tipo    | Descrizione           |
-| :-------- | :------ | :-------------------- |
-| `status`  | stringa | Stato dell'operazione |
+| Parametro  | Tipo   | Descrizione             |
+| :--------- | :----- | :---------------------- |
+| `status`   | string | Stato dell'operazione    |
 
 ### Esempio di risposta
 
 ```json title=response.json
 {
-  "status": "webhook è stato distrutto"
+  "status": "Il webhook è stato eliminato"
 }
 ```

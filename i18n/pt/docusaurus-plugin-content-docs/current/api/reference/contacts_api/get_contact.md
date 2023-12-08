@@ -1,31 +1,31 @@
 ---
-title: GET /contacts/:uuid
+title: OBTENHA /contatos/:uuid
 sidebar_position: 3
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contact/:uuid
+# GET /contato/:uuid
 
-Get a specific contact given a `uuid`.
+Obtenha um contato específico dado um `uuid`.
 
-### Required Parameters
+### Parâmetros obrigatórios
 
-| Parameter | Type   | Description             |
+| Parâmetro | Tipo   | Descrição               |
 | :-------- | :----- | :---------------------- |
-| `uuid`    | string | The uuid of the contact |
+| `uuid`    | string | O uuid do contato       |
 
-### Example Request
+### Exemplo de solicitação
 
 <RequestTabs endpoint='contacts_api' request="get_contact"/>
 
-### Response
+### Resposta
 
-| Parameter | Type                                           | Description                          |
-| :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The object representing the contact. |
+| Parâmetro | Tipo                                                   | Descrição                                  |
+| :-------- | :----------------------------------------------------- | :----------------------------------------- |
+| `contact` | [Contato](/api/reference/object_types/contact)         | O objeto que representa o contato           |
 
-### Example Response
+### Exemplo de resposta
 
 ```json title=response.json
 {

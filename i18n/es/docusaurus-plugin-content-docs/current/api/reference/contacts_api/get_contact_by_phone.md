@@ -1,19 +1,20 @@
+es
 ---
-título: GET /contactos/teléfono/:número
+title: GET /contactos/telefono/:numero
 sidebar_position: 4
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contactos/teléfono/:número
+# GET /contactos/telefono/:numero
 
-Obtener un contacto específico dado un `número_de_teléfono`.
+Obtiene un contacto específico dado un `numero_telefono`.
 
 ### Parámetros requeridos
 
-| Parámetro Tipo Descripción
-| :------------- | :----- | :------------------------------ |
-| `phone_number` | string | El número de teléfono del contacto |
+| Parámetro       | Tipo   | Descripción                             |
+| :-------------- | :----- | :-------------------------------------- |
+| `numero_telefono` | string | El número de teléfono del contacto       |
 
 ### Ejemplo de solicitud
 
@@ -21,28 +22,28 @@ Obtener un contacto específico dado un `número_de_teléfono`.
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | El objeto que representa al contacto. |
+| Parámetro | Tipo                                           | Descripción                 |
+| :-------- | :--------------------------------------------- | :-------------------------- |
+| `contacto`| [Contacto](/api/reference/object_types/contact)| El objeto que representa el contacto. |
 
 ### Ejemplo de respuesta
 
-```json title=respuesta.json
+```json title=response.json
 {
-  "contact": {
+  "contacto": {
     "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-    "name": "John Doe",
-    "phoneNumber": "+123 456 789",
+    "nombre": "John Doe",
+    "numeroTelefono": "+123 456 789",
     "avatarUrl": null,
     "createdAt": "2020-11-13T21:08:53Z",
-    "source": "whatsapp",
-    "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-    "tags": ["ventas", "lead"],
-    "assignedUser": null,
-    "customFields": {
-      "Address": "Oxford Street 123",
-      "Billing Address": "Oxford Street 123",
-      "IVA": "ABC123DCE456"
+    "origen": "whatsapp",
+    "href": "https://dash.callbell.eu/contactos/414a6d692bd645ed803f2e7ce360d4c8",
+    "etiquetas": ["ventas", "lead"],
+    "usuarioAsignado": null,
+    "camposPersonalizados": {
+      "Dirección": "Calle Oxford 123",
+      "Dirección de Facturación": "Calle Oxford 123",
+      "VAT": "ABC123DCE456"
     }
   }
 }

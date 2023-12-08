@@ -1,33 +1,33 @@
 ---
-título: GET /contactos
+title: GET /contacts
 sidebar_position: 2
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contactos
+# GET /contacts
 
-Lista todos los contactos pertenecientes a la cuenta. Se puede especificar un filtro para obtener resultados más específicos.
+Listar todos os contatos pertencentes à conta. Um filtro pode ser especificado para obter resultados mais específicos.
 
-### Parámetros opcionales
+### Parâmetros opcionais
 
-| Parámetro Tipo Descripción
+| Parâmetro | Tipo     | Descrição                                                                        |
 | :-------- | :------- | :--------------------------------------------------------------------------------- |
-| `page` | Entero | La página de contactos. Si no se especifica será por defecto la página 1.                  |
-| Fuente: Tipo de integración (por ejemplo, Whatsapp).
-| `tags` | string[] | Las etiquetas coincidentes, separadas por comas (p. ej. `sales,lead`). Las etiquetas son _case-insentive_. |
+| `page`    | Integer  | A página de contatos. Se não especificado, será padrão para a página 1.                  |
+| `source`  | Source   | O tipo de integração (por exemplo, `whatsapp`).                                             |
+| `tags`    | string[] | As tags correspondentes, separadas por vírgula (por exemplo, `sales,lead`). As tags são _case-insentive_. |
 
-### Ejemplo de solicitud
+### Exemplo de requisição
 
 <RequestTabs endpoint='contacts_api' request="get_contacts"/>
 
-### Respuesta
+### Resposta
 
-| Parámetro Tipo Descripción
+| Parâmetro  | Tipo                                             | Descrição         |
 | :--------- | :----------------------------------------------- | :------------------ |
-| `contacts` | [Contact[]](/api/reference/object_types/contact) | Una lista de contactos. |
+| `contacts` | [Contact[]](/api/reference/object_types/contact) | Uma lista de contatos. |
 
-### Ejemplo de respuesta
+### Exemplo de resposta
 
 ```json title=response.json
 {
@@ -42,11 +42,11 @@ Lista todos los contactos pertenecientes a la cuenta. Se puede especificar un fi
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "assignedUser": "john.doe@email.com",
       "tags": [
-        "ventas",
+        "sales",
         "lead"
       ],
       "customFields":{
-        "enlace Stripe": "https://stripe.com/contacts/cus1234567",
+        "Stripe link": "https://stripe.com/contacts/cus1234567",
         "Billing Address": "3 Abbey Rd, London"
       }
     },
@@ -61,12 +61,12 @@ Lista todos los contactos pertenecientes a la cuenta. Se puede especificar un fi
       "href": "https://dash.callbell.eu/contacts/ff8bec9363bc4c29b8b044eabf2afebd",
       "assignedUser": null,
       "tags": [
-        "ventas",
+        "sales",
         "lead",
-        "caliente"
+        "hot"
       ],
       "customFields":{
-        "Enlace Stripe": "https://stripe.com/contacts/cus124124153"
+        "Stripe link": "https://stripe.com/contacts/cus124124153"
       }
     }
   ]

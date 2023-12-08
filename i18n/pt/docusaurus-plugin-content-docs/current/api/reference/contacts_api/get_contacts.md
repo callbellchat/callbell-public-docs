@@ -9,25 +9,25 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 List all contacts belonging to the account. A filter can be specified in order to get more specific results.
 
-### Optional Parameters
+### Parâmetros opcionais
 
-| Parameter | Type     | Description                                                                        |
-| :-------- | :------- | :--------------------------------------------------------------------------------- |
-| `page`    | Integer  | The page of contacts. If not specified it will default to page 1.                  |
-| `source`  | Source   | The integration type (e.g. `whatsapp`)                                             |
-| `tags`    | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
+| Parâmetro | Tipo     | Descrição                                                                   |
+| :-------- | :------- | :------------------------------------------------------------------------- |
+| `page`    | Integer  | A página de contatos. Se não especificado, será definido como página 1.     |
+| `source`  | Origem   | O tipo de integração (por exemplo, `whatsapp`)                              |
+| `tags`    | string[] | As tags correspondentes, separadas por vírgula (por exemplo, `sales,lead`). As tags são _case-insensitive_. |
 
-### Example Request
+### Exemplo de Requisição
 
 <RequestTabs endpoint='contacts_api' request="get_contacts"/>
 
-### Response
+### Resposta
 
-| Parameter  | Type                                             | Description         |
-| :--------- | :----------------------------------------------- | :------------------ |
-| `contacts` | [Contact[]](/api/reference/object_types/contact) | A list of contacts. |
+| Parâmetro   | Tipo                                             | Descrição        |
+| :---------- | :----------------------------------------------- | :--------------- |
+| `contacts`  | [Contact[]](/api/reference/object_types/contact) | Uma lista de contatos. |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {

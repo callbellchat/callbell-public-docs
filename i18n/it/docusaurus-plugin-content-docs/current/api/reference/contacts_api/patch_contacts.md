@@ -1,53 +1,53 @@
 ---
-title: PATCH /contatti/:uuid
-posizione della barra laterale: 5
+title: PATCH /contacts/:uuid
+sidebar_position: 5
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# PATCH /contatti/:uuid
+# PATCH /contacts/:uuid
 
 Aggiorna un contatto esistente.
 
 ### Parametri richiesti
 
-| Parametro | Tipo    | Descrizione                                                                  |
-| :-------- | :------ | :--------------------------------------------------------------------------- |
-| `uuid`    | stringa | L'identificativo del contatto (ad esempio il numero di telefono in WhatsApp) |
+| Parametro | Tipo   | Descrizione                                                                   |
+| :-------- | :----- | :---------------------------------------------------------------------------- |
+| `uuid`    | string | L'identificatore del contatto (ad esempio, il numero di telefono in WhatsApp) |
 
 ### Parametri opzionali
 
 ### Parametri opzionali
 
-| Parametro       | Tipo     | Descrizione                                                                                         |
-| :-------------- | :------- | :-------------------------------------------------------------------------------------------------- |
-| `tags`          | string[] | Un elenco di valori separati da virgole (ad esempio `['Richiamato', 'Interessato']`)                |
-| `custom_fields` | string{} | Un oggetto con i campi personalizzati (ad esempio, `{'Indirizzo di fatturazione': 'Main Street 1}`) |
-| `nome`          | stringa  | Il nome del contatto                                                                                |
-| `assigned_user` | Stringa  | Email del collaboratore che si vuole assegnare a un contatto                                        |
-| `assegn_utente` | Booleano | `true` se si vuole rimuovere il collaboratore assegnato da un contatto                              |
+| Parametro       | Tipo     | Descrizione                                                                                        |
+| :-------------- | :------- | :------------------------------------------------------------------------------------------------- |
+| `tags`          | string[] | Un elenco di valori separati da virgola (ad es. `['Richiamami', 'Interessato']`)                   |
+| `custom_fields` | string{} | Un oggetto con i campi personalizzati (ad es., `{'Indirizzo di fatturazione': 'Via Principale 1}`) |
+| `name`          | string   | Il nome del contatto                                                                               |
+| `assigned_user` | String   | Email del collaboratore che si desidera assegnare a un contatto                                    |
+| `unassign_user` | Boolean  | `true` se si desidera rimuovere il collaboratore assegnato da un contatto                          |
 
-:::attenzione
-Assicurarsi che `custom_fields` e `tags` esistano già nel proprio account prima di passarli. Per ulteriori informazioni, visitare [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni.
+:::caution
+Assicurarsi che `custom_fields` e `tags` esistano già nel proprio account prima di passarli. Visitare [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni per ulteriori informazioni.
 
-Allo stesso modo, per `assigned_user`, utilizzare un indirizzo e-mail valido associato a un utente del proprio account.
+Inoltre, per `assigned_user`, utilizzare un indirizzo email valido associato a un utente nel proprio account.
 :::
 
-### Esempio di richiesta
+### Esempio richiesta
 
-<RequestTabs endpoint='contacts_api' request="patch_contacts" />
+<RequestTabs endpoint='contacts_api' request="patch_contacts"/>
 
 ### Risposta
 
 | Parametro | Tipo                                           | Descrizione                         |
 | :-------- | :--------------------------------------------- | :---------------------------------- |
-| `Contact` | [Contact](/api/reference/object_types/contact) | Il contatto che è stato aggiornato. |
+| `contact` | [Contact](/api/reference/object_types/contact) | Il contatto che è stato aggiornato. |
 
-### Esempio di risposta
+### Esempio risposta
 
 ```json title=response.json
 {
-  "contatto": [
+  "contact": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
       "name": "UPDATE Doe",

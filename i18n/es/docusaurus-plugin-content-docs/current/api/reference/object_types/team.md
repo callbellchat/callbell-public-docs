@@ -1,14 +1,14 @@
 ---
-título: Equipo
+title: Equipo
 sidebar_position: 1
 ---
 
-### Objeto del equipo
+### Objeto de Equipo
 
-| Campo Tipo Descripción
+| Campo       | Tipo    | Descripción                                   |
 | :---------- | :------ | :-------------------------------------------- |
-| `uuid` | string | Un único ID de equipo generado por Callbell | |
-| Nombre del equipo
-| `createdAt` | string | Fecha de creación del contacto (formato ISO 8601) | | `default` | string
-| `default` | boolean | Si el equipo es el predeterminado o no | | `members` | Nombre del equipo
-| Número de miembros del equipo
+| `uuid`      | string  | Un ID de equipo único generado por Callbell    |
+| `name`      | string  | Nombre del equipo                              |
+| `createdAt` | string  | Fecha de creación de contacto (en formato ISO 8601) |
+| `default`   | boolean | Si el equipo es el predeterminado o no         |
+| `members`   | number  | Número de miembros pertenecientes al equipo    |

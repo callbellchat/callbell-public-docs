@@ -3,12 +3,12 @@ title: Modello
 sidebar_position: 1
 ---
 
-### Oggetto modello
+### Oggetto Modello
 
-| Campo          | Tipo    | Descrizione                                                 |
-| :------------- | :------ | :---------------------------------------------------------- |
-| `uuid`         | stringa | Un ID unico del template generato da Callbell               |
+| Campo          | Tipo   | Descrizione                                                 |
+| :------------- | :----- | :---------------------------------------------------------- |
+| `uuid`         | string | ID univoco del modello generato da Callbell                  |
 |                |
-| `text`         | stringa | Testo del template                                          |
-| `templateType` | stringa | Tipo di modello (`testo`, `immagine`, `video`, `documento`) |
-| `createdAt`    | stringa | Data di creazione del contatto (formattata ISO 8601)        |
+| `text`         | string | Testo del modello                                           |
+| `templateType` | string | Tipo di modello (`text`, `image`, `video`, `document`)       |
+| `createdAt`    | string | Data di creazione del contatto (formattata secondo ISO 8601) |

@@ -4,14 +4,14 @@ sidebar_position: 7
 
 import editContactFieldsUrl from './assets/edit_contact_fields.png'
 
-# Editar campos de contacto
+# Editar Campos de Contato
 
 <img src={editContactFieldsUrl} width={180} />
 
-Esta acción permite editar los campos personalizados del contacto actual.
+Esta ação permite editar os campos personalizados do contato atual.
 
-Los campos personalizados deben crearse desde la [Sección de campos personalizados](https://dash.callbell.eu/settings/custom_fields) de su panel de control de Callbell.
+Os campos personalizados devem ser criados na [Seção de Campos Personalizados](https://dash.callbell.eu/settings/custom_fields) do painel Callbell.
 
-:::consejo
-Si necesita actualizar varios campos personalizados, puede añadir varias acciones **Editar campos de contacto** en secuencia.
+:::tip
+Se você precisa atualizar vários campos personalizados, você pode adicionar várias ações de **Editar Campos de Contato** em sequência.
 :::

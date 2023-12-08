@@ -9,49 +9,49 @@ import setVariableEditUrl from './assets/set_variable_edit.png'
 
 <img src={setVariableUrl} width={180} />
 
-L'azione **Set Variable** è usata per impostare una variabile a un valore specifico.
+L'azione **Imposta variabile** viene utilizzata per assegnare un valore specifico a una variabile.
 
 ## Come usarla
 
-Dopo aver aggiunto l'azione, è possibile selezionare una variabile esistente o crearne una nuova. In quest'ultimo caso, è sufficiente digitare il nome della variabile e poi fare clic sul pulsante **Crea**.
+Dopo aver aggiunto l'azione, è possibile selezionare una variabile esistente oppure crearne una nuova. Nel secondo caso, digitare semplicemente il nome della variabile e cliccare sul pulsante **Crea**.
 
 <img src={setVariableEditUrl} width={400} />
 
 ### Creazione di una nuova variabile
 
-La creazione di una nuova variabile richiede la selezione del tipo di variabile. È possibile scegliere tra **Stringa**, **Numero** e **Elenco**.
+La creazione di una nuova variabile richiederà di selezionare il tipo di variabile. È possibile scegliere tra **Stringa**, **Numero** e **Lista**.
 
-Dopo aver selezionato il tipo di variabile, è possibile specificare il valore della variabile. A seconda del tipo di variabile selezionata, sarà possibile specificare un'operazione da applicare alla variabile.
+Dopo aver selezionato il tipo di variabile, è possibile specificare il valore della variabile. A seconda del tipo di variabile selezionato, sarà possibile specificare un'operazione da applicare alla variabile.
 
-### Variabili stringa
+### Variabili di tipo Stringa
 
-Se è stata creata o selezionata una variabile **Stringa**, è possibile eseguire le seguenti operazioni:
+Se si è creato o selezionato una variabile di tipo **Stringa**, è possibile eseguire le seguenti azioni:
 
-- **Replace text** - Sostituisce il valore della variabile con il testo specificato.
-- **Aggiungi al testo** - Aggiunge il testo specificato al valore della variabile.
+- **Sostituisci testo** - Sostituisci il valore della variabile con il testo specificato.
+- **Aggiungi al testo** - Aggiungi il testo specificato al valore della variabile.
 
-### Variabili numeriche
+### Variabili di tipo Numero
 
-Se è stata creata o selezionata una variabile **Numero**, è possibile eseguire le seguenti azioni:
+Se si è creato o selezionato una variabile di tipo **Numero**, è possibile eseguire le seguenti azioni:
 
-- **Replace number** - Sostituisce il valore della variabile con il numero specificato.
-- **Aggiungi numero** - Aggiunge il numero specificato al valore della variabile.
-- **Subtract number** - Sottrae il numero specificato dal valore della variabile.
-- **Moltiplica numero** - Moltiplica il valore della variabile per il numero specificato.
-- Dividere numero** - Divide il valore della variabile per il numero specificato.
+- **Sostituisci numero** - Sostituisci il valore della variabile con il numero specificato.
+- **Aggiungi numero** - Aggiungi il numero specificato al valore della variabile.
+- **Sottrai numero** - Sottrai il numero specificato dal valore della variabile.
+- **Moltiplica per numero** - Moltiplica il valore della variabile per il numero specificato.
+- **Dividi per numero** - Dividi il valore della variabile per il numero specificato.
 
 :::info
 Per impostazione predefinita, il valore della variabile è impostato su `0`.
 :::
 
-### Elenco variabili
+### Variabili di tipo Lista
 
-Se è stata creata o selezionata una variabile **Elenco**, è possibile eseguire le seguenti azioni:
+Se si è creato o selezionato una variabile di tipo **Lista**, è possibile eseguire le seguenti azioni:
 
-- **Aggiungi all'elenco** - Aggiunge il testo specificato all'elenco.
-- **Rimuovi da elenco** - Rimuove il testo specificato dall'elenco.
-- **Vuota elenco** - Svuota l'elenco.
+- **Aggiungi alla lista** - Aggiungi il testo specificato alla lista.
+- **Rimuovi dalla lista** - Rimuovi il testo specificato dalla lista.
+- **Svuota la lista** - Svuota la lista.
 
-### Utilizzo di variabili con altre variabili
+### Uso di variabili con altre variabili
 
-È possibile utilizzare le variabili con altre variabili. Ad esempio, è possibile impostare una variabile sul valore di un'altra variabile. Questo è utile se si sta costruendo un elenco di valori e si vuole aggiungere un nuovo valore all'elenco o, ad esempio, se si vuole tenere traccia del punteggio di un utente.
+È anche possibile utilizzare variabili con altre variabili. Ad esempio, è possibile impostare una variabile sul valore di un'altra variabile. Ciò è utile se si sta creando una lista di valori e si desidera aggiungere un nuovo valore alla lista o, ad esempio, si desidera tenere traccia del punteggio di un utente.

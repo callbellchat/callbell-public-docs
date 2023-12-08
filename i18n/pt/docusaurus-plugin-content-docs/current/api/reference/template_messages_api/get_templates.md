@@ -7,35 +7,35 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /templates
 
-List all templates belonging to the account.
+Listar todos os modelos pertencentes à conta.
 
-### Example Request
+### Exemplo de Requisição
 
 <RequestTabs endpoint='templates_api' request="get_templates"/>
 
-### Response
+### Resposta
 
-| Parameter   | Type                                               | Description          |
+| Parâmetro   | Tipo                                               | Descrição          |
 | :---------- | :------------------------------------------------- | :------------------- |
-| `templates` | [Template[]](/api/reference/object_types/template) | A list of templates. |
+| `templates` | [Template[]](/api/reference/object_types/template) | Uma lista de modelos. |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {
   "templates": [
     {
       "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-      "title": "Template title",
+      "title": "Título do modelo",
       "templateType": "text",
-      "text": "Message text",
+      "text": "Texto da mensagem",
       "createdAt": "2020-11-13T21:08:53Z"
     },
     {
       "uuid": "47aad5f9b4ca423c9d630f06ab93fe1f",
-      "title": "Another Template title",
+      "title": "Outro Título do modelo",
       "templateType": "text",
-      "text": "Another Message text",
+      "text": "Outro Texto da mensagem",
       "createdAt": "2020-11-13T21:10:33Z"
     }
   ],

@@ -7,14 +7,14 @@ import jumpToEditUrl from './assets/jump_to_edit.png'
 
 # Salta a
 
-Questa azione consente di saltare a un blocco specifico della sequenza bot.
+Questa azione ti permette di saltare ad un blocco specifico della sequenza del bot.
 
 <img src={jumpToUrl} width={180} />
 
-È utile quando si vuole saltare a un punto specifico della sequenza bot, ad esempio quando l'utente non è in grado di rispondere a una domanda o quando entra in un blocco di ripiego.
+Questa è utile quando vuoi saltare ad un punto specifico della sequenza del bot, ad esempio quando l'utente non è in grado di rispondere ad una domanda o quando l'utente entra in un blocco fallback.
 
-## Come usarlo
+## Come utilizzarla
 
-Per utilizzare questa azione, è necessario selezionare il blocco a cui si vuole saltare. Per farlo, si può fare clic sull'azione **Salta a** e poi selezionare il blocco a cui si vuole saltare.
+Per utilizzare questa azione, devi selezionare il blocco a cui vuoi saltare. Puoi farlo cliccando sull'azione **Salta a** e quindi selezionando il blocco a cui vuoi saltare.
 
 <img src={jumpToEditUrl} width={500} />

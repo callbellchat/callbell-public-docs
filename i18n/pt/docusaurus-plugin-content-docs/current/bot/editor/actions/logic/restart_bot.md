@@ -4,12 +4,12 @@ sidebar_position: 1
 
 import restartBotUrl from './assets/restart_bot.png'
 
-# Restart Bot
+# Reiniciar Bot
 
 <img src={restartBotUrl} width={180} />
 
-This action allows you to restart the bot sequence.
+Essa ação permite reiniciar a sequência do bot.
 
-This is useful when you want to restart the bot sequence from a specific point, for example, when the user is not able to answer a question.
+Isso é útil quando você quer reiniciar a sequência do bot a partir de um ponto específico, por exemplo, quando o usuário não consegue responder a uma pergunta.
 
-Note that this action will also close the conversation and will reset any variables. If you want to restart the bot sequence without closing the conversation, you can use the [Jump to Action](/bot/editor/actions/logic/jump_to).
+Note que essa ação também fechará a conversa e redefinirá quaisquer variáveis. Se você quiser reiniciar a sequência do bot sem fechar a conversa, você pode usar o [Pular para Ação](/bot/editor/actions/logic/jump_to).

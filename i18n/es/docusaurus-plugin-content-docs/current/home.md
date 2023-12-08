@@ -5,18 +5,18 @@ sidebar_position: 1
 slug: /
 ---
 
-# Documentación Callbell
+# Documentación de Callbell
 
-¡Bienvenido a la documentación de Callbell! Aquí encontrará una referencia para utilizar [Callbell](https://www.callbell.eu) y sus productos.
+¡Bienvenido a la documentación de Callbell! Aquí encontrarás información sobre cómo utilizar [Callbell](https://www.callbell.eu) y sus productos.
 
 ## ¿Qué es Callbell?
 
 Callbell es una bandeja de entrada _centralizada_ que permite a los equipos colaborar y responder a los clientes utilizando WhatsApp, Instagram, Facebook Messenger y Telegram.
 
-## Cómo empezar
+## Empezando
 
 ¿Quieres empezar rápidamente con Callbell? [Sigue nuestra guía aquí](/bot/getting_started)
 
-## Referencia API
+## Referencia de la API
 
-[Haga clic aquí](/api/reference/introduction) para acceder a nuestra documentación pública de referencia de la API.
+[Haz clic aquí](/api/reference/introduction) para acceder a nuestra documentación de referencia de la API pública.

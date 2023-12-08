@@ -1,19 +1,19 @@
 ---
-title: GET /contatti/telefono/:numero
+title: GET /contacts/phone/:number
 sidebar_position: 4
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contatti/telefono/:numero
+# GET /contacts/phone/:numero
 
-Ottiene un contatto specifico dato un `numero_di_telefono`.
+Ottieni un contatto specifico dato un `numero_di_telefono`.
 
 ### Parametri richiesti
 
-| Parametro      | Tipo    | Descrizione                        |
-| :------------- | :------ | :--------------------------------- |
-| `phone_number` | stringa | Il numero di telefono del contatto |
+| Parametro            | Tipo   | Descrizione                        |
+| :------------------- | :----- | :--------------------------------- |
+| `numero_di_telefono` | string | Il numero di telefono del contatto |
 
 ### Esempio di richiesta
 
@@ -21,28 +21,28 @@ Ottiene un contatto specifico dato un `numero_di_telefono`.
 
 ### Risposta
 
-| Parametro | Tipo                                           | Descrizione                            |
-| :-------- | :--------------------------------------------- | :------------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | L'oggetto che rappresenta il contatto. |
+| Parametro  | Tipo                                            | Descrizione                            |
+| :--------- | :---------------------------------------------- | :------------------------------------- |
+| `contatto` | [Contatto](/api/reference/object_types/contact) | L'oggetto che rappresenta il contatto. |
 
 ### Esempio di risposta
 
 ```json title=response.json
 {
-  "contact": {
+  "contatto": {
     "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-    "name": "John Doe",
-    "phoneNumber": "+123 456 789",
-    "avatarUrl": null,
-    "createdAt": "2020-11-13T21:08:53Z",
-    "source": "whatsapp",
+    "nome": "Mario Rossi",
+    "numeroDiTelefono": "+123 456 789",
+    "urlAvatar": null,
+    "creatoIl": "2020-11-13T21:08:53Z",
+    "origine": "whatsapp",
     "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-    "tags": ["sales", "lead"],
-    "assignedUser": null,
-    "customFields": {
-      "Address": "Oxford Street 123",
-      "Indirizzo di fatturazione": "Oxford Street 123",
-      "IVA": "ABC123DCE456"
+    "tag": ["vendite", "lead"],
+    "utenteAssegnato": null,
+    "campiPersonalizzati": {
+      "Indirizzo": "Via Roma 123",
+      "Indirizzo di fatturazione": "Via Roma 123",
+      "Partita IVA": "ABC123DCE456"
     }
   }
 }

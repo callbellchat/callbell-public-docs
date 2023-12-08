@@ -1,12 +1,11 @@
 ---
-posizione_barra_ laterale: 8
+sidebar_position: 8
 ---
 
 import closeConversationUrl from './assets/close_conversation.png'
 
-# Chiudere la conversazione
+# Chiudere la Conversazione
 
 <img src={closeConversationUrl} width={180} />
 
-Questa azione consente di chiudere la conversazione corrente. Si noti che non riavvia la sequenza del bot (per farlo, si può usare l'azione [Restart Bot](/bot/editor/actions/logic/restart_bot)).
-
+Questa azione ti consente di chiudere la conversazione corrente. Nota che questo non riavvierà la sequenza del bot (per farlo, puoi utilizzare l'azione [Riavvia Bot](/bot/editor/actions/logic/restart_bot)).

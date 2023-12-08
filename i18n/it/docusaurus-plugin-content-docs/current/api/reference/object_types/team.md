@@ -1,14 +1,14 @@
 ---
-title: Squadra
+title: Team
 sidebar_position: 1
 ---
 
-### Oggetto squadra
+### Oggetto Squadra
 
-| Campo       | Tipo     | Descrizione                                          |
-| :---------- | :------- | :--------------------------------------------------- |
-| `uuid`      | stringa  | Un ID univoco della squadra generato da Callbell     |
-| `name`      | stringa  | Nome della squadra                                   |
-| `createdAt` | stringa  | Data di creazione del contatto (formattata ISO 8601) |
-| `default`   | booleano | Se il team è quello predefinito o meno               |
-| `membri`    | numero   | Numero di membri appartenenti al team                |
+| Campo       | Tipo    | Descrizione                                                  |
+| :---------- | :------ | :----------------------------------------------------------- |
+| `uuid`      | string  | Un ID di squadra univoco generato da Callbell                |
+| `name`      | string  | Nome della squadra                                           |
+| `createdAt` | string  | Data di creazione del contatto (formattata secondo ISO 8601) |
+| `default`   | boolean | Se la squadra è quella predefinita o no                      |
+| `members`   | number  | Numero di membri appartenenti alla squadra                   |

@@ -1,5 +1,5 @@
 ---
-título: POST /webhooks/subscribe
+title: POST /webhooks/subscribe
 sidebar_position: 2
 ---
 
@@ -9,7 +9,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Crea un nuevo webhook o actualiza uno existente.
 
-:::precaución
+:::caution
 
 Cada cuenta puede **sólo** registrar 1 webhook.
 
@@ -17,10 +17,10 @@ Cada cuenta puede **sólo** registrar 1 webhook.
 
 ### Parámetros requeridos
 
-| Parámetro Tipo Descripción
-| :-------------- | :------- | :---------------------------------------------------------------------------------------- |
-| `url` | string | El identificador del contacto (por ejemplo, el número de teléfono en WhatsApp) | | `subscriptions` | string[] | Comandos de suscripciones
-| `subscriptions` | string[] | Valores separados por comas de los eventos a suscribir en este webhook (ej. `message_created`) |
+| Parámetro      | Tipo     | Descripción                                                                             |
+| :------------- | :------- | :-------------------------------------------------------------------------------------- |
+| `url`          | string   | El identificador del contacto (por ejemplo, número de teléfono en WhatsApp)              |
+| `subscriptions`| string[] | Valores separados por comas de los eventos a los que suscribirse en este webhook (por ejemplo `message_created`) |
 
 ### Ejemplo de solicitud
 
@@ -28,9 +28,9 @@ Cada cuenta puede **sólo** registrar 1 webhook.
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :-------- | :--------------------------------------------- | :---------------------------------------- |
-| `contact` | [Webhook](/api/reference/object_types/webhook) | El webhook que fue creado o actualizado. |
+| Parámetro | Tipo                                           | Descripción                                 |
+| :-------- | :--------------------------------------------- | :------------------------------------------ |
+| `contacto`| [Webhook](/api/reference/object_types/webhook)| El webhook que se creó o actualizó.         |
 
 ### Ejemplo de respuesta
 
@@ -39,7 +39,7 @@ Cada cuenta puede **sólo** registrar 1 webhook.
     "webhook": {
         "url": "https://my-app.com/my-webhook-endpoint",,
         "subscriptions": [
-            "mensaje_creado"
+            "message_created"
         ],
         "createdAt": "2022-10-18 17:01:20 +0200",
         "enabled": true

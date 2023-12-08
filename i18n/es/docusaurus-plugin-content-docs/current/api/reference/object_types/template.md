@@ -1,14 +1,14 @@
 ---
-título: Plantilla
+title: Plantilla
 sidebar_position: 1
 ---
 
-### Plantilla Objeto
+### Objeto Plantilla
 
-| Campo Tipo Descripción
+| Campo          | Tipo   | Descripción                                                 |
 | :------------- | :----- | :---------------------------------------------------------- |
-| `uuid` | string | Un identificador único de plantilla generado por Callbell |
-| |
-| Texto de la plantilla
-| `templateType` | string | Tipo de plantilla (`text`, `image`, `video`, `document`) | | `createdAt` | string
-| `createdAt` | string | Fecha de creación del contacto (formato ISO 8601) |
+| `uuid`         | string | Un ID de plantilla único generado por Callbell               |
+|                |
+| `text`         | string | Texto de la plantilla                                       |
+| `templateType` | string | Tipo de la plantilla (`texto`, `imagen`, `video`, `documento`) |
+| `createdAt`    | string | Fecha de creación del contacto (formateada según ISO 8601)   |

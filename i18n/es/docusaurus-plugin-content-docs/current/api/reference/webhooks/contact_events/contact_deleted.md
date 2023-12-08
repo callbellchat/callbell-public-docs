@@ -4,27 +4,27 @@ sidebar_position: 3
 
 # Contacto eliminado
 
-Este evento se enviará siempre que un contacto sea **borrado**. Actualmente, esto ocurre cada vez que se borra una conversación de Callbell.
+Este evento se enviará cada vez que se **elimine** un contacto. Actualmente, esto ocurre cada vez que se elimina una conversación de Callbell.
 
-### Nombre del Evento
+### Nombre del evento
 
-contacto_borrado
+`contacto_eliminado`
 
-### Payload Fields
+### Campos del payload
 
-| Campo Tipo Descripción
-| :-------- | :----- | :--------------------------------------------------- |
-| `uuid` | cadena | Identificador único del mensaje borrado | | Fecha de borrado del mensaje
-| Fecha de borrado del mensaje (formato ISO 8601)
+| Campo     | Tipo   | Descripción                                        |
+| :-------- | :----- | :------------------------------------------------- |
+| `uuid`    | string | El identificador único del mensaje eliminado        |
+| `eliminado` | string | Fecha de eliminación del mensaje (formato ISO 8601) |
 
-### Ejemplo de carga útil
+### Ejemplo de payload
 
-```json title=carga.json
+```json title=payload.json
 {
-  "evento": "contacto_borrado",
+  "evento": "contacto_eliminado",
   "payload": {
     "uuid": "fad77e68757b43c3b77b51cd66ec18f3",
-    "deleted": "2022-10-17T15:15:06.095Z"
+    "eliminado": "2022-10-17T15:15:06.095Z"
   }
 }
 ```

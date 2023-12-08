@@ -1,5 +1,5 @@
 ---
-título: GET /messages/status/:uuid
+title: GET /messages/status/:uuid
 sidebar_position: 3
 ---
 
@@ -9,19 +9,19 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 ### Parámetros requeridos
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :---------------------------------------------------- |
-| `uuid` | String | Identificador del mensaje que fue enviado a través de la API. |
+| Parámetro | Tipo   | Descripción                                             |
+| :-------- | :----- | :------------------------------------------------------ |
+| `uuid`    | String | Identificador del mensaje que se envió a través de la API. |
 
-### Ejemplo de solicitud
+### Ejemplo de petición
 
 <RequestTabs endpoint='messages_api' request="get_message_status"/>
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :-------- | :--------------------------------------------------------------------- | :------------------------------------------- |
-| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | Los detalles del mensaje comprenden el estado. |
+| Parámetro | Tipo                                                                   | Descripción                                 |
+| :-------- | :--------------------------------------------------------------------- | :------------------------------------------ |
+| `message` | [MessageSendRequest](/api/reference/object_types/message_send_request) | Los detalles del mensaje, incluido el estado. |
 
 ### Ejemplo de respuesta
 
@@ -32,10 +32,10 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
     "status": "enqueued",
     "messageStatusPayload":{
       "id":"2b34bfb7-2631-4763-89fb-1b3c65a4baaa",
-      "type": "enqueued",
-      "carga útil":{
-        "type": "session",
-        "whatsappMessageId": "gBGGM2MSRxl_AAlqmG1KQXU7nz4"
+      "type":"enqueued",
+      "payload":{
+        "type":"session",
+        "whatsappMessageId":"gBGGM2MSRxl_AAlqmG1KQXU7nz4"
       },
       "destination":"1122334455"
     }

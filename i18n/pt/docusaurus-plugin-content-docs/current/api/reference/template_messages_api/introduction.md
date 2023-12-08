@@ -2,12 +2,12 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introdução
 
-Templates API allows to recover details regarding the template messages used on Callbell.
+A API de templates permite recuperar detalhes sobre as mensagens de template usadas no Callbell.
 
 :::caution
 
-At the moment we **only** support template messages for WhatsApp Business API (Gupshup) integrations, which needs to be pre-approved by WhatsApp itself. For further information regarding template approvals please reach out to us.
+No momento, oferecemos suporte apenas a mensagens de template para integrações do WhatsApp Business API (Gupshup), que precisam ser pré-aprovadas pelo WhatsApp. Para obter mais informações sobre aprovações de templates, entre em contato conosco.
 
 :::

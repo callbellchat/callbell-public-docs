@@ -1,22 +1,22 @@
 ---
-title: Casa
-barra laterale: Home
+title: Home
+sidebar: Home
 sidebar_position: 1
 slug: /
 ---
 
-# Documentazione Callbell
+# Documentazione di Callbell
 
-Benvenuti nella documentazione di Callbell! Qui troverete un riferimento per utilizzare [Callbell](https://www.callbell.eu) e i suoi prodotti.
+Benvenuto nella documentazione di Callbell! Qui troverai tutte le informazioni su come utilizzare [Callbell](https://www.callbell.eu) e i suoi prodotti.
 
 ## Cos'è Callbell?
 
-Callbell è una casella di posta elettronica _centralizzata_ che consente ai team di collaborare e rispondere ai clienti utilizzando WhatsApp, Instagram, Facebook Messenger e Telegram.
+Callbell è una **casella di posta centralizzata** che consente ai team di collaborare e rispondere ai clienti utilizzando WhatsApp, Instagram, Facebook Messenger e Telegram.
 
 ## Per iniziare
 
-Volete iniziare rapidamente con Callbell? [Seguite la nostra guida qui](/bot/getting_started)
+Vuoi iniziare rapidamente con Callbell? [Segui la nostra guida qui](/bot/getting_started)
 
 ## Riferimento API
 
-[Fare clic qui](/api/reference/introduction) per accedere alla documentazione di riferimento della nostra API pubblica.
+[Clicca qui](/api/reference/introduction) per accedere alla nostra documentazione di riferimento dell'API pubblica.

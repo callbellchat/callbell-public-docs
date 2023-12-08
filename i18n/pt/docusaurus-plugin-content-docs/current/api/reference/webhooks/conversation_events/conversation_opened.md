@@ -2,23 +2,23 @@
 sidebar_position: 1
 ---
 
-# Conversation Opened
+# Conversa Iniciada
 
-This event occurs when a conversation is **opened** or **reopened**.
+Esse evento ocorre quando uma conversa é **iniciada** ou **reiniciada**.
 
-### Event Name
+### Nome do Evento
 
-`conversation_opened`
+`conversa_iniciada`
 
-### Payload Fields
+### Campos do Payload
 
-See [Conversation Object](/api/reference/object_types/conversation)
+Veja [Objeto Conversa](/api/reference/object_types/conversation)
 
-### Example Payload
+### Exemplo de Payload
 
 ```json title=payload.json
 {
-  "event": "conversation_opened",
+  "event": "conversa_iniciada",
   "payload": {
     "source": "whatsapp",
     "contact": {

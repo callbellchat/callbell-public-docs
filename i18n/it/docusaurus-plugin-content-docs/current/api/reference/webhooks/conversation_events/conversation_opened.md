@@ -2,29 +2,29 @@
 sidebar_position: 1
 ---
 
-# Conversazione aperta
+# Conversation Aperta
 
 Questo evento si verifica quando una conversazione viene **aperta** o **riaperta**.
 
-### Nome evento
+### Nome dell'evento
 
-`conversazione_aperta
+`conversation_opened`
 
-### Campi del carico utile
+### Campi del Payload
 
-Vedere [Oggetto di conversazione](/api/reference/object_types/conversation)
+Consulta [Oggetto Conversazione](/api/reference/object_types/conversation)
 
-### Esempio di carico utile
+### Esempio Payload
 
-``json title=payload.json
-
-  "evento": "conversation_opened",
+```json title=payload.json
+{
+  "event": "conversation_opened",
   "payload": {
     "source": "whatsapp",
-    "contatto": {
+    "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
-      "nome": "John Doe",
-      "tag": ["Lead"],
+      "name": "John Doe",
+      "tags": ["Lead"],
       "uuid": "eb2b914a977e4ab896e7b886698b3eac",
       "source": "whatsapp",
       "avatarUrl": null,

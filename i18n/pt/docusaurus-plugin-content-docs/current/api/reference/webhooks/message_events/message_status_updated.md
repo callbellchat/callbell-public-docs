@@ -1,14 +1,14 @@
-# Message Status Updated
+# Status de Mensagem Atualizado
 
 :::caution
-Note that **message deliver notifications** are only available on **WhatsApp Business API** and **WhatsApp QR API**.
+Observe que as **notificações de entrega de mensagem** estão disponíveis apenas no **WhatsApp Business API** e **WhatsApp QR API**.
 :::
 
 :::info
-Events are only forwarded for **outgoing messages**. Incoming messages won't trigger any status updates.
+Os eventos são encaminhados apenas para **mensagens enviadas**. As mensagens recebidas não acionarão atualizações de status.
 :::
 
-This event will be sent whenever a message status gets an **update**. This can be one of the following values:
+Este evento será enviado sempre que um status de mensagem receber uma **atualização**. Isso pode ser um dos seguintes valores:
 
 - `enqueued`
 - `sent`
@@ -18,54 +18,52 @@ This event will be sent whenever a message status gets an **update**. This can b
 - `mismatch`
 - `deleted`
 
+### Status de Mensagem
 
-### Message Statuses
+#### Enfileirado
 
-#### Enqueued
+Enviado quando a mensagem é enviada com sucesso para o cliente do WhatsApp Business API ou para o cliente do QR API.
 
-Sent when the message is successfully sent to the WhatsApp Business API client or to the QR API client.
+#### Enviado
 
-#### Sent
+Esse status é enviado sempre que a mensagem é enviada para o dispositivo do usuário final.
 
-This status is sent whenever the message is sent to the end-user device.
+#### Entregue
 
-#### Delivered
+Enviado quando a mensagem foi finalmente entregue ao dispositivo do usuário final.
 
-Sent when the message has finally been delivered to the end-user device.
+#### Lido
 
-#### Read
+Indica que a mensagem foi lida com sucesso pelo usuário final.
 
-Represents that the message has been successfully read by the end-user.
+#### Falha
 
-#### Failed
+Esse status é emitido sempre que a entrega da mensagem não foi possível. Na carga útil interna, o motivo da falha também é especificado (por exemplo, _"número não existe no WhatsApp"_)
 
-This status is emitted whenever the delivery of the message wasn't possible. In the inner payload the failure reason is also specified (e.g. _"number does not exist on WhatsApp"_)
+#### Incompatibilidade
 
-#### Mismatch
+Esse status do evento é enviado sempre que o WhatsApp Business API realiza uma correção automática no número de telefone. O identificador do número de telefone corrigido estará presente na carga útil interna do evento.
 
-This event status is sent whenever WhatsApp Business API performs a phone number correction automatically. The corrected phone number identifier will be present inside the inner payload of the event.
-
-### Deleted 
+### Excluído
 :::caution
-This event has been deprecated since it's not supported anymore by Meta.
+Este evento foi depreciado, pois não é mais suportado pelo Meta.
 :::
 
-Represents a message deletion from the end-user, both for _"delete only for me"_ and _"delete for everyone"_.
+Representa a exclusão de uma mensagem pelo usuário final, tanto para _"excluir apenas para mim"_ quanto para _"excluir para todos"_.
 
-
-### Event Name
+### Nome do Evento
 
 `message_status_updated`
 
-### Payload Fields
+### Campos da Carga Útil
 
-| Field                  | Type   | Description                          |
-| :--------------------- | :----- | :----------------------------------- |
-| `uuid`                 | string | The unique identifier of the message |
-| `status`               | string | The delivery status of the message   |
-| `messageStatusPayload` | JSON   | The raw message status payload       |
+| Campo                  | Tipo   | Descrição                                |
+| :--------------------- | :----- | :--------------------------------------- |
+| `uuid`                 | string | O identificador único da mensagem        |
+| `status`               | string | O status de entrega da mensagem          |
+| `messageStatusPayload` | JSON   | A carga útil bruta do status da mensagem |
 
-### Example Payload
+### Exemplo de Carga Útil
 
 ```json title=payload.json
 {

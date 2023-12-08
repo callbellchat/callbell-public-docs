@@ -1,5 +1,6 @@
+es
 ---
-título: GET /templates/:uuid
+title: GET /templates/:uuid
 sidebar_position: 3
 ---
 
@@ -9,11 +10,11 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Obtener una plantilla específica dado un `uuid`.
 
-### Parámetros obligatorios
+### Parámetros requeridos
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :----------------------- |
-| `uuid` | string | El uuid de la plantilla |
+| Parámetro | Tipo   | Descripción            |
+| :-------- | :----- | :--------------------- |
+| `uuid`    | string | El uuid de la plantilla |
 
 ### Ejemplo de solicitud
 
@@ -21,9 +22,9 @@ Obtener una plantilla específica dado un `uuid`.
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :--------- | :------------------------------------------------- | :----------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | El objeto que representa el mensaje de plantilla de Whatsapp. |
+| Parámetro   | Tipo                                               | Descripción                                                            |
+| :---------- | :------------------------------------------------- | :--------------------------------------------------------------------- |
+| `template`  | [Template[]](/api/reference/object_types/template) | El objeto que representa el mensaje de plantilla de WhatsApp.           |
 
 ### Ejemplo de respuesta
 
@@ -31,10 +32,10 @@ Obtener una plantilla específica dado un `uuid`.
 {
   "template": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "title": "Template title",
-    "templateType": "text",
+    "title": "Título de la plantilla",
+    "templateType": "texto",
     "text": "Texto del mensaje",
-    "createdAt" "2020-11-13T21:08:53Z"
+    "createdAt": "2020-11-13T21:08:53Z"
   }
 }
 ```

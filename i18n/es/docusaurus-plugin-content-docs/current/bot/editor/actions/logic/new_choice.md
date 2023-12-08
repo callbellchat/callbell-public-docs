@@ -6,53 +6,52 @@ import newChoiceUrl from './assets/new_choice.png'
 import newChoiceEditUrl from './assets/new_choice_edit.png'
 import newChoiceFallbackUrl from './assets/new_choice_fallback.png'
 
-# Nueva elección
+# Nueva Opción
 
 <img src={newChoiceUrl} width={180} />
 
-Esta acción permite crear una nueva elección en el flujo actual.
+Esta acción te permite crear una nueva opción en el flujo actual.
 
 ## Configuración
 
-Esta acción permite personalizar **cómo debe comportarse** el flujo en función del último mensaje enviado por el usuario o por un valor variable.
+La acción te permite personalizar **cómo debe comportarse el flujo** dependiendo del último mensaje enviado por el usuario o por el valor de una variable.
 
 <img src={newChoiceEditUrl} width={300} />
 
-### Activadores de elección
+### Disparadores de la opción
 
-Puede especificar un **disparador** de la elección utilizando uno de los siguientes operadores de igualdad:
+Puedes especificar un **disparador** de la opción utilizando uno de los siguientes operadores de igualdad:
 
-- Igual a** - La elección se activa si el valor es igual al valor del campo de la derecha.
-- Contiene** - La elección se activa si el valor contiene el valor del campo de la derecha.
-- Empieza por** - La opción se activa si el valor empieza por el valor especificado en el campo de la derecha.
-- **Finaliza con** - La elección se dispara si el valor finaliza con el valor especificado en el campo de la derecha.
-- Diferente de** - La elección se activa si el valor es diferente del valor especificado en el campo de la derecha.
-- Mayor que** - La opción se activa si el valor es mayor que el valor especificado en el campo de la derecha.
-- Menor que** - La opción se activa si el valor es menor que el valor del campo de la derecha.
-- Mayor o igual que** - La opción se activa si el valor es mayor o igual que el valor del campo de la derecha.
-- Menor o igual que** - La opción se activa si el valor es menor o igual que el valor del campo de la derecha.
-- Es un número** - La opción se activa si el valor es un número.
-- Es un mensaje** - La opción se activa si el valor es un mensaje.
+- **Igual a** - La opción se dispara si el valor es igual al valor en el campo de la derecha.
+- **Contiene** - La opción se dispara si el valor contiene el valor en el campo de la derecha.
+- **Comienza con** - La opción se dispara si el valor comienza con el valor especificado en el campo de la derecha.
+- **Termina con** - La opción se dispara si el valor termina con el valor especificado en el campo de la derecha.
+- **Diferente a** - La opción se dispara si el valor es diferente al valor en el campo de la derecha.
+- **Mayor que** - La opción se dispara si el valor es mayor que el valor en el campo de la derecha.
+- **Menor que** - La opción se dispara si el valor es menor que el valor en el campo de la derecha.
+- **Mayor o igual que** - La opción se dispara si el valor es mayor o igual que el valor en el campo de la derecha.
+- **Menor o igual que** - La opción se dispara si el valor es menor o igual que el valor en el campo de la derecha.
+- **Es número** - La opción se dispara si el valor es un número.
+- **Es mensaje** - La opción se dispara si el valor es un mensaje.
 
-### Disparadores múltiples
+### Múltiples Disparadores
 
-Puede especificar múltiples disparadores en la misma condición pulsando el botón **Añadir condición**.
+Puedes especificar múltiples disparadores en la misma condición haciendo clic en el botón **Agregar condición**.
 
-Puede decidir cómo unir las múltiples condiciones utilizando los operadores **AND** u **OR**. Si desea cambiar entre los dos operadores, haga clic en el botón **AND** u **OR**.
+Puedes decidir cómo unir las múltiples condiciones utilizando los operadores **Y** o **O**. Si deseas cambiar entre los dos operadores, haz clic en el botón **Y** o **O**.
 
-Por ejemplo, utilizando múltiples **OR** puede construir una lista de sinónimos para la misma elección. Esto es útil si desea activar la misma opción para diferentes palabras.
+Por ejemplo, usando múltiples operadores **O** puedes construir una lista de sinónimos para la misma opción. Esto es útil si deseas activar la misma opción para diferentes palabras.
 
-Al mismo tiempo, puede utilizar múltiples **AND** para crear una lista de condiciones que deben cumplirse para activar la selección. Por ejemplo, imagine comprobar la condición de una variable para que sea mayor que un determinado valor y menor que otro valor.
-
+Al mismo tiempo, puedes usar múltiples operadores **Y** para construir una lista de condiciones que deben ser cumplidas para activar la opción. Por ejemplo, imagina verificar la condición de una variable para que sea mayor de cierto valor y menor que otro valor.
 
 ### Variables
 
-Puedes comparar valores de variables, lo que significa que puedes tomar una decisión basándote en el valor de una variable. Esto es útil cuando quieres que el bot tome un camino específico sin tener que preguntar al usuario.
+Puedes comparar los valores de las variables, lo que significa que puedes tomar una decisión basada en el valor de una variable. Esto es útil cuando deseas dirigir al bot para que tome un camino específico sin tener que pedir al usuario una entrada.
 
-### Fallback
+### Respaldo
 
-Si no se cumple ninguna de las condiciones, el bot tomará la ruta **Fallback**.
+Si ninguna de las condiciones se cumple, el bot tomará el camino de **Respaldo**.
 
 <img src={newChoiceFallbackUrl} width={500} />
 
-Los Fallbacks son útiles cuando quieres manejar todos los casos que no están cubiertos por las condiciones.
+Los respaldos son útiles cuando deseas manejar todos los casos que no están cubiertos por las condiciones.

@@ -1,23 +1,23 @@
 ---
-title: GET /contatti/:uuid
+title: GET /contacts/:uuid
 sidebar_position: 3
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /contatto/:uuid
+# GET /co ntacts/:uuid
 
-Ottiene un contatto specifico, dato un `uuid`.
+Ottieni un contatto specifico dato un `uuid`.
 
 ### Parametri richiesti
 
-| Parametro | Tipo    | Descrizione         |
-| :-------- | :------ | :------------------ |
-| `uuid`    | stringa | L'uuid del contatto |
+| Parametro | Tipo   | Descrizione         |
+| :-------- | :----- | :------------------ |
+| `uuid`    | string | L'uuid del contatto |
 
 ### Esempio di richiesta
 
-<RequestTabs endpoint='contacts_api' request="get_contact" />
+<RequestTabs endpoint='contacts_api' request="get_contact"/>
 
 ### Risposta
 
@@ -29,7 +29,7 @@ Ottiene un contatto specifico, dato un `uuid`.
 
 ```json title=response.json
 {
-  "contatto": [
+  "contact": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
       "name": "John Doe",
@@ -42,8 +42,8 @@ Ottiene un contatto specifico, dato un `uuid`.
       "assignedUser": null,
       "customFields": {
         "Address": "Oxford Street 123",
-        "Indirizzo di fatturazione": "Oxford Street 123",
-        "IVA": "ABC123DCE456"
+        "Billing Address": "Oxford Street 123",
+        "VAT": "ABC123DCE456"
       }
     }
   ]

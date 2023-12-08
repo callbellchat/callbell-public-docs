@@ -2,29 +2,29 @@
 sidebar_position: 3
 ---
 
-# Contatto eliminato
+# Contatto Eliminato
 
-Questo evento viene inviato ogni volta che un contatto viene **cancellato**. Attualmente, ciò avviene ogni volta che una conversazione viene cancellata da Callbell.
+Questo evento verrà inviato ogni volta che un contatto viene **eliminato**. Attualmente, ciò avviene quando una conversazione viene eliminata da Callbell.
 
-### Nome evento
+### Nome dell'evento
 
-`contatto_cancellato`
+`contact_deleted`
 
-### Campi del carico utile
+### Campi del payload
 
-| Campo | Tipo | Descrizione |
-| :-------- | :----- | :--------------------------------------------------- |
-| `uuid` | stringa | L'identificatore univoco del messaggio cancellato |
-| `deleted` | stringa | Data di cancellazione del messaggio (formattata ISO 8601) |
+| Campo     | Tipo   | Descrizione                                                   |
+| :-------- | :----- | :------------------------------------------------------------ |
+| `uuid`    | stringa | L'identificatore univoco del messaggio eliminato               |
+| `deleted` | stringa | Data dell'eliminazione del messaggio (formato ISO 8601)        |
 
-### Esempio di carico utile
+### Esempio del payload
 
 ```json title=payload.json
 {
-  "evento": "contatto_cancellato",
+  "event": "contact_deleted",
   "payload": {
     "uuid": "fad77e68757b43c3b77b51cd66ec18f3",
-    "cancellato": "2022-10-17T15:15:06.095Z"
+    "deleted": "2022-10-17T15:15:06.095Z"
   }
 }
 ```

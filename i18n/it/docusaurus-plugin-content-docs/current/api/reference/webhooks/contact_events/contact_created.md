@@ -4,25 +4,25 @@ sidebar_position: 1
 
 # Contatto creato
 
-Questo evento viene inviato ogni volta che viene **creato** un contatto.
+Questo evento verrà inviato ogni volta che viene creato un contatto.
 
-### Nome evento
+### Nome dell'evento
 
 `contatto_creato`
 
-### Campi del carico utile
+### Campi del payload
 
-Vedere [Oggetto Contatto](./../../object_types/contact.md)
+Vedi [Oggetto Contatto](./../../object_types/contact.md)
 
-### Esempio di carico utile
+### Esempio di payload
 
-``json title=payload.json
+```json title=payload.json
 {
-  "evento": "contact_created",
+  "event": "contatto_creato",
   "payload": {
     "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
-    "nome": "John Doe",
-    "tag": ["Lead"],
+    "name": "John Doe",
+    "tags": ["Lead"],
     "uuid": "eb2b914a977e4ab896e7b886698b3eac",
     "source": "whatsapp",
     "avatarUrl": null,

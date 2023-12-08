@@ -1,5 +1,5 @@
 ---
-título: PATCH /templates/:uuid
+title: PATCH /templates/:uuid
 sidebar_position: 4
 ---
 
@@ -9,27 +9,27 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Actualiza una plantilla existente.
 
-### Parámetros requeridos
+### Parámetros obligatorios
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :----------------------------- |
-| `uuid` | string | El identificador de la plantilla |
+| Parámetro | Tipo   | Descripción                        |
+| :-------- | :----- | :--------------------------------- |
+| `uuid`    | string | El identificador de la plantilla    |
 
 ### Parámetros opcionales
 
-| Parámetro Tipo Descripción
-| :-------- | :----- | :----------------------------------------------- |
-| `title` | string | El nuevo título que se dará a la plantilla |
+| Parámetro | Tipo   | Descripción                                          |
+| :-------- | :----- | :--------------------------------------------------- |
+| `title`   | string | El nuevo título que se asignará a la plantilla        |
 
-### Ejemplo de petición
+### Ejemplo de solicitud
 
 <RequestTabs endpoint='templates_api' request="patch_template"/>
 
 ### Respuesta
 
-| Parámetro Tipo Descripción
-| :--------- | :------------------------------------------------- | :----------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | El objeto que representa el mensaje de plantilla de Whatsapp. |
+| Parámetro  | Tipo                                                          | Descripción                                                          |
+| :--------- | :------------------------------------------------------------ | :------------------------------------------------------------------- |
+| `template` | [Template[]](/api/reference/object_types/template) | El objeto que representa el mensaje de plantilla de WhatsApp. |
 
 ### Ejemplo de respuesta
 
@@ -40,7 +40,7 @@ Actualiza una plantilla existente.
     "title": "Nuevo título",
     "templateType": "text",
     "text": "Texto del mensaje",
-    "createdAt" "2020-11-13T21:08:53Z"
+    "createdAt": "2020-11-13T21:08:53Z"
   }
 }
 ```

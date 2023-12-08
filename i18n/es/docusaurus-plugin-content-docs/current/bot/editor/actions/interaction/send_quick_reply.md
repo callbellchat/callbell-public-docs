@@ -4,12 +4,12 @@ sidebar_position: 3
 
 import sendQuickReplyUrl from './assets/send_quick_reply.png'
 
-# Enviar respuesta rápida
+# Enviar Resposta Rápida
 
 <img src={sendQuickReplyUrl} width={180} />
 
-La acción **Enviar respuesta rápida** se utiliza para enviar una respuesta rápida a sus clientes.
+A ação **Enviar Resposta Rápida** é usada para enviar uma resposta rápida aos seus clientes.
 
-Una respuesta rápida es una respuesta enlatada que puedes crear desde tu [Callbell dashboard](https://dash.callbell.eu/settings/templates) que puede ser un texto, una imagen o un texto con una imagen.
+Uma resposta rápida é uma resposta pré-definida que você pode criar no seu [painel de controle do Callbell](https://dash.callbell.eu/settings/templates) e pode ser um texto, uma imagem ou um texto com uma imagem.
 
-El uso de esta acción le permitirá evitar repetir los mismos mensajes una y otra vez.
+Usar essa ação permitirá que você evite repetir as mesmas mensagens várias e várias vezes.

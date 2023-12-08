@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Introducción
 
-Templates API permite recuperar detalles sobre los mensajes de plantilla utilizados en Callbell.
+La API de Templates permite recuperar detalles sobre los mensajes de plantilla utilizados en Callbell.
 
-:::precaución
+:::caution
 
-Por el momento, **sólo** admitimos mensajes de plantilla para las integraciones de WhatsApp Business API (Gupshup), que deben ser aprobadas previamente por el propio WhatsApp. Para más información sobre la aprobación de plantillas, ponte en contacto con nosotros.
+En este momento solo admitimos mensajes de plantilla para integraciones de WhatsApp Business API (Gupshup), que deben ser preaprobados por WhatsApp mismo. Para obtener más información sobre las aprobaciones de plantillas, contáctenos.
 
 :::

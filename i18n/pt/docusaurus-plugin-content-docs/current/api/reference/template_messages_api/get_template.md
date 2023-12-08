@@ -7,33 +7,33 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /templates/:uuid
 
-Get a specific template given a `uuid`.
+Obtenha um modelo específico dado um `uuid`.
 
-### Required Parameters
+### Parâmetros Obrigatórios
 
-| Parameter | Type   | Description              |
-| :-------- | :----- | :----------------------- |
-| `uuid`    | string | The uuid of the template |
+| Parâmetro | Tipo   | Descrição                 |
+| :-------- | :----- | :------------------------ |
+| `uuid`    | string | O uuid do modelo          |
 
-### Example Request
+### Exemplo de Requisição
 
 <RequestTabs endpoint='templates_api' request="get_template"/>
 
-### Response
+### Resposta
 
-| Parameter  | Type                                               | Description                                            |
-| :--------- | :------------------------------------------------- | :----------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | The object representing the Whatsapp template message. |
+| Parâmetro  | Tipo                                               | Descrição                                                |
+| :--------- | :------------------------------------------------- | :------------------------------------------------------- |
+| `template` | [Template[]](/api/reference/object_types/template) | O objeto que representa a mensagem de modelo do WhatsApp. |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {
   "template": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "title": "Template title",
-    "templateType": "text",
-    "text": "Message text",
+    "title": "Título do modelo",
+    "templateType": "texto",
+    "text": "Texto da mensagem",
     "createdAt": "2020-11-13T21:08:53Z"
   }
 }

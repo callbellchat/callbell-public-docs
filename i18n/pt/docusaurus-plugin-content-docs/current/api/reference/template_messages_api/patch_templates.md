@@ -7,39 +7,39 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # PATCH /templates/:uuid
 
-Updates an existing template.
+Atualiza um modelo existente.
 
-### Required Parameters
+### Parâmetros obrigatórios
 
-| Parameter | Type   | Description                    |
-| :-------- | :----- | :----------------------------- |
-| `uuid`    | string | The identifier of the template |
+| Parâmetro | Tipo   | Descrição                  |
+| :-------- | :----- | :------------------------- |
+| `uuid`    | string | O identificador do modelo. |
 
-### Optional Parameters
+### Parâmetros opcionais
 
-| Parameter | Type   | Description                                      |
+| Parâmetro | Tipo   | Descrição                                        |
 | :-------- | :----- | :----------------------------------------------- |
-| `title`   | string | The new title that will be given to the template |
+| `title`   | string | O novo título que será atribuído ao modelo.      |
 
-### Example Request
+### Requisição de exemplo
 
 <RequestTabs endpoint='templates_api' request="patch_template"/>
 
-### Response
+### Resposta
 
-| Parameter  | Type                                               | Description                                            |
-| :--------- | :------------------------------------------------- | :----------------------------------------------------- |
-| `template` | [Template[]](/api/reference/object_types/template) | The object representing the Whatsapp template message. |
+| Parâmetro  | Tipo                                               | Descrição                                                |
+| :--------- | :------------------------------------------------- | :------------------------------------------------------- |
+| `template` | [Template[]](/api/reference/object_types/template) | O objeto que representa a mensagem de modelo do WhatsApp. |
 
-### Example Response
+### Exemplo de resposta
 
 ```json title=response.json
 {
   "templates": {
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
-    "title": "New title",
+    "title": "Novo título",
     "templateType": "text",
-    "text": "Message text",
+    "text": "Texto da mensagem",
     "createdAt": "2020-11-13T21:08:53Z"
   }
 }

@@ -1,5 +1,5 @@
 ---
-title: POST /webhooks/subscribe
+title: POST /webhooks/inscrever
 sidebar_position: 2
 ---
 
@@ -7,32 +7,32 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # POST /subscriptions
 
-Creates a new webhook or updates an existing one.
+Cria um novo webhook ou atualiza um existente.
 
 :::caution
 
-Each account can **only** register 1 webhook.
+Cada conta pode **apenas** registrar 1 webhook.
 
 :::
 
-### Required Parameters
+### Parâmetros obrigatórios
 
-| Parameter       | Type     | Description                                                                               |
-| :-------------- | :------- | :---------------------------------------------------------------------------------------- |
-| `url`           | string   | The identifier of the contact (e.g. phone number in WhatsApp)                             |
-| `subscriptions` | string[] | Comma separated values of the events to subscribe on this webhook (e.g `message_created`) |
+| Parâmetro       | Tipo       | Descrição                                                                                          |
+| :-------------- | :--------- | :------------------------------------------------------------------------------------------------- |
+| `url`           | string     | O identificador do contato (por exemplo, número de telefone no WhatsApp)                            |
+| `subscriptions` | string[]   | Valores separados por vírgula dos eventos para se inscrever neste webhook (por exemplo, `message_created`) |
 
-### Example Request
+### Exemplo de Requisição
 
 <RequestTabs endpoint='webhooks_api' request="post_webhooks_subscribe"/>
 
-### Response
+### Resposta
 
-| Parameter | Type                                           | Description                               |
-| :-------- | :--------------------------------------------- | :---------------------------------------- |
-| `contact` | [Webhook](/api/reference/object_types/webhook) | The webhook which was created or updated. |
+| Parâmetro | Tipo                                               | Descrição                                                            |
+| :-------- | :------------------------------------------------- | :------------------------------------------------------------------- |
+| `contact` | [Webhook](/api/reference/object_types/webhook/pt-BR)| O webhook que foi criado ou atualizado.                              |
 
-### Example Response
+### Exemplo de Resposta
 
 ```json title=response.json
 {

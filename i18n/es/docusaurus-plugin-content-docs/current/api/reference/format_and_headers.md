@@ -1,12 +1,12 @@
 ---
-título: Formato y cabeceras
+title: Formato e Cabeçalhos
 sidebar_position: 4
 ---
 
-Todas las respuestas se devuelven en formato JSON. Por otro lado, la API sólo acepta cargas JSON, lo que significa que es responsabilidad del cliente enviar una cabecera accept como la siguiente:
+Todas as respostas são retornadas no formato JSON. Por outro lado, a API aceita apenas payloads JSON, o que significa que é responsabilidade do cliente enviar um cabeçalho accept como o seguinte:
 
 ```
 Accept: application/json
 ```
 
-Siguiendo la misma lógica, todos los extremos del cuerpo (por ejemplo, en las solicitudes POST, PUT y PATCH) deben codificarse en JSON en consecuencia.
+Seguindo a mesma lógica, todos os endpoints de corpo (por exemplo, em solicitações POST, PUT e PATCH) precisam ser codificados em JSON de acordo.

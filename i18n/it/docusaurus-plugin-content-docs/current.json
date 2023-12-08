@@ -1,0 +1,82 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Callbell API": {
+    "message": "Callbell API",
+    "description": "The label for category Callbell API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.API Reference": {
+    "message": "Referenza API",
+    "description": "The label for category API Reference in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Auth API": {
+    "message": "Auth API",
+    "description": "The label for category Auth API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Messages API": {
+    "message": "API Messaggi",
+    "description": "The label for category Messages API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contacts API": {
+    "message": "API Contatti",
+    "description": "The label for category Contacts API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Teams API": {
+    "message": "API Teams",
+    "description": "The label for category Teams API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Templates API": {
+    "message": "API Templates",
+    "description": "The label for category Templates API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Webhooks API": {
+    "message": "API Webhooks",
+    "description": "The label for category Webhooks API in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Webhooks": {
+    "message": "Webhooks",
+    "description": "The label for category Webhooks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Message Events": {
+    "message": "Eventi di messaggio",
+    "description": "The label for category Message Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contact Events": {
+    "message": "Eventi di contatto",
+    "description": "The label for category Contact Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Conversation Events": {
+    "message": "Eventi di conversazione",
+    "description": "The label for category Conversation Events in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Object Types": {
+    "message": "Tipologie di oggetto",
+    "description": "The label for category Object Types in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Bot Flow Builder": {
+    "message": "Builder di flussi bot",
+    "description": "The label for category Bot Flow Builder in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Editor": {
+    "message": "Editor",
+    "description": "The label for category Editor in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Actions": {
+    "message": "Azioni",
+    "description": "The label for category Actions in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Interaction": {
+    "message": "Interazione",
+    "description": "The label for category Interaction in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Contact": {
+    "message": "Contatto",
+    "description": "The label for category Contact in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Logic": {
+    "message": "Logica",
+    "description": "The label for category Logic in sidebar tutorialSidebar"
+  }
+}

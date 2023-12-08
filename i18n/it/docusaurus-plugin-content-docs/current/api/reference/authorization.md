@@ -6,7 +6,7 @@ sidebar_position: 3
 
 È necessario specificare un token di accesso per ogni richiesta inviata all'API
 
-In particolare, il token sarà generato e memorizzato all'interno della nostra dashboard e potrà essere utilizzato impostando un header di autorizzazione come il seguente:
+Più precisamente, il token verrà generato e memorizzato all'interno del nostro cruscotto e può essere utilizzato impostando un'intestazione di autorizzazione come la seguente:
 
 ```
 Autorizzazione: Bearer <XXX-XXXXXXXXXX>

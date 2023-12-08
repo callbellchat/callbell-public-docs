@@ -10,4 +10,4 @@ import addNoteUrl from './assets/add_note.png'
 
 Questa azione aggiunge una nota alla conversazione.
 
-Questa azione è utile quando si vuole aggiungere una nota alla conversazione. È possibile utilizzare le variabili per personalizzare la nota o **etichettare un collaboratore** utilizzando il simbolo `@`.
+Questa azione è utile quando si desidera aggiungere una nota alla conversazione. È possibile utilizzare delle variabili per personalizzare la nota o **taggare un collaboratore** utilizzando il simbolo `@`.

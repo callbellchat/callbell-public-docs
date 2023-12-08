@@ -1,82 +1,84 @@
+es
 # Estado del mensaje actualizado
 
-:::precaución
-Ten en cuenta que las **notificaciones de entrega de mensajes** sólo están disponibles en **WhatsApp Business API** y **WhatsApp QR API**.
+:::caution
+Tenga en cuenta que las notificaciones de **entrega del mensaje** solo están disponibles en **WhatsApp Business API** y **WhatsApp QR API**.
 :::
 
 :::info
-Los eventos sólo se reenvían para **mensajes salientes**. Los mensajes entrantes no activarán ninguna actualización de estado.
+Los eventos solo se transmiten para **mensajes salientes**. Los mensajes entrantes no activarán ninguna actualización de estado.
 :::
 
-Este evento se enviará siempre que el estado de un mensaje obtenga una **actualización**. Puede ser uno de los siguientes valores:
+Este evento se enviará siempre que el estado de un mensaje se actualice. Puede ser uno de los siguientes valores:
 
-- `encolado`
-- enviado
-- entregado
-- leído
-- `failed
-- no coinciden
-- borrado
+- `enqueued` (encolado)
+- `sent` (enviado)
+- `delivered` (entregado)
+- `read` (leído)
+- `failed` (fallido)
+- `mismatch` (incompatibilidad)
+- `deleted` (eliminado)
 
 
-### Estados de los mensajes
+### Estados del mensaje
 
-#### En cola
+#### Enqueued (encolado)
 
-Enviado cuando el mensaje se envía correctamente al cliente de la API de WhatsApp Business o al cliente de la API de QR.
+Se envía cuando el mensaje se envía correctamente al cliente de WhatsApp Business API o al cliente de QR API.
 
-#### Enviado
+#### Sent (enviado)
 
-Este estado se envía siempre que el mensaje se envía al dispositivo del usuario final.
+Este estado se envía cada vez que el mensaje se envía al dispositivo del usuario final.
 
-#### Entregado
+#### Delivered (entregado)
 
-Se envía cuando el mensaje ha sido finalmente entregado al dispositivo del usuario final.
+Se envía cuando el mensaje finalmente ha sido entregado al dispositivo del usuario final.
 
-#### Leído
+#### Read (leído)
 
-Representa que el mensaje ha sido leído con éxito por el usuario final.
+Representa que el mensaje ha sido leído correctamente por el usuario final.
 
-#### Fallido
+#### Failed (fallido)
 
-Este estado se emite cuando no ha sido posible entregar el mensaje. En la carga útil interna también se especifica el motivo del fallo (por ejemplo, _"el número no existe en WhatsApp"_)
+Este estado se emite siempre que no fue posible enviar el mensaje. En el payload interno también se especifica la razón del fallo (por ejemplo, _"el número no existe en WhatsApp"_)
 
-#### No coincide
+#### Mismatch (incompatibilidad)
 
-Este estado de evento se envía siempre que WhatsApp Business API realiza una corrección automática del número de teléfono. El identificador del número de teléfono corregido estará presente en la carga útil interna del evento.
+Este estado del evento se envía cada vez que WhatsApp Business API realiza una corrección automática del número de teléfono. El identificador de número de teléfono corregido estará presente en el payload interno del evento.
 
-### Borrado
-:::precaución
-Este evento ha sido obsoleto porque ya no es compatible con Meta.
+### Deleted (eliminado)
+:::caution
+Este evento se ha descontinuado ya que ya no es compatible con Meta.
 :::
 
-Representa el borrado de un mensaje por parte del usuario final, tanto para _"borrar sólo para mí"_ como para _"borrar para todos"_.
+Representa la eliminación de un mensaje por parte del usuario final, tanto para _"eliminar solo para mí"_ como para _"eliminar para todos"_.
+
 
 
 ### Nombre del evento
 
-`message_status_updated` (estado del mensaje actualizado)
+`message_status_updated` (estado_del_mensaje_actualizado)
 
-### Payload Fields
+### Campos de la carga útil
 
-| Campo Tipo Descripción
+| Campo                  | Tipo   | Descripción                          |
 | :--------------------- | :----- | :----------------------------------- |
-| Identificador único del mensaje.
-| `status` | string | El estado de entrega del mensaje | | `messageStatusPath
-| `messageStatusPayload` | JSON | La carga útil sin procesar del estado del mensaje.
+| `uuid`                 | cadena | El identificador único del mensaje |
+| `status`               | cadena | El estado de entrega del mensaje   |
+| `messageStatusPayload` | JSON   | La carga útil del estado del mensaje en bruto   |
 
 ### Ejemplo de carga útil
 
-```json title=carga.json
+```json title=payload.json
 {
-  "evento": "mensaje_estado_actualizado",
+  "event": "message_status_updated",
   "payload": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
     "status": "read",
     "messageStatusPayload":{
-      "id": "gBGGM2MSRxl_Aglqmg5KQXU7ABC",
+      "id":"gBGGM2MSRxl_Aglqmg5KQXU7ABC",
       "gsId":"2b34bfb7-2631-4763-89fb-1b3c65a4babc",
-      "type": "read",
+      "type":"read",
       "payload":{
         "ts":1686563913
       },

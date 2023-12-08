@@ -4,6 +4,6 @@ sidebar_position: 1
 
 # Introduzione
 
-Callbell REST API implementa diversi endpoint che consentono di _inviare messaggi_, _ricevere eventi_ e sincronizzare _informazioni di contatto_ in modo programmatico.
+L'API REST di Callbell implementa diversi endpoint che ti consentono di inviare messaggi, ricevere eventi e sincronizzare le informazioni di contatto in modo programmato.
 
-Se siete alle prime armi con Callbell, potete anche seguire la nostra [Guida introduttiva a Callbell](/).
+Se sei nuovo in Callbell, puoi anche seguire la nostra [Guida introduttiva a Callbell](/).

@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction
+# Introdução
 
-Auth API allows to verify that the provided API token is valid and ready to be used.
+A API de autenticação permite verificar se o token de API fornecido é válido e está pronto para ser usado.

@@ -9,49 +9,49 @@ import setVariableEditUrl from './assets/set_variable_edit.png'
 
 <img src={setVariableUrl} width={180} />
 
-The **Set Variable** action is used to set a variable to a specific value.
+A ação **Set Variable** é usada para definir uma variável com um valor específico.
 
-## How to use it
+## Como usar
 
-After adding the action you can either select an existing variable or create a new one. In the latter case, just type the variable name and then click on the **Create** button.
+Depois de adicionar a ação, você pode selecionar uma variável existente ou criar uma nova. No último caso, basta digitar o nome da variável e clicar no botão **Criar**.
 
 <img src={setVariableEditUrl} width={400} />
 
-###  Creating a new variable
+###  Criando uma nova variável
 
-Creating a new variable will prompt you to select the variable type. You can choose between **String**, **Number** and **List**.
+Ao criar uma nova variável, você será solicitado a selecionar o tipo de variável. Você pode escolher entre **String**, **Number** e **List**.
 
-After selecting the variable type, you can specify the variable value. Depending on the type of variable you selected, you will be able to specify an operation to apply to the variable.
+Após selecionar o tipo de variável, você pode especificar o valor da variável. Dependendo do tipo de variável selecionado, você poderá especificar uma operação a ser aplicada à variável.
 
-### String variables
+### Variáveis do tipo String
 
-If you created or selected a **String** variable, you can perform the following actions:
+Se você criou ou selecionou uma variável do tipo **String**, você pode executar as seguintes ações:
 
-- **Replace text** - Replace the variable value with the specified text.
-- **Add to text** - Append the specified text to the variable value.
+- **Substituir texto** - Substituir o valor da variável pelo texto especificado.
+- **Adicionar ao texto** - Anexar o texto especificado ao valor da variável.
 
-### Number variables
+### Variáveis do tipo Number
 
-If you created or selected a **Number** variable, you can perform the following actions:
+Se você criou ou selecionou uma variável do tipo **Number**, você pode executar as seguintes ações:
 
-- **Replace number** - Replace the variable value with the specified number.
-- **Add number** - Add the specified number to the variable value.
-- **Subtract number** - Subtract the specified number from the variable value.
-- **Multiply number** - Multiply the variable value by the specified number.
-- **Divide number** - Divide the variable value by the specified number.
+- **Substituir número** - Substituir o valor da variável pelo número especificado.
+- **Adicionar número** - Adicionar o número especificado ao valor da variável.
+- **Subtrair número** - Subtrair o número especificado do valor da variável.
+- **Multiplicar por número** - Multiplicar o valor da variável pelo número especificado.
+- **Dividir por número** - Dividir o valor da variável pelo número especificado.
 
 :::info
-By default, the variable value is set to `0`.
+Por padrão, o valor da variável é definido como `0`.
 :::
 
-### List variables
+### Variáveis do tipo List
 
-If you created or selected a **List** variable, you can perform the following actions:
+Se você criou ou selecionou uma variável do tipo **List**, você pode executar as seguintes ações:
 
-- **Add to list** - Add the specified text to the list.
-- **Remove from list** - Remove the specified text from the list.
-- **Empty list** - Empty the list.
+- **Adicionar à lista** - Adicionar o texto especificado à lista.
+- **Remover da lista** - Remover o texto especificado da lista.
+- **Esvaziar lista** - Esvaziar a lista.
 
-### Using variables with other variables
+### Usando variáveis com outras variáveis
 
-You can also use variables with other variables. For example, you can set a variable to the value of another variable. This is helpful if you're building a list of values and you want to add a new value to the list or, for example you want to keep track of the score of a user.
+Você também pode usar variáveis com outras variáveis. Por exemplo, você pode definir uma variável com o valor de outra variável. Isso é útil se você estiver construindo uma lista de valores e quiser adicionar um novo valor à lista ou, por exemplo, se quiser acompanhar a pontuação de um usuário.

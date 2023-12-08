@@ -1,34 +1,34 @@
 ---
-title: Ottieni /auth/me
+title: Get /auth/me
 sidebar_position: 1
 ---
 
-import RequestTabs from"@site/src/components/Requests/RequestTabs"
+import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /auth/me
 
-Restituisce un codice di stato `200` se l'`api_token` è valido.
+Return a `200` status code if the `api_token` is valid.
 
-### Richiesta di esempio
+### Example Request
 
-<RequestTabs endpoint='auth_api' request="get_me" />
+<RequestTabs endpoint='auth_api' request="get_me"/>
 
-### Risposta
+### Response
 
-| Parametro     | Tipo    | Descrizione                                                |
-| :------------ | :------ | :--------------------------------------------------------- |
-| `status`      | stringa | Lo stato della richiesta (`ok`)                            |
-| `user_email`  | stringa | Email dell'utente dell'account                             |
-| `nome_utente` | stringa | Nome dell'utente dell'account                              |
-| `api_key`     | stringa | Chiave API che ha generato il token usato per la richiesta |
+| Parameter    | Type   | Description                                            |
+| :----------- | :----- | :----------------------------------------------------- |
+| `status`     | string | The status of the request (`ok`)                       |
+| `user_email` | string | Email of the account user                              |
+| `user_name`  | string | Name of the account user                               |
+| `api_key`    | string | API key which generated the token used for the request |
 
-### Esempio di risposta
+### Example Response
 
 ```json title=response.json
 {
   "status": "ok",
   "user_email": "john_doe@email.com",
-  "nome_utente": "John Doe",
+  "user_name": "John Doe",
   "api_key": "test_1234567890"
 }
 ```

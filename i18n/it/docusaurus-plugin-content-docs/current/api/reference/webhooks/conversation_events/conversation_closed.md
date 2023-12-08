@@ -6,25 +6,25 @@ sidebar_position: 2
 
 Questo evento si verifica quando una conversazione viene **chiusa**.
 
-### Nome evento
+### Nome dell'evento
 
-`conversazione_chiusa
+`conversazione_chiusa`
 
-### Campi del carico utile
+### Campi del payload
 
-Vedere [Oggetto di conversazione](/api/reference/object_types/conversation)
+Vedi [Oggetto Conversazione](/api/reference/object_types/conversation)
 
-### Esempio di carico utile
+### Esempio di payload
 
-``json title=payload.json
-
-  "evento": "conversation_closed",
+```json title=payload.json
+{
+  "event": "conversazione_chiusa",
   "payload": {
     "source": "whatsapp",
-    "contatto": {
+    "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
-      "nome": "John Doe",
-      "tag": ["Lead"],
+      "name": "John Doe",
+      "tags": ["Lead"],
       "uuid": "eb2b914a977e4ab896e7b886698b3eac",
       "source": "whatsapp",
       "avatarUrl": null,
