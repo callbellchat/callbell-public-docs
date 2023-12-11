@@ -11,6 +11,8 @@ import setVariableEditUrl from './assets/set_variable_edit.png'
 
 L'azione **Imposta variabile** viene utilizzata per assegnare un valore specifico a una variabile.
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/LhJmOoV-dAM" title="Come usare l&#39;azione &quot;imposta variabile&quot; - Callbell Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Come usarla
 
 Dopo aver aggiunto l'azione, è possibile selezionare una variabile esistente oppure crearne una nuova. Nel secondo caso, digitare semplicemente il nome della variabile e cliccare sul pulsante **Crea**.
