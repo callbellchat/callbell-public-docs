@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## December 14, 2023
+
+### 🛠️ Changes
+
+- [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) now includes the whole `contact` reference. This is useful to have further information about the contact without having to perform an extra API call.
+
 ## November 30, 2023
 
 ### ✨ What's new
