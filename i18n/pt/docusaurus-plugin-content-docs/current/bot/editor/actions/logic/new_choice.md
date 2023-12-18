@@ -12,6 +12,8 @@ import newChoiceFallbackUrl from './assets/new_choice_fallback.png'
 
 Essa ação permite criar uma nova escolha no fluxo atual.
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/6lKoVK60FR4?list=PLf4W27ayM3atB5hBJesfP7Xp0XWY3Uge3" title="Callbell - Como usar o bloco de ação &quot;Nova Escolha&quot; - Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Configuração
 
 A ação permite personalizar **como o fluxo deve se comportar** com base na última mensagem enviada pelo usuário ou em um valor de variável.
@@ -54,5 +56,7 @@ Você pode comparar valores de variáveis, ou seja, você pode tomar uma decisã
 Se nenhuma das condições for satisfeita, o bot seguirá o caminho de **Fallback**.
 
 <img src={newChoiceFallbackUrl} width={500} />
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/2LKLsk4q2CM?list=PLf4W27ayM3atB5hBJesfP7Xp0XWY3Uge3" title="Callbell - Como usar a ação Reenvio e Reenvio programado - Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Os fallbacks são úteis quando você quer lidar com todos os casos que não são cobertos pelas condições.

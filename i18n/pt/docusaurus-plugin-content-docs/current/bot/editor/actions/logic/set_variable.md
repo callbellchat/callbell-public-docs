@@ -11,6 +11,8 @@ import setVariableEditUrl from './assets/set_variable_edit.png'
 
 A ação **Set Variable** é usada para definir uma variável com um valor específico.
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/94-suQGULQM?list=PLf4W27ayM3atB5hBJesfP7Xp0XWY3Uge3" title="Callbell - Como usar a ação &quot;definir variável&quot; no Chatbot da Callbell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Como usar
 
 Depois de adicionar a ação, você pode selecionar uma variável existente ou criar uma nova. No último caso, basta digitar o nome da variável e clicar no botão **Criar**.
