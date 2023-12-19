@@ -12,6 +12,8 @@ import newChoiceFallbackUrl from './assets/new_choice_fallback.png'
 
 This action allows you to create a new choice in the current flow.
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/0pbU9KPXcWI" title="How to use the &quot;New choice&quot; action - Callbell Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Configuration
 
 The action allows you to customize **how the flow should behave** depending on the last message sent by the user or by a variable value.

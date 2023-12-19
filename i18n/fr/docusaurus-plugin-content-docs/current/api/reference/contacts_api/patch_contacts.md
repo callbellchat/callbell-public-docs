@@ -9,28 +9,29 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Met à jour un contact existant.
 
-### Paramètres obligatoires
+### Paramètres requis
 
-| Paramètre | Type   | Description                                                                  |
-| :-------- | :----- | :--------------------------------------------------------------------------- |
-| `uuid`    | string | L'identifiant du contact (par exemple, le numéro de téléphone dans WhatsApp) |
+| Paramètre | Type   | Description                                                             |
+| :-------- | :----- | :---------------------------------------------------------------------- |
+| `uuid`    | string | L'identifiant du contact (par exemple, le numéro de téléphone sur WhatsApp) |
 
-### Paramètres facultatifs
+### Paramètres optionnels
 
-### Paramètres facultatifs
+### Paramètres optionnels
 
-| Paramètre       | Type     | Description                                                                      |
-| :-------------- | :------- | :------------------------------------------------------------------------------- |
-| `tags`          | string[] | Une liste de valeurs séparées par des virgules (par exemple, `['Call back', 'Interested']`) |
-| `custom_fields` | string{} | Un objet avec les champs personnalisés (par exemple, `{'Adresse de facturation': 'Rue principale 1}`) |
-| `name`          | string   | Le nom du contact                                                                |
-| `assigned_user` | String   | L'e-mail du collaborateur que vous souhaitez attribuer à un contact                |
-| `unassign_user` | Boolean  | `true` si vous souhaitez supprimer le collaborateur attribué d'un contact         |
+| Paramètre       | Type     | Description                                                                              |
+| :-------------- | :------- | :--------------------------------------------------------------------------------------- |
+| `tags`          | string[] | Une liste de valeurs séparées par une virgule (par exemple, `['Rappeler', 'Intéressé']`) |
+| `custom_fields` | string{} | Un objet avec les champs personnalisés (par exemple, `{'Adresse de facturation':'Main Street 1}`) |
+| `name`          | string   | Le nom du contact                                                                         |
+| `assigned_user` | String   | L'e-mail du collaborateur que vous souhaitez attribuer à un contact                        |
+| `unassign_user` | Boolean  | `true` si vous souhaitez supprimer le collaborateur attribué d'un contact                  |
+| `team_uuid`     | String   | UUID de l'équipe que vous souhaitez attribuer à un contact                               |
 
 :::caution
-Assurez-vous que `custom_fields` et `tags` existent déjà dans votre compte avant de les transmettre. Rendez-vous sur [tags](https://dash.callbell.eu/settings/tags) et [custom_fields](https://dash.callbell.eu/settings/custom_fields) dans vos paramètres pour plus d'informations.
+Assurez-vous que `custom_fields` et `tags` existent déjà dans votre compte avant de les passer. Visitez [tags](https://dash.callbell.eu/settings/tags) et [custom_fields](https://dash.callbell.eu/settings/custom_fields) dans vos paramètres pour plus d'informations.
 
-De même, pour `assigned_user`, utilisez une adresse e-mail valide associée à un utilisateur de votre compte.
+De même, pour `assigned_user` et `team_uuid`, utilisez une adresse e-mail valide associée à un utilisateur de votre compte ou référencez une équipe existante.
 :::
 
 ### Exemple de requête
@@ -39,9 +40,9 @@ De même, pour `assigned_user`, utilisez une adresse e-mail valide associée à 
 
 ### Réponse
 
-| Paramètre | Type                                             | Description                              |
-| :-------- | :----------------------------------------------- | :--------------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | Le contact qui a été mis à jour. |
+| Paramètre | Type                                           | Description                         |
+| :-------- | :--------------------------------------------- | :---------------------------------- |
+| `contact` | [Contact](/api/reference/object_types/contact) | Le contact qui a été mis à jour.    |
 
 ### Exemple de réponse
 
@@ -57,7 +58,7 @@ De même, pour `assigned_user`, utilisez une adresse e-mail valide associée à 
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "tags": [],
-      "assignedUser": "jane.doe@email.com",
+      "assignedUser": "example@example.com",
       "customFields": {}
     }
   ]

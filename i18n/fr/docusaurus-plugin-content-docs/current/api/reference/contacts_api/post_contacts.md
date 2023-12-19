@@ -11,23 +11,25 @@ Crée un nouveau contact.
 
 ### Paramètres obligatoires
 
-| Paramètre    | Type   | Description                                                                        |
-| :----------- | :----- | :--------------------------------------------------------------------------------- |
-| `identifiant`| String | L'identifiant du contact (ex: numéro de téléphone dans WhatsApp)                   |
-| `source`     | Source | La source du contact (ex: `whatsapp`)                                              |
-| `nom`        | String | Le nom du contact                                                                  |
+| Paramètre    | Type   | Description                                                   |
+| :----------- | :----- | :------------------------------------------------------------ |
+| `identifier` | String | L'identifiant du contact (par exemple, le numéro de téléphone sur WhatsApp) |
+| `source`     | Source | La source du contact (par exemple, `whatsapp`)                   |
+| `name`       | String | Le nom du contact                                       |
 
 ### Paramètres optionnels
 
-| Paramètre      | Type     | Description                                                                                   |
-| :------------- | :------- | :-------------------------------------------------------------------------------------------- |
-| `tags`         | String[] | Une liste de valeurs séparées par des virgules (ex: `['Rappel', 'Intéressé']`)                  |
-| `champs_personnalisés` | String{} | Un objet avec les champs personnalisés (ex: `{'Adresse de facturation': 'Rue principale 1'}`)  |
-| `utilisateur_assigné` | String   | Email de l'utilisateur auquel vous souhaitez attribuer un contact                               |
+| Paramètre       | Type     | Description                                                                    |
+| :-------------- | :------- | :----------------------------------------------------------------------------- |
+| `tags`          | String[] | Une liste de valeurs séparées par des virgules (par exemple `['Appeler en arrière', 'Intéressé']`)           |
+| `custom_fields` | String{} | Un objet avec les champs personnalisés (par exemple, `{'Adresse de facturation': 'Rue Principale 1'}`) |
+| `assigned_user` | String   | E-mail de l'utilisateur que vous souhaitez attribuer à un contact                         |
+| `team_uuid`     | String   | UUID de l'équipe que vous souhaitez attribuer à un contact                          |
 
 :::caution
-Lors du passage de `champs_personnalisés` ou `tags`, assurez-vous qu'ils existent dans votre compte. Consultez les pages [tags](https://dash.callbell.eu/settings/tags) et [champs_personnalisés](https://dash.callbell.eu/settings/custom_fields) dans vos paramètres.
-Il en va de même pour `utilisateur_assigné`, cela doit être un email valide d'un utilisateur de votre compte.
+Lorsque vous passez `custom_fields` ou `tags`, assurez-vous qu'ils existent dans votre compte. Voir [tags](https://dash.callbell.eu/settings/tags) et [custom_fields](https://dash.callbell.eu/settings/custom_fields) dans vos paramètres.
+
+La même chose s'applique à `assigned_user` et `team_uuid` : ils doivent également exister dans votre compte.
 :::
 
 ### Exemple de requête
@@ -36,9 +38,9 @@ Il en va de même pour `utilisateur_assigné`, cela doit être un email valide d
 
 ### Réponse
 
-| Paramètre  | Type                                             | Description                      |
-| :--------- | :----------------------------------------------- | :------------------------------- |
-| `contact`  | [Contact](/api/reference/object_types/contact)   | Le contact qui a été créé.       |
+| Paramètre | Type                                           | Description                    |
+| :-------- | :--------------------------------------------- | :----------------------------- |
+| `contact` | [Contact](/api/reference/object_types/contact) | Le contact qui a été créé. |
 
 ### Exemple de réponse
 

@@ -27,6 +27,7 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `optin_contact`   | Boolean | Confirmation that the contact has opted-in for receiving messages |
 | `template_values` | Array   | Values for multi-variable template message                        |
 | `assigned_user`   | String  | Message will be assigned to this collaborator's email             |
+| `team_uuid`       | String  | Message will be assigned to this team                             |
 
 ### Example Request
 

@@ -1,61 +1,63 @@
 ---
-title: POST /contacts
+title: POST /contatti
 sidebar_position: 4
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# POST /contacts
+# POST /contatti
 
 Crea un nuovo contatto.
 
-### Parametri Obbligatori
+### Parametri obbligatori
 
-| Parametro    | Tipo   | Descrizione                                                                |
-| :----------- | :----- | :------------------------------------------------------------------------- |
-| `identifier` | String | L'identificatore del contatto (ad esempio, numero di telefono su WhatsApp) |
-| `source`     | Source | La fonte del contatto (ad esempio, `whatsapp`)                             |
-| `name`       | String | Il nome del contatto                                                       |
+| Parametro    | Tipo   | Descrizione                                                    |
+| :----------- | :----- | :------------------------------------------------------------- |
+| `identificativo` | String | L'identificativo del contatto (ad esempio il numero di telefono in WhatsApp) |
+| `origine`     | Origine | L'origine del contatto (ad esempio `whatsapp`)                   |
+| `nome`       | String | Il nome del contatto                                       |
 
-### Parametri Opzionali
+### Parametri opzionali
 
-| Parametro       | Tipo     | Descrizione                                                                                            |
-| :-------------- | :------- | :----------------------------------------------------------------------------------------------------- |
-| `tags`          | String[] | Un elenco di valori separati da virgola (ad esempio `['Richiamare', 'Interessato']`)                   |
-| `custom_fields` | String{} | Un oggetto con i campi personalizzati (ad esempio `{'Indirizzo di fatturazione': 'Via Principale 1'}`) |
-| `assigned_user` | String   | L'email dell'utente che si desidera assegnare a un contatto                                            |
+| Parametro       | Tipo     | Descrizione                                                                    |
+| :-------------- | :------- | :----------------------------------------------------------------------------- |
+| `tag`          | Array di Stringhe | Una lista di valori separati da virgola (es. `['Richiamare', 'Interessato']`)           |
+| `campi_personalizzati` | Oggetto {} | Un oggetto con i campi personalizzati (es. `{'Indirizzo fatturazione': 'Via Principale 1'}`) |
+| `utente_assegnato` | Stringa   | Email dell'utente a cui si desidera assegnare un contatto                         |
+| `team_uuid`     | Stringa   | UUID del team a cui si desidera assegnare un contatto                          |
 
 :::caution
-Quando si passano `custom_fields` o `tags` assicurarsi che esistano nel proprio account. Vedi [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni.
-Stessa cosa per `assigned_user`, deve essere una email valida di un utente nel proprio account.
+Quando si passano i `campi_personalizzati` o i `tag`, assicurarsi che esistano nel proprio account. Vedere [tag](https://dash.callbell.eu/settings/tags) e [campi_personalizzati](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni.
+
+Lo stesso vale per `utente_assegnato` e `team_uuid`: devono esistere nel proprio account.
 :::
 
-### Esempio Richiesta
+### Esempio di richiesta
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
 
 ### Risposta
 
-| Parametro | Tipo                                            | Descrizione         |
-| :-------- | :---------------------------------------------- | :------------------ |
-| `contact` | [Contatto](/api/reference/object_types/contact) | Il contatto creato. |
+| Parametro | Tipo                                           | Descrizione                     |
+| :-------- | :--------------------------------------------- | :------------------------------ |
+| `contatto` | [Contatto](/api/reference/object_types/contact) | Il contatto appena creato. |
 
-### Esempio Risposta
+### Esempio di risposta
 
 ```json title=response.json
 {
-  "contact": [
+  "contatto": [
     {
       "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-      "name": "John Doe",
-      "phoneNumber": "123456789",
+      "nome": "Mario Rossi",
+      "numeroTelefono": "123456789",
       "avatarUrl": null,
       "createdAt": "2020-11-13T21:08:53Z",
-      "source": "whatsapp",
+      "origine": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-      "tags": [],
-      "assignedUser": null,
-      "customFields": {}
+      "tag": [],
+      "utenteAssegnato": null,
+      "campiPersonalizzati": {}
     }
   ]
 }

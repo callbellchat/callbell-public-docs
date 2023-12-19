@@ -26,11 +26,12 @@ Updates an existing contact.
 | `name`          | string   | The name of the contact                                                       |
 | `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact            |
 | `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
+| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                         |
 
 :::caution
 Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
 
-Similarly, for `assigned_user`, use a valid email address associated with a user in your account.
+Similarly, for `assigned_user` and `team_uuid`, use a valid email address associated with a user in your account or reference an existing team.
 :::
 
 ### Example Request

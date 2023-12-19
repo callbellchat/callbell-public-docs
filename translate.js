@@ -146,18 +146,23 @@ async function generateFileTranslation({
 (async () => {
   for await (const f of getFiles("./docs")) {
     if (process.argv) {
-      const sourcePath = path.join(__dirname, process.argv[2]);
-      const targetLanguage = process.argv[3];
+      const targets = process.argv[3].split(",");
 
-      console.log(`[SINGLE] processing ${sourcePath}: ${targetLanguage}...`);
+      for (let target of targets) {
+        const sourcePath = path.join(__dirname, process.argv[2]);
+        const targetLanguage = target;
 
-      await generateFileTranslation({
-        sourcePath,
-        sourceLanguage: SOURCE_LANGUAGE,
-        targetLanguage: targetLanguage,
-      });
+        console.log(`[SINGLE] processing ${sourcePath}: ${targetLanguage}...`);
 
-      console.log("...done!");
+        await generateFileTranslation({
+          sourcePath,
+          sourceLanguage: SOURCE_LANGUAGE,
+          targetLanguage: targetLanguage,
+        });
+
+        console.log("...done!");
+      }
+
       return;
     }
 

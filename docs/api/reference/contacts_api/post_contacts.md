@@ -24,10 +24,12 @@ Creates a new contact.
 | `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)           |
 | `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`) |
 | `assigned_user` | String   | Email of the user that you want to assign to a contact                         |
+| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                          |
 
 :::caution
 When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
-Same applies for `assigned_user`, must be a valid email of a user in your account.
+
+Same applies for `assigned_user` and `team_uuid`: either needs to exists in your account.
 :::
 
 ### Example Request

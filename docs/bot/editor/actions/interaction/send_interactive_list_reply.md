@@ -8,7 +8,9 @@ import sendInteractiveListReplyUrl from './assets/send_interactive_list_reply.pn
 
 <img src={sendInteractiveListReplyUrl} width={180} />
 
-The **Send Interactive List Reply** action is used to send a list of items to your customers. 
+The **Send Interactive List Reply** action is used to send a list of items to your customers.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/cjpz7MBSzeY" title="Callbell - How to create interactive Messages on WhatsApp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 You can create an interactive list reply from the [Quick Replies Section](https://dash.callbell.eu/settings/templates) of your Callbell dashboard.
 

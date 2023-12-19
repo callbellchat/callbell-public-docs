@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## December 19, 2023
+
+### ✨ What's new
+
+- Added `team_uuid` to [send message requests](/api/reference/messages_api/post_send_messages) and contact [creation](/api/reference/contacts_api/post_contacts) and [update](/api/reference/contacts_api/patch_contacts) requests. This allows you to assign a contact to a team via API.
+
 ## December 14, 2023
 
 ### 🛠️ Changes

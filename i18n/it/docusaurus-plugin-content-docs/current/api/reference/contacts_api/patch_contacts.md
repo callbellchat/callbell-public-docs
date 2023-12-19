@@ -11,29 +11,28 @@ Aggiorna un contatto esistente.
 
 ### Parametri richiesti
 
-| Parametro | Tipo   | Descrizione                                                                   |
-| :-------- | :----- | :---------------------------------------------------------------------------- |
-| `uuid`    | string | L'identificatore del contatto (ad esempio, il numero di telefono in WhatsApp) |
+| Parametro | Tipo   | Descrizione                                                   |
+| :-------- | :----- | :------------------------------------------------------------ |
+| `uuid`    | string | L'identificatore del contatto (ad esempio, numero di telefono su WhatsApp) |
 
 ### Parametri opzionali
 
-### Parametri opzionali
-
-| Parametro       | Tipo     | Descrizione                                                                                        |
-| :-------------- | :------- | :------------------------------------------------------------------------------------------------- |
-| `tags`          | string[] | Un elenco di valori separati da virgola (ad es. `['Richiamami', 'Interessato']`)                   |
-| `custom_fields` | string{} | Un oggetto con i campi personalizzati (ad es., `{'Indirizzo di fatturazione': 'Via Principale 1}`) |
-| `name`          | string   | Il nome del contatto                                                                               |
-| `assigned_user` | String   | Email del collaboratore che si desidera assegnare a un contatto                                    |
-| `unassign_user` | Boolean  | `true` se si desidera rimuovere il collaboratore assegnato da un contatto                          |
+| Parametro       | Tipo     | Descrizione                                                                   |
+| :-------------- | :------- | :---------------------------------------------------------------------------- |
+| `tags`          | string[] | Una lista di valori separati da virgola (ad esempio, `['Richiama', 'Interessato']`) |
+| `custom_fields` | string{} | Un oggetto con i campi personalizzati (ad esempio, `{'Indirizzo di fatturazione': 'Via principale 1'}`) |
+| `name`          | string   | Il nome del contatto                                                       |
+| `assigned_user` | String   | L'e-mail del collaboratore che desideri assegnare a un contatto            |
+| `unassign_user` | Boolean  | `true` se si desidera rimuovere il collaboratore assegnato da un contatto         |
+| `team_uuid`     | String   | UUID del team che si desidera assegnare a un contatto                         |
 
 :::caution
-Assicurarsi che `custom_fields` e `tags` esistano già nel proprio account prima di passarli. Visitare [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni per ulteriori informazioni.
+Assicurarsi che `custom_fields` e `tags` esistano già nel proprio account prima di passarli. Visita [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni per ulteriori informazioni.
 
-Inoltre, per `assigned_user`, utilizzare un indirizzo email valido associato a un utente nel proprio account.
+Analogamente, per `assigned_user` e `team_uuid`, utilizzare un indirizzo e-mail valido associato a un utente nel proprio account o fare riferimento a un team esistente.
 :::
 
-### Esempio richiesta
+### Esempio di richiesta
 
 <RequestTabs endpoint='contacts_api' request="patch_contacts"/>
 
@@ -43,7 +42,7 @@ Inoltre, per `assigned_user`, utilizzare un indirizzo email valido associato a u
 | :-------- | :--------------------------------------------- | :---------------------------------- |
 | `contact` | [Contact](/api/reference/object_types/contact) | Il contatto che è stato aggiornato. |
 
-### Esempio risposta
+### Esempio di risposta
 
 ```json title=response.json
 {
