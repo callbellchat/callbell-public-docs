@@ -11,8 +11,8 @@ Listar todas as mensagens pertencentes ao contato. Os resultados são paginados 
 
 ### Parâmetros opcionais
 
-| Parâmetro | Tipo    | Descrição                                                            |
-| :-------- | :------ | :------------------------------------------------------------------- |
+| Parâmetro | Tipo    | Descrição                                                               |
+| :-------- | :------ | :---------------------------------------------------------------------- |
 | `page`    | Integer | A página das mensagens. Se não especificado, será padrão para página 1. |
 
 ### Exemplo de Requisição
@@ -21,9 +21,9 @@ Listar todas as mensagens pertencentes ao contato. Os resultados são paginados 
 
 ### Resposta
 
-| Parâmetro  | Tipo                                                    | Descrição           |
-| :--------- | :------------------------------------------------------ | :------------------ |
-| `messages` | [Mensagens[]](/api/reference/object_types/message)       | Uma lista de mensagens. |
+| Parâmetro  | Tipo                                               | Descrição               |
+| :--------- | :------------------------------------------------- | :---------------------- |
+| `messages` | [Mensagens[]](/api/reference/object_types/message) | Uma lista de mensagens. |
 
 ### Exemplo de Resposta
 

@@ -7,12 +7,12 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts/:uuid/messages
 
-List all messages belonging to the contact. Results are paginated and sorted by `createdAt` in descending order.
+Lista todos los mensajes pertenecientes al contacto. Los resultados están paginados y ordenados por `createdAt` en orden descendente.
 
 ### Parámetros Opcionales
 
-| Parámetro | Tipo    | Descripción                                                       |
-| :-------- | :------ | :---------------------------------------------------------------- |
+| Parámetro | Tipo    | Descripción                                                           |
+| :-------- | :------ | :-------------------------------------------------------------------- |
 | `page`    | Integer | La página de mensajes. Si no se especifica, se utilizará la página 1. |
 
 ### Ejemplo de Solicitud
@@ -21,9 +21,9 @@ List all messages belonging to the contact. Results are paginated and sorted by 
 
 ### Respuesta
 
-| Parámetro   | Tipo                                              | Descripción          |
-| :---------- | :------------------------------------------------ | :------------------- |
-| `messages`  | [Messages[]](/api/reference/object_types/message) | Una lista de mensajes. |
+| Parámetro  | Tipo                                              | Descripción            |
+| :--------- | :------------------------------------------------ | :--------------------- |
+| `messages` | [Messages[]](/api/reference/object_types/message) | Una lista de mensajes. |
 
 ### Ejemplo de Respuesta
 
