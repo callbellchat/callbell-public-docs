@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## January 4, 2024
+
+### ✨ What's new
+
+- [Contact messages API](/api/reference/contacts_api/get_contact_messages) to fetch all the messages of a contact. This endpoint is useful to fetch all the messages of a contact, the result is paginated and sorted by date.
+
 ## December 19, 2023
 
 ### ✨ What's new
