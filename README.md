@@ -70,10 +70,8 @@ node translate.js <your_file> 'it,pt,es,fr'
 
 This sould do the job. If you have any issues, please contact the team.
 
-:::warning
+> [!NOTE]
+> The translation is not perfect, so you need to check the translation and make sure that everything is correct.
 
-The translation is not perfect, so you need to check the translation and make sure that everything is correct.
-
-The translations preview won't be available in the local development server, so you push the changes to the repository and check the preview build on Netlify.
-
-:::
+> [!CAUTION]
+> The translations preview won't be available in the local development server, so you push the changes to the repository and check the preview build on Netlify.
