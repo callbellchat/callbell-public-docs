@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## January 8, 2024
+
+### ✨ What's new
+
+Added information and examples about how to use Callbell with Zapier.
+
 ## January 4, 2024
 
 ### ✨ What's new

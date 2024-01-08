@@ -6,13 +6,13 @@ sidebar_position: 2
 
 ## What is Zapier?
 
-Zapier is a tool that allows you to connect apps you use every day to automate tasks and save time. You can connect any of our 2,000+ integrated apps together to make your own automations. What's more it's quick and easy to set up - you don't need to be a developer, anyone can make a Zap!
+Zapier is a tool that allows you to connect apps you use every day to automate tasks and save time. You can connect with more than 2,000+ apps to make your own automations.
 
 ## How does Zapier work?
 
 Zapier uses a **Zap** to connect two or more apps together.
 
-A Zap is made up of a **Trigger** and one or more **Actions** or **Searches**.
+A Zap is made up of a **Trigger** and one or more **Actions**.
 
 Whenever the trigger happens in one app, Zapier will automatically perform the actions or searches in another app in order.
 
