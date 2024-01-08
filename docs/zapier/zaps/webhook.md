@@ -29,7 +29,7 @@ The webhook URL is the URL that Zapier will use to send data to Callbell.
 
 :::info
 
-example: https://docs.callbell.eu/api/reference/contacts_api/post_contacts could be used to create a new contact
+In [this](https://docs.callbell.eu/api/reference/contacts_api/post_contacts) section you can find the `url` to use for the webhook.
 
 :::
 

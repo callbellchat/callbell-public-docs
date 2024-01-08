@@ -2,49 +2,49 @@
 sidebar_position: 4
 ---
 
-# Using Advanced Webhooks
+# Usare gli Advanced Webhooks
 
-Here we'll see how to use Callbell through Zapier by using Zapier's custom webhook as an action.
-This is a more advanced way to use Callbell in Zapier, but it gives you more flexibility because you can use our public API to perform actions.
+Qui vedremo come usare Callbell tramite Zapier utilizzando Zapier's custom webhook come azione.
+Questo è un modo più avanzato per utilizzare Callbell in Zapier, ma ti offre maggiore flessibilità perché puoi utilizzare la nostra API pubblica per eseguire azioni.
 
-See <a href="https://docs.callbell.eu/api/reference/introduction'">API reference</a> for more info about the endponts and the payloads.
+Vedi <a href="https://docs.callbell.eu/api/reference/introduction'">API reference</a> per ulteriori informazioni sugli endpoint e sui payload.
 
-## Using Zapier's Custom Webhook
+## Uso del custom webhook di Zapier
 
-Make sure you select the right Callbell app (latest):
+Assicurati di selezionare l'app Callbell corretta (la più recente):
 
-![Callbell integration](../assets/select-action.png)
+![Integrazione Callbell](../assets/select-action.png)
 
-Then select "Webhooks by Zapier" as the action app:
+Quindi seleziona "Webhooks by Zapier" come app per l'azione:
 
 ![Webhooks by Zapier](../assets/webhook.png)
 
-The reccomened action is "Custom Request" here:
+L'azione consigliata è "Richiesta personalizzata" qui:
 
-Regardless of the action you choose, you'll need to set up the webhook URL correctly.
+Indipendentemente dall'azione che scegli, dovrai configurare correttamente l'URL webhook.
 
-### Webhook URL
+### URL Webhook
 
-The webhook URL is the URL that Zapier will use to send data to Callbell.
+L'URL webhook è l'URL che Zapier utilizzerà per inviare i dati a Callbell.
 
 :::info
 
-example: https://docs.callbell.eu/api/reference/contacts_api/post_contacts could be used to create a new contact
+In [questa](https://docs.callbell.eu/api/reference/contacts_api/post_contacts) sezione puoi trovare l'URL da utilizzare per il webhook.
 
 :::
 
-### Webhook Payload
+### Payload Webhook
 
-The webhook payload is the data that Zapier will send to Callbell.
+Il payload webhook è il dato che Zapier invierà a Callbell.
 
-The payload must be in JSON format.
+Il payload deve essere in formato JSON.
 
-### Authentication
+### Autenticazione
 
-You will need to authenticate your request to Callbell.
+Dovrai autenticare la tua richiesta a Callbell.
 
-You can do this by adding the following headers to your request:
+Puoi farlo aggiungendo le seguenti intestazioni alla tua richiesta:
 
-![Headers](../assets/headers.png)
+![Intestazioni](../assets/headers.png)
 
-The `Content-Type` set to `application/json` is **required**.
+Il `Content-Type` impostato su `application/json` è **obbligatorio**.

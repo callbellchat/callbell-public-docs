@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
-In order to use Callbell with Zapier, you'll need to have a Callbell account. [Haz clic aquí](https://dash.callbell.eu/users/sign_up) para crear uno.
+# Introducción
 
-You will also need a Zapier account. [Haz clic aquí](https://zapier.com/sign-up) para crear uno.
+Para usar Callbell con Zapier, necesitarás tener una cuenta de Callbell. [Haz clic aquí](https://dash.callbell.eu/users/sign_up) para crear una.
+
+También necesitarás una cuenta de Zapier. [Haz clic aquí](https://zapier.com/sign-up) para crear una.

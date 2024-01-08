@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Here we'll show you how to use Callbell in Zapier as a **Trigger**
 
-## As a Trigger
+## Callbell As a Trigger
 
 Make you select the right Callbell(latest) app:
 

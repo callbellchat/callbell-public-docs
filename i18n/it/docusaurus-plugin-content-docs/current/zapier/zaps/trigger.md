@@ -2,81 +2,81 @@
 sidebar_position: 2
 ---
 
-# Usando o Trigger no Zapier
+# Usare Trigger in Zapier
 
-Aqui vamos mostrar como usar o Callbell no Zapier como um **Trigger**.
+Qui ti mostreremo come usare Callbell in Zapier come **Trigger**
 
-## Como Trigger
+## Callbell come Trigger
 
-Certifique-se de selecionar o aplicativo certo do Callbell (mais recente):
+Assicurati di selezionare la giusta app Callbell(l'ultima):
 
-![Integração do Callbell](../assets/select-trigger.png)
+![Integrazione Callbell](../assets/select-trigger.png)
 
-Nossa integração do Callbell permite que você use o Callbell como um trigger. Isso significa que você pode enviar dados do Callbell para outros aplicativos.
+La nostra integrazione Callbell consente di utilizzare Callbell come trigger. Ciò significa che puoi inviare dati da Callbell ad altre app.
 
-### Triggers Suportados
+### Trigger supportati
 
-- Contato Criado
-- Contato Atualizado
-- Contato Excluído
-- Mensagem Criada
-- Status da Mensagem Atualizado
-- Evento de Entrada (trigger legado)
+- Contatto creato
+- Contatto aggiornato
+- Contatto eliminato
+- Messaggio creato
+- Aggiornamento stato messaggio
+- Evento in arrivo (trigger obsoleto)
 
-Recomendamos que você use os primeiros 5 triggers, pois o último será descontinuado em algum momento.
+Ti consigliamo di utilizzare i primi 5 trigger, poiché l'ultimo verrà deprecato a un certo punto.
 
-#### Contato Criado
+#### Contatto creato
 
-Esse trigger será ativado quando um novo contato for criado no Callbell.
+Questo trigger verrà attivato quando viene creato un nuovo contatto in Callbell.
 
-#### Contato Atualizado
+#### Contatto aggiornato
 
-Esse trigger será ativado quando um contato for atualizado no Callbell.
+Questo trigger verrà attivato quando viene aggiornato un contatto in Callbell.
 
-#### Contato Excluído
+#### Contatto eliminato
 
-Esse trigger será ativado quando um contato for excluído no Callbell.
+Questo trigger verrà attivato quando viene eliminato un contatto in Callbell.
 
-#### Mensagem Criada
+#### Messaggio creato
 
-Esse trigger será ativado quando uma nova mensagem for criada no Callbell. A mensagem pode ser tanto de entrada quanto de saída.
+Questo trigger verrà attivato quando viene creato un nuovo messaggio in Callbell. Il messaggio può essere di input o di output.
 
-#### Status da Mensagem Atualizado
+#### Aggiornamento stato messaggio
 
-Esse trigger será ativado quando o status de uma mensagem for atualizado no Callbell.
+Questo trigger verrà attivato quando viene aggiornato lo stato di un messaggio in Callbell.
 
-## Exemplo com o Trigger de Contato Criado
+## Esempio con il Trigger "Contatto creato"
 
-Digamos que você tenha um CRM externo e queira enviar dados do Callbell para o seu CRM. Você pode usar o Zapier para enviar os dados do Callbell para o seu CRM.
+Supponiamo di avere un CRM esterno e di voler inviare i dati da Callbell al CRM. Puoi utilizzare Zapier per inviare i dati da Callbell al tuo CRM.
 
-O Callbell é o **Trigger** e o seu CRM é a **Ação**.
+Callbell è il **Trigger** e il tuo CRM è l'**Azione**.
 
-Configure o seu Zap:
+Configurazione del tuo Zap:
 
-![Trigger e Ação do Zapier](../assets/trigger+action.png)
+![Trigger e Azione Zapier](../assets/trigger+action.png)
 
-### Passo 1: Configure o seu Trigger
+### Passo 1: Configura il tuo Trigger
 
-Neste exemplo, vamos usar o Callbell como o Trigger.
+In questo esempio, utilizzeremo Callbell come Trigger.
 
-Selecione o Callbell como o aplicativo do Trigger e em seguida selecione o trigger "Contato Criado".
+Seleziona Callbell come app Trigger, quindi seleziona il trigger "Contatto creato".
 
-### Passo 2: Configure a sua Ação
+### Passo 2: Configura la tua Azione
 
-Selecione o seu CRM como o aplicativo da Ação.
+Seleziona il tuo CRM come app Azione.
 
-Em seguida, clique em "Continuar". Você será solicitado a conectar a sua conta do CRM ao Zapier.
+Poi clicca su "Continua". Ti verrà chiesto di collegare il tuo account CRM a Zapier.
 
-Depois de conectar a sua conta do CRM, você terá que configurar a ação.
+Una volta collegato il tuo account CRM, dovrai configurare l'azione.
 
-Selecione os dados que você deseja enviar para o seu CRM.
+Seleziona i dati che desideri inviare al tuo CRM.
 
-Em seguida, clique em "Continuar".
+Poi clicca su "Continua".
 
-Depois, clique em "Testar e Continuar".
+Poi clicca su "Testa e continua".
 
-Em seguida, clique em "Ativar Zap".
+Poi clicca su "Attiva Zap".
 
-### Passo 3: Teste o seu Zap
+### Passo 3: Testa il tuo Zap
 
-Depois de ativar o seu Zap, você pode testá-lo criando um novo contato no Callbell.
+Una volta attivato il tuo Zap, puoi testarlo creando un nuovo contatto in Callbell.
