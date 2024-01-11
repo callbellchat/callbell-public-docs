@@ -17,8 +17,6 @@ Updates an existing contact.
 
 ### Optional Parameters
 
-### Optional Parameters
-
 | Parameter       | Type     | Description                                                                   |
 | :-------------- | :------- | :---------------------------------------------------------------------------- |
 | `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |

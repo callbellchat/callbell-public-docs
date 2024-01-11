@@ -7,14 +7,15 @@ sidebar_position: 1
 
 | Campo          | Tipo              | Descrizione                                       |
 | :------------- | :---------------- | :------------------------------------------------ |
-| `uuid`         | string            | L'ID contatto univoco generato da Callbell         |
-| `nome`         | string            | Nome del contatto                                 |
-| `numeroTelefono`  | string            | Numero di telefono del contatto                       |
-| `avatarUrl`    | string            | URL dell'avatar utente                            |
-| `creatoIl`    | string            | Data di creazione del contatto (formattata secondo la norma ISO 8601)     |
-| `origine`       | Origine            | Origine della conversazione                            |
-| `link`         | string            | Link al CRM del contatto nel dashboard                     |
-| `etichette`         | string            | Elenco di etichette associate                           |
-| `utenteAssegnato` | string            | Email dell'utente a cui è assegnato il contatto |
-| `campiPersonalizzati` | string            | Elenco di campi personalizzati associati                  |
-| `team`         | [Team](./team.md) | Casella di posta team attualmente associata al contatto    |
+| `uuid`         | string            | L'ID univoco del contatto generato da Callbell     |
+| `name`         | string            | Nome del contatto                                 |
+| `phoneNumber`  | string            | Numero di telefono del contatto                   |
+| `avatarUrl`    | string            | URL dell'avatar dell'utente                       |
+| `createdAt`    | string            | Data di creazione del contatto (formato ISO 8601) |
+| `source`       | Source            | Origine della conversazione                       |
+| `closedAt`     | string            | Data di chiusura del contatto (formato ISO 8601)  |
+| `href`         | string            | Link al dashboard CRM del contatto                |
+| `tags`         | string            | Elenco di tag associati                           |
+| `assignedUser` | string            | E-mail dell'utente a cui è stato assegnato il contatto |
+| `customFields` | string            | Elenco di campi personalizzati associati          |
+| `team`         | [Team](./team.md) | Inbox del team attualmente associata al contatto  |

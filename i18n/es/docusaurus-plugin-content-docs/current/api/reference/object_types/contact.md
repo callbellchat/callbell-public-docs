@@ -1,20 +1,21 @@
 ---
-title: Contacto
+title: Objeto de Contato
 sidebar_position: 1
 ---
 
-### Objeto de Contacto
+### Objeto de Contato
 
-| Campo          | Tipo              | Descripción                                           |
-| :------------- | :---------------- | :---------------------------------------------------- |
-| `uuid`         | string            | ID único del contacto generado por Callbell            |
-| `name`         | string            | Nombre del contacto                                   |
-| `phoneNumber`  | string            | Número de teléfono del contacto                       |
-| `avatarUrl`    | string            | URL del avatar del usuario                            |
-| `createdAt`    | string            | Fecha de creación del contacto (en formato ISO 8601)   |
-| `source`       | Fuente            | Fuente de la conversación                             |
-| `href`         | string            | Enlace al contacto en el panel de control del CRM      |
-| `tags`         | string            | Lista de tags asociados                               |
-| `assignedUser` | string            | Email del usuario al que se ha asignado el contacto    |
-| `customFields` | string            | Lista de campos personalizados asociados               |
-| `team`         | [Equipo](./team.md) | Buzón de equipo asociado actualmente al contacto       |
+| Campo          | Tipo              | Descrição                                         |
+| :------------- | :---------------- | :------------------------------------------------ |
+| `uuid`         | string            | O ID único do contato gerado pelo Callbell        |
+| `name`         | string            | Nome do contato                                   |
+| `phoneNumber`  | string            | Número de telefone do contato                     |
+| `avatarUrl`    | string            | URL do avatar do usuário                          |
+| `createdAt`    | string            | Data de criação do contato (formato ISO 8601)     |
+| `source`       | Source            | Origem da conversa                                |
+| `closedAt`     | string            | Data de encerramento do contato (formato ISO 8601) |
+| `href`         | string            | Link para o contato no painel CRM                 |
+| `tags`         | string            | Lista de tags associadas                          |
+| `assignedUser` | string            | E-mail do usuário ao qual o contato está atribuído |
+| `customFields` | string            | Lista de campos personalizados associados          |
+| `team`         | [Team](./team.md) | Caixa de entrada da equipe associada ao contato    |

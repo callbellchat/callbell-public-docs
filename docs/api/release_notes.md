@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## January 11, 2024
+
+### ✨ What's new
+
+- [Contact Conversation Open](/api/reference/contacts_api/post_contact_conversation_open) and [Contact Conversation Close](/api/reference/contacts_api/post_contact_conversation_close) endpoints to open and close a conversation associated to a contact.
+
 ## January 8, 2024
 
 ### ✨ What's new
