@@ -13,6 +13,7 @@ sidebar_position: 1
 | `avatarUrl`    | string            | URL of the user avatar                            |
 | `createdAt`    | string            | Date of contact creation (ISO 8601 formatted)     |
 | `source`       | Source            | Source of conversation                            |
+| `closedAt`     | string            | Date of contact closure (ISO 8601 formatted)      |
 | `href`         | string            | Link to dashboard CRM contact                     |
 | `tags`         | string            | List of associated tags                           |
 | `assignedUser` | string            | Email of the user that the contact is assigned to |
