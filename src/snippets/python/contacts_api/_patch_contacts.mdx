@@ -3,14 +3,22 @@ import requests
 
 headers = {
     'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
-    # Already added when you pass json=
-    # 'Content-Type': 'application/json',
+    'Content-Type': 'application/json',
 }
 
 json_data = {
     'name': 'Joe Doe NEW',
+    'custom_fields': {
+        'orderNumber': 123,
+        'zipCode': '98765430',
+    },
 }
 
 response = requests.patch('https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n        "name": "Joe Doe NEW",\n        "custom_fields": {\n          "orderNumber": 123,\n          "zipCode": "98765430"\n        }\n      }'
+#response = requests.patch('https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8', headers=headers, data=data)
 
 ```

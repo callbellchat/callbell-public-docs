@@ -11,7 +11,13 @@ import (
 
 func main() {
 	client := &http.Client{}
-	var data = strings.NewReader(`{"name": "Joe Doe NEW"}`)
+	var data = strings.NewReader(`{
+        "name": "Joe Doe NEW",
+        "custom_fields": {
+          "orderNumber": 123,
+          "zipCode": "98765430"
+        }
+      }`)
 	req, err := http.NewRequest("PATCH", "https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8", data)
 	if err != nil {
 		log.Fatal(err)

@@ -1500,6 +1500,7 @@
     utility-types "^3.10.0"
     webpack "^5.73.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/plugin-content-docs@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/plugin-content-docs/-/plugin-content-docs-2.4.3.tgz#aa224c0512351e81807adf778ca59fd9cd136973"
@@ -1523,6 +1524,9 @@
     webpack "^5.73.0"
 
 "@docusaurus/plugin-content-docs@^2.0.0-rc.1":
+=======
+"@docusaurus/plugin-content-docs@2.1.0", "@docusaurus/plugin-content-docs@^2.0.0-rc.1":
+>>>>>>> Stashed changes
   version "2.1.0"
   resolved "https://registry.npmjs.org/@docusaurus/plugin-content-docs/-/plugin-content-docs-2.1.0.tgz"
   integrity sha512-Rup5pqXrXlKGIC4VgwvioIhGWF7E/NNSlxv+JAxRYpik8VKlWsk9ysrdHIlpX+KJUCO9irnY21kQh2814mlp/Q==
@@ -1673,10 +1677,17 @@
     tslib "^2.4.0"
     utility-types "^3.10.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/theme-common@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-common/-/theme-common-2.4.3.tgz#bb31d70b6b67d0bdef9baa343192dcec49946a2e"
   integrity sha512-7KaDJBXKBVGXw5WOVt84FtN8czGWhM0lbyWEZXGp8AFfL6sZQfRTluFp4QriR97qwzSyOfQb+nzcDZZU4tezUw==
+=======
+"@docusaurus/theme-common@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/@docusaurus/theme-common/-/theme-common-2.1.0.tgz"
+  integrity sha512-vT1otpVPbKux90YpZUnvknsn5zvpLf+AW1W0EDcpE9up4cDrPqfsh0QoxGHFJnobE2/qftsBFC19BneN4BH8Ag==
+>>>>>>> Stashed changes
   dependencies:
     "@docusaurus/mdx-loader" "2.4.3"
     "@docusaurus/module-type-aliases" "2.4.3"
@@ -1717,6 +1728,7 @@
     tslib "^2.4.0"
     utility-types "^3.10.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/theme-translations@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/theme-translations/-/theme-translations-2.4.3.tgz#91ac73fc49b8c652b7a54e88b679af57d6ac6102"
@@ -1726,6 +1738,9 @@
     tslib "^2.4.0"
 
 "@docusaurus/theme-translations@^2.0.0-rc.1":
+=======
+"@docusaurus/theme-translations@2.1.0", "@docusaurus/theme-translations@^2.0.0-rc.1":
+>>>>>>> Stashed changes
   version "2.1.0"
   resolved "https://registry.npmjs.org/@docusaurus/theme-translations/-/theme-translations-2.1.0.tgz"
   integrity sha512-07n2akf2nqWvtJeMy3A+7oSGMuu5F673AovXVwY0aGAux1afzGCiqIFlYW3EP0CujvDJAEFSQi/Tetfh+95JNg==
@@ -1747,6 +1762,7 @@
     webpack "^5.73.0"
     webpack-merge "^5.8.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/types@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/types/-/types-2.4.3.tgz#4aead281ca09f721b3c0a9b926818450cfa3db31"
@@ -1761,6 +1777,8 @@
     webpack "^5.73.0"
     webpack-merge "^5.8.0"
 
+=======
+>>>>>>> Stashed changes
 "@docusaurus/utils-common@2.1.0", "@docusaurus/utils-common@^2.0.0-rc.1":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@docusaurus/utils-common/-/utils-common-2.1.0.tgz"
@@ -1768,6 +1786,7 @@
   dependencies:
     tslib "^2.4.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/utils-common@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils-common/-/utils-common-2.4.3.tgz#30656c39ef1ce7e002af7ba39ea08330f58efcfb"
@@ -1775,6 +1794,8 @@
   dependencies:
     tslib "^2.4.0"
 
+=======
+>>>>>>> Stashed changes
 "@docusaurus/utils-validation@2.1.0", "@docusaurus/utils-validation@^2.0.0-rc.1":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@docusaurus/utils-validation/-/utils-validation-2.1.0.tgz"
@@ -1786,6 +1807,7 @@
     js-yaml "^4.1.0"
     tslib "^2.4.0"
 
+<<<<<<< Updated upstream
 "@docusaurus/utils-validation@2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@docusaurus/utils-validation/-/utils-validation-2.4.3.tgz#8122c394feef3e96c73f6433987837ec206a63fb"
@@ -1797,6 +1819,8 @@
     js-yaml "^4.1.0"
     tslib "^2.4.0"
 
+=======
+>>>>>>> Stashed changes
 "@docusaurus/utils@2.1.0", "@docusaurus/utils@^2.0.0-rc.1":
   version "2.1.0"
   resolved "https://registry.npmjs.org/@docusaurus/utils/-/utils-2.1.0.tgz"
@@ -3766,11 +3790,14 @@ del@^6.1.1:
     rimraf "^3.0.2"
     slash "^3.0.0"
 
+<<<<<<< Updated upstream
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
 
+=======
+>>>>>>> Stashed changes
 depd@2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/depd/-/depd-2.0.0.tgz"
@@ -5593,7 +5620,11 @@ mime-types@2.1.18, mime-types@~2.1.17:
   dependencies:
     mime-db "~1.33.0"
 
+<<<<<<< Updated upstream
 mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.31, mime-types@~2.1.24, mime-types@~2.1.34:
+=======
+mime-types@^2.1.27, mime-types@^2.1.31, mime-types@~2.1.24, mime-types@~2.1.34:
+>>>>>>> Stashed changes
   version "2.1.35"
   resolved "https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz"
   integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
