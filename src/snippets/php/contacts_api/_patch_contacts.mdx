@@ -8,7 +8,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
     'Content-Type: application/json',
 ]);
-curl_setopt($ch, CURLOPT_POSTFIELDS, '{"name": "Joe Doe NEW"}');
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n        \"name\": \"Joe Doe NEW\",\n        \"custom_fields\": {\n          \"orderNumber\": 123,\n          \"zipCode\": \"98765430\"\n        }\n      }");
 
 $response = curl_exec($ch);
 

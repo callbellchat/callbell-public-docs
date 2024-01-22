@@ -8,9 +8,13 @@ req.content_type = 'application/json'
 req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
 
 # The object won't be serialized exactly like this
-# req.body = '{"name": "Joe Doe NEW"}'
+# req.body = "{\n        \"name\": \"Joe Doe NEW\",\n        \"custom_fields\": {\n          \"orderNumber\": 123,\n          \"zipCode\": \"98765430\"\n        }\n      }"
 req.body = {
-  'name' => 'Joe Doe NEW'
+  'name' => 'Joe Doe NEW',
+  'custom_fields' => {
+    'orderNumber' => 123,
+    'zipCode' => '98765430'
+  }
 }.to_json
 
 req_options = {

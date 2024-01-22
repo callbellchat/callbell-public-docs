@@ -3,9 +3,13 @@ import axios from 'axios';
 
 const response = await axios.patch(
   'https://api.callbell.eu/v1/contacts/414a6d692bd645ed803f2e7ce360d4c8',
-  // '{"name": "Joe Doe NEW"}',
+  // '{\n        "name": "Joe Doe NEW",\n        "custom_fields": {\n          "orderNumber": 123,\n          "zipCode": "98765430"\n        }\n      }',
   {
-    'name': 'Joe Doe NEW'
+    'name': 'Joe Doe NEW',
+    'custom_fields': {
+      'orderNumber': 123,
+      'zipCode': '98765430'
+    }
   },
   {
     headers: {
