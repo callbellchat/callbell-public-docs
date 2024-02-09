@@ -28,7 +28,7 @@ Dopo 24 ore senza risposta da parte del cliente, non è più possibile inviare m
 | `template_values` | Array   | Valori per il messaggio modello a più variabili                                                           |
 | `assigned_user`   | String  | Il messaggio sarà assegnato all'email di questo collaboratore                                             |
 | `team_uuid`       | String  | Il messaggio sarà assegnato a questo team                                                                 |
-| `canale_uuid`     | String  | Il messaggio sarà inviato da questo canale (se omesso, verrà utilizzato il canale principale predefinito) |
+| `channel_uuid`    | String  | Il messaggio sarà inviato da questo canale (se omesso, verrà utilizzato il canale principale predefinito) |
 
 ### Richiesta di esempio
 
