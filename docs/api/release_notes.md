@@ -6,6 +6,16 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 9, 2024
+
+### ✨ What's new
+
+- [Channels API](/api/reference/channels_api/introduction) to manage your Callbell Channels programmatically. Use this endpoint to list, show and update your channels.
+
+### 🛠️ Changes
+
+- [Send Messages](/api/reference/messages_api/post_send_messages) endpoint now supports the `channel_uuid` parameter to send a message to a specific channel.
+
 ## January 11, 2024
 
 ### ✨ What's new

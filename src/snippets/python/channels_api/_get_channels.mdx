@@ -1,0 +1,16 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+params = {
+    'type': 'whatsapp',
+    'page': '1',
+}
+
+response = requests.get('https://api.callbell.eu/v1/channels', params=params, headers=headers)
+
+```

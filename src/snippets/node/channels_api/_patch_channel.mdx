@@ -1,0 +1,18 @@
+```js
+import axios from 'axios';
+
+const response = await axios.patch(
+  'https://api.callbell.eu/v1/channels/7c996996fea947f4a1d5a11e7fac84db',
+  // '{"title": "New title"}',
+  {
+    'title': 'New title'
+  },
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
+    }
+  }
+);
+
+```

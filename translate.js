@@ -63,7 +63,7 @@ import assignTeamUrl from './assets/assign_team.png'
 Ciao mondo!
 `;
 
-const TARGET_LANGUAGES = ["it"];
+const TARGET_LANGUAGES = ["it", "es", "pt", "fr"];
 const SOURCE_LANGUAGE = "en";
 const DEEPL_LANGUAGE_MAPPING = {
   en: "en-US",
@@ -145,7 +145,7 @@ async function generateFileTranslation({
 
 (async () => {
   for await (const f of getFiles("./docs")) {
-    if (process.argv) {
+    if (process.argv.length > 2) {
       const targets = process.argv[3].split(",");
 
       for (let target of targets) {

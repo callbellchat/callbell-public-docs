@@ -12,21 +12,23 @@ Após 24 horas sem resposta do cliente, não é possível enviar mensagens regul
 
 ### Parâmetros Obrigatórios
 
-| Parâmetro  | Tipo           | Descrição                                            |
-| :--------- | :------------- | :--------------------------------------------------- |
-| `to`       | String         | Número de telefone ou identificador da plataforma     |
-| `from`     | String         | Identificador do canal (por exemplo, `whatsapp`)      |
-| `type`     | MessageType    | Tipo de mensagem a ser enviada                        |
-| `content`  | MessageContent | Conteúdo da mensagem                                  |
+| Parâmetro | Tipo           | Descrição                                         |
+| :-------- | :------------- | :------------------------------------------------ |
+| `to`      | String         | Número de telefone ou identificador da plataforma |
+| `from`    | String         | Identificador do canal (por exemplo, `whatsapp`)  |
+| `type`    | MessageType    | Tipo de mensagem a ser enviada                    |
+| `content` | MessageContent | Conteúdo da mensagem                              |
 
 ### Parâmetros Opcionais
 
-| Parâmetro          | Tipo    | Descrição                                                                     |
-| :----------------- | :------ | :---------------------------------------------------------------------------- |
-| `template_uuid`    | String  | Identificador único da mensagem modelo                                         |
-| `optin_contact`    | Boolean | Confirmação de que o contato optou por receber mensagens                       |
-| `template_values`  | Array   | Valores para mensagem modelo de múltiplas variáveis                            |
-| `assigned_user`    | String  | Mensagem será atribuída ao email deste colaborador                              |
+| Parâmetro         | Tipo    | Descrição                                                                   |
+| :---------------- | :------ | :-------------------------------------------------------------------------- |
+| `template_uuid`   | String  | Identificador único da mensagem modelo                                      |
+| `optin_contact`   | Boolean | Confirmação de que o contato optou por receber mensagens                    |
+| `template_values` | Array   | Valores para mensagem modelo de múltiplas variáveis                         |
+| `assigned_user`   | String  | Mensagem será atribuída ao email deste colaborador                          |
+| `team_uuid`       | String  | Mensagem será atribuída a esta equipe                                       |
+| `channel_uuid`    | String  | Mensagem será enviada deste canal (quando omitido, usará o canal principal) |
 
 ### Exemplo de Requisição
 
@@ -34,8 +36,8 @@ Após 24 horas sem resposta do cliente, não é possível enviar mensagens regul
 
 ### Resposta
 
-| Parâmetro | Tipo                                                                   | Descrição                                                             |
-| :-------- | :--------------------------------------------------------------------- | :-------------------------------------------------------------------- |
+| Parâmetro | Tipo                                                                   | Descrição                                                                          |
+| :-------- | :--------------------------------------------------------------------- | :--------------------------------------------------------------------------------- |
 | message   | [MessageSendRequest](/api/reference/object_types/message_send_request) | A solicitação de envio de mensagem. O sistema inicialmente enfileirará a mensagem. |
 
 ### Exemplo de Resposta
