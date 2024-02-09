@@ -1,0 +1,16 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    # Already added when you pass json=
+    # 'Content-Type': 'application/json',
+}
+
+json_data = {
+    'title': 'New title',
+}
+
+response = requests.patch('https://api.callbell.eu/v1/channels/7c996996fea947f4a1d5a11e7fac84db', headers=headers, json=json_data)
+
+```

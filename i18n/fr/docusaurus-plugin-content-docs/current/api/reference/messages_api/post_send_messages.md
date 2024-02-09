@@ -1,3 +1,4 @@
+fr
 ---
 title: POST /messages/send
 ---
@@ -7,38 +8,40 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 # POST /messages/send
 
 :::caution
-After 24h without a reply from the customer, it is not possible to send regular messages, you'll need to use a [Template](#send-template-messages) message, see examples below.
+Après 24h sans réponse du client, il n'est pas possible d'envoyer des messages réguliers, vous devrez utiliser un message [Template](#send-template-messages), voir les exemples ci-dessous.
 :::
 
-### Required Parameters
+### Paramètres requis
 
-| Parameter | Type           | Description                          |
-| :-------- | :------------- | :----------------------------------- |
-| `to`      | String         | Phone number or platform identifier  |
-| `from`    | String         | Channel identifier (e.g. `whatsapp`) |
-| `type`    | MessageType    | Type of message to be sent           |
-| `content` | MessageContent | Content of the message               |
+| Paramètre  | Type           | Description                          |
+| :--------- | :------------- | :----------------------------------- |
+| `to`       | String         | Numéro de téléphone ou identifiant de la plateforme | 
+| `from`     | String         | Identifiant du canal (par exemple, `whatsapp`) |
+| `type`     | MessageType    | Type de message à envoyer |
+| `content`  | MessageContent | Contenu du message               | 
 
-### Optional Parameters
+### Paramètres optionnels
 
-| Parameter         | Type    | Description                                                       |
-| :---------------- | :------ | :---------------------------------------------------------------- |
-| `template_uuid`   | String  | Unique identifier of the template message                         |
-| `optin_contact`   | Boolean | Confirmation that the contact has opted-in for receiving messages |
-| `template_values` | Array   | Values for multi-variable template message                        |
-| `assigned_user`   | String  | Message will be assigned to this collaborator's email             |
+| Paramètre          | Type    | Description                                                                                     |
+| :----------------- | :------ | :---------------------------------------------------------------------------------------------- |
+| `template_uuid`    | String  | Identifiant unique du message modèle                                                             |
+| `optin_contact`    | Boolean | Confirmation que le contact a opté pour recevoir des messages                                |
+| `template_values`  | Array   | Valeurs pour un message modèle à variables multiples                                                      |
+| `assigned_user`    | String  | Le message sera attribué à l'adresse e-mail de ce collaborateur                                          |
+| `team_uuid`        | String  | Le message sera attribué à cette équipe                                                            |
+| `channel_uuid`     | String  | Le message sera envoyé depuis ce canal (lorsqu'il est omis, il utilisera le canal principal par défaut) |
 
-### Example Request
+### Exemple de requête
 
 <RequestTabs endpoint='messages_api' request="post_messages"/>
 
-### Response
+### Réponse
 
-| Parameter | Type                                                                   | Description                                                              |
+| Paramètre | Type                                                                   | Description                                                              |
 | :-------- | :--------------------------------------------------------------------- | :----------------------------------------------------------------------- |
-| message   | [MessageSendRequest](/api/reference/object_types/message_send_request) | The message send request. The system will initially enqueue the message. |
+| message   | [MessageSendRequest](/api/reference/object_types/message_send_request) | La demande d'envoi de message. Le système mettra initialement le message en file d'attente. |
 
-### Example Response
+### Exemple de réponse
 
 ```json title=response.json
 {
@@ -49,132 +52,132 @@ After 24h without a reply from the customer, it is not possible to send regular 
 }
 ```
 
-## Send Message with Automatic User Assignment
+## Envoyer un message avec attribution automatique de l'utilisateur
 
-It is possible to send a message via API request with an assigned user by sending their email in the `assigned_user` parameter.
+Il est possible d'envoyer un message via une demande API avec un utilisateur attribué en envoyant leur adresse e-mail dans le paramètre `assigned_user`.
 
 :::caution
-The user has to be part of your team, otherwise the assignment will not work.
+L'utilisateur doit faire partie de votre équipe, sinon l'attribution ne fonctionnera pas.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_messages_with_user_assignment"/>
 
-## Send Message with Media Attachments
+## Envoyer des messages avec des pièces jointes
 
-You can use the API to send **media messages** containing **images**, **documents**, **audio** and **video** messages.
+Vous pouvez utiliser l'API pour envoyer des **messages multimédias** contenant des messages **images**, **documents**, **audio** et **vidéo**.
 
-Is it also possible to add a _caption_ when sending `image` attachments (see the example request below).
+Il est également possible d'ajouter une _légende_ lors de l'envoi de pièces jointes `image` (voir l'exemple de requête ci-dessous).
 
-### Send Image Attachment Example
+### Exemple d'envoi de pièce jointe image
 
 <RequestTabs endpoint='messages_api' request="post_messages_image"/>
 
-### Send Image Attachment & Caption Example
+### Exemple d'envoi de pièce jointe image et de légende
 
 <RequestTabs endpoint='messages_api' request="post_messages_image_caption"/>
 
-### Send Document Attachment Example
+### Exemple d'envoi de pièce jointe de document
 
 <RequestTabs endpoint='messages_api' request="post_messages_document"/>
 
-### Send Audio Attachment Example
+### Exemple d'envoi de pièce jointe audio
 
 :::info
-This is only available for accounts using the official **WhatsApp Business API** integration.
+Ceci est uniquement disponible pour les comptes utilisant l'intégration officielle **WhatsApp Business API**.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_messages_audio"/>
 
-### Send Video Attachment Example
+### Exemple d'envoi de pièce jointe vidéo
 
 :::info
-This is only available for accounts using the official **WhatsApp Business API** integration.
+Ceci est uniquement disponible pour les comptes utilisant l'intégration officielle **WhatsApp Business API**.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_messages_video"/>
 
-## Send Template Messages
+## Envoyer des messages avec des modèles
 
-You can use the API to send an approved [Template](/api/reference/object_types/template) Message.
+Vous pouvez utiliser l'API pour envoyer un message [Template](/api/reference/object_types/template) approuvé.
 
 :::info
-This is only available for accounts using the official **WhatsApp Business API** integration.
+Ceci est uniquement disponible pour les comptes utilisant l'intégration officielle **WhatsApp Business API**.
 :::
 
 :::caution
-In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
+Pour envoyer des messages de modèle, `template_uuid` et `optin_contact` **doivent** être présents dans la charge utile.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_messages_template"/>
 
-In this context `text` refers to the placeholder of the template message, for example let's say you have a template message like this:
+Dans ce contexte, `texte` fait référence à l'espace réservé du message modèle, par exemple, disons que vous ayez un message modèle comme ceci :
 
 ```bash title=template_example
-Hello {{1}}, this is a template message example
+Bonjour {{1}}, ceci est un exemple de message modèle
 ```
 
-The placeholder replacement will be done with the value passed in the payload, so in this case it will be the following:
+Le remplacement de l'espace réservé sera effectué avec la valeur passée dans la charge utile, donc dans ce cas, ce sera le suivant :
 
 ```bash title=template_example
-Hello John Doe, this is a template message example
+Bonjour John Doe, ceci est un exemple de message modèle
 ```
 
-## Send Multi-variables Template Messages
+## Envoyer des messages de modèle à variables multiples
 
-You can use the API to send an approved [Template](/api/reference/object_types/template) Message.
+Vous pouvez utiliser l'API pour envoyer un message [Template](/api/reference/object_types/template) approuvé.
 
 :::info
-This is only available for accounts using the official **WhatsApp Business API** integration.
+Ceci est uniquement disponible pour les comptes utilisant l'intégration officielle **WhatsApp Business API**.
 :::
 
 :::caution
-In order to send template messages `template_uuid` and `optin_contact` **must** be present in the payload.
+Pour envoyer des messages de modèle, `template_uuid` et `optin_contact` **doivent** être présents dans la charge utile.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_multi_variable_messages_template"/>
 
-In this context `template_values` refers to the placeholders of the template message, for example let's say you have a template message like this:
+Dans ce contexte, `template_values` fait référence aux espaces réservés du message modèle, par exemple, disons que vous ayez un message modèle comme ceci :
 
 ```bash title=template_example
-Hello {{1}}, this is a template {{2}} example. {{3}}!
+Bonjour {{1}}, ceci est un exemple de message modèle. {{3}}!
 ```
 
-The placeholders replacements will be done with the values passed in the payload inside an array, so in this case it will be the following:
+Le remplacement des espaces réservés sera effectué avec les valeurs passées dans la charge utile à l'intérieur d'un tableau, donc dans ce cas, ce sera le suivant :
 
 ```bash title=template_example
-Hello Jack, this is a template message example. Cheers!
+Bonjour Jack, ceci est un exemple de message modèle. Cheers!
 ```
 
 :::info
-When `template_values` are valid, the values inside `content` will be ignored, since it is used for template messages with only one variable.
+Lorsque `template_values` sont valides, les valeurs à l'intérieur de `content` seront ignorées, car elles sont utilisées pour les messages de modèle avec une seule variable.
 :::
 
-## Send Template Messages with Media Attachments
+## Envoyer des messages de modèle avec des pièces jointes
 
-You can use the API to send an approved [Template](/api/reference/object_types/template) Message
+Vous pouvez utiliser l'API pour envoyer un [Template](/api/reference/object_types/template) Message approuvé.
 
 :::info
-This is only available for accounts using the official **WhatsApp Business API** integration.
+Ceci est uniquement disponible pour les comptes utilisant l'intégration officielle **WhatsApp Business API**.
 :::
 
 :::caution
-In order to send template messages `template_uuid` and `optin_contact` must be present in the payload.
+Pour envoyer des messages de modèle, `template_uuid` et `optin_contact` doivent être présents dans la charge utile.
 :::
 
-If you have media template messages approved, you can send them by including a valid `url` of the media
+Si vous avez des messages de modèle de média approuvés, vous pouvez les envoyer en incluant une URL valide du média
 
-### Send Image Attachment
+### Envoyer une pièce jointe image
 
 <RequestTabs endpoint='messages_api' request="post_messages_template_image"/>
 
-### Send Document Attachment
+### Envoyer une pièce jointe de document
 
 <RequestTabs endpoint='messages_api' request="post_messages_template_document"/>
 
-### Send Video Attachment
+### Envoyer une pièce jointe de vidéo
 
 <RequestTabs endpoint='messages_api' request="post_messages_template_video"/>
 
 :::info
-Use the [Templates API](/api/reference/template_messages_api/introduction) to the get the `template_uuid`s your templates.
+Utilisez l'[API des modèles](/api/reference/template_messages_api/introduction) pour obtenir les `template_uuid`s de vos modèles.
 :::
