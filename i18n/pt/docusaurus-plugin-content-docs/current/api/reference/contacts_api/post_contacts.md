@@ -1,11 +1,11 @@
 ---
-title: POST /contatos
+title: POST /contacts
 sidebar_position: 4
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# POST /contatos
+# POST /contacts
 
 Cria um novo contato.
 

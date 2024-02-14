@@ -14,7 +14,7 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 ### ✨ O que há de novo
 
-- API de Canais para gerenciar seus canais do Callbell programaticamente. Use este endpoint para listar, exibir e atualizar seus canais.
+- API de Canais para gerenciar seus canais da Callbell programaticamente. Use este endpoint para listar, exibir e atualizar seus canais.
 
 ### 🛠️ Alterações
 
@@ -30,7 +30,7 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 ### ✨ O que há de novo
 
-Adicionadas informações e exemplos sobre como usar o Callbell com o Zapier.
+Adicionadas informações e exemplos sobre como utilizar a Callbell com o Zapier.
 
 ## 4 de janeiro de 2024
 
