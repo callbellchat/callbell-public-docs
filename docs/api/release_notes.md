@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 14, 2024
+
+### ✨ What's new
+
+- [Create contact](/api/reference/contacts_api/post_contacts) endpoint now supports the `channel_uuid` parameter to create a contact associated with a specific channel.
+
 ## February 9, 2024
 
 ### ✨ What's new

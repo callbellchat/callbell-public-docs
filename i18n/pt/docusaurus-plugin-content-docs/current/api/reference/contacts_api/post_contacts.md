@@ -1,48 +1,49 @@
 ---
-title: POST /contacts
+title: POST /contatos
 sidebar_position: 4
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# POST /contacts
+# POST /contatos
 
 Cria um novo contato.
 
 ### Parâmetros obrigatórios
 
-| Parâmetro    | Tipo   | Descrição                                                                      |
-| :----------- | :----- | :----------------------------------------------------------------------------- |
-| `identifier` | String | O identificador do contato (por exemplo, número de telefone no WhatsApp)        |
-| `source`     | Source | A origem do contato (por exemplo, `whatsapp`)                                   |
-| `name`       | String | O nome do contato                                                              |
+| Parâmetro    | Tipo   | Descrição                                                                                          
+| :----------- | :----- | :--------------------------------------------------------------------------------------------------- 
+| `identificador` | String | O identificador do contato (por exemplo, número de telefone no WhatsApp)                          |
+| `fonte`     | Fonte | A fonte do contato (por exemplo, `whatsapp`)                                                       |
+| `nome`       | String | O nome do contato                                                                                  |
 
 ### Parâmetros opcionais
 
-| Parâmetro       | Tipo     | Descrição                                                                         |
-| :-------------- | :------- | :-------------------------------------------------------------------------------- |
-| `tags`          | String[] | Uma lista de valores separados por vírgula (por exemplo, `['Call back', 'Interessado']`) |
-| `custom_fields` | String{} | Um objeto com os campos personalizados (por exemplo, `{'Endereço de Cobrança': 'Rua Principal 1'}`) |
-| `assigned_user` | String   | Email do usuário que você deseja atribuir a um contato                            |
-| `team_uuid`     | String   | UUID da equipe que você deseja atribuir a um contato                             |
+| Parâmetro        | Tipo     | Descrição                                                                                                         |
+| :-------------- | :------- | :---------------------------------------------------------------------------------------------------------------- 
+| `tags`           | String[] | Uma lista de valores separados por vírgula (por exemplo, `['Retornar ligação', 'Interessado']`)                |
+| `campos_personalizados` | String{} | Um objeto com os campos personalizados (por exemplo, `{'Endereço de cobrança': 'Rua Principal 1'}`)        |
+| `usuario_designado` | String   | Email do usuário que você deseja atribuir a um contato                                                        |
+| `equipe_uuid`     | String   | UUID da equipe que você deseja atribuir a um contato                                                           |
+| `canal_uuid`  | String   | A mensagem será enviada deste canal (quando omitido, será usado o canal principal padrão)                      |
 
 :::caution
-Ao passar `custom_fields` ou `tags`, verifique se eles existem em sua conta. Veja [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) em suas configurações.
+Ao passar `campos_personalizados` ou `tags`, verifique se eles existem em sua conta. Veja [tags](https://dash.callbell.eu/settings/tags) e [campos_personalizados](https://dash.callbell.eu/settings/custom_fields) em suas configurações.
 
-O mesmo se aplica a `assigned_user` e `team_uuid`: eles também precisam existir em sua conta.
+O mesmo se aplica para `usuario_designado` e `equipe_uuid`: eles precisam existir em sua conta.
 :::
 
-### Exemplo de requisição
+### Exemplo de Requisição
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
 
 ### Resposta
 
-| Parâmetro | Tipo                                           | Descrição                            |
-| :-------- | :--------------------------------------------- | :----------------------------------- |
-| `contact` | [Contato](/api/reference/object_types/contact) | O contato que foi criado. |
+| Parâmetro | Tipo                                                  | Descrição                    |
+| :-------- | :----------------------------------------------------- | :----------------------------- 
+| `contato` | [Contato](/api/reference/object_types/contact) | O contato que foi criado.
 
-### Exemplo de resposta
+### Exemplo de Resposta
 
 ```json title=response.json
 {
