@@ -7,42 +7,43 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # POST /contacts
 
-Crea un nuovo contatto.
+Creates a new contact.
 
-### Parametri obbligatori
+### Required Parameters
 
-| Parametro    | Tipo   | Descrizione                                                                  |
-| :----------- | :----- | :--------------------------------------------------------------------------- |
-| `identifier` | String | L'identificatore del contatto (ad esempio, il numero di telefono in WhatsApp) |
-| `source`     | Source | La fonte del contatto (ad esempio, `whatsapp`)                                |
-| `name`       | String | Il nome del contatto                                                        |
+| Parameter    | Type   | Description                                                   |
+| :----------- | :----- | :------------------------------------------------------------ |
+| `identifier` | String | The identifier of the contact (e.g. phone number in WhatsApp) |
+| `source`     | Source | The source of the contact (e.g. `whatsapp`)                   |
+| `name`       | String | The name of the contact                                       |
 
-### Parametri opzionali
+### Optional Parameters
 
-| Parametro       | Tipo     | Descrizione                                                                      |
-| :-------------- | :------- | :------------------------------------------------------------------------------- |
-| `tags`          | String[] | Una lista di valori separati da virgola (ad esempio, `['Call back', 'Interested']`) |
-| `custom_fields` | String{} | Un oggetto con i campi personalizzati (ad esempio, `{'Indirizzo di fatturazione': 'Via Principale 1'}`) |
-| `assigned_user` | String   | Email dell'utente a cui desideri assegnare un contatto                          |
-| `team_uuid`     | String   | UUID del team che desideri assegnare a un contatto                              |
+| Parameter       | Type     | Description                                                                                     |
+| :-------------- | :------- | :---------------------------------------------------------------------------------------------- |
+| `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)                            |
+| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`)                  |
+| `assigned_user` | String   | Email of the user that you want to assign to a contact                                          |
+| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                                           |
+| `channel_uuid`  | String   | The message will be sent from this channel (when omitted, it will use the default main channel) |
 
 :::caution
-Quando si passano `custom_fields` o `tags`, assicurarsi che esistano nel proprio account. Vedi [tags](https://dash.callbell.eu/settings/tags) e [custom_fields](https://dash.callbell.eu/settings/custom_fields) nelle impostazioni.
+When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
 
-Lo stesso vale per `assigned_user` e `team_uuid`: devono esistere nel proprio account.
+Same applies for `assigned_user` and `team_uuid`: either needs to exists in your account.
 :::
 
-### Esempio di richiesta
+### Example Request
 
 <RequestTabs endpoint='contacts_api' request="post_contacts"/>
 
-### Risposta
+### Response
 
-| Parametro  | Tipo                                           | Descrizione                  |
-| :--------- | :--------------------------------------------- | :--------------------------- |
-| `contact`  | [Contact](/api/reference/object_types/contact) | Il contatto creato.          |
+| Parameter | Type                                           | Description                    |
+| :-------- | :--------------------------------------------- | :----------------------------- |
+| `contact` | [Contact](/api/reference/object_types/contact) | The contact which was created. |
 
-### Esempio di risposta
+### Example Response
 
 ```json title=response.json
 {
