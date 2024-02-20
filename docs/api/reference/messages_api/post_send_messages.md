@@ -29,6 +29,7 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `assigned_user`   | String  | Message will be assigned to this collaborator's email                                           |
 | `team_uuid`       | String  | Message will be assigned to this team                                                           |
 | `channel_uuid`    | String  | The message will be sent from this channel (when omitted, it will use the default main channel) |
+| `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact`               |
 
 ### Example Request
 
@@ -47,6 +48,23 @@ After 24h without a reply from the customer, it is not possible to send regular 
   "message": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
     "status": "enqueued"
+  }
+}
+```
+
+### Example Response (with `fields=contact`)
+
+```json title=response.json
+{
+  "message": {
+    "uuid": "adf3d1216d4c4dcd908199d6700f2381",
+    "status": "enqueued",
+    "contact": {
+      "uuid": "c7b3d1216d4c4dcd908199d6700f2381",
+      "name": "John Doe",
+      "phone": "+1234567890",
+      "email": "john@doe.com"
+    }
   }
 }
 ```

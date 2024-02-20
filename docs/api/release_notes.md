@@ -6,6 +6,16 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 20, 2024
+
+### ✨ What's new
+
+- Added a new endpoint for listing all the [team members](/api/reference/teams_api/get_team_members) belonging to a team.
+
+### 🛠️ Changes
+
+- [Send Message](/api/reference/messages_api/post_send_messages) endpoint now supports an optional `fields` parameter to specify which fields to include in the response. This is useful to reduce the response size and speed up the API calls. Currently only `contact` is supported.
+ 
 ## February 14, 2024
 
 ### ✨ What's new
