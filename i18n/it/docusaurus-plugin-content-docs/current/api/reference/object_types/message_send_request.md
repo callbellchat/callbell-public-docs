@@ -1,14 +1,15 @@
 ---
-title: Richiesta di invio messaggio
-sidebar_position: 2
+title: Oggetto MessageSendRequest
+sidebar_position: 3
 ---
 
 ### Oggetto MessageSendRequest
 
-`MessageSendRequest` rappresenta una richiesta di invio messaggio. Può essere identificata e recuperata in seguito utilizzando il campo `uuid`.
+`MessageSendRequest` rappresenta una richiesta di invio messaggio. Può essere identificato e recuperato successivamente utilizzando il campo `uuid`.
 
-| Campo                  | Tipo          | Descrizione                          |
-| :--------------------- | :------------ | :----------------------------------- |
-| `uuid`                 | string        | Un ID univoco generato da Callbell    |
-| `status`               | MessageStatus | Lo stato del messaggio                |
-| `messageStatusPayload` | JSON          | Il payload grezzo dello stato messaggio |
+| Campo                 | Tipo                    | Descrizione                                                                                                                                                                  |
+| :-------------------- | :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `uuid`                | string                  | Un ID univoco generato da Callbell                                                                                                                                           |
+| `status`              | MessageStatus           | Lo stato del messaggio                                                                                                                                                       |
+| `messageStatusPayload`| JSON                    | Carico utile dello stato del messaggio                                                                                                                                       |
+| `contact`             | [Contatto](./contatto.md)| Il contatto a cui è stato inviato il messaggio (restituito solo quando si specifica la proprietà `contatto` all'interno di `campi` all'interno di [invia messaggio](../messages_api/post_send_messages.md)) |

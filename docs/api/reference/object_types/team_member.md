@@ -1,0 +1,13 @@
+---
+title: Team Member
+sidebar_position: 1
+---
+
+# Team Member
+
+The `TeamMember` object represents a member of a team.
+
+| Field       | Type    | Description                                                                         |
+| :---------- | :------ | :---------------------------------------------------------------------------------- |
+| `email`     | string  | The email of the team member.                                                       |
+| `available` | boolean | The availability status of the team member. Possible values are `true` and `false`. |
