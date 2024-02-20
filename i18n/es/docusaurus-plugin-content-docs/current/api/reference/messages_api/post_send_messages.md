@@ -5,7 +5,7 @@ title: POST /messages/send
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# POST /mensajes/enviar
+# POST /messages/send
 
 :::caution
 Después de 24 horas sin respuesta del cliente, no es posible enviar mensajes regulares, deberás utilizar un mensaje [Plantilla](#enviar-mensajes-de-plantilla), ver ejemplos a continuación.

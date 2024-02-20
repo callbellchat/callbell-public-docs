@@ -1,10 +1,10 @@
 ---
-title: INVIA /messages/send
+title: POST /messages/send
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# INVIA /messages/send
+# POST /messages/send
 
 :::caution
 Dopo 24h senza risposta dal cliente, non è possibile inviare messaggi regolari, sarà necessario utilizzare un messaggio [Template](#send-template-messages), vedere gli esempi di seguito.
@@ -47,7 +47,7 @@ Dopo 24h senza risposta dal cliente, non è possibile inviare messaggi regolari,
 {
   "message": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
-    "status": "in coda"
+    "status": "enqueued"
   }
 }
 ```
