@@ -19,10 +19,6 @@
     "message": "Webhooks",
     "description": "The label for category Webhooks in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Message Events": {
-    "message": "Eventos de Mensajes",
-    "description": "The label for category Message Events in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Bot Flow Builder": {
     "message": "Constructor de Flujo de Bot",
     "description": "The label for category Bot Flow Builder in sidebar tutorialSidebar"
