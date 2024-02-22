@@ -7,10 +7,6 @@
     "message": "Callbell API",
     "description": "The label for category Callbell API in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.API Reference": {
-    "message": "Referencia API",
-    "description": "The label for category API Reference in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Auth API": {
     "message": "Auth API",
     "description": "The label for category Auth API in sidebar tutorialSidebar"
@@ -19,41 +15,9 @@
     "message": "API de Mensajes",
     "description": "The label for category Messages API in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Contacts API": {
-    "message": "API de Contactos",
-    "description": "The label for category Contacts API in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Teams API": {
-    "message": "API de Equipos",
-    "description": "The label for category Teams API in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Templates API": {
-    "message": "API de Plantillas",
-    "description": "The label for category Templates API in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Webhooks API": {
-    "message": "API de Webhooks",
-    "description": "The label for category Webhooks API in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Webhooks": {
     "message": "Webhooks",
     "description": "The label for category Webhooks in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Message Events": {
-    "message": "Eventos de Mensajes",
-    "description": "The label for category Message Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Contact Events": {
-    "message": "Eventos de Contacto",
-    "description": "The label for category Contact Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Conversation Events": {
-    "message": "Eventos de Conversación",
-    "description": "The label for category Conversation Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Object Types": {
-    "message": "Tipos de Objeto",
-    "description": "The label for category Object Types in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Bot Flow Builder": {
     "message": "Constructor de Flujo de Bot",

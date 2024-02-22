@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 22, 2024
+
+### ✨ What's new
+
+- [Team Membership Updated](/api/reference/webhooks/team_events/team_membership_updated) webhook event to notify when a team member is added or removed from a team.
+- [Agent Status Updated](/api/reference/webhooks/agent_events/agent_status_updated) webhook event to notify when an agent changes their status.
+
 ## February 20, 2024
 
 ### ✨ What's new

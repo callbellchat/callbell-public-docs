@@ -1,9 +1,14 @@
 ---
 sidebar_position: 1
+title: Introduction
 ---
 
-# Introduzione
+:::info
+La documentazione API di Callbell è in lingua inglese. Se hai bisogno di assistenza, contattaci all'indirizzo [support@callbell.eu](mailto:support@callbell.eu).
+:::
 
-L'API REST di Callbell implementa diversi endpoint che ti consentono di inviare messaggi, ricevere eventi e sincronizzare le informazioni di contatto in modo programmato.
+# Introduction
 
-Se sei nuovo in Callbell, puoi anche seguire la nostra [Guida introduttiva a Callbell](/).
+Callbell REST API implements several endpoints which allows you to programmatically _send messages_, _receive events_ and synchronize _contact information_.
+
+If you're new to Callbell you can also follow our [Getting Started with Callbell Guide](/).
