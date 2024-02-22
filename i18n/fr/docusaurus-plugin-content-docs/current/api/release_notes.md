@@ -2,132 +2,139 @@
 sidebar_position: 4
 ---
 
-# Notes de publication
+# Notes de version
 
-Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier chaque fois que de nouveaux points d'extrémité sont ajoutés ou des modifications sont apportées.
+Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
+
+## 22 février 2024
+
+### ✨ Nouveautés
+
+- [Événement de webhook Team Membership Updated](/api/reference/webhooks/team_events/team_membership_updated) pour notifier quand un membre d'une équipe est ajouté ou supprimé d'une équipe.
+- [Événement de webhook Agent Status Updated](/api/reference/webhooks/agent_events/agent_status_updated) pour notifier quand un agent change son statut.
 
 ## 20 février 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- Ajout d'un nouveau point d'extrémité pour lister tous les [membres de l'équipe](/api/reference/teams_api/get_team_members) appartenant à une équipe.
+- Ajout d'un nouveau point d'extrémité pour répertorier tous les [membres d'équipe](/api/reference/teams_api/get_team_members) appartenant à une équipe.
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
-- Le point d'extrémité [Envoyer un message](/api/reference/messages_api/post_send_messages) prend désormais en charge un paramètre facultatif `fields` pour spécifier les champs à inclure dans la réponse. Cela est utile pour réduire la taille de la réponse et accélérer les appels API. Actuellement, seul `contact` est pris en charge.
- 
+- Le point d'extrémité [Send Message](/api/reference/messages_api/post_send_messages) prend maintenant en charge un paramètre optionnel `fields` pour spécifier les champs à inclure dans la réponse. Cela permet de réduire la taille de la réponse et d'accélérer les appels API. Actuellement, seul `contact` est pris en charge.
+
 ## 14 février 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- Le point d'extrémité [Créer un contact](/api/reference/contacts_api/post_contacts) prend désormais en charge le paramètre `channel_uuid` pour créer un contact associé à un canal spécifique.
+- Le point d'extrémité [Create contact](/api/reference/contacts_api/post_contacts) prend maintenant en charge le paramètre `channel_uuid` pour créer un contact associé à un canal spécifique.
 
 ## 9 février 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [API des canaux](/api/reference/channels_api/introduction) pour gérer vos canaux Callbell de manière programmatique. Utilisez ce point d'extrémité pour lister, afficher et mettre à jour vos canaux.
+- [Channels API](/api/reference/channels_api/introduction) pour gérer vos canaux Callbell de manière programmable. Utilisez ce point d'extrémité pour répertorier, afficher et mettre à jour vos canaux.
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
-- Le point d'extrémité [Envoyer des messages](/api/reference/messages_api/post_send_messages) prend désormais en charge le paramètre `channel_uuid` pour envoyer un message à un canal spécifique.
+- Le point d'extrémité [Send Messages](/api/reference/messages_api/post_send_messages) prend maintenant en charge le paramètre `channel_uuid` pour envoyer un message à un canal spécifique.
 
 ## 11 janvier 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- Les points d'extrémité [Ouvrir une conversation de contact](/api/reference/contacts_api/post_contact_conversation_open) et [Fermer une conversation de contact](/api/reference/contacts_api/post_contact_conversation_close) pour ouvrir et fermer une conversation associée à un contact.
+- Les points d'extrémité [Contact Conversation Open](/api/reference/contacts_api/post_contact_conversation_open) et [Contact Conversation Close](/api/reference/contacts_api/post_contact_conversation_close) pour ouvrir et fermer une conversation associée à un contact.
 
 ## 8 janvier 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-Ajout d'informations et d'exemples sur l'utilisation de Callbell avec Zapier.
+- Ajout d'informations et d'exemples sur la façon d'utiliser Callbell avec Zapier.
 
 ## 4 janvier 2024
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [API des messages de contact](/api/reference/contacts_api/get_contact_messages) pour récupérer tous les messages d'un contact. Ce point d'extrémité est utile pour récupérer tous les messages d'un contact, le résultat est paginé et trié par date.
+- [Contact messages API](/api/reference/contacts_api/get_contact_messages) pour récupérer tous les messages d'un contact. Ce point d'extrémité est utile pour récupérer tous les messages d'un contact, le résultat est paginé et trié par date.
 
 ## 19 décembre 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- Ajout de `team_uuid` aux demandes d'[envoi de messages](/api/reference/messages_api/post_send_messages) et de création ([contacts](/api/reference/contacts_api/post_contacts)) et de mise à jour ([contacts](/api/reference/contacts_api/patch_contacts)). Cela vous permet d'attribuer un contact à une équipe via une API.
+- Ajout de `team_uuid` aux [demandes d'envoi de message](/api/reference/messages_api/post_send_messages) et aux demandes de création et de mise à jour de contact [creation](/api/reference/contacts_api/post_contacts) et [update](/api/reference/contacts_api/patch_contacts). Cela vous permet d'assigner un contact à une équipe via l'API.
 
 ## 14 décembre 2023
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
-- L'événement de webhook [Message Created](/api/reference/webhooks/message_events/message_created) inclut désormais la référence complète du `contact`. Cela est utile pour obtenir des informations supplémentaires sur le contact sans avoir à effectuer un appel API supplémentaire.
+- L'événement du webhook [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) inclut maintenant la référence complète du `contact`. Cela permet d'obtenir des informations supplémentaires sur le contact sans avoir à effectuer un appel API supplémentaire.
 
 ## 30 novembre 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- Événement de webhook [Conversation Ouverte](/api/reference/webhooks/conversation_events/conversation_opened)
-- Événement de webhook [Conversation Fermée](/api/reference/webhooks/conversation_events/conversation_closed)
+- [Conversation Opened Webhook Event](/api/reference/webhooks/conversation_events/conversation_opened)
+- [Conversation Closed Webhook Event](/api/reference/webhooks/conversation_events/conversation_closed)
 
 ## 7 novembre 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [Point de terminaison de l'API des équipes](/api/reference/teams_api/introduction)
+- [Teams API Endpoint](/api/reference/teams_api/introduction)
 
 ## 29 juin 2023
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
-- Autoriser l'envoi de [messages de modèle à variables multiples](/api/reference/messages_api/post_send_messages#send-multi-variables-template-messages)
+- Autoriser l'envoi de [Multi-Variables Template Messages](/api/reference/messages_api/post_send_messages#send-multi-variables-template-messages)
 
 ## 15 juin 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- L'objet [`MessageSendRequest`](/api/reference/object_types/message_send_request) inclut désormais un nouvel attribut : `messageStatusPayload`. Cet attribut fournit la charge utile d'état pour le message correspondant, provenant directement de l'intégration.
-- Cet attribut est utile lors de la [récupération des mises à jour d'état pour un message](/api/reference/messages_api/get_message_status).
-- À des fins de dépannage, `messageStatusPayload` peut également être consulté via l'événement webhook [Mise à jour de l'état du message](/api/reference/webhooks/message_events/message_status_updated).
+- L'objet [`MessageSendRequest`](/api/reference/object_types/message_send_request) inclut maintenant un nouvel attribut : `messageStatusPayload`. Cet attribut fournit la charge utile de statut correspondante pour le message, provenant directement de l'intégration.
+- Cet attribut est utile lors de la récupération des mises à jour de statut pour un message via l'[API de statut de message](/api/reference/messages_api/get_message_status).
+- À des fins de dépannage, `messageStatusPayload` peut également être consulté via l'événement du webhook [Message Status Update Webhook Event](/api/reference/webhooks/message_events/message_status_updated).
 
 ## 5 avril 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- L'attribut `assignedUser` a été ajouté à l'objet [Contact](/api/reference/object_types/contact)
-- Les utilisateurs peuvent désormais être assignés à un contact lors de sa création ou de sa mise à jour en fournissant le paramètre `assigned_user` avec l'e-mail de l'utilisateur (par exemple, `john.doe@email.com`). Assurez-vous que l'e-mail fourni correspond à un utilisateur confirmé de votre compte.
-- Pour désassigner un utilisateur d'un contact lors d'une mise à jour, incluez le paramètre `unassign_user` dans le corps de la requête et définissez sa valeur sur true. Cette action supprimera l'utilisateur assigné du contact.
+- L'attribut `assignedUser` a été ajouté à l'objet [Contact](/api/reference/object_types/contact).
+- Les utilisateurs peuvent maintenant être assignés à un contact lors de la création ou de la mise à jour en fournissant le paramètre `assigned_user` avec l'e-mail d'un utilisateur (par exemple, `john.doe@email.com`). Assurez-vous que l'e-mail fourni correspond à un utilisateur confirmé de votre compte.
+- Pour désassigner un utilisateur d'un contact lors d'une mise à jour, incluez le paramètre `unassign_user` dans le corps de la requête et définissez sa valeur sur `true`. Cette action supprimera l'utilisateur assigné du contact.
 
 ## 3 mars 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
 - Extraits de code multilingues (`curl`, `node`, `go`, `ruby`, `php`, `python`) pour toutes les requêtes
-- Section Notes de publication
+- Section Notes de version
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
 - [Contact](/api/reference/object_types/contact) inclut maintenant `custom_fields`
-- `custom_fields`, `tags` peuvent être transmis dans le corps lors de la [création](/api/reference/contacts_api/post_contacts) ou de la [mise à jour](/api/reference/contacts_api/post_contacts) d'un contact
-- `phone_number` de [Contact](/api/reference/object_types/contact) ne peut plus être mis à jour
+- `custom_fields`, `tags` peuvent être envoyés dans le corps lors de la [création](/api/reference/contacts_api/post_contacts) ou de la [mise à jour](/api/reference/contacts_api/post_contacts) d'un contact
+- La mise à jour du `phone_number` du [Contact](/api/reference/object_types/contact) n'est plus possible
 
 ## 17 janvier 2023
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [API des modèles](/api/reference/template_messages_api/introduction)
+- [Templates API](/api/reference/template_messages_api/introduction)
 
-### 🛠️ Changements
+### 🛠️ Modifications
 
-- Autoriser l'envoi de [messages de modèle](/api/reference/messages_api/post_send_messages#send-template-messages)
+- Autoriser l'envoi de [Template Messages](/api/reference/messages_api/post_send_messages#send-template-messages)
 
 ## 11 novembre 2022
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [API d'authentification](/api/reference/auth_api/introduction)
+- [Auth API](/api/reference/auth_api/introduction)
 
 ## 18 octobre 2022
 
-### ✨ Quoi de neuf
+### ✨ Nouveautés
 
-- [API des webhooks](/api/reference/webhooks_api/introduction)
+- [Webhooks API](/api/reference/webhooks_api/introduction)

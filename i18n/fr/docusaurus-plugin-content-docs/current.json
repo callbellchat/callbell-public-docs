@@ -39,22 +39,6 @@
     "message": "Webhooks",
     "description": "The label for category Webhooks in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.Message Events": {
-    "message": "Événements de Message",
-    "description": "The label for category Message Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Contact Events": {
-    "message": "Événements de Contact",
-    "description": "The label for category Contact Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Conversation Events": {
-    "message": "Événements de Conversation",
-    "description": "The label for category Conversation Events in sidebar tutorialSidebar"
-  },
-  "sidebar.tutorialSidebar.category.Object Types": {
-    "message": "Types d'Objet",
-    "description": "The label for category Object Types in sidebar tutorialSidebar"
-  },
   "sidebar.tutorialSidebar.category.Bot Flow Builder": {
     "message": "Constructeur de Flux de Bot",
     "description": "The label for category Bot Flow Builder in sidebar tutorialSidebar"
