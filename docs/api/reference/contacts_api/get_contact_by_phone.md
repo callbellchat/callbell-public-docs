@@ -15,6 +15,13 @@ Get a specific contact given a `phone_number`.
 | :------------- | :----- | :------------------------------ |
 | `phone_number` | string | The phone number of the contact |
 
+
+### Optional Parameters
+
+| Parameter      | Type   | Description                                |
+| :------------- | :----- | :----------------------------------------- |
+| `channel_uuid` | string | The channel UUID to search the contact by. |
+
 ### Example Request
 
 <RequestTabs endpoint='contacts_api' request="get_contact_by_phone"/>
