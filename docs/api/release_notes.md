@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## March 5, 2024
+
+### 🛠️ Changes
+
+- [Get Contact By Phone](/api/reference/contacts_api/get_contact_by_phone) endpoint now supports the `channel_uuid` parameter to search the contact by phone number and channel.
+
 ## February 22, 2024
 
 ### ✨ What's new

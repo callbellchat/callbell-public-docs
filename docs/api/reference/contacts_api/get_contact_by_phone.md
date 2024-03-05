@@ -7,13 +7,20 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts/phone/:number
 
-Get a specific contact given a `phone_number`.
+Get a specific contact given a `phone_number`. When the `channel_uuid` is specified, the contact will be searched by the phone number and the channel, otherwise by default the lookup will be performed on the **main WhatsApp channel**.
 
 ### Required Parameters
 
 | Parameter      | Type   | Description                     |
 | :------------- | :----- | :------------------------------ |
 | `phone_number` | string | The phone number of the contact |
+
+
+### Optional Parameters
+
+| Parameter      | Type   | Description                                |
+| :------------- | :----- | :----------------------------------------- |
+| `channel_uuid` | string | The channel UUID to search the contact by. |
 
 ### Example Request
 

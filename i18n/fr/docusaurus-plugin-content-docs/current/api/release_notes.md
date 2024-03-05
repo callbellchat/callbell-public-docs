@@ -6,6 +6,10 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+### 🛠️ Changements
+
+- Le point de terminaison [Get Contact By Phone](/api/reference/contacts_api/get_contact_by_phone) supporte désormais le paramètre `channel_uuid` pour rechercher le contact par numéro de téléphone et par canal.
+
 ## 22 février 2024
 
 ### ✨ Nouveautés
