@@ -1,6 +1,6 @@
 ---
 title: POST /contacts/:uuid/bot
-sidebar_position: 4
+sidebar_position: 10
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
