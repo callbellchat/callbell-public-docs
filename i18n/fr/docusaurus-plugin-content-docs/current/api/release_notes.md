@@ -6,6 +6,15 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 11 mars 2024
+
+#### ✨ Nouveautés
+
+- GET Contact Bot](/api/reference/contacts_api/get_contact_bot) pour obtenir le bot associé à un contact spécifique.
+- POST Contact Bot](/api/reference/contacts_api/post_contact_bot) pour changer le statut du bot associé à un contact spécifique.
+
+## 5 mars 2024
+
 ### 🛠️ Changements
 
 - Le point de terminaison [Get Contact By Phone](/api/reference/contacts_api/get_contact_by_phone) supporte désormais le paramètre `channel_uuid` pour rechercher le contact par numéro de téléphone et par canal.

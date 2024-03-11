@@ -6,6 +6,13 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 11 de marzo de 2024
+
+### ✨ Novedades
+
+- El endpoint [GET Contacto Bot](/api/reference/contacts_api/get_contact_bot) para obtener el bot asociado a un contacto específico.
+- El endpoint [POST Contact Bot](/api/reference/contacts_api/post_contact_bot) para cambiar el estado del bot asociado a un contacto específico.
+
 ## 5 de marzo de 2024
 
 ### 🛠️ Cambios
