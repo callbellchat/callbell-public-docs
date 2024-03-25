@@ -22,6 +22,7 @@ See [Team Member Object](/api/reference/object_types/team_member)
   "event": "agent_status_updated",
   "payload": {
     "email": "john.doe@gmail.com",
+    "name": "John Doe",
     "available": false,
     "lastUpdatedAt": "2024-02-21T12:02:47Z"
   }
