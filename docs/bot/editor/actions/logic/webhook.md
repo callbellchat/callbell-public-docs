@@ -13,6 +13,7 @@ import responseFailureVariable from './assets/response_failure_variable.png'
 import failureHandling from './assets/failure_handling.png'
 import simulatorWebhookChoices from './assets/simulator_webhook_choices.png'
 import fakeSuccessWebhook from './assets/fake_success_webhook.png'
+import multipleResponseVariables from './assets/multiple_response_variables.png'
 
 # Webhook
 
@@ -170,6 +171,14 @@ If you want to access the category of the second product item, you can use this 
 ```
 products[1].category
 ```
+
+:::tip
+You can store multiple parts of the response in different variables. This will prevent you from running the same webhook request multiple time
+
+<div class="text--center">
+    <img src={multipleResponseVariables} width={500} />
+</div>
+:::
 
 ### Dealing with failed requests
 

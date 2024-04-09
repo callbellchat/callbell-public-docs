@@ -2,17 +2,18 @@
 sidebar_position: 3
 ---
 
-importare urlParams da './assets/url_params.png'.
-importare queryParams da './assets/query_params.png'.
-importare responseQuickView da './assets/response_quick_view.png'
-import webhookValidationErrors da './assets/webhook_validation_errors.png'
-import parameterVariable da './assets/parameter_variable.png'
-importare pathHelper da './assets/path_helper.png'.
-import flatMapExemple da './assets/flat_map_exemple.png'
-import responseFailureVariable da './assets/response_failure_variable.png'
-importare failureHandling da './assets/failure_handling.png'.
-importare simulatorWebhookChoices da './assets/simulator_webhook_choices.png'.
-importare fakeSuccessWebhook da './assets/fake_success_webhook.png'.
+import urlParams from './assets/url_params.png'
+import queryParams from './assets/query_params.png'
+import responseQuickView from './assets/response_quick_view.png'
+import webhookValidationErrors from './assets/webhook_validation_errors.png'
+import parameterVariable from './assets/parameter_variable.png'
+import pathHelper from './assets/path_helper.png'
+import flatMapExemple from './assets/flat_map_exemple.png'
+import responseFailureVariable from './assets/response_failure_variable.png'
+import failureHandling from './assets/failure_handling.png'
+import simulatorWebhookChoices from './assets/simulator_webhook_choices.png'
+import fakeSuccessWebhook from './assets/fake_success_webhook.png'
+import multipleResponseVariables from './assets/multiple_response_variables.png'
 
 # Webhook
 
@@ -59,7 +60,7 @@ Tutti gli altri parametri (intestazioni e corpo) sono facoltativi. Si possono ag
 È possibile inserire variabili per inviare informazioni precedentemente memorizzate in qualsiasi campo: URL, params, header o body. È sufficiente fare clic sul piccolo pulsante variabile a destra.
 
 <div class="text--center">
-    <img src={parametroVariabile} width={500} />
+    <img src={parameterVariable} width={500} />
 </div>
 :::
 
@@ -79,19 +80,19 @@ Durante l'impostazione e il test dell'azione, si possono incontrare diversi tipi
 
 Elaboriamo le richieste sul nostro server e identifichiamo gli errori più comuni:
 
- <tabella>
+ <table>
   <tr>
     <th>Tipo</th>
     <th>Motivi</th>
     <th>Azione</th>
   </tr>
   <tr>
-    <td>Parametro mancante</td>
+    <td>MissingParameter</td>
     <td>Url o metodo mancante</td>
-    <td>Controllare che l'URL e il metodo siano specificati correttamente.</td>
+    <td>Controlla che l'URL e il metodo siano specificati correttamente.</td>
   </tr>
   <tr>
-    <td>Richiesta errata</td>
+    <td>BadRequest</td>
     <td>Url, corpo, parametri o intestazione non validi</td>
     <td>Controllare la validità di ogni parametro. Usare client come Postman per controllare i parametri.</td>
   </tr>
@@ -171,6 +172,14 @@ Se si vuole accedere alla categoria del secondo prodotto, si può utilizzare que
 prodotti[1].categoria
 ```
 
+:::tip
+È possibile memorizzare più parti della risposta in variabili diverse. In questo modo si eviterà di eseguire più volte la stessa richiesta di webhook
+
+<div class="text--center">
+    <img src={multipleResponseVariables} width={500} />
+</div>
+:::
+
 ### Gestire le richieste fallite
 
 È possibile che, anche dopo aver impostato correttamente l'azione webhook, questa fallisca occasionalmente (errori del server, parametri non gestiti correttamente ecc.).
@@ -190,7 +199,7 @@ Sta a voi gestire o meno questo errore. Il modo migliore è creare una variabile
 ## Testare la richiesta nel simulatore
 
 Si dovrebbe sempre verificare se il bot si comporta come previsto tramite il simulatore, assicurandosi che sia le richieste riuscite che quelle fallite siano gestite correttamente.
-Quando il simulatore raggiunge un'azione webhook, a differenza del bot reale, si ferma e chiede di specificare a cosa dovrebbe assomigliare la richiesta:
+Quando il simulatore raggiunge un'azione webhook, a differenza del bot reale, si mette in pausa e chiede di specificare a cosa dovrebbe assomigliare la richiesta:
 
 <div class="text--center">
     <img src={simulatorWebhookChoices} width={500} />
@@ -198,7 +207,7 @@ Quando il simulatore raggiunge un'azione webhook, a differenza del bot reale, si
 
 - Finto successo: Richiederà una modale per specificare il carico della richiesta andata a buon fine. Quindi, utilizzerà ogni percorso specificato nell'azione webhook per analizzare e memorizzare le variabili corrispondenti. Si noti che se si memorizza una variabile di tipo elenco, il simulatore si aspetta che il payload fornito contenga un array nel percorso giusto. In caso contrario, verrà visualizzato un errore nella finestra modale, impedendo ulteriori progressi.
 
-<div class="text--center">
+<div class="text-center">
     <img src={fakeSuccessWebhook} width={500} />
 </div>
 

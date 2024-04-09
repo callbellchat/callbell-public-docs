@@ -2,24 +2,25 @@
 sidebar_position: 3
 ---
 
-import urlParams from './activos/url_params.png'
-import queryParams de './assets/query_params.png'
-import responseQuickView de './assets/response_quick_view.png'
+import urlParams from './assets/url_params.png'
+import queryParams from './assets/query_params.png'
+import responseQuickView from './assets/response_quick_view.png'
 import webhookValidationErrors from './assets/webhook_validation_errors.png'
 import parameterVariable from './assets/parameter_variable.png'
 import pathHelper from './assets/path_helper.png'
 import flatMapExemple from './assets/flat_map_exemple.png'
 import responseFailureVariable from './assets/response_failure_variable.png'
-import failureHandling from './activos/failure_handling.png'
-import simulatorWebhookChoices from './activos/simulator_webhook_choices.png'
+import failureHandling from './assets/failure_handling.png'
+import simulatorWebhookChoices from './assets/simulator_webhook_choices.png'
 import fakeSuccessWebhook from './assets/fake_success_webhook.png'
+import multipleResponseVariables from './assets/multiple_response_variables.png'
 
 # Webhook
 
 Esta acción le permite realizar peticiones HTTP a cualquier servicio externo que desee.
 Esto es útil para enviar información desde el bot a otro servicio o para obtener información de otro servicio y utilizarla en el bot.
 
-:::consejo
+:::tip
 Antes de utilizar esta acción necesitarás conocimientos técnicos sobre [Peticiones HTTP y sus parámetros](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 :::
 
@@ -55,7 +56,7 @@ o utilizar el helper:
 
 El resto de parámetros (cabeceras y cuerpo) son opcionales. Puedes añadirlos siguiendo la misma lógica, utilizando los botones "add header" o "add body" de la esquina superior derecha.
 
-:::consejo
+:::tip
 Puede insertar variables para enviar información previamente almacenada en cualquier campo: URL, params, cabecera o cuerpo. Sólo tienes que hacer clic en el pequeño botón de variables de la derecha.
 
 <div class="text--center">
@@ -86,22 +87,22 @@ Procesamos sus peticiones en nuestro servidor e identificamos los errores más c
     <th>Acción</th>
   </tr>
   <tr>
-    <td>Parámetro que falta</td>
+    <td>MissingParameter</td>
     <td>Falta url o método</td>
     <td>Verifique que tanto la URL como el método estén correctamente especificados.</td>
   </tr>
   <tr>
-    <td>Solicitud incorrecta</td>
+    <td>BadRequest</td>
     <td>URL, cuerpo, parámetros o cabecera no válidos</td>.
     <td>Comprueba la validez de cada parámetro. Utilice clientes como Postman para comprobar sus parámetros.</td>
   </tr>
   <tr>
-    <td>Respuesta incorrecta</td>
+    <td>BadResponse</td>
     <td>Estado de la respuesta diferente de 200 o respuesta no en formato JSON</td>.
     <td>Comprueba el estado de tu servidor.</td>
   </tr>
   <tr>
-    <td>Error de clave</td>
+    <td>KeyError</td>
     <td>La ruta especificada no coincide con la carga útil de la respuesta</td>.
     <td>Verifica dos veces la validez de la ruta que has introducido en la acción webhook para cada variable</td>.
   </tr>
@@ -171,9 +172,17 @@ Si desea acceder a la categoría del segundo elemento de producto, puede utiliza
 productos[1].categoría
 ```
 
-### Tratamiento de peticiones fallidas
+:::tip
+Puedes almacenar múltiples partes de la respuesta en diferentes variables. Esto evitará que ejecutes la misma petición webhook varias veces
 
-Es posible que incluso después de configurar correctamente tu acción webhook, ésta falle ocasionalmente (errores del servidor, parámetros no manejados correctamente, etc.).
+<div class="text--center">
+    <img src={multipleResponseVariables} width={500} />
+</div>
+:::
+
+### Tratamiento de las solicitudes fallidas
+
+Es posible que incluso después de configurar correctamente tu acción webhook, falle ocasionalmente (errores del servidor, parámetros no manejados correctamente, etc.).
 Si el comportamiento de tu bot depende del resultado de la petición, es importante manejar los errores.
 El bot almacenará cualquier error en la variable que hayas especificado, o utilizará la variable `last webhook failure`:
 

@@ -13,13 +13,14 @@ import responseFailureVariable from './assets/response_failure_variable.png'
 import failureHandling from './assets/failure_handling.png'
 import simulatorWebhookChoices from './assets/simulator_webhook_choices.png'
 import fakeSuccessWebhook from './assets/fake_success_webhook.png'
+import multipleResponseVariables from './assets/multiple_response_variables.png'
 
 # Webhook
 
 Essa ação permite que você faça uma solicitação HTTP para qualquer serviço externo que desejar.
 Isso é útil para enviar informações do bot para outro serviço ou para buscar informações de outro serviço e usá-las no bot.
 
-:::dica
+:::tip
 Antes de utilizar essa ação, você precisará de conhecimento técnico sobre [solicitação HTTP e seus parâmetros] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 :::
 
@@ -29,7 +30,7 @@ Antes de utilizar essa ação, você precisará de conhecimento técnico sobre [
 
 Aqui estão algumas explicações sobre como essa ação funciona e suas limitações:
 
-- O bot sempre executa essa ação de forma síncrona, o que significa que ele espera até que a solicitação receba um resultado (sucesso ou falha) antes de prosseguir para a próxima etapa. Se você tiver várias ações de webhook, uma após a outra, elas serão executadas sequencialmente, não em lotes.
+- O bot sempre executa essa ação de forma síncrona, o que significa que ele aguarda até que a solicitação receba um resultado (sucesso ou falha) antes de prosseguir para a próxima etapa. Se você tiver várias ações de webhook, uma após a outra, elas serão executadas sequencialmente, não em lotes.
 
 - O tempo limite da consulta é definido internamente como 15 segundos. Qualquer consulta de longa duração falhará após esse período.
 
@@ -55,7 +56,7 @@ ou use o auxiliar:
 
 Todos os outros parâmetros (cabeçalhos e corpo) são opcionais. Você pode adicioná-los usando a mesma lógica, usando os botões "add header" (adicionar cabeçalho) ou "add body" (adicionar corpo) no canto superior direito.
 
-:::dica
+:::tip
 Você pode inserir variáveis para enviar informações armazenadas anteriormente em qualquer campo: URL, parâmetros, cabeçalho ou corpo. Basta clicar no pequeno botão de variável à direita.
 
 <div class="text--center">
@@ -63,7 +64,7 @@ Você pode inserir variáveis para enviar informações armazenadas anteriorment
 </div>
 :::
 
-Depois de escolher o método correto, você pode clicar no botão `Testar URL`. Se a solicitação for bem-sucedida, um pequeno botão "olho" no lado direito será exibido, permitindo que você dê uma olhada rápida no layout da resposta:
+Depois de escolher o método correto, você pode clicar no botão `Testar URL`. Se a solicitação for bem-sucedida, um pequeno botão de "olho" no lado direito será exibido, permitindo que você dê uma olhada rápida no layout da resposta:
 
 <div class="text--center">
     <img src={responseQuickView} width={500} />
@@ -103,7 +104,7 @@ Processamos suas solicitações em nosso servidor e identificamos erros comuns:
   <tr>
     <td>KeyError</td>
     <td>O caminho especificado não corresponde à carga útil da resposta</td>
-    <td>Verifique duas vezes a validade do caminho que você inseriu na ação do webhook para cada variável</td>
+    <td>Verifique novamente a validade do caminho que você inseriu na ação do webhook para cada variável</td>
   </tr>
 </table>
 
@@ -171,6 +172,14 @@ Se quiser acessar a categoria do segundo item do produto, você pode usar esse c
 products[1].category
 ```
 
+:::tip
+Você pode armazenar várias partes da resposta em diferentes variáveis. Isso evitará que você execute a mesma solicitação de webhook várias vezes
+
+<div class="text--center">
+    <img src={multipleResponseVariables} width={500} />
+</div>
+:::
+
 ### Lidando com solicitações com falha
 
 É possível que, mesmo depois de configurar corretamente sua ação de webhook, ela falhe ocasionalmente (erros de servidor, parâmetros não tratados corretamente etc.).
@@ -204,4 +213,4 @@ Quando o simulador chegar a uma ação de webhook, ao contrário do bot real, el
 
 - Falha falsa: Exibirá o mesmo modal e permitirá que você especifique a carga útil a ser salva na variável de falha especificada na ação.
 
-- Trigger real webhook: fará o proxy de sua solicitação para o nosso servidor e retornará o resultado real. Isso pode ser útil para verificar se tudo está funcionando bem, mas lembre-se de que ele fará uma solicitação HTTP real. Se você planeja adicionar um usuário ao seu CRM por meio da ação de webhook, usar essa opção no simulador pode adicionar dados indesejados ao seu CRM.
+- Trigger real webhook: fará proxy de sua solicitação para o nosso servidor e retornará o resultado real. Isso pode ser útil para verificar se tudo está funcionando bem, mas lembre-se de que ele fará uma solicitação HTTP real. Se você planeja adicionar um usuário ao seu CRM por meio da ação do webhook, usar essa opção no simulador pode adicionar dados indesejados ao seu CRM.

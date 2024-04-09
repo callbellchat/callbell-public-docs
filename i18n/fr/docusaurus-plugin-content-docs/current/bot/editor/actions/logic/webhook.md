@@ -1,5 +1,5 @@
 ---
-sidebar_position : 3
+sidebar_position: 3
 ---
 
 import urlParams from './assets/url_params.png'
@@ -7,21 +7,22 @@ import queryParams from './assets/query_params.png'
 import responseQuickView from './assets/response_quick_view.png'
 import webhookValidationErrors from './assets/webhook_validation_errors.png'
 import parameterVariable from './assets/parameter_variable.png'
-import pathHelper de './assets/path_helper.png'
+import pathHelper from './assets/path_helper.png'
 import flatMapExemple from './assets/flat_map_exemple.png'
 import responseFailureVariable from './assets/response_failure_variable.png'
-import failureHandling de './assets/failure_handling.png'
+import failureHandling from './assets/failure_handling.png'
 import simulatorWebhookChoices from './assets/simulator_webhook_choices.png'
 import fakeSuccessWebhook from './assets/fake_success_webhook.png'
+import multipleResponseVariables from './assets/multiple_response_variables.png'
 
 # Webhook
 
 Cette action vous permet d'envoyer des requêtes HTTP à n'importe quel service externe.
 C'est utile pour envoyer des informations du bot à un autre service ou pour récupérer des informations d'un autre service et les utiliser dans le bot.
 
-:::conseil
+:::tip
 Avant d'utiliser cette action, vous devez avoir des connaissances techniques sur les [requêtes HTTP et leurs paramètres] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
-:: :
+:::
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/0pbU9KPXcWI" title="Comment utiliser l'action &quot;Webhook&quot ; - Callbell Chatbot" frameborder="0" allow="accelerometer ; autoplay ; clipboard-write ; encrypted-media ; gyroscope ; picture-in-picture ; web-share" allowfullscreen></iframe>
 
@@ -29,7 +30,7 @@ Avant d'utiliser cette action, vous devez avoir des connaissances techniques sur
 
 Voici quelques explications sur le fonctionnement et les limites de cette action :
 
-- Le robot exécute toujours cette action de manière synchrone, c'est-à-dire qu'il attend que la demande reçoive un résultat (succès ou échec) avant de passer à l'étape suivante. Si vous avez plusieurs actions de webhook l'une après l'autre, elles seront exécutées séquentiellement, et non par lots.
+- Le robot exécute toujours cette action de manière synchrone, ce qui signifie qu'il attend que la demande reçoive un résultat (succès ou échec) avant de passer à l'étape suivante. Si vous avez plusieurs actions de webhook l'une après l'autre, elles seront exécutées séquentiellement, et non par lots.
 
 - Le délai d'attente pour la requête est fixé en interne à 15 secondes. Toute requête de longue durée échouera au-delà de cette durée.
 
@@ -55,13 +56,13 @@ ou utiliser l'aide :
 
 Tous les autres paramètres (en-têtes et corps) sont facultatifs. Vous pouvez les ajouter selon la même logique, en utilisant les boutons "add header" ou "add body" dans le coin supérieur droit.
 
-:::conseil
+:::tip
 Vous pouvez insérer des variables pour envoyer des informations précédemment stockées dans n'importe quel champ : URL, paramètres, en-tête ou corps. Il suffit de cliquer sur le petit bouton "variable" à droite.
 
 <div class="text--center">
-    <img src={paramètreVariable} width={500} />
+    <img src={parameterVariable} width={500} />
 </div>
-:: :
+:::
 
 Une fois que vous avez choisi la bonne méthode, vous pouvez cliquer sur le bouton "Tester l'URL". Si la demande aboutit, un petit bouton "œil" sur le côté droit apparaîtra, vous permettant de jeter un coup d'œil rapide à la présentation de la réponse :
 
@@ -86,26 +87,26 @@ Nous traitons vos demandes sur notre serveur et identifions les erreurs courante
     <th>Action</th>
   </tr>
   <tr>
-    <td>Paramètre manquant</td>
+    <td>MissingParameter</td>
     <td>Url ou méthode manquante</td>
     <td>Vérifiez que l'URL et la méthode sont correctement spécifiées.</td>
   </tr>
   <tr>
-    <td>MauvaiseRequête</td>
+    <td>BadRequest</td>
     <td>URL, corps, paramètres ou en-tête non valides</td>
-    <td>Vérifiez la validité de chaque paramètre. Utilisez des clients comme Postman pour vérifier vos paramètres.
+    <td>Vérifiez la validité de chaque paramètre. Utilisez des clients comme Postman pour vérifier vos paramètres.</td>
   </tr>
   <tr>
-    <td>MauvaiseRéponse</td>
+    <td>BadResponse</td>
     <td>Statut de la réponse différent de 200 ou la réponse n'est pas au format JSON</td>
     <td>Vérifiez l'état de votre serveur.</td>
   </tr>
   <tr>
-    <td>Erreur de clé</td>
+    <td>KeyError</td>
     <td>Le chemin spécifié ne correspond pas à la charge utile de la réponse</td>
     <td>Vérifiez la validité du chemin que vous avez saisi dans l'action webhook pour chaque variable</td>.
   </tr>
-</tableau>
+</table>
 
 ### Analyse et stockage des réponses aux requêtes dans des variables
 
@@ -171,10 +172,18 @@ Si vous souhaitez accéder à la catégorie du deuxième produit, vous pouvez ut
 produits[1].catégorie
 ```
 
-### Gestion des requêtes échouées
+:::tip
+Vous pouvez stocker plusieurs parties de la réponse dans des variables différentes. Cela vous évitera d'exécuter la même requête webhook plusieurs fois.
 
-Il est possible que même après avoir correctement configuré votre action de webhook, elle échoue occasionnellement (erreurs de serveur, paramètres mal gérés, etc.).
-Si le comportement de votre bot dépend du résultat de la requête, il est important de gérer les erreurs.
+<div class="text--center">
+    <img src={multipleResponseVariables} width={500} />
+</div>
+:::
+
+### Traitement des demandes échouées
+
+Il est possible que même après avoir correctement configuré votre action webhook, celle-ci échoue occasionnellement (erreurs de serveur, paramètres mal gérés, etc.).
+Si le comportement de votre robot dépend du résultat de la requête, il est important de gérer les erreurs.
 Le bot stockera toutes les erreurs dans la variable que vous avez spécifiée, ou utilisera la variable `last webhook failure` :
 
 <div class="text--center">
@@ -193,7 +202,7 @@ Vous devriez toujours vérifier que votre bot se comporte comme prévu via le si
 Lorsque le simulateur atteint une action webhook, contrairement au bot réel, il se met en pause et vous invite à spécifier à quoi la requête doit ressembler :
 
 <div class="text--center">
-    <img src={simulateurWebhookChoices} width={500} />
+    <img src={simulatorWebhookChoices} width={500} />
 </div>
 
 - Faux succès : Une fenêtre modale s'ouvrira pour spécifier la charge utile de la requête réussie. Ensuite, il utilisera chaque chemin que vous avez spécifié dans l'action du webhook pour analyser et stocker les variables correspondantes. Notez que si vous stockez dans une variable de type liste, le simulateur s'attend à ce que le payload que vous fournissez contienne un tableau au bon chemin. Si ce n'est pas le cas, une erreur sera affichée dans la fenêtre modale, empêchant toute progression.
