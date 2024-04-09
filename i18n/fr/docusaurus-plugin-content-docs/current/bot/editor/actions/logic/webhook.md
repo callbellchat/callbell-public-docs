@@ -48,7 +48,7 @@ Le seul paramètre obligatoire est l'URL. Vous pouvez y ajouter directement des 
     <img src={urlParams} width={500} />
 </div>
 
-ou utiliser l'aide :
+ou utiliser l'assistant :
 
 <div class="text--center">
     <img src={queryParams} width={500} />
@@ -205,12 +205,12 @@ Lorsque le simulateur atteint une action webhook, contrairement au bot réel, il
     <img src={simulatorWebhookChoices} width={500} />
 </div>
 
-- Faux succès : Une fenêtre modale s'ouvrira pour spécifier la charge utile de la requête réussie. Ensuite, il utilisera chaque chemin que vous avez spécifié dans l'action du webhook pour analyser et stocker les variables correspondantes. Notez que si vous stockez dans une variable de type liste, le simulateur s'attend à ce que le payload que vous fournissez contienne un tableau au bon chemin. Si ce n'est pas le cas, une erreur sera affichée dans la fenêtre modale, empêchant toute progression.
+- Simuler un succès : Une fenêtre modale s'ouvrira pour spécifier la charge utile de la requête réussie. Ensuite, il utilisera chaque chemin que vous avez spécifié dans l'action du webhook pour analyser et stocker les variables correspondantes. Notez que si vous stockez dans une variable de type liste, le simulateur s'attend à ce que le payload que vous fournissez contienne un tableau au bon chemin. Si ce n'est pas le cas, une erreur sera affichée dans la fenêtre modale, empêchant toute progression.
 
 <div class="text--center">
     <img src={fakeSuccessWebhook} width={500} />
 </div>
 
-- Faux échec : Il affichera la même fenêtre modale et vous permettra de spécifier le payload à sauvegarder dans la variable fail que vous avez spécifiée dans l'action.
+- Simuler un échec : Il affichera la même fenêtre modale et vous permettra de spécifier le payload à sauvegarder dans la variable fail que vous avez spécifiée dans l'action.
 
 - Déclencher un véritable webhook : il transmettra votre demande à notre serveur et renverra le résultat réel. Cela peut être utile pour vérifier que tout fonctionne correctement, mais n'oubliez pas que vous ferez une vraie demande HTTP. Si vous prévoyez d'ajouter un utilisateur à votre CRM via l'action webhook, l'utilisation de ce choix dans le simulateur peut ajouter des données non désirées à votre CRM.
