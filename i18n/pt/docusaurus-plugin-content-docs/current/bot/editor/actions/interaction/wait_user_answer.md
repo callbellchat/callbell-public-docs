@@ -20,6 +20,6 @@ Sempre que o bot alcançar uma ação "esperar resposta do usuário", é possív
 
 Lembre-se de que, se o usuário responder antes do período especificado, o fallback não será acionado. O mesmo acontece se você interromper manualmente o bot.
 
-Depois de especificar um atraso, você poderá interagir com a ramificação recém-criada como qualquer outra ramificação:
+Depois de especificar um período, você poderá interagir com a ramificação recém-criada como qualquer outra ramificação:
 
 <img src={scheduleBranchExemple} width={180} />
