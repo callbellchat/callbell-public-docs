@@ -211,6 +211,6 @@ Quando o simulador chegar a uma ação de webhook, ao contrário do bot real, el
     <img src={fakeSuccessWebhook} width={500} />
 </div>
 
-- Falha falsa: Exibirá o mesmo modal e permitirá que você especifique a carga útil a ser salva na variável de falha especificada na ação.
+- Falha falsa: Exibirá o mesmo modal e permitirá que você especifique o _payload_ a ser salvo na variável de falha especificada na ação.
 
 - Trigger real webhook: fará proxy de sua solicitação para o nosso servidor e retornará o resultado real. Isso pode ser útil para verificar se tudo está funcionando bem, mas lembre-se de que ele fará uma solicitação HTTP real. Se você planeja adicionar um usuário ao seu CRM por meio da ação do webhook, usar essa opção no simulador pode adicionar dados indesejados ao seu CRM.
