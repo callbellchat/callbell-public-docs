@@ -18,7 +18,7 @@ Sempre que o bot alcançar uma ação "esperar resposta do usuário", é possív
 
 <img src={triggerFallbackDelaySelector} width={180} />
 
-Lembre-se de que, se o usuário responder antes do atraso, o fallback não será acionado. O mesmo acontece se você interromper manualmente o bot.
+Lembre-se de que, se o usuário responder antes do período especificado, o fallback não será acionado. O mesmo acontece se você interromper manualmente o bot.
 
 Depois de especificar um atraso, você poderá interagir com a ramificação recém-criada como qualquer outra ramificação:
 
