@@ -116,7 +116,7 @@ Quando sua solicitação receber uma resposta bem-sucedida, você poderá escolh
     <img src={pathHelper} width={500} />
 </div>
 
-Se estiver tentando selecionar uma matriz como valor, o helper sugerirá o uso da função `flatMap`, que lhe dá a possibilidade de extrair qualquer valor da matriz.
+Se estiver tentando selecionar um arranjo (_array_) como valor, o helper sugerirá o uso da função `flatMap`, que lhe dá a possibilidade de extrair qualquer valor dele.
 
 Por exemplo, digamos que a estrutura de dados da resposta de sua solicitação seja semelhante a esta:
 
