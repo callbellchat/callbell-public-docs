@@ -199,7 +199,7 @@ Cabe a você tratar esse erro ou não. A melhor maneira é criar uma variável e
 ## Teste sua solicitação no simulador
 
 Você deve sempre verificar se o seu bot está se comportando conforme o esperado por meio do simulador, garantindo que as solicitações bem-sucedidas e com falha sejam tratadas corretamente.
-Quando o simulador chegar a uma ação de webhook, ao contrário do bot real, ele fará uma pausa e solicitará que você especifique a aparência da solicitação:
+Quando o simulador chegar a uma ação de webhook, ao contrário do bot real, ele fará uma pausa e solicitará que você especifique como deveria ser a solicitação:
 
 <div class="text--center">
     <img src={simulatorWebhookChoices} width={500} />
