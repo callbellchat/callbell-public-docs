@@ -183,7 +183,7 @@ Você pode armazenar várias partes da resposta em diferentes variáveis. Isso e
 ### Lidando com solicitações com falha
 
 É possível que, mesmo depois de configurar corretamente sua ação de webhook, ela falhe ocasionalmente (erros de servidor, parâmetros não tratados corretamente etc.).
-Se o comportamento do seu bot depender do resultado da solicitação, é importante lidar com os erros.
+Se o comportamento do seu bot depender do resultado da solicitação, é importante dar uma tratativa aos erros.
 O bot armazenará todos os erros na variável que você especificou ou usará a variável `last webhook failure`:
 
 <div class="text--center">
