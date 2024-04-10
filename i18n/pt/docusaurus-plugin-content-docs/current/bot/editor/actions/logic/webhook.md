@@ -205,7 +205,7 @@ Quando o simulador chegar a uma ação de webhook, ao contrário do bot real, el
     <img src={simulatorWebhookChoices} width={500} />
 </div>
 
-- Sucesso falso: Ele solicitará um modal para especificar a carga útil da solicitação bem-sucedida. Em seguida, ele utilizará cada caminho que você especificou na ação do webhook para analisar e armazenar as variáveis correspondentes. Observe que, se você estiver armazenando em uma variável do tipo lista, o simulador esperará que a carga útil fornecida contenha uma matriz no caminho correto. Caso contrário, será exibido um erro no modal, impedindo a progressão.
+- Sucesso falso: Ele solicitará um modal para especificar o _payload_ da solicitação bem-sucedida. Em seguida, ele utilizará cada caminho que você especificou na ação do webhook para analisar e armazenar as variáveis correspondentes. Observe que, se você estiver armazenando em uma variável do tipo lista, o simulador esperará que o _payload_ fornecido contenha um arranjo no caminho correto. Caso contrário, será exibido um erro no modal, impedindo a continuidade.
 
 <div class="text--center">
     <img src={fakeSuccessWebhook} width={500} />
