@@ -24,7 +24,7 @@ Questa azione consente di effettuare richieste HTTP a qualsiasi servizio esterno
 Prima di utilizzare questa azione, è necessario disporre di conoscenze tecniche sulle [richieste HTTP e i loro parametri] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 :::
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/0pbU9KPXcWI" title="Come utilizzare l'azione &quot;Webhook&quot; - Callbell Chatbot" frameborder="0" allow="accelerometro; autoplay; clipboard-write; encrypted-media; giroscopio; picture-in-picture; web-share" allowfullscreen></iframe>.
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/dqIdYm0nohY" title="Come utilizzare l'azione &quot;Webhook&quot; - Callbell Chatbot" frameborder="0" allow="accelerometro; autoplay; clipboard-write; encrypted-media; giroscopio; picture-in-picture; web-share" allowfullscreen></iframe>.
 
 ## Come funziona questa azione
 

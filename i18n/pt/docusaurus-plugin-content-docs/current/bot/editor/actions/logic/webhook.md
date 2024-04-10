@@ -24,7 +24,7 @@ Isso é útil para enviar informações do bot para outro serviço ou para busca
 Antes de utilizar essa ação, você precisará de conhecimento técnico sobre [solicitação HTTP e seus parâmetros] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 :::
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/0pbU9KPXcWI" title="Como usar a ação &quot;Webhook&quot; - Callbell Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/dqIdYm0nohY" title="Como usar a ação &quot;Webhook&quot; - Callbell Chatbot" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Como essa ação funciona
 
