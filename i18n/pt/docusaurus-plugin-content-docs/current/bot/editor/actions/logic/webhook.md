@@ -154,7 +154,7 @@ Por exemplo, digamos que a estrutura de dados da resposta de sua solicitação s
 }
 ```
 
-E você deseja armazenar na variável `webhook success` uma matriz somente de títulos de produtos:
+E você deseja armazenar na variável `webhook success` um _array_ somente de títulos de produtos:
 
 ```
 ["iPhone 9", "iPhone X"]
