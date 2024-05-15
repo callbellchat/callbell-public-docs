@@ -6,12 +6,18 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 15 Mai, 2024
+
+### ✨ Nouveautés
+
+- Les points de terminaison [Create Contact](/api/reference/contacts_api/post_contacts), [Edit Contact](/api/reference/contacts_api/post_contacts) et [Send Message](/api/reference/messages_api/post_send_messages) supportent désormais le paramètre `bot_status` pour définir le statut du bot associé à un contact spécifique.
+
 ## 11 mars 2024
 
-#### ✨ Nouveautés
+### ✨ Nouveautés
 
-- GET Contact Bot](/api/reference/contacts_api/get_contact_bot) pour obtenir le bot associé à un contact spécifique.
-- POST Contact Bot](/api/reference/contacts_api/post_contact_bot) pour changer le statut du bot associé à un contact spécifique.
+- GET [Contact Bot](/api/reference/contacts_api/get_contact_bot) pour obtenir le bot associé à un contact spécifique.
+- POST [Contact Bot](/api/reference/contacts_api/post_contact_bot) pour changer le statut du bot associé à un contact spécifique.
 
 ## 5 mars 2024
 

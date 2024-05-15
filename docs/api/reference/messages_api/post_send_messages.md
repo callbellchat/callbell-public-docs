@@ -30,6 +30,13 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `team_uuid`       | String  | Message will be assigned to this team                                                           |
 | `channel_uuid`    | String  | The message will be sent from this channel (when omitted, it will use the default main channel) |
 | `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact`               |
+| `bot_status`      | String  | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`.                |
+
+:::info
+When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
+
+If you have a bot enabled, the default status is `bot_start` meaning that the bot will reply whenever the contact writes. If this is not the intended behavior, you can set the status to `bot_end` to stop the bot from replying to the contact. This can be useful when you want to take over the conversation manually or when you want to stop the bot from replying to the contact for any other reason.
+:::
 
 ### Example Request
 

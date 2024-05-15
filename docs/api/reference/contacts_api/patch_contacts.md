@@ -17,14 +17,21 @@ Updates an existing contact.
 
 ### Optional Parameters
 
-| Parameter       | Type     | Description                                                                   |
-| :-------------- | :------- | :---------------------------------------------------------------------------- |
-| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)          |
-| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`) |
-| `name`          | string   | The name of the contact                                                       |
-| `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact            |
-| `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact         |
-| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                         |
+| Parameter       | Type     | Description                                                                      |
+| :-------------- | :------- | :------------------------------------------------------------------------------- |
+| `tags`          | string[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)             |
+| `custom_fields` | string{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1}`)    |
+| `name`          | string   | The name of the contact                                                          |
+| `assigned_user` | String   | Email of the the collaborator that you want to assign to a contact               |
+| `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact            |
+| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                            |
+| `bot_status`    | String   | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`. |
+
+:::info
+When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
+
+If you have a bot enabled, the default status is `bot_start`.
+:::
 
 :::caution
 Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
