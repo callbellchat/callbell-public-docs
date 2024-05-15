@@ -19,13 +19,20 @@ Creates a new contact.
 
 ### Optional Parameters
 
-| Parameter       | Type     | Description                                                                                     |
-| :-------------- | :------- | :---------------------------------------------------------------------------------------------- |
-| `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)                            |
-| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`)                  |
-| `assigned_user` | String   | Email of the user that you want to assign to a contact                                          |
-| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                                           |
-| `channel_uuid`  | String   | The message will be sent from this channel (when omitted, it will use the default main channel) |
+| Parameter       | Type     | Description                                                                                             |
+| :-------------- | :------- | :------------------------------------------------------------------------------------------------------ |
+| `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)                                    |
+| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`)                          |
+| `assigned_user` | String   | Email of the user that you want to assign to a contact                                                  |
+| `team_uuid`     | String   | UUID of the team that you want to assign to a contact                                                   |
+| `channel_uuid`  | String   | The message will be sent from this channel (when omitted, it will use the default main channel)         |
+| `bot_status`    | String   | The status of the bot for this contact. The status of the bot. Accepts either `bot_start` or `bot_end`. |
+
+:::info
+When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
+
+If you have a bot enabled, the default status is `bot_start` meaning that the bot will reply whenever the contact writes. If this is not the intended behavior, you can set the status to `bot_end` to stop the bot from replying to the contact. This can be useful when you want to take over the conversation manually or when you want to stop the bot from replying to the contact for any other reason.
+:::
 
 :::caution
 When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.

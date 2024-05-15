@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 15 de mayo de 2024
+
+### ✨ Novedades
+
+- Los puntos finales [Crear contacto](/api/reference/contacts_api/post_contacts), [Editar contacto](/api/reference/contacts_api/post_contacts) y [Enviar mensaje](/api/reference/messages_api/post_send_messages) ahora admiten el parámetro `bot_status` para establecer el estado del bot asociado a un contacto específico.
+
 ## 11 de marzo de 2024
 
 ### ✨ Novedades
