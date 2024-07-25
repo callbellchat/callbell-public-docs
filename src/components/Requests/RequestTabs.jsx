@@ -34,6 +34,21 @@ export default function RequestTabs(props) {
       component: require(`../../snippets/python/${props.endpoint}/_${props.request}.mdx`),
       value: "Python",
     },
+    {
+      key: "csharp",
+      component: require(`../../snippets/csharp/${props.endpoint}/_${props.request}.mdx`),
+      value: "C#",
+    },
+    {
+      key: "java",
+      component: require(`../../snippets/java/${props.endpoint}/_${props.request}.mdx`),
+      value: "Java",
+    },
+    {
+      key: "rust",
+      component: require(`../../snippets/rust/${props.endpoint}/_${props.request}.mdx`),
+      value: "Rust",
+    },
   ];
 
   return (

@@ -1,0 +1,24 @@
+```rust
+extern crate reqwest;
+use reqwest::header;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut headers = header::HeaderMap::new();
+    headers.insert("Authorization", "Bearer test_gshuPaZoeEG6ovbc8M79w0QyM".parse().unwrap());
+    headers.insert("Content-Type", "application/json".parse().unwrap());
+
+    let client = reqwest::blocking::Client::builder()
+        .redirect(reqwest::redirect::Policy::none())
+        .build()
+        .unwrap();
+    let res = client.patch("https://api.callbell.eu/v1/templates/414a6d692bd645ed803f2e7ce360d4c8")
+        .headers(headers)
+        .body("{\"title\": New title\"}")
+        .send()?
+        .text()?;
+    println!("{}", res);
+
+    Ok(())
+}
+
+```

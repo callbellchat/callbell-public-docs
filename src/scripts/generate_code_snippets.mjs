@@ -8,7 +8,17 @@ const __dirname = path.dirname(__filename);
 
 const BASE_PATH = path.join(__dirname, "..", "..", "src", "snippets");
 
-const languages = ["go", "node", "php", "python", "ruby"];
+const languages = [
+  "go",
+  "node",
+  "php",
+  "python",
+  "ruby",
+  "csharp",
+  "java",
+  "rust",
+];
+
 const endpoints = [
   "auth_api",
   "contacts_api",
@@ -26,6 +36,9 @@ const translationMethods = (snippet) => ({
   php: () => curlconverter.toPhp(snippet),
   python: () => curlconverter.toPython(snippet),
   ruby: () => curlconverter.toRuby(snippet),
+  csharp: () => curlconverter.toCSharp(snippet),
+  java: () => curlconverter.toJava(snippet),
+  rust: () => curlconverter.toRust(snippet),
 });
 
 const readFiles = () => {
