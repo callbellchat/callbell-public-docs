@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 25 juillet 2024
+
+#### ✨ Nouveautés
+
+- Ajout d'extraits de code pour **C#**, **Java** et **Rust**.
+
 ## 15 Mai, 2024
 
 ### ✨ Nouveautés
