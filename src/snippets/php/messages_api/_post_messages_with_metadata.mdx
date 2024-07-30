@@ -8,7 +8,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
     'Content-Type: application/json',
 ]);
-curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello! This message has an assigned user!\"\n    },\n    \"assigned_user\": \"john.doe@email.com\",\n    \"metadata\": {\n      \"customer_id\": \"123456\",\n      \"sent_from\": \"backend_api\"\n    }\n  }");
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello! This message has an assigned user!\"\n    },\n    \"metadata\": {\n      \"customer_id\": \"123456\",\n      \"sent_from\": \"backend_api\"\n    }\n  }");
 
 $response = curl_exec($ch);
 

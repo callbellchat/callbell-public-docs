@@ -8,7 +8,7 @@ req.content_type = 'application/json'
 req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
 
 # The object won't be serialized exactly like this
-# req.body = "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello! This message has an assigned user!\"\n    },\n    \"assigned_user\": \"john.doe@email.com\",\n    \"metadata\": {\n      \"customer_id\": \"123456\",\n      \"sent_from\": \"backend_api\"\n    }\n  }"
+# req.body = "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello! This message has an assigned user!\"\n    },\n    \"metadata\": {\n      \"customer_id\": \"123456\",\n      \"sent_from\": \"backend_api\"\n    }\n  }"
 req.body = {
   'to' => '+31612345678',
   'from' => 'whatsapp',
@@ -16,7 +16,6 @@ req.body = {
   'content' => {
     'text' => 'Hello! This message has an assigned user!'
   },
-  'assigned_user' => 'john.doe@email.com',
   'metadata' => {
     'customer_id' => '123456',
     'sent_from' => 'backend_api'
