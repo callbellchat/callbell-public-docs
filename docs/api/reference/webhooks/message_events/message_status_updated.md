@@ -59,11 +59,12 @@ Represents a message deletion from the end-user, both for _"delete only for me"_
 
 ### Payload Fields
 
-| Field                  | Type   | Description                          |
-| :--------------------- | :----- | :----------------------------------- |
-| `uuid`                 | string | The unique identifier of the message |
-| `status`               | string | The delivery status of the message   |
-| `messageStatusPayload` | JSON   | The raw message status payload       |
+| Field                  | Type   | Description                                   |
+| :--------------------- | :----- | :-------------------------------------------- |
+| `uuid`                 | string | The unique identifier of the message          |
+| `status`               | string | The delivery status of the message            |
+| `metadata`             | Object | Metadata attached to the message (if present) |
+| `messageStatusPayload` | JSON   | The raw message status payload                |
 
 ### Example Payload
 

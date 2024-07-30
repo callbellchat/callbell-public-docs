@@ -18,6 +18,7 @@ This event will be sent whenever a message gets **created**, for example when _r
 | `channel`     | string                                         | Channel identifier (e.g. `whatsapp`)                           |
 | `contact`     | [Contact](/api/reference/object_types/contact) | The contact associated to the message                          |
 | `createdAt`   | string                                         | Date of contact creation (ISO 8601 formatted)                  |
+| `metadata`    | Object                                         | Metadata attached to the message (if present)                  |
 
 ### Example Payload
 

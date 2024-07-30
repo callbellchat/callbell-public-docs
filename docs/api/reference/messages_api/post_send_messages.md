@@ -31,6 +31,7 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `channel_uuid`    | String  | The message will be sent from this channel (when omitted, it will use the default main channel) |
 | `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact`               |
 | `bot_status`      | String  | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`.                |
+| `metadata`        | Object  | Metadata to be attached to the message.                                                         |
 
 :::info
 When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
@@ -85,6 +86,21 @@ The user has to be part of your team, otherwise the assignment will not work.
 :::
 
 <RequestTabs endpoint='messages_api' request="post_messages_with_user_assignment"/>
+
+## Send Message with Metadata
+
+You can send a message with custom metadata by passing an object in the `metadata` parameter. This is useful for storing additional information about the message, especially when combined with the [webhooks](/api/reference/webhooks_api/introduction) feature. This metadata will be returned in the webhook events.
+
+:::caution
+Don’t store any sensitive information (bank account numbers, card details, and so on) as metadata or in the description parameter. Use it only for non-sensitive information like internal ids, references or similar.
+:::
+
+<RequestTabs endpoint='messages_api' request="post_messages_with_metadata"/>
+
+### Metadata Limitations
+
+The metadata object can contain up to 10 key-value pairs. The key must be a string with a maximum length of 50 characters, and the value must be a string with a maximum length of 500 characters.
+
 
 ## Send Message with Media Attachments
 

@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 30 juillet 2024
+
+#### ✨ Nouveautés
+
+- L'envoi de [messages POST prend désormais en charge le champ de métadonnées](/api/reference/messages_api/post_send_messages#send-message-with-metadata) pour envoyer des messages avec des paires clé-valeur personnalisées.
+
 ## 25 juillet 2024
 
 #### ✨ Nouveautés

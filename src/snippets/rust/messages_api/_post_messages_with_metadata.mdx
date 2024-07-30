@@ -1,0 +1,39 @@
+```rust
+extern crate reqwest;
+use reqwest::header;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut headers = header::HeaderMap::new();
+    headers.insert("Authorization", "Bearer test_gshuPaZoeEG6ovbc8M79w0QyM".parse().unwrap());
+    headers.insert("Content-Type", "application/json".parse().unwrap());
+
+    let client = reqwest::blocking::Client::builder()
+        .redirect(reqwest::redirect::Policy::none())
+        .build()
+        .unwrap();
+    let res = client.post("https://api.callbell.eu/v1/messages/send")
+        .headers(headers)
+        .body(r#"
+{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "text",
+    "content": {
+      "text": "Hello! This message has an assigned user!"
+    },
+    "assigned_user": "john.doe@email.com",
+    "metadata": {
+      "customer_id": "123456",
+      "sent_from": "backend_api"
+    }
+  }
+"#
+        )
+        .send()?
+        .text()?;
+    println!("{}", res);
+
+    Ok(())
+}
+
+```
