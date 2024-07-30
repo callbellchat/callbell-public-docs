@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Uma lista de todas as alterações e melhorias que foram introduzidas em nossa API. Use para verificar sempre que novos endpoints forem adicionados ou alterações forem feitas.
 
+## 30 de julho de 2024
+
+### ✨ Novidades 
+
+- O [POST Send Messages agora oferece suporte ao campo de metadados](/api/reference/messages_api/post_send_messages#send-message-with-metadata) para enviar mensagens com pares de valores-chave personalizados.
+
 ## 25 de julho de 2024
 
 ### ✨ Novidades

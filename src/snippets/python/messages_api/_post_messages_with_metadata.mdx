@@ -1,0 +1,29 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+json_data = {
+    'to': '+31612345678',
+    'from': 'whatsapp',
+    'type': 'text',
+    'content': {
+        'text': 'Hello! This message has an assigned user!',
+    },
+    'metadata': {
+        'customer_id': '123456',
+        'sent_from': 'backend_api',
+    },
+}
+
+response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n    "to": "+31612345678",\n    "from": "whatsapp",\n    "type": "text",\n    "content": {\n      "text": "Hello! This message has an assigned user!"\n    },\n    "metadata": {\n      "customer_id": "123456",\n      "sent_from": "backend_api"\n    }\n  }'
+#response = requests.post('https://api.callbell.eu/v1/messages/send', headers=headers, data=data)
+
+```

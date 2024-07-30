@@ -1,0 +1,17 @@
+```bash
+curl -X POST "https://api.callbell.eu/v1/messages/send" \
+  -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "to": "+31612345678",
+    "from": "whatsapp",
+    "type": "text",
+    "content": {
+      "text": "Hello! This message has an assigned user!"
+    },
+    "metadata": {
+      "customer_id": "123456",
+      "sent_from": "backend_api"
+    }
+  }'
+```
