@@ -32,7 +32,7 @@ Here are some explanations of how this action operates and its limitations:
 
 - The bot always executes this action synchronously, meaning it waits until the request receives a result (either success or failure) before proceeding to the next step. If you have multiple webhook actions one after the other, they will be executed sequentially, not in batches.
 
-- The timeout for the query is set internally to 15 seconds. Any long-running query will fail beyond this duration.
+- The timeout for the query is set internally to 10 seconds. Any long-running query will fail beyond this duration.
 
 - The bot will continue even if your webhook action fails for any reason.
 
