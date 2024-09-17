@@ -35,7 +35,7 @@ Pour ajouter une action Google Sheets dans l'éditeur de flux Callbell, suivez c
 
 Cliquez sur le bouton "Google connect" et suivez les instructions.
 
-:::conseil
+:::tip
 Veillez à sélectionner tous les droits. Le robot Callbell ne fonctionnera pas correctement si l'un des droits "Google Drive File" ou "Google Spreadsheet Sheet" n'est pas sélectionné.
 
 <div class="text--center">
@@ -57,7 +57,7 @@ Vous devez configurer l'intégration en remplissant les champs suivants :
 - Mettre à jour une ligne : permet de mettre à jour une ligne existante en fonction des données de l'utilisateur.
 - Sélectionner une ligne : Cette action permet de récupérer les données de la feuille pour les afficher dans la conversation du bot.
 
-:::conseil
+:::tip
 Assurez-vous d'avoir des feuilles de calcul disponibles dans votre compte. Callbell ne pourra pas en créer une automatiquement pour vous.
 De plus, Callbell ne supportera que les feuilles de calcul avec des en-têtes (avec des noms de colonnes) en haut comme ceci :
 

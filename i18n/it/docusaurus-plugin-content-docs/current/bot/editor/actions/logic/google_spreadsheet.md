@@ -35,7 +35,7 @@ Per aggiungere un'azione di Google Sheets nell'editor di flusso di Callbell, pro
 
 Fare clic sul pulsante "Google connect" e seguire le istruzioni.
 
-:::suggerimento
+:::tip
 Assicurarsi di selezionare tutti i diritti. Il bot Callbell non funziona correttamente se manca uno dei diritti "File di Google Drive" o "Foglio di calcolo di Google".
 
 <div class="text--center">
@@ -57,7 +57,7 @@ Assicurarsi di selezionare tutti i diritti. Il bot Callbell non funziona corrett
 - Aggiorna riga: consente di aggiornare una riga esistente in base all'input dell'utente.
 - Seleziona riga: consente di recuperare i dati dal foglio per visualizzarli nella conversazione del bot.
 
-:::consiglio
+:::tip
 Assicuratevi di avere fogli di calcolo disponibili nel vostro account. Callbell non sarà in grado di crearne uno automaticamente per voi.
 Inoltre, Callbell supporterà solo fogli di calcolo con intestazioni (con nomi di colonne) in alto come questo:
 

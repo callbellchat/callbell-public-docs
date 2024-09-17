@@ -35,7 +35,7 @@ Para añadir una acción de Google Sheets en el editor de flujos de Callbell, si
 
 Haz clic en el botón "Google connect" y sigue las instrucciones.
 
-:::consejo
+:::tip
 Asegúrate de seleccionar todos los derechos. Callbell bot no funcionará correctamente si falta alguno de los derechos "Archivo de Google Drive" u "Hoja de cálculo de Google".
 
 <div class="text--center">
@@ -57,7 +57,7 @@ Deberá configurar la integración rellenando los siguientes campos:
 - Actualizar Fila: Permite actualizar una fila existente basándose en los datos introducidos por el usuario.
 - Seleccionar Fila: Se utiliza para recuperar datos de la hoja para mostrarlos en la conversación del bot.
 
-:::consejo
+:::tip
 Asegúrate de que tienes hojas de cálculo disponibles en tu cuenta. Callbell no podrá crear una automáticamente por ti.
 Además, Callbell sólo soportará hojas de cálculo con cabeceras (con nombres de columnas) en la parte superior como esta:
 
@@ -141,7 +141,7 @@ Whould devolver este valor:
 
 Y almacenarlo en la variable "número de teléfono de la hoja de cálculo"
 
-:::consejo
+:::tip
 Tenga en cuenta que la búsqueda sólo devolverá el primer resultado. Si tienes varias filas que coinciden con el valor de la celda, sólo se devolverá la primera. Si el resultado que buscas no es el primero, crea una nueva columna en tu hoja de cálculo con valores más específicos/únicos
 :::
 

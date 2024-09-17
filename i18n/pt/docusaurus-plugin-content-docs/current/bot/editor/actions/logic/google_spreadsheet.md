@@ -35,7 +35,7 @@ Para adicionar uma ação do Google Sheets no editor de fluxo da Callbell, siga 
 
 Clique no botão "Google connect" e siga as instruções.
 
-:::dica
+:::tip
 Certifique-se de selecionar todos os direitos. O bot da Callbell não funcionará corretamente se o direito "Google Drive File" ou "Google Spreadsheet Sheet" estiver ausente.
 
 <div class="text--center">
@@ -57,7 +57,7 @@ Você precisará configurar a integração preenchendo os seguintes campos:
 - Update Row (Atualizar linha): Use essa ação para atualizar uma linha existente com base na entrada do usuário.
 - Select Row (Selecionar linha): Use essa ação para recuperar dados da planilha a serem exibidos na conversa do bot.
 
-:::dica
+:::tip
 Certifique-se de ter planilhas disponíveis em sua conta. A Callbell não poderá criar uma automaticamente para você.
 Além disso, a Callbell só aceita planilhas com cabeçalhos (com nomes de colunas) na parte superior, como esta:
 
@@ -141,13 +141,13 @@ O que retornaria esse valor:
 
 E armazene-o na variável "número de telefone da planilha"
 
-:::dica
+:::tip
 Observe que a pesquisa retornará apenas o primeiro resultado. Se você tiver várias linhas que correspondam ao valor da célula, somente a primeira será retornada. Se o resultado que você está procurando não for o primeiro, crie uma nova coluna na planilha com valores mais específicos/únicos
 :::
 
 ## 7. Tratamento de falhas
 
-No caso de uma falha de API, você pode armazenar a resposta à falha em uma variável dedicada para análise futura ou novas tentativas.
+No caso de uma falha de API, você pode armazenar a resposta à falha em uma variável detipda para análise futura ou novas tentativas.
 Você pode, por exemplo, imaginar alguma lógica que verifique a falha e tente novamente com uma ação de "salto".
 
 # Práticas recomendadas:
