@@ -147,7 +147,8 @@ Note that the search will only return the first result. If you have multiple row
 
 ## 7. Handling Failures
 
-In case of an API failure, you can store the failure response in a dedicated variable for future analysis or retries. You can imagine some logic that would check the failure and retry with a "jump" action.
+In case of an API failure, you can store the failure response in a dedicated variable for future analysis or retries.
+You can, for instance, imagine some logic that would check the failure and retry with a "jump" action.
 
 # Best Practices:
 
