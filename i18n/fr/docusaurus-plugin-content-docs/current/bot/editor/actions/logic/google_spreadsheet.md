@@ -12,31 +12,31 @@ import googleSpreadsheetUpdate2 from './assets/google_spreadsheet_update_2.png'
 import googleSpreadsheetSelect from './assets/google_spreadsheet_select.png'
 import googleSpreadsheetSelect2 from './assets/google_spreadsheet_select_2.png'
 
-# Feuille de calcul Google
+# Google Spreadsheet
 
-Cette action permet à votre robot d'interagir avec un document Google Sheets en insérant, en mettant à jour et en sélectionnant des lignes de manière dynamique au cours des interactions avec l'utilisateur. Elle peut être utilisée pour stocker, récupérer et modifier les données collectées lors des conversations du robot.
+Cette action permet à votre bot d'interagir avec un document Google Sheets en insérant, en mettant à jour et en sélectionnant des lignes de manière dynamique au cours des interactions avec l'utilisateur. Elle peut être utilisée pour stocker, récupérer et modifier les données collectées lors des conversations du bot.
 
 # Cas d'utilisation :
 
 - Stockage des réponses des utilisateurs directement dans un fichier Google Sheets en vue d'un traitement ultérieur.
 - Mise à jour d'entrées spécifiques dans Google Sheets en fonction des données fournies par l'utilisateur.
-- Récupération des données d'une feuille Google pour les utiliser dans une conversation ou comme conditions dans le flux du robot.
+- Récupération des données d'une feuille Google pour les utiliser dans une conversation ou comme conditions de choix.
 
 # Comment l'utiliser :
 
 ## 1. Ajouter une action Google Sheets
 
-Pour ajouter une action Google Sheets dans l'éditeur de flux Callbell, suivez ces étapes :
+Pour ajouter une action Google Sheets dans l'éditeur de bot Callbell, suivez ces étapes :
 
-1. Ouvrez l'éditeur de flux et sélectionnez le point de votre conversation où vous souhaitez intégrer Google Sheets.
-2. Ajoutez une nouvelle action en cliquant sur le bouton Add Action et en sélectionnant Google Sheets dans la liste des actions disponibles, dans la section "Logic".
+1. Ouvrez l'éditeur de bot et sélectionnez le point de votre conversation où vous souhaitez intégrer Google Sheets.
+2. Ajoutez une nouvelle action en cliquant sur le bouton "+" et en sélectionnant Google Sheets dans la liste des actions disponibles, dans la section "Logic".
 
 ## 2. Authentifiez-vous sur votre compte Google
 
 Cliquez sur le bouton "Google connect" et suivez les instructions.
 
 :::tip
-Veillez à sélectionner tous les droits. Le robot Callbell ne fonctionnera pas correctement si l'un des droits "Google Drive File" ou "Google Spreadsheet Sheet" n'est pas sélectionné.
+Veillez à sélectionner tous les droits. Le bot Callbell ne fonctionnera pas correctement si l'un des droits "Google Drive File" ou "Google Spreadsheet Sheet" n'est pas sélectionné.
 
 <div class="text--center">
     <img src={googleCredentials} width={500} />
@@ -47,7 +47,7 @@ Veillez à sélectionner tous les droits. Le robot Callbell ne fonctionnera pas 
 
 Vous devez configurer l'intégration en remplissant les champs suivants :
 
-**Spreadsheet** : Choisissez le document Google Sheets avec lequel vous souhaitez interagir. Assurez-vous que l'API Google Sheets est correctement configurée.
+**Spreadsheet** : Choisissez le document Google Sheets avec lequel vous souhaitez interagir.
 
 **Feuille** : Sélectionnez la feuille spécifique dans le document (par exemple, "Sheet1").
 
@@ -76,7 +76,7 @@ Lorsque vous sélectionnez l'option Insérer une ligne :
 
   L'option "Personnalisé" permet d'insérer une ligne à n'importe quel index spécifié. Vous pouvez rendre cette valeur dynamique en utilisant une variable, mais assurez-vous que la valeur est toujours un nombre. Le Bot renverra une erreur et continuera son flux si l'index n'est pas un nombre.
 
-  "Last" insère la ligne jusqu'à la première ligne vide trouvée.
+  "Dernier" insère la ligne jusqu'à la première ligne vide trouvée.
 
   Notez que si vous avez des "trous" dans votre feuille de calcul, la ligne peut ne pas être insérée à l'endroit voulu.
 
@@ -84,7 +84,7 @@ Lorsque vous sélectionnez l'option Insérer une ligne :
     <img src={googleSpreadsheetInsertLast} width={500} />
 </div>
 
-- Columns Values (Valeurs des colonnes) : Mapper les données qui seront insérées.
+- Valeurs des colonnes : Mapper les données qui seront insérées.
 
 Vous pouvez ajouter plusieurs colonnes en fonction des données que vous souhaitez insérer et des colonnes disponibles dans votre feuille de calcul.
 L'omission d'une valeur de colonne laissera la colonne vide dans votre feuille de calcul.
@@ -94,14 +94,14 @@ Par exemple, ces paramètres :
 <div class="text--center">
     <img src={googleSpreadsheetInsert} width={500} />
 </div>
-Le résultat sera cette insertion :
+Donneront ce resultat :
 <div class="text--center">
     <img src={googleSpreadsheetInsert2} width={500} />
 </div>
 
 ## 5. Mise à jour des données dans Google Sheets
 
-Lorsque vous sélectionnez l'option Mettre à jour la ligne :
+Lorsque vous sélectionnez l'option "Mettre à jour" :
 
 - Mettre à jour la position : Exactement comme pour l'insertion, définissez la ligne à mettre à jour. Notez qu'en raison de la limitation de Google, il n'est pas possible de mettre à jour directement la dernière ligne.
 
@@ -113,7 +113,7 @@ Par exemple, une action définie de cette manière :
     <img src={googleSpreadsheetUpdate} width={500} />
 </div>
 
-Le résultat sera la mise à jour de la ligne 3 de cette manière :
+Mettra à jour la ligne 3 de cette manière :
 
 <div class="text--center">
     <img src={googleSpreadsheetUpdate2} width={500} />
@@ -121,11 +121,11 @@ Le résultat sera la mise à jour de la ligne 3 de cette manière :
 
 ## 6. Sélection de données à partir de Google Sheets
 
-Pour rechercher et récupérer une ligne, vous aurez besoin de.. :
+Pour rechercher et récupérer une ligne, vous aurez besoin de :
 
-- **la colonne à rechercher** : Le bot que nous itérons et ne regardons que sur une colonne donnée.
+- **la colonne à rechercher** : Le bot ne peut itérer que sur une colonne donnée.
 - **La valeur de la cellule à trouver** : La valeur que la colonne doit contenir.
-- Stockez les données de la ligne dans des variables. Vous pouvez accéder à n'importe quelle donnée de colonne et la stocker dans n'importe quelle variable que vous avez créée.
+- Stockez les données de la ligne dans des variables. Vous pouvez accéder à n'importe quelle donnée de ligne trouvée et la stocker dans n'importe quelle variable que vous avez créée.
 
 Par exemple, une action définie de cette manière :
 
@@ -133,13 +133,13 @@ Par exemple, une action définie de cette manière :
     <img src={googleSpreadsheetSelect} width={500} />
 </div>
 
-Ce qui renverrait cette valeur :
+Renverra cette valeur :
 
 <div class="text--center">
     <img src={googleSpreadsheetSelect2} width={500} />
 </div>
 
-Et le stocker dans la variable "numéro de téléphone de la feuille de calcul"
+Et stockera dans la variable "numéro de téléphone de la feuille de calcul"
 
 :::tip
 Notez que la recherche ne renvoie que le premier résultat. Si plusieurs lignes correspondent à la valeur de la cellule, seule la première sera renvoyée. Si le résultat que vous recherchez n'est pas le premier, créez une nouvelle colonne dans votre feuille de calcul avec des valeurs plus spécifiques/uniques.
@@ -148,7 +148,7 @@ Notez que la recherche ne renvoie que le premier résultat. Si plusieurs lignes 
 ## 7. Gestion des échecs
 
 En cas d'échec de l'API, vous pouvez stocker la réponse à l'échec dans une variable dédiée en vue d'une analyse ultérieure ou de nouvelles tentatives.
-Vous pouvez, par exemple, imaginer une logique qui vérifierait l'échec et réessayerait avec une action "jump".
+Vous pouvez, par exemple, imaginer une logique qui vérifierait l'échec et réessayerait avec une action "saut".
 
 # Meilleures pratiques :
 
