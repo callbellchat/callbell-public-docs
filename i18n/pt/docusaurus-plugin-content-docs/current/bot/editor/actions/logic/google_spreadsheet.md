@@ -36,7 +36,7 @@ Para adicionar uma ação do Google Sheets no editor de fluxo da Callbell, siga 
 Clique no botão "Google connect" e siga as instruções.
 
 :::tip
-Certifique-se de selecionar todos os direitos. O bot da Callbell não funcionará corretamente se o direito "Google Drive File" ou "Google Spreadsheet Sheet" estiver ausente.
+Certifique-se de selecionar todas as permissões. O bot da Callbell não funcionará corretamente se a permissão "Google Drive File" ou "Google Spreadsheet Sheet" estiver ausente.
 
 <div class="text--center">
     <img src={googleCredentials} width={500} />
