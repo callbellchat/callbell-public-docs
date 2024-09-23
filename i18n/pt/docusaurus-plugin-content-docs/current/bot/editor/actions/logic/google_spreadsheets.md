@@ -4,6 +4,7 @@ sidebar_position: 3
 
 import googleSpreadsheetValidFormat from './assets/google_spreadsheet_valid_format.png'
 import googleCredentials from './assets/google_credentials.png'
+import googleCredentialsWarning from './assets/google_credentials_warning.png'
 import googleSpreadsheetInsertLast from './assets/google_spreadsheet_insert_last.png'
 import googleSpreadsheetInsert from './assets/google_spreadsheet_insert.png'
 import googleSpreadsheetInsert2 from './assets/google_spreadsheet_insert_2.png'
@@ -36,11 +37,18 @@ Para adicionar uma ação do Google Sheets no editor de fluxo da Callbell, siga 
 Clique no botão "Google connect" e siga as instruções.
 
 :::tip
-Certifique-se de selecionar todas as permissões. O bot da Callbell não funcionará corretamente se a permissão "Google Drive File" ou "Google Spreadsheet Sheet" estiver ausente.
+Certifique-se de selecionar todos os direitos. O bot da Callbell não funcionará corretamente se o direito "Google Drive File" ou "Google Spreadsheet Sheet" estiver ausente.
 
 <div class="text--center">
     <img src={googleCredentials} width={500} />
 </div>
+
+Poderá também encontrar este aviso do Google:
+
+<div class="text--center">
+    <img src={googleCredentialsWarning} width={500} />
+</div>
+Que é apenas um aviso temporário. Nesse caso, certifique-se de que continua a clicar em “avançado” e depois em “Continuar com a Callbell”
 :::
 
 ## 3. Configuração da ação

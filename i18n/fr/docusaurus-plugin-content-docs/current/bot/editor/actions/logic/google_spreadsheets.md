@@ -4,6 +4,7 @@ sidebar_position: 3
 
 import googleSpreadsheetValidFormat from './assets/google_spreadsheet_valid_format.png'
 import googleCredentials from './assets/google_credentials.png'
+import googleCredentialsWarning from './assets/google_credentials_warning.png'
 import googleSpreadsheetInsertLast from './assets/google_spreadsheet_insert_last.png'
 import googleSpreadsheetInsert from './assets/google_spreadsheet_insert.png'
 import googleSpreadsheetInsert2 from './assets/google_spreadsheet_insert_2.png'
@@ -41,6 +42,14 @@ Veillez à sélectionner tous les droits. Le bot Callbell ne fonctionnera pas co
 <div class="text--center">
     <img src={googleCredentials} width={500} />
 </div>
+
+Vous pouvez également rencontrer cet avertissement de Google :
+
+<div class="text--center">
+    <img src={googleCredentialsWarning} width={500} />
+</div>
+Il s'agit d'un avertissement temporaire. Dans ce cas, assurez-vous de continuer en cliquant sur « avancé » et ensuite sur « Procéder avec Callbell »
+
 :::
 
 ## 3. Configuration de l'action
