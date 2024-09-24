@@ -14,8 +14,6 @@ Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Uti
 - Il campo è presente anche in tutti i webhook relativi a contatti, messaggi e conversazioni.
 - Aggiunto un nuovo campo `conversation` al corpo della richiesta dell'endpoint [Send Message](/api/reference/messages_api/post_send_messages). Questo campo consente di restituire la conversazione nella risposta.
 
-Tradotto con DeepL.com (versione gratuita)
-
 ## 30 luglio 2024
 
 ### ✨ Novità
