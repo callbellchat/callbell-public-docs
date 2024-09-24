@@ -10,7 +10,7 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 ### ✨ Novidades
 
-- Adicionado `conversationHref` a todos os pontos de extremidade que retornam um objeto [Contact](/api/reference/object_types/contact); esse campo é vinculado à conversa associada ao contato no painel da Callbell.
+- Adicionado `conversationHref` a todos os endpoints que retornam um objeto [Contact](/api/reference/object_types/contact); esse campo é vinculado à conversa associada ao contato no painel da Callbell.
 - O campo também está presente em todos os webhooks relacionados a contatos, mensagens e conversas.
 - Foi adicionado um novo campo `conversation` ao corpo da solicitação do ponto final [Send Message] (/api/reference/messages_api/post_send_messages). Esse campo permite retornar a conversa na resposta.
 
