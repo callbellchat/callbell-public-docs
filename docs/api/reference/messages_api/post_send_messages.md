@@ -29,7 +29,7 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `assigned_user`   | String  | Message will be assigned to this collaborator's email                                           |
 | `team_uuid`       | String  | Message will be assigned to this team                                                           |
 | `channel_uuid`    | String  | The message will be sent from this channel (when omitted, it will use the default main channel) |
-| `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact`               |
+| `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact,conversation`  |
 | `bot_status`      | String  | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`.                |
 | `metadata`        | Object  | Metadata to be attached to the message.                                                         |
 
@@ -67,6 +67,44 @@ If you have a bot enabled, the default status is `bot_start` meaning that the bo
   "message": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
     "status": "enqueued",
+    "contact": {
+      "uuid": "c7b3d1216d4c4dcd908199d6700f2381",
+      "name": "John Doe",
+      "phone": "+1234567890",
+      "email": "john@doe.com"
+    }
+  }
+}
+```
+
+### Example Response (with `fields=conversation`)
+
+```json title=response.json
+{
+  "message": {
+    "uuid": "adf3d1216d4c4dcd908199d6700f2381",
+    "status": "enqueued",
+    "conversation": {
+      "source": "whatsapp",
+      "href": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
+      "createdAt": "2024-09-23T20:09:10Z"
+    }
+  }
+}
+```
+
+### Example Response (with `fields=conversation,contact`)
+
+```json title=response.json
+{
+  "message": {
+    "uuid": "adf3d1216d4c4dcd908199d6700f2381",
+    "status": "enqueued",
+    "conversation": {
+      "source": "whatsapp",
+      "href": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
+      "createdAt": "2024-09-23T20:09:10Z"
+    },
     "contact": {
       "uuid": "c7b3d1216d4c4dcd908199d6700f2381",
       "name": "John Doe",

@@ -33,6 +33,7 @@ This event will be sent whenever a message gets **created**, for example when _r
     "channel": "whatsapp",
     "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
+      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "name": "John Doe",
       "tags": ["Lead"],
       "uuid": "eb2b914a977e4ab896e7b886698b3eac",

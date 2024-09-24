@@ -38,6 +38,7 @@ Get a specific contact given a `uuid`.
       "createdAt": "2020-11-13T21:08:53Z",
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
+      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "tags": ["sales", "lead"],
       "assignedUser": null,
       "customFields": {

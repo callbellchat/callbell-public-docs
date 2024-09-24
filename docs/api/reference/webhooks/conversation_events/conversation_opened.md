@@ -21,6 +21,7 @@ See [Conversation Object](/api/reference/object_types/conversation)
   "event": "conversation_opened",
   "payload": {
     "source": "whatsapp",
+    "href": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
     "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
       "name": "John Doe",
