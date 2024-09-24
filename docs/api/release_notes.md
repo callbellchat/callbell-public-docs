@@ -6,6 +6,14 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## September 24, 2024
+
+### ✨ What's new
+
+- Added `conversationHref` to all the endpoints that return a [Contact](/api/reference/object_types/contact) object; this field links to the conversation associated with the contact on Callbell dashboard.
+- The field is also present in all webhooks related to contacts, messages and conversations.
+- Added a new field `conversation` to the [Send Message](/api/reference/messages_api/post_send_messages) endpoint request body. This fields allows to return the conversation in the response.
+
 ## July 30, 2024
 
 ### ✨ What's new

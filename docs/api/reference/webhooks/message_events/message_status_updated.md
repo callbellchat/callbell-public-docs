@@ -74,6 +74,17 @@ Represents a message deletion from the end-user, both for _"delete only for me"_
   "payload": {
     "uuid": "adf3d1216d4c4dcd908199d6700f2381",
     "status": "read",
+    "contact": {
+      "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
+      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
+      "name": "John Doe",
+      "tags": ["Lead"],
+      "uuid": "eb2b914a977e4ab896e7b886698b3eac",
+      "source": "whatsapp",
+      "avatarUrl": null,
+      "createdAt": "2022-10-12T15:57:16Z",
+      "phoneNumber": "331122334455"
+    },
     "messageStatusPayload":{
       "id":"gBGGM2MSRxl_Aglqmg5KQXU7ABC",
       "gsId":"2b34bfb7-2631-4763-89fb-1b3c65a4babc",

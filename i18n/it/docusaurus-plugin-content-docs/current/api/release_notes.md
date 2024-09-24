@@ -6,6 +6,16 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 24 settembre 2024
+
+### ✨ Novità
+
+- Aggiunto `conversationHref` a tutti gli endpoint che restituiscono un oggetto [Contact](/api/reference/object_types/contact); questo campo rimanda alla conversazione associata al contatto nella dashboard di Callbell.
+- Il campo è presente anche in tutti i webhook relativi a contatti, messaggi e conversazioni.
+- Aggiunto un nuovo campo `conversation` al corpo della richiesta dell'endpoint [Send Message](/api/reference/messages_api/post_send_messages). Questo campo consente di restituire la conversazione nella risposta.
+
+Tradotto con DeepL.com (versione gratuita)
+
 ## 30 luglio 2024
 
 ### ✨ Novità

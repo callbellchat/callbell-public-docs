@@ -6,6 +6,14 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 24 septembre 2024
+
+### ✨ Nouveautés
+
+- Ajout de `conversationHref` à tous les points de terminaison qui renvoient un objet [Contact](/api/reference/object_types/contact) ; ce champ renvoie à la conversation associée au contact sur le tableau de bord de Callbell.
+- Le champ est également présent dans tous les webhooks liés aux contacts, aux messages et aux conversations.
+- Ajout d'un nouveau champ `conversation` dans le corps de la requête du point final [Send Message](/api/reference/messages_api/post_send_messages). Ce champ permet de renvoyer la conversation dans la réponse.
+
 ## 30 juillet 2024
 
 #### ✨ Nouveautés

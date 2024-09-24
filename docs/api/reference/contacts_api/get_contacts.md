@@ -40,6 +40,7 @@ List all contacts belonging to the account. A filter can be specified in order t
       "createdAt": "2020-11-13T21:08:53Z",
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
+      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": "john.doe@email.com",
       "tags": [
         "sales",
@@ -59,6 +60,7 @@ List all contacts belonging to the account. A filter can be specified in order t
       "createdAt": "2021-02-24T20:33:06Z",
       "source": "whatsapp",
       "href": "https://dash.callbell.eu/contacts/ff8bec9363bc4c29b8b044eabf2afebd",
+      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": null,
       "tags": [
         "sales",
