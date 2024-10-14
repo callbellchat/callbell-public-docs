@@ -8,7 +8,7 @@ import blockContact from './assets/block_contact.png'
 
 <img src={blockContact} width={180} />
 
-Cette action vous permet de bloquer un contact pour interagir avec le bot.
+Cette action vous permet de bloquer un contact via le bot.
 
 Cela est utile chaque fois que vous devez empêcher un contact spécifique de continuer la conversation ou d'accéder au bot à l'avenir.
 
