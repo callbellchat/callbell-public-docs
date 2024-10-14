@@ -4,14 +4,15 @@ sidebar_position: 10
 
 import blockContact from './assets/block_contact.png'
 
-# Bloquear contato
+# Bloquear contacto
 
 <img src={blockContact} width={180} />
 
-Esta ação permite bloquear um contato para que ele não possa interagir com o bot.
+Esta acción permite bloquear a un contacto para que no pueda interactuar con el bot.
 
-Isso é útil sempre que você precisa impedir que um contato específico continue a conversa ou acesse o bot no futuro.
+Esto es útil siempre que necesites impedir que un contacto específico continúe la conversación o acceda al bot en el futuro.
 
 :::danger
-O bot não poderá desbloquear o contato, pois não receberemos mais mensagens dele. Portanto, esta ação é irreversível.
+El bot no podrá desbloquear al contacto, ya que no recibiremos más mensajes de él. Por lo tanto, esta acción es irreversible.
 :::
+
