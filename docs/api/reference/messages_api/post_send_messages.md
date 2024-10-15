@@ -12,12 +12,13 @@ After 24h without a reply from the customer, it is not possible to send regular 
 
 ### Required Parameters
 
-| Parameter | Type           | Description                          |
-| :-------- | :------------- | :----------------------------------- |
-| `to`      | String         | Phone number or platform identifier  |
-| `from`    | String         | Channel identifier (e.g. `whatsapp`) |
-| `type`    | MessageType    | Type of message to be sent           |
-| `content` | MessageContent | Content of the message               |
+| Parameter         | Type           | Description                                |
+| :---------------- | :------------- | :----------------------------------------- |
+| `to`              | String         | Phone number or platform identifier        |
+| `from`            | String         | Channel identifier (e.g. `whatsapp`)       |
+| `type`            | MessageType    | Type of message to be sent                 |
+| `content`         | MessageContent | Content of the message                     |
+| `channel_uuid`    | String         | The message will be sent from this channel |
 
 ### Optional Parameters
 
@@ -28,7 +29,6 @@ After 24h without a reply from the customer, it is not possible to send regular 
 | `template_values` | Array   | Values for multi-variable template message                                                      |
 | `assigned_user`   | String  | Message will be assigned to this collaborator's email                                           |
 | `team_uuid`       | String  | Message will be assigned to this team                                                           |
-| `channel_uuid`    | String  | The message will be sent from this channel (when omitted, it will use the default main channel) |
 | `fields`          | String  | Comma-separated fields to be returned in the message. Supported values: `contact,conversation`  |
 | `bot_status`      | String  | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`.                |
 | `metadata`        | Object  | Metadata to be attached to the message.                                                         |
