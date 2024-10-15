@@ -8,7 +8,7 @@ HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "https://ap
 
 request.Headers.Add("Authorization", "Bearer test_gshuPaZoeEG6ovbc8M79w0QyM");
 
-request.Content = new StringContent("{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }");
+request.Content = new StringContent("{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"channel_uuid\": \"35f6f8cc-b550-4278-a2ea-099f3a4e0730\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }");
 request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
 HttpResponseMessage response = await client.SendAsync(request);

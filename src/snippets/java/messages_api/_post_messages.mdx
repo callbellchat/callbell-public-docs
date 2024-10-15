@@ -18,7 +18,7 @@ class Main {
 
 		httpConn.setDoOutput(true);
 		OutputStreamWriter writer = new OutputStreamWriter(httpConn.getOutputStream());
-		writer.write("{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }");
+		writer.write("{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"channel_uuid\": \"35f6f8cc-b550-4278-a2ea-099f3a4e0730\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }");
 		writer.flush();
 		writer.close();
 		httpConn.getOutputStream().close();
