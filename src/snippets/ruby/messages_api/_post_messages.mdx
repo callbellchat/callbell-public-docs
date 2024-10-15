@@ -8,11 +8,12 @@ req.content_type = 'application/json'
 req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
 
 # The object won't be serialized exactly like this
-# req.body = "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }"
+# req.body = "{\n    \"to\": \"+31612345678\",\n    \"from\": \"whatsapp\",\n    \"type\": \"text\",\n    \"channel_uuid\": \"35f6f8cc-b550-4278-a2ea-099f3a4e0730\",\n    \"content\": {\n      \"text\": \"Hello!\"\n    }\n  }"
 req.body = {
   'to' => '+31612345678',
   'from' => 'whatsapp',
   'type' => 'text',
+  'channel_uuid' => '35f6f8cc-b550-4278-a2ea-099f3a4e0730',
   'content' => {
     'text' => 'Hello!'
   }
