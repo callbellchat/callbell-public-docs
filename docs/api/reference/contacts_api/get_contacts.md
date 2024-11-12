@@ -11,11 +11,12 @@ List all contacts belonging to the account. A filter can be specified in order t
 
 ### Optional Parameters
 
-| Parameter | Type     | Description                                                                        |
-| :-------- | :------- | :--------------------------------------------------------------------------------- |
-| `page`    | Integer  | The page of contacts. If not specified it will default to page 1.                  |
-| `source`  | Source   | The integration type (e.g. `whatsapp`)                                             |
-| `tags`    | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
+| Parameter   | Type     | Description                                                                        |
+| :---------- | :------- | :--------------------------------------------------------------------------------- |
+| `page`      | Integer  | The page of contacts. If not specified it will default to page 1.                  |
+| `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
+| `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
+| `team_uuid` | string   | The uuid of the team.                                                              |
 
 ### Example Request
 
