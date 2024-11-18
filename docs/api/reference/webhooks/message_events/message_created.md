@@ -8,17 +8,19 @@ This event will be sent whenever a message gets **created**, for example when _r
 
 ### Payload Fields
 
-| Field         | Type                                           | Description                                                    |
-| :------------ | :--------------------------------------------- | :------------------------------------------------------------- |
-| `to`          | string                                         | The channel-specific identifier of the message receiver        |
-| `from`        | string                                         | The channel-specific identifier of the message sender          |
-| `text`        | string                                         | The text of the message                                        |
-| `attachments` | string[]                                       | The attachments of the message                                 |
-| `status`      | string                                         | The status of the message. Can be only be `received` or `sent` |
-| `channel`     | string                                         | Channel identifier (e.g. `whatsapp`)                           |
-| `contact`     | [Contact](/api/reference/object_types/contact) | The contact associated to the message                          |
-| `createdAt`   | string                                         | Date of contact creation (ISO 8601 formatted)                  |
-| `metadata`    | Object                                         | Metadata attached to the message (if present)                  |
+| Field                | Type                                                                   | Description                                                    |
+| :------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------- |
+| `to`                 | string                                                                 | The channel-specific identifier of the message receiver        |
+| `from`               | string                                                                 | The channel-specific identifier of the message sender          |
+| `text`               | string                                                                 | The text of the message                                        |
+| `attachments`        | string[]                                                               | The attachments of the message                                 |
+| `status`             | string                                                                 | The status of the message. Can be only be `received` or `sent` |
+| `channel`            | string                                                                 | Channel identifier (e.g. `whatsapp`)                           |
+| `contact`            | [Contact](/api/reference/object_types/contact)                         | The contact associated to the message                          |
+| `createdAt`          | string                                                                 | Date of contact creation (ISO 8601 formatted)                  |
+| `messageContactCard` | [MessageContactCard](/api/reference/object_types/message_contact_card) | The contact card associated to the message                     |
+| `messageLocation`    | [MessageLocation](/api/reference/object_types/message_location)        | The location associated to the message                         |
+| `metadata`           | Object                                                                 | Metadata attached to the message (if present)                  |
 
 ### Example Payload
 
@@ -41,6 +43,20 @@ This event will be sent whenever a message gets **created**, for example when _r
       "avatarUrl": null,
       "createdAt": "2022-10-12T15:57:16Z",
       "phoneNumber": "331122334455"
+    },
+    "messageLocation": {
+      "coordinates": { "x": -23.605403621614, "y": -46.637346962613 },
+      "googleMapsLocation": "https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=270x200&scale=2&maptype=roadmap&markers=color:red%7C-24.605403621614,-47.637346962613&key=AIzaSyByh_wmPx1e3qOzsUTa-xjKHFSEDvpzT0Y&signature=e8lZQ-eMXUwBwqmA1FAXksGtiR8="
+    },
+    "messageContactCard": {
+      "contactsInfo": [
+        {
+          "name": "Peter Parker",
+          "phones": [
+            { "phone": "3331122336699", "wa_id": "", "type": "MOBILE" }
+          ]
+        }
+      ]
     },
     "createdAt": "2022-10-18T12:06:29.000+02:00"
   }

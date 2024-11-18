@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 18, 2024
+
+### ✨ What's new
+
+- [MessageContactCard](/api/reference/object_types/message_contact_card) and [MessageLocation](/api/reference/object_types/message_location) added as object types.
+- [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) now includes the `messageContactCard` and `MessageLocation` references. This is useful to have information about location messages and contact cards.
+
 ## September 24, 2024
 
 ### ✨ What's new
@@ -61,7 +68,7 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 ### 🛠️ Changes
 
 - [Send Message](/api/reference/messages_api/post_send_messages) endpoint now supports an optional `fields` parameter to specify which fields to include in the response. This is useful to reduce the response size and speed up the API calls. Currently only `contact` is supported.
- 
+
 ## February 14, 2024
 
 ### ✨ What's new
