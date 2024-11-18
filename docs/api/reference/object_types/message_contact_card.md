@@ -1,5 +1,5 @@
 ---
-title: Message
+title: MessageContactCard
 sidebar_position: 3
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Message
+title: MessageLocation
 sidebar_position: 3
 ---
 
