@@ -8,27 +8,29 @@ This event will be sent whenever a message gets **created**, for example when _r
 
 ### Payload Fields
 
-| Field                    | Type                                                                           | Description                                                    |
-| :----------------------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `to`                     | string                                                                         | The channel-specific identifier of the message receiver        |
-| `from`                   | string                                                                         | The channel-specific identifier of the message sender          |
-| `text`                   | string                                                                         | The text of the message                                        |
-| `attachments`            | string[]                                                                       | The attachments of the message                                 |
-| `status`                 | string                                                                         | The status of the message. Can be only be `received` or `sent` |
-| `channel`                | string                                                                         | Channel identifier (e.g. `whatsapp`)                           |
-| `contact`                | [Contact](/api/reference/object_types/contact)                                 | The contact associated to the message                          |
-| `createdAt`              | string                                                                         | Date of contact creation (ISO 8601 formatted)                  |
-| `metadata`               | Object                                                                         | Metadata attached to the message (if present)                  |
+| Field         | Type                                           | Description                                                    |
+| :------------ | :--------------------------------------------- | :------------------------------------------------------------- |
+| `to`          | string                                         | The channel-specific identifier of the message receiver        |
+| `from`        | string                                         | The channel-specific identifier of the message sender          |
+| `text`        | string                                         | The text of the message                                        |
+| `attachments` | string[]                                       | The attachments of the message                                 |
+| `status`      | string                                         | The status of the message. Can be only be `received` or `sent` |
+| `channel`     | string                                         | Channel identifier (e.g. `whatsapp`)                           |
+| `contact`     | [Contact](/api/reference/object_types/contact) | The contact associated to the message                          |
+| `createdAt`   | string                                         | Date of contact creation (ISO 8601 formatted)                  |
+| `metadata`    | Object                                         | Metadata attached to the message (if present)                  |
 
 ### Optional Fields
 
-| Field                    | Type                                                                           | Description                                                    |
-| :----------------------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `messageContactCard`     | [MessageContactCard](/api/reference/object_types/message_contact_card)         | The contact card associated to the message                     |
-| `messageInteractiveList` | [MessageInteractiveList](/api/reference/object_types/message_interactive_list) | Interactive list message information                           |
-| `messageLocation`        | [MessageLocation](/api/reference/object_types/message_location)                | The location associated to the message                         |
-| `messageReplyButton`     | [MessageReplyButton](/api/reference/object_types/message_reply_button)         | Reply buttons message information                              |
-
+| Field                    | Type                                                                           | Description                                |
+| :----------------------- | :----------------------------------------------------------------------------- | :----------------------------------------- |
+| `messageContactCard`     | [MessageContactCard](/api/reference/object_types/message_contact_card)         | The contact card associated to the message |
+| `mesageContext`          | [MessageContext](/api/reference/object_types/message_context)                  | Shows if it is a reply to a message        |
+| `messageForward`         | [MessageForward](/api/reference/object_types/message_forward)                  | Indicates if it is a forwarded message     |
+| `messageInteractiveList` | [MessageInteractiveList](/api/reference/object_types/message_interactive_list) | Interactive list message information       |
+| `messageLocation`        | [MessageLocation](/api/reference/object_types/message_location)                | The location associated to the message     |
+| `messageReaction`        | [MssageReaction](/api/reference/object_types/message_reaction)                 | The reaction associated to the message     |
+| `messageReplyButton`     | [MessageReplyButton](/api/reference/object_types/message_reply_button)         | Reply buttons message information          |
 
 ### Example Payload
 
