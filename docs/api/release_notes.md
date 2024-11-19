@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 19, 2024
+
+### ✨ What's new
+
+- [MessageReplyButton](/api/reference/object_types/message_reply_button) and [MessageInteractiveList](/api/reference/object_types/message_interactive_list) added as object types.
+- [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) now includes the `messageReplyButton` and `messageInteractiveList` references. This is useful to have information about location messages and contact cards.
+
 ## November 18, 2024
 
 ### ✨ What's new
