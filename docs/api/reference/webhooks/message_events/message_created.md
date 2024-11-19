@@ -8,19 +8,21 @@ This event will be sent whenever a message gets **created**, for example when _r
 
 ### Payload Fields
 
-| Field                | Type                                                                   | Description                                                    |
-| :------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `to`                 | string                                                                 | The channel-specific identifier of the message receiver        |
-| `from`               | string                                                                 | The channel-specific identifier of the message sender          |
-| `text`               | string                                                                 | The text of the message                                        |
-| `attachments`        | string[]                                                               | The attachments of the message                                 |
-| `status`             | string                                                                 | The status of the message. Can be only be `received` or `sent` |
-| `channel`            | string                                                                 | Channel identifier (e.g. `whatsapp`)                           |
-| `contact`            | [Contact](/api/reference/object_types/contact)                         | The contact associated to the message                          |
-| `createdAt`          | string                                                                 | Date of contact creation (ISO 8601 formatted)                  |
-| `messageContactCard` | [MessageContactCard](/api/reference/object_types/message_contact_card) | The contact card associated to the message                     |
-| `messageLocation`    | [MessageLocation](/api/reference/object_types/message_location)        | The location associated to the message                         |
-| `metadata`           | Object                                                                 | Metadata attached to the message (if present)                  |
+| Field                    | Type                                                                           | Description                                                    |
+| :----------------------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| `to`                     | string                                                                         | The channel-specific identifier of the message receiver        |
+| `from`                   | string                                                                         | The channel-specific identifier of the message sender          |
+| `text`                   | string                                                                         | The text of the message                                        |
+| `attachments`            | string[]                                                                       | The attachments of the message                                 |
+| `status`                 | string                                                                         | The status of the message. Can be only be `received` or `sent` |
+| `channel`                | string                                                                         | Channel identifier (e.g. `whatsapp`)                           |
+| `contact`                | [Contact](/api/reference/object_types/contact)                                 | The contact associated to the message                          |
+| `createdAt`              | string                                                                         | Date of contact creation (ISO 8601 formatted)                  |
+| `messageContactCard`     | [MessageContactCard](/api/reference/object_types/message_contact_card)         | The contact card associated to the message                     |
+| `messageInteractiveList` | [MessageInteractiveList](/api/reference/object_types/message_interactive_list) | Interactive list message information                           |
+| `messageLocation`        | [MessageLocation](/api/reference/object_types/message_location)                | The location associated to the message                         |
+| `messageReplyButton`     | [MessageReplyButton](/api/reference/object_types/message_reply_button)         | Reply buttons message information                              |
+| `metadata`               | Object                                                                         | Metadata attached to the message (if present)                  |
 
 ### Example Payload
 
@@ -57,6 +59,42 @@ This event will be sent whenever a message gets **created**, for example when _r
           ]
         }
       ]
+    },
+    "messageReplyButton": {
+      "metadata": {
+        "type": "quick_reply",
+        "content": {
+          "url": "https://url.com/uploads/conversation_attachment/url/12389/file.png",
+          "text": "hello text",
+          "header": "header",
+          "caption": "caption",
+          "filename": "file.png",
+          "contentType": "image"
+        },
+        "options": [
+          {
+            "type": "text",
+            "title": "Yes",
+            "postback_url": "",
+            "postback_text": ""
+          },
+          {
+            "type": "text",
+            "title": "No",
+            "postback_url": "",
+            "postback_text": ""
+          },
+          {
+            "type": "text",
+            "title": "Maybe",
+            "postback_url": "",
+            "postback_text": ""
+          }
+        ]
+      }
+    },
+    "messageInteractiveList": {
+      "metadata": "{\"header\":\"Welcome to our restaurant\",\"body\":\"Have a look at our menu\",\"buttons\":[{\"title\":\"click here\"}],\"sections\":[{\"title\":\"Breakfast\",\"subtitle\":null,\"items\":[{\"header\":\"Yogurt\",\"description\":null},{\"header\":\"Pancakes\",\"description\":null}]}]}"
     },
     "createdAt": "2022-10-18T12:06:29.000+02:00"
   }
