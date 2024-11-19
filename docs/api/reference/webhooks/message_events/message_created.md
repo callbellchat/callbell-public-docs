@@ -18,11 +18,17 @@ This event will be sent whenever a message gets **created**, for example when _r
 | `channel`                | string                                                                         | Channel identifier (e.g. `whatsapp`)                           |
 | `contact`                | [Contact](/api/reference/object_types/contact)                                 | The contact associated to the message                          |
 | `createdAt`              | string                                                                         | Date of contact creation (ISO 8601 formatted)                  |
+| `metadata`               | Object                                                                         | Metadata attached to the message (if present)                  |
+
+### Optional Fields
+
+| Field                    | Type                                                                           | Description                                                    |
+| :----------------------- | :----------------------------------------------------------------------------- | :------------------------------------------------------------- |
 | `messageContactCard`     | [MessageContactCard](/api/reference/object_types/message_contact_card)         | The contact card associated to the message                     |
 | `messageInteractiveList` | [MessageInteractiveList](/api/reference/object_types/message_interactive_list) | Interactive list message information                           |
 | `messageLocation`        | [MessageLocation](/api/reference/object_types/message_location)                | The location associated to the message                         |
 | `messageReplyButton`     | [MessageReplyButton](/api/reference/object_types/message_reply_button)         | Reply buttons message information                              |
-| `metadata`               | Object                                                                         | Metadata attached to the message (if present)                  |
+
 
 ### Example Payload
 
