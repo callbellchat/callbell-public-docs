@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 21, 2024
+
+### ✨ What's new
+
+- [MessageContext](/api/reference/object_types/message_context) and [MessageForward](/api/reference/object_types/message_forward) added as object types.
+- [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) now includes the `messageContext` and `messageForward` references. This is useful to have information about location messages and contact cards.
+
 ## November 19, 2024
 
 ### ✨ What's new
