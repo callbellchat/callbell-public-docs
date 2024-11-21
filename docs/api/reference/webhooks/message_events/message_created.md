@@ -29,7 +29,6 @@ This event will be sent whenever a message gets **created**, for example when _r
 | `messageForward`         | [MessageForward](/api/reference/object_types/message_forward)                  | Indicates if it is a forwarded message     |
 | `messageInteractiveList` | [MessageInteractiveList](/api/reference/object_types/message_interactive_list) | Interactive list message information       |
 | `messageLocation`        | [MessageLocation](/api/reference/object_types/message_location)                | The location associated to the message     |
-| `messageReaction`        | [MssageReaction](/api/reference/object_types/message_reaction)                 | The reaction associated to the message     |
 | `messageReplyButton`     | [MessageReplyButton](/api/reference/object_types/message_reply_button)         | Reply buttons message information          |
 
 ### Example Payload
