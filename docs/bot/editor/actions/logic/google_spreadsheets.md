@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 import googleSpreadsheetValidFormat from './assets/google_spreadsheet_valid_format.png'
