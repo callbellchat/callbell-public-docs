@@ -17,7 +17,7 @@ Creates a note on the conversation associated to the contact.
 
 ### Example Request
 
-<RequestTabs endpoint='contacts_api' request="post_contact_conversation_open"/>
+<RequestTabs endpoint='contacts_api' request="post_contact_conversation_create_note"/>
 
 ### Response
 

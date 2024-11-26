@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## November 26, 2024
+
+### ✨ What's new
+
+- Added a new endpoint to [create notes](/docs/api/reference/contacts_api/post_contact_conversation_create_note.md) on the conversation associated to contacts.
+- [Agent Session Updated](/api/reference/webhooks/agent_events/agent_session_updated.md) webhook event to notify when an agent logs in or logs out.
+
 ## November 21, 2024
 
 ### ✨ What's new
