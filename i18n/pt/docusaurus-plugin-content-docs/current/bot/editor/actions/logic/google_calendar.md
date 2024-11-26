@@ -10,102 +10,101 @@ import googleCalendarEventCreated from './assets/google_calendar_event_created.p
 
 # Google Calendar
 
-This action enables your bot to interact with a Google Calendar by creating events dynamically during user interactions.
+Esta ação permite que seu bot interaja com o Google Calendar, criando eventos dinamicamente durante as interações do usuário.
 
-# Use Cases:
+# Casos de uso:
 
-- Creating reminders in your Google Calendar.
-- Creating meetings using self-generated meeting links.
+- Criar lembretes no seu Google Calendar.
+- Criar reuniões usando links de reunião gerados automaticamente.
 
-# How to use it:
+# Como usar:
 
-## 1. Adding a Google Calendar Action
+## 1. Adicionando uma Ação do Google Calendar
 
-To add a Google Calendar action in the Callbell flow editor, follow these steps:
+Para adicionar uma ação do Google Calendar no editor de fluxo do Callbell, siga estas etapas:
 
-1. Open the Flow Builder and select the point in your conversation where you want to integrate Google Calendar.
-2. Add a new action by clicking the Add Action button and selecting Google Calendar from the list of available actions, inside the "Logic" section.
+1. Abra o Criador de Fluxo e selecione o ponto da conversa em que você deseja integrar o Google Calendar.
+2. Adicione nova ação clicando no botão Adicionar Ação e selecione Google Calendar na lista de ações disponíveis, dentro da seção "Lógica".
 
-## 2. Authenticate to your Google account
+## 2. Autenticando sua conta do Google
 
-Click "Google connect" button and follow the instructions.
+Clique no botão "Conectar com o Google" e siga as instruções.
 
 :::tip
-Make sure to select all rights. Callbell bot will not work properly if any permissions are missing.
+Certifique-se de selecionar todas as permissões necessárias. O bot do Callbell não funcionará corretamente se alguma permissão estiver faltando.
 
 <div class="text--center">
     <img src={googleCredentials} width={500} />
 </div>
 
-You may also encounter this warning from Google:
+Você também pode encontrar este aviso do Google:
 
 <div class="text--center">
     <img src={googleCredentialsWarning} width={500} />
 </div>
 
-Which is just a temporary warning. In that case, make sure to continue by clicking "advanced" and then "Proceed with Callbell"
+Este aviso é apenas temporário. Nesse caso, certifique-se de continuar clicando em "avançado" e, em seguida, "Continuar com o Callbell"
 :::
 
-## 3. Configuring the Action
+## 3. Configurando a Ação
 
-You will need to configure the integration by filling in the following fields:
+Você precisará configurar a integração preenchendo os seguintes campos:
 
-**Select calendar**: Choose the Google Calendar you want to interact with. Each Google account can have multiple calendars; the one labeled with an email address is your main calendar.
+**Selecionar calendário**: Escolha o Google Calendar com o qual você deseja interagir. Cada conta do Google pode ter vários calendários; o que tem um endereço de e-mail é o seu calendário principal.
 
-**Select action**: Currently, `create event` is the only option available.
+**Selecionar ação**: Atualmente, `criar evento` é a única opção disponível.
 
-**Event summary**: The title of the event as it will appear on the calendar.
+**Resumo do evento**: O título do evento como ele aparecerá no calendário.
 
-**Event month**: The month in which the event will be created.
+**Mês do evento**: O mês em que o evento será criado.
 
-**Event day**: The day on which the event will be created.
+**Dia do evento**: O dia em que o evento será criado.
 
-**Event starts at**: The time when the event will start. The required time format is: `HH:MM`.
+**Hora de início do evento**: A hora em que o evento começará. O formato de hora necessário é: `HH:MM`.
 
-**Event duration (in minutes)**: The length of the event in minutes.
+**Duração do evento (em minutos)**: O tempo de duração do evento em minutos.
 
-**Send event updates to**: The recipients who will receive updates about the event. The options are: `None` or `All`.
+**Enviar atualizações de evento para**: Os destinatários que receberão atualizações sobre o evento. As opções são: `Nenhum` ou `Todos`.
 
-**Create meet link**: Option to generate a link for a virtual meeting associated with the event.
+**Criar link de reunião**: Opção para gerar um link para uma reunião virtual associada ao evento.
 
 :::tip
-You can use variables to dynamically populate these details
+Você pode usar variáveis para preencher dinamicamente esses detalhes.
 :::
 
-## 4. Handling Success
+## 4. Lidando com o Sucesso
 
-In case of a successful response from the API, the result will indicate the event creation status: `confirmed`. By default, this value will be saved as `Last webhook success`, but you can configure any variable you prefer for it. If `Create meet link` option is active, the URL of the meet will be stored in the variable.
+Em caso de uma resposta bem-sucedida da API, o resultado indicará o status de criação do evento: `confirmado`. Por padrão, esse valor será salvo como `Último sucesso de webhook`, mas você pode configurar qualquer variável que preferir. Se a opção `Criar link de reunião` estiver ativa, a URL da reunião será armazenada na variável.
 
-## 5. Handling Failure
+## 5. Lidando com a Falha
 
-In case of an API failure, you can store the failure response in a dedicated variable for future analysis or retries.
-You can, for instance, imagine some logic that would check the failure and retry with a "jump" action.
+Em caso de falha da API, você pode armazenar a resposta de falha em uma variável dedicada para análises ou novas tentativas. Você pode, por exemplo, imaginar uma lógica que verificaria a falha e faria uma ação de "salto" novamente.
 
-## 6. Example
+## 6. Exemplo
 
-This is an example of how you can configure the action and use it with variables.
+Aqui está um exemplo de como você pode configurar a ação e usá-la com variáveis.
 
-1. In this example, we created 2 variables:
+1. Neste exemplo, criamos 2 variáveis:
 
 <img src={googleCalendarVariables} width={500} />
 
-2. `Summary`, `month` and `duration` were set as fixed values.
+2. `Resumo`, `mês` e `duração` foram definidos como valores fixos.
 
-3. We used a combination of actions to dynamically retrieve the day:
+3. Usamos uma combinação de ações para recuperar dinamicamente o dia:
 
-- [Send message](/bot/editor/actions/interaction/send_message) to send the message asking about which day is the best.
-- [Wait user's answer](/bot/editor/actions/interaction/wait_user_answer) to get the answer.
-- [Set variable](/bot/editor/actions/logic/set_variable) to save the result from the answer in our variable `day`.
+- [Enviar mensagem](/bot/editor/actions/interaction/send_message) para enviar a mensagem perguntando sobre qual é o melhor dia.
+- [Aguardar resposta do usuário](/bot/editor/actions/interaction/wait_user_answer) para obter a resposta.
+- [Definir variável](/bot/editor/actions/logic/set_variable) para salvar o resultado da resposta em nossa variável `dia`.
 
-4. We did the same to retrieve the `time`.
+4. Fizemos o mesmo para recuperar a `hora`.
 
-5. Now it's finished, this is the result:
+5. Agora está pronto, este é o resultado:
 
 <img src={googleCalendarFullSetup} width={500} />
 
 <img src={googleCalendarEventCreated} width={500} />
 
-# Best Practices:
+# Melhores Práticas:
 
-- Always ensure that the Google API is connected and has the proper permissions for the bot to access the calendar.
-- Test the integration thoroughly to handle possible API errors (e.g., Google calendar access issues, Wrong date format issues). The bot simulator will help you in this matter.
+- Sempre verifique se a API do Google está conectada e possui as permissões adequadas para que o bot acesse o calendário.
+- Teste a integração minuciosamente para lidar com possíveis erros da API (por exemplo, problemas de acesso ao calendário do Google, problemas de formato de data incorreto). O simulador de bot irá ajudá-lo nesse aspecto.
