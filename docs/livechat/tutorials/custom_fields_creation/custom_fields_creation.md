@@ -10,7 +10,7 @@ In this quick guide you will learn how to create [custom fields](https://headway
 
 After creating a live chat integration and customizing it according to your preferences, go to the second section of the widget configuration page. There you will see a code snippet that was generated to be copied and pasted into your website in order to make the live chat work.
 
-![snippet](./assets/snippet.png)
+![livechat_snippet](./assets/livechat_snippet.png)
 
 ## Step 2: Edit code snippet
 
