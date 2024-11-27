@@ -69,7 +69,7 @@ Você precisará configurar a integração preenchendo os seguintes campos:
 **Criar link de reunião**: Opção para gerar um link para uma reunião virtual associada ao evento.
 
 :::tip
-Você pode usar variáveis para preencher dinamicamente esses detalhes.
+Você pode usar variáveis para preencher dinamicamente esses campos
 :::
 
 ## 4. Lidando com o Sucesso

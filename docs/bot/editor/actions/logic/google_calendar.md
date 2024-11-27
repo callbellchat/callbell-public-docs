@@ -69,7 +69,7 @@ You will need to configure the integration by filling in the following fields:
 **Create meet link**: Option to generate a link for a virtual meeting associated with the event.
 
 :::tip
-You can use variables to dynamically populate these details
+You can use variables to dynamically populate these fields
 :::
 
 ## 4. Handling Success

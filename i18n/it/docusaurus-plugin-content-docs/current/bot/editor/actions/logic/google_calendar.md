@@ -69,7 +69,7 @@ Dovrai configurare l'integrazione compilando i seguenti campi:
 **Crea link per riunione**: Opzione per generare un link per una riunione virtuale associata all'evento.
 
 :::tip
-Puoi utilizzare variabili per popolare dinamicamente questi dettagli
+Puoi utilizzare variabili per popolare dinamicamente questi campi
 :::
 
 ## 4. Gestione del successo

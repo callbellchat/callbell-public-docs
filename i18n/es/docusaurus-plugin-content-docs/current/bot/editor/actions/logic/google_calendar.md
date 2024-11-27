@@ -69,7 +69,7 @@ Deberás configurar la integración completando los siguientes campos:
 **Crear enlace de reunión**: Opción para generar un enlace para una reunión virtual asociada con el evento.
 
 :::tip
-Puedes utilizar variables para completar dinámicamente estos detalles
+Puedes utilizar variables para completar dinámicamente estos campos
 :::
 
 ## 4. Manejo del Éxito

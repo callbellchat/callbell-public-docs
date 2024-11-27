@@ -69,7 +69,7 @@ Vous devrez configurer l'intégration en remplissant les champs suivants :
 **Créer un lien de réunion** : Option pour générer un lien vers une réunion virtuelle associée à l'événement.
 
 :::tip
-Vous pouvez utiliser des variables pour remplir dynamiquement ces détails.
+Vous pouvez utiliser des variables pour remplir dynamiquement ces champs
 :::
 
 ## 4. Gérer le succès
