@@ -7,6 +7,10 @@ import googleCredentialsWarning from './assets/google_credentials_warning.png'
 import googleCalendarVariables from './assets/google_calendar_variables.png'
 import googleCalendarFullSetup from './assets/google_calendar_full_setup.png'
 import googleCalendarEventCreated from './assets/google_calendar_event_created.png'
+import googleCalendarSendMessage from './assets/google_calendar_send_message.png'
+import googleCalendarWaitUserAnswer from './assets/google_calendar_wait_user_answer.png'
+import googleCalendarSetVariable from './assets/google_calendar_set_variable.png'
+import googleCalendarFlowCombination from './assets/google_calendar_flow_combination.png'
 
 # Google Calendar
 
@@ -93,9 +97,19 @@ Aquí tienes un ejemplo de cómo puedes configurar la acción y usarla con varia
 
 3. Utilizamos una combinación de acciones para recuperar dinámicamente el día:
 
+<img src={googleCalendarFlowCombination} width={200} />
+
 - [Enviar mensaje](/bot/editor/actions/interaction/send_message) para enviar el mensaje preguntando cuál es el mejor día.
+
+<img src={googleCalendarSendMessage} width={500} />
+
 - [Esperar respuesta del usuario](/bot/editor/actions/interaction/wait_user_answer) para obtener la respuesta.
+
+<img src={googleCalendarWaitUserAnswer} width={500} />
+
 - [Establecer variable](/bot/editor/actions/logic/set_variable) para guardar el resultado de la respuesta en nuestra variable `día`.
+
+<img src={googleCalendarSetVariable} width={500} />
 
 4. Hicimos lo mismo para recuperar la `hora`.
 

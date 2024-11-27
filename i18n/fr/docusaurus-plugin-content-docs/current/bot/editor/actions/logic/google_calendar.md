@@ -7,6 +7,10 @@ import googleCredentialsWarning from './assets/google_credentials_warning.png'
 import googleCalendarVariables from './assets/google_calendar_variables.png'
 import googleCalendarFullSetup from './assets/google_calendar_full_setup.png'
 import googleCalendarEventCreated from './assets/google_calendar_event_created.png'
+import googleCalendarSendMessage from './assets/google_calendar_send_message.png'
+import googleCalendarWaitUserAnswer from './assets/google_calendar_wait_user_answer.png'
+import googleCalendarSetVariable from './assets/google_calendar_set_variable.png'
+import googleCalendarFlowCombination from './assets/google_calendar_flow_combination.png'
 
 # Google Calendar
 
@@ -85,16 +89,26 @@ En cas d'échec de l'API, vous pouvez stocker la réponse d'échec dans une vari
 Voici un exemple de configuration de l'action et de son utilisation avec des variables.
 
 1. Dans cet exemple, nous avons créé 2 variables :
-   
+
 <img src={googleCalendarVariables} width={500} />
 
 2. `Résumé`, `mois` et `durée` ont été définis comme des valeurs fixes.
 
 3. Nous avons utilisé une combinaison d'actions pour récupérer dynamiquement le jour :
 
-   - [Envoyer un message](/bot/editor/actions/interaction/send_message) pour envoyer le message demandant quel jour convient le mieux.
-   - [Attendre la réponse de l'utilisateur](/bot/editor/actions/interaction/wait_user_answer) pour obtenir la réponse.
-   - [Définir une variable](/bot/editor/actions/logic/set_variable) pour enregistrer le résultat de la réponse dans notre variable `jour`.
+<img src={googleCalendarFlowCombination} width={200} />
+
+- [Envoyer un message](/bot/editor/actions/interaction/send_message) pour envoyer le message demandant quel jour convient le mieux.
+
+<img src={googleCalendarSendMessage} width={500} />
+
+- [Attendre la réponse de l'utilisateur](/bot/editor/actions/interaction/wait_user_answer) pour obtenir la réponse.
+
+<img src={googleCalendarWaitUserAnswer} width={500} />
+
+- [Définir une variable](/bot/editor/actions/logic/set_variable) pour enregistrer le résultat de la réponse dans notre variable `jour`.
+
+<img src={googleCalendarSetVariable} width={500} />
 
 4. Nous avons fait de même pour récupérer l'`heure`.
 
