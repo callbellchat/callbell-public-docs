@@ -2,19 +2,19 @@
 sidebar_position: 1
 ---
 
-# Come creare campi personalizzati dalla chat live
+# Come creare campi personalizzati dalla chat in diretta
 
-In questa breve guida imparerai come creare [campi personalizzati](https://headwayapp.co/callbell-changelog/custom-fields-(for-contacts)-225586) nell'app Callbell utilizzando informazioni inviate tramite la nostra chat live.
+In questa guida rapida imparerai come creare [campi personalizzati](https://headwayapp.co/callbell-changelog/custom-fields-(for-contacts)-225586) nell'app Callbell utilizzando le informazioni inviate tramite la nostra chat in diretta.
 
-## Passo 1: Generare il frammento di codice della chat live
+## Step 1: Genera il frammento di codice della chat in diretta
 
-Dopo aver creato un'integrazione di chat live e personalizzata in base alle tue preferenze, vai alla seconda sezione della pagina di configurazione del widget. Lì vedrai un frammento di codice che è stato generato per essere copiato e incollato nel tuo sito web al fine di far funzionare la chat live.
+Dopo aver creato un'integrazione di chat in diretta e personalizzarla secondo le tue preferenze, vai alla seconda sezione della pagina di configurazione del widget. Lì vedrai un frammento di codice che è stato generato per essere copiato e incollato nel tuo sito web al fine di far funzionare la chat in diretta.
 
-![snippet](./assets/snippet.png)
+![livechat_snippet](./assets/livechat_snippet.png)
 
-## Passo 2: Modificare il frammento di codice
+## Step 2: Modifica il frammento di codice
 
-Nel nostro caso, ciò che vogliamo fare è inviare informazioni dal nostro sito web all'app Callbell ogni volta che un utente inizia a interagire con la chat. Possiamo ottenere ciò semplicemente apportando alcune piccole modifiche al frammento di codice generato in precedenza. Vedi l'esempio qui sotto:
+Nel nostro caso, ciò che vogliamo fare è inviare informazioni dal nostro sito web all'app Callbell ogni volta che un utente inizia a interagire con la chat. Possiamo farlo apportando semplicemente alcune piccole modifiche al frammento di codice generato sopra. Vedi l'esempio qui sotto:
 
 ```html
 <script>
@@ -34,19 +34,19 @@ Nel nostro caso, ciò che vogliamo fare è inviare informazioni dal nostro sito 
 </script>
 ```
 
-In questo esempio, i campi extra sono codificati direttamente, ma possono essere informazioni inviate dal tuo backend.
+In questo esempio, i campi extra sono codificati rigorosamente, ma possono essere informazioni inviate dal tuo backend.
 
 :::info
-Nota che il campo `identifier` è obbligatorio. Sarà utilizzato come un ID per l'utente che interagisce con la chat live, pertanto deve essere univoco. Se questo campo non viene inviato, l'utente potrà interagire con la chat e inviare e ricevere messaggi, ma non verranno creati campi personalizzati.
+Nota che il campo `identifier` è obbligatorio. Verrà utilizzato come ID per l'utente che interagisce con la chat in diretta, pertanto deve essere univoco. Se questo campo non viene inviato, l'utente sarà in grado di interagire con la chat e inviare e ricevere messaggi, ma non saranno creati campi personalizzati.
 :::
 
 :::info
-Puoi inviare fino a un massimo di 20 campi extra per creare campi personalizzati nell'app Callbell.
+È possibile inviare un massimo di 20 campi extra per creare campi personalizzati nell'app Callbell.
 :::
 
 ## Esempio
 
-Nell'esempio sottostante, stiamo generando un UUID casuale come identificatore e ottenendo la lingua del browser.
+Nell'esempio qui sotto, stiamo generando un UUID casuale come identificatore e ottenendo la lingua del browser.
 ```html
 <script>
   if (!window.callbellSettings) {
