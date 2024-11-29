@@ -23,45 +23,47 @@ Updates the availability and/or a users' custom status.
 | `custom_status_uuid` | string | The `uuid` of a custom status    |
 
 :::info
-When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
-
-If you have a bot enabled, the default status is `bot_start`.
+You can update only the user's availability, only their custom status, or both in the same request.
 :::
 
 :::caution
-Ensure that `custom_fields` and `tags` already exist in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
+Ensure that a `custom_status` already exists in your account before passing them. Visit [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings for more information.
 
-Similarly, for `assigned_user` and `team_uuid`, use a valid email address associated with a user in your account or reference an existing team.
+Similarly, for the user's  `uuid`, use a valid one associated to a user in your account.
 :::
 
 ### Example Request
 
-<RequestTabs endpoint='contacts_api' request="patch_contacts"/>
+<RequestTabs endpoint='users_api' request="put_user_status"/>
 
 ### Response
 
 | Parameter | Type                                           | Description                         |
 | :-------- | :--------------------------------------------- | :---------------------------------- |
-| `contact` | [Contact](/api/reference/object_types/contact) | The contact which has been updated. |
+| `user_status` | string{} | The user status that has been updated |
+| `custom_status` | string{} | The custom status of the user |
+| `id` | string | The custom status' id |
+| `name` | string | The custom status' name |
+| `last_updated_at` | string | The last update date of the user's custom status |
+| `appearance` | string{} | The user's appearance |
+| `available` | boolean | The user's availability |
+| `appearance` | string{} | The user's appearance |
+| `last_updated_at` | string | The user appearance's last update date |
 
 ### Example Response
 
 ```json title=response.json
 {
-  "contact": [
-    {
-      "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
-      "name": "UPDATE Doe",
-      "phoneNumber": "123456789",
-      "avatarUrl": null,
-      "createdAt": "2020-11-13T21:08:53Z",
-      "source": "whatsapp",
-      "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
-      "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
-      "tags": [],
-      "assignedUser": "jane.doe@email.com",
-      "customFields": {}
-    }
-  ]
+	"user_status": {
+		"custom_status": {
+			"id": "0d6041a2-8b88-49ec-a99b-a88a078a16c1",
+			"name": "Vacationing",
+			"last_updated_at": "2024-11-22T21:29:43.311+01:00"
+		},
+		"appearance": {
+			"available": false,
+			"last_updated_at": "2024-11-26T20:14:40.649+01:00"
+		}
+	}
 }
 ```
