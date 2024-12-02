@@ -27,6 +27,7 @@ const endpoints = [
   "webhooks_api",
   "teams_api",
   "channels_api",
+  "users_api",
 ];
 const curlDir = path.join(BASE_PATH, "curl/");
 

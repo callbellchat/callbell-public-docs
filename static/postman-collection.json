@@ -264,6 +264,55 @@
       ]
     },
     {
+      "name": "USERS API",
+      "item": [
+        {
+          "name": "PUT /users/:uuid/status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{CALLBELL_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"custom_status_uuid\": \"0d6041a2-8b88-49ec-a99b-a88a078a16c1\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{CALLBELL_PUBLIC_API}}/users/:uuid/status",
+              "host": [
+                "{{CALLBELL_PUBLIC_API}}"
+              ],
+              "path": [
+                "users",
+                ":uuid",
+                "status"
+              ],
+              "variable": [
+                {
+                  "key": "uuid",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "name": "TEMPLATES API",
       "item": [
         {

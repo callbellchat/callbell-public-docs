@@ -1,0 +1,19 @@
+```js
+import axios from 'axios';
+
+const response = await axios.put(
+  'https://api.callbell.eu/v1/users/414a6d692bd645ed803f2e7ce360d4c8/status',
+  // '{\n          "available": false,\n          "custom_status_uuid": "0d6041a2-8b88-49ec-a99b-a88a078a16c1"\n    }',
+  {
+    'available': false,
+    'custom_status_uuid': '0d6041a2-8b88-49ec-a99b-a88a078a16c1'
+  },
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
+    }
+  }
+);
+
+```
