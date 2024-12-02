@@ -1,0 +1,25 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+json_data = {
+    'available': False,
+    'custom_status_uuid': '0d6041a2-8b88-49ec-a99b-a88a078a16c1',
+}
+
+response = requests.put(
+    'https://api.callbell.eu/v1/users/414a6d692bd645ed803f2e7ce360d4c8/status',
+    headers=headers,
+    json=json_data,
+)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n          "available": false,\n          "custom_status_uuid": "0d6041a2-8b88-49ec-a99b-a88a078a16c1"\n    }'
+#response = requests.put('https://api.callbell.eu/v1/users/414a6d692bd645ed803f2e7ce360d4c8/status', headers=headers, data=data)
+
+```
