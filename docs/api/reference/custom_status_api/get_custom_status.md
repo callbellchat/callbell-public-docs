@@ -5,7 +5,7 @@ sidebar_position: 2
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# GET /custom_statuses
+# GET /custom_statuses/:id
 
 Get a specific custom status given an `id`.
 

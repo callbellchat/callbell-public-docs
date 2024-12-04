@@ -5,7 +5,7 @@ sidebar_position: 6
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# DELETE /contacts/:uuid
+# DELETE /custom_statuses/:uuid
 
 Deletes a specific custom status given an `id`.
 
