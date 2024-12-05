@@ -22,6 +22,7 @@ const languages = [
 const endpoints = [
   "auth_api",
   "contacts_api",
+  "custom_status_api",
   "messages_api",
   "templates_api",
   "webhooks_api",

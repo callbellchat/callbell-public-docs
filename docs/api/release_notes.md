@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## December 5, 2024
+
+### ✨ What's new
+
+- [Custom Status API](/api/reference/custom_status_api/introduction)
+- Added new endpoint to [update a user's status](/docs/api/reference/users_api/put_user_status.md), which means their availability and/or their custom status.
+
 ## November 26, 2024
 
 ### ✨ What's new

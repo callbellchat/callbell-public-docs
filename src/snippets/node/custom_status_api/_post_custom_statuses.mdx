@@ -1,0 +1,18 @@
+```js
+import axios from 'axios';
+
+const response = await axios.post(
+  'https://api.callbell.eu/v1/custom_statuses',
+  // '{\n        "name": "Lunch"\n    }',
+  {
+    'name': 'Lunch'
+  },
+  {
+    headers: {
+      'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+      'Content-Type': 'application/json'
+    }
+  }
+);
+
+```
