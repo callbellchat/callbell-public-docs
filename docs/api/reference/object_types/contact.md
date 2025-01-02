@@ -11,6 +11,7 @@ sidebar_position: 1
 | `name`             | string                  | Name of contact                                   |
 | `phoneNumber`      | string                  | Phone number of the contact                       |
 | `avatarUrl`        | string                  | URL of the user avatar                            |
+| `blockedAt`        | string                  | Date of contact block (ISO 8601 formatted)        |
 | `createdAt`        | string                  | Date of contact creation (ISO 8601 formatted)     |
 | `source`           | Source                  | Source of conversation                            |
 | `closedAt`         | string                  | Date of contact closure (ISO 8601 formatted)      |
