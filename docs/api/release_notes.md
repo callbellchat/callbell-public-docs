@@ -6,12 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
-## January 6, 2024
+## January 6, 2025
 
 ### ✨ What's new
 
 - Added new field `blocked_at` on [Contact](/api/reference/object_types/contact) object type.
-
+- Added new fields `status`, `category` on [Template Messages](/api/reference/template_messages_api/get_templates#example-response) object type.
 ## December 5, 2024
 
 ### ✨ What's new
