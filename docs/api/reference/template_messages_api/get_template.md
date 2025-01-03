@@ -33,6 +33,8 @@ Get a specific template given a `uuid`.
     "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
     "title": "Template title",
     "templateType": "text",
+    "category": "MARKETING",
+    "status": "approved",
     "text": "Message text",
     "createdAt": "2020-11-13T21:08:53Z"
   }

@@ -28,6 +28,8 @@ List all templates belonging to the account.
       "uuid": "ad42a09715814e6483b1c5debd6a2dbc",
       "title": "Template title",
       "templateType": "text",
+      "category": "MARKETING",
+      "status": "approved",
       "text": "Message text",
       "createdAt": "2020-11-13T21:08:53Z"
     },
@@ -35,6 +37,8 @@ List all templates belonging to the account.
       "uuid": "47aad5f9b4ca423c9d630f06ab93fe1f",
       "title": "Another Template title",
       "templateType": "text",
+      "category": "MARKETING",
+      "status": "rejected",
       "text": "Another Message text",
       "createdAt": "2020-11-13T21:10:33Z"
     }
