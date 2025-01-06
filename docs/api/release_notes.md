@@ -6,7 +6,7 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
-## January 6, 2024
+## January 6, 2025
 
 ### ✨ What's new
 
