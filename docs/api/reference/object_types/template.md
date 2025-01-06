@@ -11,4 +11,6 @@ sidebar_position: 1
 |                |
 | `text`         | string | Text of the template                                        |
 | `templateType` | string | Type of the template (`text`, `image`, `video`, `document`) |
+| `category`     | string | Category of the template (`MARKETING`, `UTILITY`) |
+| `status`       | string | Status of the template (`failed`, `paused`, `pending`, `deactivated`, `deleted`, `rejected`, `approved`, `disabled`, `in_appeal`, `limit_exceeded`, `pending_deletion`) |
 | `createdAt`    | string | Date of contact creation (ISO 8601 formatted)               |
