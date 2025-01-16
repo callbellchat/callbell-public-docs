@@ -10,7 +10,7 @@ In questa guida rapida imparerai come creare [campi personalizzati](https://head
 
 Dopo aver creato un'integrazione di chat in diretta e personalizzarla secondo le tue preferenze, vai alla seconda sezione della pagina di configurazione del widget. Lì vedrai un frammento di codice che è stato generato per essere copiato e incollato nel tuo sito web al fine di far funzionare la chat in diretta.
 
-![livechat_snippet](./assets/livechat_snippet.png)
+![webchat_snippet](./assets/webchat_snippet.png)
 
 ## Step 2: Modifica il frammento di codice
 

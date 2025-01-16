@@ -10,7 +10,7 @@ Dans ce guide rapide, vous apprendrez comment créer des [champs personnalisés]
 
 Après avoir créé une intégration de chat en direct et l'avoir personnalisée selon vos préférences, rendez-vous à la deuxième section de la page de configuration du widget. Vous y verrez un extrait de code qui a été généré pour être copié et collé dans votre site Web afin de permettre le fonctionnement du chat en direct.
 
-![livechat_snippet](./assets/livechat_snippet.png)
+![webchat_snippet](./assets/webchat_snippet.png)
 
 ## Étape 2 : Modifier l'extrait de code
 
