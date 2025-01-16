@@ -2,13 +2,13 @@
 sidebar_position: 1
 ---
 
-# Como criar campos personalizados a partir do live chat
+# Como criar campos personalizados a partir do webchat
 
-Neste guia rápido, você aprenderá como criar [campos personalizados](https://headwayapp.co/callbell-changelog/custom-fields-(for-contacts)-225586) no aplicativo Callbell usando informações que são enviadas por meio do nosso live chat.
+Neste guia rápido, você aprenderá como criar [campos personalizados](https://headwayapp.co/callbell-changelog/custom-fields-(for-contacts)-225586) no aplicativo Callbell usando informações que são enviadas por meio do nosso webchat.
 
-## Passo 1: Gerar o trecho de código do live chat
+## Passo 1: Gerar o trecho de código do webchat
 
-Após criar uma integração de live chat e personalizá-la de acordo com suas preferências, vá para a segunda seção da página de configuração do widget. Lá você verá um trecho de código que foi gerado para ser copiado e colado em seu site para que o live chat funcione.
+Após criar uma integração de webchat e personalizá-la de acordo com suas preferências, vá para a segunda seção da página de configuração do widget. Lá você verá um trecho de código que foi gerado para ser copiado e colado em seu site para que o webchat funcione.
 
 ![livechat_snippet](./assets/livechat_snippet.png)
 
@@ -37,7 +37,7 @@ Em nosso caso, o que queremos é enviar informações de nosso site para o aplic
 Neste exemplo, os campos extras são codificados manualmente, mas podem ser informações enviadas a partir de seu backend.
 
 :::info
-Observe que o campo `identifier` é obrigatório. Ele será usado como um identificador para o usuário que interage com o live chat, portanto, deve ser único. Se este campo não for enviado, o usuário poderá interagir com o chat, enviar e receber mensagens, mas nenhum campo personalizado será criado.
+Observe que o campo `identifier` é obrigatório. Ele será usado como um identificador para o usuário que interage com o webchat, portanto, deve ser único. Se este campo não for enviado, o usuário poderá interagir com o chat, enviar e receber mensagens, mas nenhum campo personalizado será criado.
 :::
 
 :::info
