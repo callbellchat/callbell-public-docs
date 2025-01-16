@@ -10,7 +10,7 @@ Neste guia rápido, você aprenderá como criar [campos personalizados](https://
 
 Após criar uma integração de webchat e personalizá-la de acordo com suas preferências, vá para a segunda seção da página de configuração do widget. Lá você verá um trecho de código que foi gerado para ser copiado e colado em seu site para que o webchat funcione.
 
-![livechat_snippet](./assets/livechat_snippet.png)
+![webchat_snippet](./assets/webchat_snippet.png)
 
 ## Passo 2: Editar o trecho de código
 

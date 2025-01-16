@@ -10,7 +10,7 @@ En esta guía rápida aprenderás cómo crear [campos personalizados](https://he
 
 Después de crear una integración de chat en vivo y personalizarla según tus preferencias, ve a la segunda sección de la página de configuración del widget. Allí verás un fragmento de código que se generó para copiar y pegar en tu sitio web para que funcione el chat en vivo.
 
-![livechat_snippet](./assets/livechat_snippet.png)
+![webchat_snippet](./assets/webchat_snippet.png)
 
 ## Paso 2: Editar el fragmento de código
 
