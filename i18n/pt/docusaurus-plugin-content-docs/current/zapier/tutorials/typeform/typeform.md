@@ -18,56 +18,57 @@ Este artigo explica como automatizar a qualificação e a comunicação com lead
 
 ### 1. **Crie o Typeform desejado**
 
-   Configure seu Typeform para coletar informações essenciais, como:
+Configure seu Typeform para coletar informações essenciais, como:
 
-   - Nome
-   - Número de telefone (obrigatório)
-   - Endereço de E-mail (opcional)
+- Nome
+- Número de telefone (obrigatório)
+- Endereço de E-mail (opcional)
 
-   ![create_form](../../assets/create_form.png)
+![create_desired_typeform](../../assets/create_desired_typeform.png)
 
 ### 2. **Prepare Modelos de Mensagem na Callbell**
 
-   - Crie o modelo de mensagem que deseja enviar para os novos leads na Callbell. Ao configurar o modelo:
-   - Use variáveis personalizadas (ex: {{variável 1}}, {{variável 2}}) para personalizar a mensagem.
-   - Essas variáveis serão preenchidas dinamicamente no Zapier usando os dados do lead do Typeform.
+- Crie o modelo de mensagem que deseja enviar para os novos leads na Callbell. Ao configurar o modelo:
+- Use variáveis personalizadas (ex: {{variável 1}}, {{variável 2}}) para personalizar a mensagem.
+- Essas variáveis serão preenchidas dinamicamente no Zapier usando os dados do lead do Typeform.
 
-   Saiba mais sobre como criar modelos de mensagem com variáveis na Callbell: [Callbell Help Center](https://callbellsupport.zendesk.com/hc/pt/articles/360007759237-O-que-s%C3%A3o-e-para-que-servem-os-modelos-de-mensagem)
+Saiba mais sobre como criar modelos de mensagem com variáveis na Callbell: [Callbell Help Center](https://callbellsupport.zendesk.com/hc/pt/articles/360007759237-O-que-s%C3%A3o-e-para-que-servem-os-modelos-de-mensagem)
 
-   ![prepare_message](../../assets/prepare_message.png)
+![prepare_message_template](../../assets/prepare_message_template.png)
 
 ### 3. **Criar um Zap: Typeform como Trigger**
 
-   - Acesse o Zapier e crie um novo Zap.
-   - Defina o gatilho como “New entry in Typeform”.
-   - Conecte sua conta do Typeform e selecione o formulário criado no Passo 1.
-   - Teste o gatilho para garantir que o Zapier está recuperando corretamente os dados do formulário.
+- Acesse o Zapier e crie um novo Zap.
+- Defina o gatilho como “New entry in Typeform”.
+- Conecte sua conta do Typeform e selecione o formulário criado no Passo 1.
+- Teste o gatilho para garantir que o Zapier está recuperando corretamente os dados do formulário.
 
-   ![create_zap](../../assets/create_zap.png)
+![create_zap](../../assets/create_zap.png)
 
 ### 4. **Formatar o Número de Telefone**
 
-   **Nota**: Se o campo de telefone no Typeform for do tipo "phone number", não é necessário realizar a formatação.
+**Nota**: Se o campo de telefone no Typeform for do tipo "phone number", não é necessário realizar a formatação.
 
-   Caso contrário:
-   - Adicione a ação "Formatter" no Zapier para garantir que o número de telefone enviado via Typeform esteja corretamente formatado para o Callbell.
-   - Selecione a ação "Numbers" no Formatter.
-   - Escolha "Format Phone Number" como o tipo de transformação.
-   - Mapeie o campo de número de telefone do Typeform.
-   - Selecione o formato de saída E164.
+Caso contrário:
 
-   ![format_phone_number](../../assets/format_phone_number.png)
+- Adicione a ação "Formatter" no Zapier para garantir que o número de telefone enviado via Typeform esteja corretamente formatado para o Callbell.
+- Selecione a ação "Numbers" no Formatter.
+- Escolha "Format Phone Number" como o tipo de transformação.
+- Mapeie o campo de número de telefone do Typeform.
+- Selecione o formato de saída E164.
+
+![format_phone_number](../../assets/format_phone_number.png)
 
 ### 5. **Enviar o Modelo de Mensagem com Variáveis Personalizadas via Callbell**
 
-   - Adicione a ação "Send Template Message" no Zapier.
-   - Conecte sua conta da Callbell.
-   - Mapeie o campo de número de telefone formatado da etapa anterior no campo "To".
-   - Copie e cole o UUID do modelo de mensagem criado no Passo 2.
-   - Copie e cole o UUID do canal da sua conta Callbell.
-   - Preencha as variáveis do modelo no campo "Template values".
+- Adicione a ação "Send Template Message" no Zapier.
+- Conecte sua conta da Callbell.
+- Mapeie o campo de número de telefone formatado da etapa anterior no campo "To".
+- Copie e cole o UUID do modelo de mensagem criado no Passo 2.
+- Copie e cole o UUID do canal da sua conta Callbell.
+- Preencha as variáveis do modelo no campo "Template values".
 
-   ![send_template_message](../../assets/send_template_message.png)
+![send_template_message](../../assets/send_template_message.png)
 
 ## Notas Finais
 

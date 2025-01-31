@@ -20,9 +20,9 @@ This article explains how to automate lead qualification and communication using
 
 Design your Typeform to collect essential information, such as:
 
-- Name
-- Phone number (mandatory)
-- E-mail address (optional)
+    - Name
+    - Phone number (mandatory)
+    - E-mail address (optional)
 
 ![create_desired_typeform](../../assets/create_desired_typeform.png)
 
@@ -30,9 +30,9 @@ Design your Typeform to collect essential information, such as:
 
 Create the template message you want to send to new leads in Callbell. While designing the template:
 
-- Use custom variables (e.g., `{{variable 1}}`, `{{variable 2}}`) to personalize the message.
-- These variables will be dynamically filled in Zapier using the lead data from Typeform.
-- Learn more about creating templates with variables in Callbell: [Callbell Help Article](https://callbellsupport.zendesk.com/hc/en-us/articles/360007759237-What-are-message-templates-and-what-are-they-for)
+    - Use custom variables (e.g., `{{variable 1}}`, `{{variable 2}}`) to personalize the message.
+    - These variables will be dynamically filled in Zapier using the lead data from Typeform.
+    - Learn more about creating templates with variables in Callbell: [Callbell Help Article](https://callbellsupport.zendesk.com/hc/en-us/articles/360007759237-What-are-message-templates-and-what-are-they-for)
 
 ![prepare_message_template](../../assets/prepare_message_template.png)
 
@@ -47,7 +47,7 @@ Create the template message you want to send to new leads in Callbell. While des
 
 ### 4. Format the Phone Number
 
-> **Note:** If the phone number field in Typeform is of type **"phone number"**, there is no need to perform the number formatting step.
+**Note:** If the phone number field in Typeform is of type **"phone number"**, there is no need to perform the number formatting step.
 
 Add Zapier’s **"Formatter"** action to ensure the phone number submitted via Typeform is properly formatted for Callbell.
 
