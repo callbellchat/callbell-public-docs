@@ -42,5 +42,17 @@
   "sidebar.tutorialSidebar.category.Logic": {
     "message": "Lógica",
     "description": "The label for category Logic in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Zapier Integration": {
+    "message": "Integración Zapier",
+    "description": "The label for category Zapier Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutoriales",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Typeform Integration": {
+  "message": "Integración Typeform",
+  "description": "The label for category Typeform Integration in sidebar tutorialSidebar"
   }
 }
