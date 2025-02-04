@@ -28,7 +28,7 @@ Creates a new custom status.
     "name": "Lunch",
     "createdAt": "2024-12-04 14:12:14 +0100",
     "updatedAt": "2024-12-04 14:12:14 +0100",
-    "emoji": 🍙,
+    "emoji": "🍙",
     "id": "8dbd6f6c-ec09-4b87-a04e-bef1c2ca41db"
   }
 }
