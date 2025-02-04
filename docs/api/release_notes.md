@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 5, 2025
+
+### ✨ What's new
+
+- Added new field `emoji` on [CustomStatus](/api/reference/object_types/custom_status) object type.
+- Added [UserCustomStatus](/api/reference/object_types/user_custom_status) information in [TeamMember](/api/reference/object_types/team_member) object type.
+
 ## January 6, 2025
 
 ### ✨ What's new
