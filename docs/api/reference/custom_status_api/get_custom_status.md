@@ -28,6 +28,7 @@ Get a specific custom status given an `id`.
     "name": "Vacationing",
     "createdAt": "2024-11-22 21:29:43 +0100",
     "updatedAt": "2024-11-22 21:29:43 +0100",
+    "emoji": 🚌,
     "id": "0d6041a2-8b88-49ec-a99b-a88a078a16c1"
   }
 }
