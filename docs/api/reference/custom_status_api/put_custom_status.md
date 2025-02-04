@@ -29,7 +29,6 @@ Updates a specific custom status given an `id`.
 		"emoji": "⭐️",
 		"createdAt": "2024-12-04 14:12:14 +0100",
 		"updatedAt": "2024-12-04 14:31:58 +0100",
-
 		"id": "8dbd6f6c-ec09-4b87-a04e-bef1c2ca41db"
 	}
 }
