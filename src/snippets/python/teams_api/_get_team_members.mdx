@@ -6,10 +6,6 @@ headers = {
     'Content-Type': 'application/json',
 }
 
-params = {
-    'status': 'available',
-}
-
-response = requests.get('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc', params=params, headers=headers)
+response = requests.get('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc/members', headers=headers)
 
 ```

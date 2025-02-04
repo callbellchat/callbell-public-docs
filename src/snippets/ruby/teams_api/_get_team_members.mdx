@@ -1,12 +1,7 @@
 ```ruby
 require 'net/http'
 
-uri = URI('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc')
-params = {
-  :status => 'available',
-}
-uri.query = URI.encode_www_form(params)
-
+uri = URI('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc/members')
 req = Net::HTTP::Get.new(uri)
 req.content_type = 'application/json'
 req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'

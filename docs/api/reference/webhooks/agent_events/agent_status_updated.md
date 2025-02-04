@@ -24,7 +24,13 @@ See [Team Member Object](/api/reference/object_types/team_member)
     "email": "john.doe@gmail.com",
     "name": "John Doe",
     "available": false,
-    "lastUpdatedAt": "2024-02-21T12:02:47Z"
+    "lastUpdatedAt": "2024-02-21T12:02:47Z",
+    "userCustomStatus": {
+				"updatedAt": "2025-02-04T20:21:31Z",
+				"id": "0d6041a2-8b88-49ec-a99b-a88a078a16c1",
+				"name": "Vacationing",
+        "emoji": "🌴"
+    }
   }
 }
 ```

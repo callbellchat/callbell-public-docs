@@ -8,7 +8,7 @@ import java.util.Scanner;
 class Main {
 
 	public static void main(String[] args) throws IOException {
-		URL url = new URL("https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc?status=available");
+		URL url = new URL("https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc/members");
 		HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
 		httpConn.setRequestMethod("GET");
 
