@@ -39,11 +39,21 @@ List all members belonging to the team.
   "users": [
     {
       "email": "john1@gmail.com",
-      "available": true
+      "name": "John One",
+      "available": true,
+      "lastUpdatedAt": "2024-07-17T18:54:49Z",
     },
     {
       "email": "john2@gmail.com",
-      "available": true
+      "name": "John Two",
+      "available": true,
+      "lastUpdatedAt": "2024-07-17T18:54:49Z",
+      "userCustomStatus": {
+				"updatedAt": "2025-02-04T20:21:31Z",
+				"id": "0d6041a2-8b88-49ec-a99b-a88a078a16c1",
+				"name": "Vacationing",
+				"emoji": "🌴"
+			}
     }
   ],
   "meta": {

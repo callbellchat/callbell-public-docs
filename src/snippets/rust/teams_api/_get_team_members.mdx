@@ -11,7 +11,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .redirect(reqwest::redirect::Policy::none())
         .build()
         .unwrap();
-    let res = client.get("https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc?status=available")
+    let res = client.get("https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc/members")
         .headers(headers)
         .send()?
         .text()?;

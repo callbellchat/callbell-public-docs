@@ -1,10 +1,7 @@
 ```js
 import axios from 'axios';
 
-const response = await axios.get('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc', {
-  params: {
-    'status': 'available'
-  },
+const response = await axios.get('https://api.callbell.eu/v1/teams/ad42a09715814e6483b1c5debd6a2dbc/members', {
   headers: {
     'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
     'Content-Type': 'application/json'
