@@ -9,6 +9,10 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Creates a new custom status.
 
+:::info
+Looking to assign a custom status to a user? Use the **[Users API](/api/reference/users_api/put_user_status)**
+:::
+
 ### Example Request
 
 <RequestTabs endpoint='custom_status_api' request="post_custom_statuses"/>
