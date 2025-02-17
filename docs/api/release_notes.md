@@ -6,6 +6,15 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 17, 2025
+
+### ✨ What's new
+- Added [DELETE /users/:uuid/status](/api/reference/users_api/delete_user_status) endpoint to unassign a custom status from a user.
+
+### 🛠️ Changes
+
+- Added the possibility to unassign a custom status from a user by passing `null` as the `custom_status_uuid` parameter on the [Users API](/api/reference/users_api/put_user_status).
+
 ## February 5, 2025
 
 ### ✨ What's new

@@ -6,6 +6,65 @@ sidebar_position: 4
 
 Uma lista de todas as alterações e melhorias que foram introduzidas em nossa API. Use para verificar sempre que novos endpoints forem adicionados ou alterações forem feitas.
 
+## 17 de fevereiro de 2025
+
+### ✨ Novidades
+
+- Adicionado o endpoint [DELETE /users/:uuid/status](/api/reference/users_api/delete_user_status) para cancelar a atribuição de um status personalizado de um usuário.
+
+### 🛠️ Alterações
+
+- Adicionada a possibilidade de cancelar a atribuição de um status personalizado de um usuário passando `null` como o parâmetro `custom_status_uuid` no [Users API] (/api/reference/users_api/put_user_status).
+
+## 5 de fevereiro de 2025
+
+### ✨ Novidades
+
+- Adicionado novo campo `emoji` no tipo de objeto [CustomStatus](/api/reference/object_types/custom_status).
+- Adicionadas informações de [UserCustomStatus](/api/reference/object_types/user_custom_status) no tipo de objeto [TeamMember](/api/reference/object_types/team_member).
+
+## 6 de janeiro de 2025
+
+### ✨ Novidades
+
+- Adicionado novo campo `blocked_at` no tipo de objeto [Contact](/api/reference/object_types/contact).
+- Adicionados novos campos `status`, `category` no tipo de objeto [Template Messages](/api/reference/template_messages_api/get_templates#example-response).
+
+## 5 de dezembro de 2024
+
+### ✨ Novidades
+
+- API de status personalizado](/api/reference/custom_status_api/introduction)
+- Adicionado novo ponto de extremidade para [atualizar o status de um usuário](/docs/api/reference/users_api/put_user_status.md), o que significa sua disponibilidade e/ou seu status personalizado.
+
+## 26 de novembro de 2024
+
+### ✨ Novidades
+
+- Adicionado um novo ponto de extremidade para [criar notas](/docs/api/reference/contacts_api/post_contact_conversation_create_note.md) na conversa associada aos contatos.
+- Evento de webhook [Agent Session Updated](/api/reference/webhooks/agent_events/agent_session_updated.md) para notificar quando um agente faz login ou logout.
+
+## 21 de novembro de 2024
+
+### ✨ Novidades
+
+- [MessageContext](/api/reference/object_types/message_context) e [MessageForward](/api/reference/object_types/message_forward) adicionados como tipos de objeto.
+- O evento [Message Created Webhook](/api/reference/webhooks/message_events/message_created) agora inclui as referências `messageContext` e `messageForward`. Isso é útil para obter informações sobre mensagens de localização e cartões de contato.
+
+## 19 de novembro de 2024
+
+### ✨ Novidades
+
+- [MessageReplyButton](/api/reference/object_types/message_reply_button) e [MessageInteractiveList](/api/reference/object_types/message_interactive_list) adicionados como tipos de objeto.
+- O evento [Message Created Webhook](/api/reference/webhooks/message_events/message_created) agora inclui as referências `messageReplyButton` e `messageInteractiveList`. Isso é útil para ter informações sobre mensagens de localização e cartões de contato.
+
+## November 18, 2024
+
+### ✨ Novidades
+
+- [MessageContactCard](/api/reference/object_types/message_contact_card) e [MessageLocation](/api/reference/object_types/message_location) foram adicionados como tipos de objeto.
+- O evento [Message Created Webhook] (/api/reference/webhooks/message_events/message_created) agora inclui as referências `messageContactCard` e `MessageLocation`. Isso é útil para ter informações sobre mensagens de localização e cartões de contato.
+
 ## 24 de setembro de 2024
 
 ### ✨ Novidades
