@@ -17,13 +17,15 @@ Updates the availability and/or a users' custom status.
 
 ### Optional Parameters
 
-| Parameter            | Type    | Description                                  |
-| :------------------- | :------ | :------------------------------------------- |
-| `available`          | boolean | User is available (`true`) or away (`false`) |
-| `custom_status_uuid` | string  | The `uuid` of a custom status                |
+| Parameter            | Type    | Description                                                        |
+| :------------------- | :------ | :----------------------------------------------------------------- |
+| `available`          | boolean | User is available (`true`) or away (`false`)                       |
+| `custom_status_uuid` | string  | The `uuid` of a custom status. To unassign the status, pass `null` |
 
 :::info
-You can update only the user's availability, only their custom status, or both in the same request.
+- You can update **both** availability and custom status in the **same request**
+- If you want to **unassign the status**, pass `null` as the `custom_status_uuid`
+- Looking on how to create / edit / delete custom statuses? Use the **[Custom Status API](/api/reference/custom_status_api/introduction)**
 :::
 
 :::caution
