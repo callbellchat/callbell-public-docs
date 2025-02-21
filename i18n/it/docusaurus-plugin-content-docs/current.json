@@ -54,5 +54,13 @@
   "sidebar.tutorialSidebar.category.Zapier Integration": {
     "message": "Integrazione Zapier",
     "description": "The label for category Zapier Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Typeform Integration": {
+    "message": "Integrazione Typeform",
+    "description": "The label for category Typeform Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Calendly Integration": {
+    "message": "Integrazione Calendly",
+    "description": "The label for category Calendly Integration in sidebar tutorialSidebar"
   }
 }

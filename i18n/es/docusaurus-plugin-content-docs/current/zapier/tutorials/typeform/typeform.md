@@ -2,7 +2,9 @@
 sidebar_position: 3
 ---
 
-# Integración con Typeform - Automatizar la comunicación con el Lead en Callbell
+# Integración con Typeform
+
+## Automatizar la comunicación con el Lead en Callbell
 
 Simplifica la comunicación con el lead, integrando Callbell y Typeform a través de Zapier. Esta guía te ayudará a configurar un flujo de trabajo automatizado para recopilar datos de leads desde Typeform, formatearlos y enviar un mensaje de plantilla personalizado por WhatsApp a través de Callbell utilizando variables personalizadas.
 
