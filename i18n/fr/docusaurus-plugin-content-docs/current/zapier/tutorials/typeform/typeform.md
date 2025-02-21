@@ -2,7 +2,9 @@
 sidebar_position: 3
 ---
 
-# Intégration Typeform - Automatisez la communication avec les prospects via Callbell
+# Intégration Typeform
+
+## Automatisez la communication avec les prospects via Callbell
 
 Simplifiez la communication avec les prospects en intégrant Typeform et Callbell via Zapier. Ce guide vous aidera à mettre en place un flux de travail automatisé pour collecter les données des prospects depuis Typeform, les formater et envoyer un message de modèle WhatsApp personnalisé via Callbell en utilisant des variables personnalisées.
 

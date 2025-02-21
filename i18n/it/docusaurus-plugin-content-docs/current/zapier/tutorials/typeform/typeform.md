@@ -2,7 +2,9 @@
 sidebar_position: 3
 ---
 
-# Integrazione Typeform - Automatizza la comunicazione con i lead con Callbell
+# Integrazione Typeform
+
+## Automatizza la comunicazione con i lead con Callbell
 
 Questa guida ti aiuterà a configurare un flusso automatizzato per raccogliere i dati dei lead da Typeform, formattarli e inviare un messaggio personalizzato su WhatsApp tramite Callbell utilizzando variabili personalizzate.
 

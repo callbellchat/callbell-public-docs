@@ -70,5 +70,13 @@
   "sidebar.tutorialSidebar.category.Tutorials": {
     "message": "Tutoriels",
     "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Typeform Integration": {
+    "message": "Intégration Typeform",
+    "description": "The label for category Typeform Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Calendly Integration": {
+    "message": "Intégration Calendly",
+    "description": "The label for category Calendly Integration in sidebar tutorialSidebar"
   }
 }
