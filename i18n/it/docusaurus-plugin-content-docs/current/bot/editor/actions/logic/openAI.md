@@ -24,6 +24,10 @@ Ecco alcune spiegazioni su come funziona questa azione e le sue limitazioni:
 
 - È tua responsabilità gestire la risposta, che sia positiva o negativa. Dovrai specificare le variabili per memorizzare la risposta di OpenAI. Poi, spetta a te utilizzare queste variabili successivamente nel bot, ad esempio come condizioni in un blocco di scelta, in messaggi o note.
 
+:::tip
+L’account OpenAI deve contenere almeno 5 dollari di credito per poter funzionare e consentire all’integrazione di essere operativa.
+:::
+
 ## Come utilizzarla
 
 Solo il token e il prompt sono obbligatori.

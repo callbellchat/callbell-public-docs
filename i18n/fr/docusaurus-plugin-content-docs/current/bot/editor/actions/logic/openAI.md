@@ -24,6 +24,10 @@ Voici quelques explications sur le fonctionnement de cette action et ses limitat
 
 - Il est de votre responsabilité de gérer la réponse, qu'elle soit réussie ou non. Vous devrez spécifier des variables pour stocker la réponse OpenAI. Ensuite, c'est à vous d'utiliser ces variables plus tard dans le bot, par exemple, comme conditions dans un bloc de choix, dans des messages ou des notes.
 
+:::tip
+Le compte OpenAI doit contenir au moins 5 dollars de crédit pour fonctionner et permettre à l’intégration d’être opérationnelle.
+:::
+
 ## Comment l'utiliser
 
 Seuls le jeton et le stimulus sont obligatoires.

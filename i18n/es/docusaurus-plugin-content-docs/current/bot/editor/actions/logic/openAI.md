@@ -24,6 +24,10 @@ Aquí hay algunas explicaciones sobre cómo opera esta acción y sus limitacione
 
 - Es su responsabilidad manejar la respuesta, ya sea exitosa o fallida. Deberá especificar variables para almacenar la respuesta de OpenAI. Luego, depende de usted utilizar estas variables más adelante en el bot, por ejemplo, como condiciones en un bloque de opciones, en mensajes o notas.
 
+:::tip
+La cuenta de OpenAI debe tener al menos 5 dólares de crédito para funcionar y permitir que la integración esté operativa.
+:::
+
 ## Cómo usarlo
 
 Solo el token y el estímulo son obligatorios.

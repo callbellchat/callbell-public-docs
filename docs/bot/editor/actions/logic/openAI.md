@@ -22,6 +22,10 @@ Here are some explanations of how this action operates and its limitations:
 - The bot will continue its flow even if the OpenAI action fails for any reason, such as a timeout.
 - It is your responsibility to handle the response, whether successful or failed. You'll need to specify variables to store the OpenAI answer. Then, it's up to you to utilize these variables later in the bot, for example, as conditions in a choice block, in messages, or notes.
 
+:::tip
+The OpenAI account must have at least $5 in credit to function and allow the integration to be operational.
+:::
+
 ## How to use it
 
 Only the token and the prompt are mandatory.
