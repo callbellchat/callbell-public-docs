@@ -50,5 +50,9 @@
   "sidebar.tutorialSidebar.category.Calendly Integration": {
     "message": "Integração Calendly",
     "description": "The label for category Calendly Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Pipedrive Integration": {
+    "message": "Integração Pipedrive",
+    "description": "The label for category Pipedrive Integration in sidebar tutorialSidebar"
   }
 }
