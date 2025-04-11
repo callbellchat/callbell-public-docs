@@ -20,7 +20,7 @@ You can fix this by whitelisting `wss://centrifugo.callbell.eu/connection/websoc
 connect-src 'self' wss://centrifugo.callbell.eu
 ```
 
-You can add this line to your website's CSP by adding the following line to your website's CSP:
+You can add this line to your website's CSP by adding the following line to your website's CSP or by returning the [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) header from your server response:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="connect-src 'self' wss://centrifugo.callbell.eu">
