@@ -91,7 +91,7 @@ const config = {
             activeBasePath: "/api/reference/",
           },
           {
-            href: "https://headwayapp.co/callbell-changelog",
+            href: "https://feedback.callbell.eu/changelog ",
             position: "left",
             label: "Product Updates",
           },
