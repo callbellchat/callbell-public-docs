@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Websocket Connection Refused
 
-Once the webchat is installed successfully, depending on your website configuration, you might get a websocket connection error in the browser console like the one below:
+Once the webchat is installed successfully, depending on your website configuration, you might get a WebSocket connection error in the browser console like the one below:
 
 ```
 Refused to connect to 'wss://centrifugo.callbell.eu/connection/websocket' because it violates the following Content Security Policy directive: "default-src https: localhost:* 'unsafe-inline' 'unsafe-eval'". Note that 'connect-src' was not explicitly set, so 'default-src' is used as a fallback.
