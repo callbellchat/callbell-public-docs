@@ -42,3 +42,7 @@ After clicking "Create new webhook" you should receive a success notification. Y
 :::caution
 Callbell doesn't support `localhost` as webhook URL. If you need to debug a local application use instead a service to expose your local dev environment like [Ngrok](https://ngrok.com).
 :::
+
+After subscribing to an event, Callbell will perform connection checks periodically.  You can answer it back with a status code of `200` and a body with `{"status": "ok"}`.
+
+If the endpoint does not respond for 10 minutes, we will send the account admin an email. If it does not respond for 6 hours, the webhook subscription will be disabled.
