@@ -6,7 +6,13 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
-## February 17, 2025
+## 20 mai 2025
+
+### ✨ Nouveautés
+
+- Ajout d'un point de terminaison [DELETE /messages/:uuid](/api/reference/messages_api/delete_message) pour supprimer un message par son UUID ou ID externe.
+
+## 17 février 2025
 
 ### ✨ Nouveautés
 - Ajout d'un point de terminaison [DELETE /users/:uuid/status](/api/reference/users_api/delete_user_status) pour annuler l'attribution d'un statut personnalisé à un utilisateur.
@@ -15,28 +21,28 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 - Ajout de la possibilité d'annuler un statut personnalisé d'un utilisateur en passant `null` comme paramètre `custom_status_uuid` sur l'[API Utilisateurs](/api/reference/users_api/put_user_status).
 
-## February 5, 2025
+## 5 février 2025
 
 ### ✨ Nouveautés
 
 - Ajout d'un nouveau champ `emoji` sur le type d'objet [CustomStatus](/api/reference/object_types/custom_status).
 - Ajout d'informations sur [UserCustomStatus](/api/reference/object_types/user_custom_status) dans le type d'objet [TeamMember](/api/reference/object_types/team_member).
 
-## January 6, 2025
+## 6 janvier 2025
 
 ### ✨ Nouveautés
 
 - Ajout d'un nouveau champ `blocked_at` sur le type d'objet [Contact](/api/reference/object_types/contact).
 - Ajout de nouveaux champs `status`, `category` sur le type d'objet [Template Messages](/api/reference/template_messages_api/get_templates#example-response).
 
-## December 5, 2024
+## 5 décembre 2024
 
 ### ✨ Nouveautés
 
 - API de statut personnalisé](/api/reference/custom_status_api/introduction)
 - Ajout d'un nouveau point de terminaison pour [mettre à jour le statut d'un utilisateur](/docs/api/reference/users_api/put_user_status.md), ce qui signifie leur disponibilité et/ou leur statut personnalisé.
 
-## November 26, 2024
+## 26 novembre 2024
 
 ### ✨ Nouveautés
 
@@ -50,14 +56,14 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 - [MessageContext](/api/reference/object_types/message_context) et [MessageForward](/api/reference/object_types/message_forward) ajoutés en tant que types d'objets.
 - L'événement Webhook [Message Created](/api/reference/webhooks/message_events/message_created) inclut maintenant les références `messageContext` et `messageForward`. Ceci est utile pour avoir des informations sur les messages de localisation et les cartes de contact.
 
-## November 19, 2024
+## 19 novembre 2024
 
 ### ✨ Nouveautés
 
 - [MessageReplyButton](/api/reference/object_types/message_reply_button) et [MessageInteractiveList](/api/reference/object_types/message_interactive_list) ajoutés en tant que types d'objets.
 - L'événement Webhook [Message Created Webhook event](/api/reference/webhooks/message_events/message_created) inclut maintenant les références `messageReplyButton` et `messageInteractiveList`. Ceci est utile pour avoir des informations sur les messages de localisation et les cartes de contact.
 
-## November 18, 2024
+## 18 novembre 2024
 
 ### ✨ Nouveautés
 
@@ -84,7 +90,7 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 - Ajout d'extraits de code pour **C#**, **Java** et **Rust**.
 
-## 15 Mai, 2024
+## 15 mai 2024
 
 ### ✨ Nouveautés
 

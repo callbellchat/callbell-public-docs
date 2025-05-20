@@ -1,0 +1,15 @@
+```js
+import axios from 'axios';
+
+const response = await axios.delete('https://api.callbell.eu/v1/messages', {
+  headers: {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json'
+  },
+  // data: '{\n    "uuid": "1da07a20eb0d46728f89d234a727607a"\n  }',
+  data: {
+    'uuid': '1da07a20eb0d46728f89d234a727607a'
+  }
+});
+
+```

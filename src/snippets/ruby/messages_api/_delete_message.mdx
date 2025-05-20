@@ -1,0 +1,23 @@
+```ruby
+require 'net/http'
+require 'json'
+
+uri = URI('https://api.callbell.eu/v1/messages')
+req = Net::HTTP::Delete.new(uri)
+req.content_type = 'application/json'
+req['Authorization'] = 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM'
+
+# The object won't be serialized exactly like this
+# req.body = "{\n    \"uuid\": \"1da07a20eb0d46728f89d234a727607a\"\n  }"
+req.body = {
+  'uuid' => '1da07a20eb0d46728f89d234a727607a'
+}.to_json
+
+req_options = {
+  use_ssl: uri.scheme == 'https'
+}
+res = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  http.request(req)
+end
+
+```
