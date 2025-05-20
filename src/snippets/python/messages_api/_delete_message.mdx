@@ -1,0 +1,20 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+json_data = {
+    'uuid': '1da07a20eb0d46728f89d234a727607a',
+}
+
+response = requests.delete('https://api.callbell.eu/v1/messages', headers=headers, json=json_data)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{\n    "uuid": "1da07a20eb0d46728f89d234a727607a"\n  }'
+#response = requests.delete('https://api.callbell.eu/v1/messages', headers=headers, data=data)
+
+```

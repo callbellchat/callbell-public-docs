@@ -1,0 +1,17 @@
+```php
+<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://api.callbell.eu/v1/messages');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'DELETE');
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type: application/json',
+]);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "{\n    \"uuid\": \"1da07a20eb0d46728f89d234a727607a\"\n  }");
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+```

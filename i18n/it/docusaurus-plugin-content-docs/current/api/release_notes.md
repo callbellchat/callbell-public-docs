@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 20 maggio 2025
+
+### ✨ Novità
+
+- Aggiunto l'endpoint [DELETE /messages/:uuid](/api/reference/messages_api/delete_message) per eliminare un messaggio per UUID o ID esterno.
+
 ## 17 febbraio 2025
 
 ### ✨ Novità
