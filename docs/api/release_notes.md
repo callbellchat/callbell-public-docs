@@ -6,15 +6,19 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
-## May 20, 2025
+## December 22, 2025
 
 ### ✨ What's new
+
+- Added [GET /funnels endpoint](/docs/api/reference/funnels_api/get_funnels) to list all account's created funnels.
+- Added [PUT /:id/conversation/update_funnel](/api/reference/contacts_api/delete_message) that allows to change a conversation funnel
+
+## May 20, 2025
 
 - Added [DELETE /messages/:uuid](/api/reference/messages_api/delete_message) endpoint to delete a message by its UUID or external ID.
 
 ## February 17, 2025
 
-### ✨ What's new
 - Added [DELETE /users/:uuid/status](/api/reference/users_api/delete_user_status) endpoint to unassign a custom status from a user.
 
 ### 🛠️ Changes
