@@ -10,8 +10,8 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### ✨ What's new
 
-- Added [GET /funnels endpoint](/docs/api/reference/funnels_api/get_funnels) to list all account's created funnels.
-- Added [PUT /:id/conversation/update_funnel](/api/reference/contacts_api/delete_message) that allows to change a conversation funnel
+- Added [GET /funnels](/api/reference/funnels_api/get_funnels) endpoint to list all account's created funnels.
+- Added [PUT /:id/conversation/update_funnel](/api/reference/contacts_api/put_contacts_conversation_update_funnel) that allows to change a conversation funnel
 
 ## May 20, 2025
 
