@@ -15,13 +15,13 @@ List all created funnels in your account.
 
 ### Response
 
-| Parameter | Type                                             | Description       |
-| :-------- | :----------------------------------------------- | :---------------- |
-| `funnels` | [Funnels[]](/api/reference/object_types/funnels) | A list of funnels |
+| Parameter | Type                                            | Description       |
+| :-------- | :---------------------------------------------- | :---------------- |
+| `funnels` | [Funnels[]](/api/reference/object_types/funnel) | A list of funnels |
 
 ### Example Response
 
-````json title=response.json
+```json title=response.json
 {
  "funnels": [
   {
@@ -53,5 +53,4 @@ List all created funnels in your account.
    "uuid": "8c51dfc8-667a-4f7f-9c83-ae065524483a"
   }
 }
-```json title=response.json
-````
+```

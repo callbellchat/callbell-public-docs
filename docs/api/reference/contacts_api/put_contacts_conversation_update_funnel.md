@@ -5,7 +5,7 @@ sidebar_position: 7
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
-# POST /contacts/:uuid/conversation/update_funnel
+# PUT /contacts/:uuid/conversation/update_funnel
 
 Updates the funnel of a conversation.
 
