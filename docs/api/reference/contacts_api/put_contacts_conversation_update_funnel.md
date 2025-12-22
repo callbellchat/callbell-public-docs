@@ -1,6 +1,6 @@
 ---
 title: PUT /contacts/:uuid/conversation/update_funnel
-sidebar_position: 7
+sidebar_position: 12
 ---
 
 import RequestTabs from "@site/src/components/Requests/RequestTabs"
