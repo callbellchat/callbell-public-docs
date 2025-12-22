@@ -1,5 +1,5 @@
 ---
-title: POST /contacts/:uuid/conversation/update_funnel
+title: PUT /contacts/:uuid/conversation/update_funnel
 sidebar_position: 7
 ---
 
