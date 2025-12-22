@@ -23,6 +23,7 @@ const endpoints = [
   "auth_api",
   "contacts_api",
   "custom_status_api",
+  "funnels_api",
   "messages_api",
   "templates_api",
   "webhooks_api",
@@ -64,7 +65,7 @@ const readFiles = () => {
 const translateSnippet = (snippet, endpoint, fileName) => {
   const methods = translationMethods(snippet);
   languages.map((lang) =>
-    generateSnippet(lang, methods[lang](), endpoint, fileName)
+    generateSnippet(lang, methods[lang](), endpoint, fileName),
   );
 };
 
@@ -86,7 +87,7 @@ const generateSnippet = (lang, script, endpoint, fileName) => {
     "\n",
     script,
     "\n",
-    "```"
+    "```",
   );
 
   generateFile(formatSnippet, lang, endpoint, fileName);
@@ -98,7 +99,7 @@ const readFile = async (file, endpoint, fileName) => {
     translateSnippet(
       contents.replace("```bash", "").replace("```", ""),
       endpoint,
-      fileName
+      fileName,
     );
   } catch (err) {
     console.error(err.message);
