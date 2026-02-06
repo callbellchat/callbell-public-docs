@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 6 février 2026
+
+### 🛠️ Changements
+
+- Le point de terminaison [GET /channels](/api/reference/channels_api/get_channels) supporte désormais le paramètre `active` pour filtrer les canaux en fonction de leur statut actif.
+
 ## 20 mai 2025
 
 ### ✨ Nouveautés
