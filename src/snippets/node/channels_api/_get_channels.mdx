@@ -4,6 +4,7 @@ import axios from 'axios';
 const response = await axios.get('https://api.callbell.eu/v1/channels', {
   params: {
     'type': 'whatsapp',
+    'active': 'true',
     'page': '1'
   },
   headers: {
