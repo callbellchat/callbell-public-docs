@@ -11,7 +11,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .redirect(reqwest::redirect::Policy::none())
         .build()
         .unwrap();
-    let res = client.get("https://api.callbell.eu/v1/channels?type=whatsapp&page=1")
+    let res = client.get("https://api.callbell.eu/v1/channels?type=whatsapp&active=true&page=1")
         .headers(headers)
         .send()?
         .text()?;

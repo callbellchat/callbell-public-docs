@@ -4,6 +4,7 @@ require 'net/http'
 uri = URI('https://api.callbell.eu/v1/channels')
 params = {
   :type => 'whatsapp',
+  :active => 'true',
   :page => '1',
 }
 uri.query = URI.encode_www_form(params)

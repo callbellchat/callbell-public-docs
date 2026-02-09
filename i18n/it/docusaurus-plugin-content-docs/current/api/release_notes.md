@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 6 febbraio 2026
+
+### 🛠️ Modifiche
+
+- L'endpoint [GET /channels](/api/reference/channels_api/get_channels) ora supporta il parametro `active` per filtrare i canali in base al loro stato attivo.
+
 ## 20 maggio 2025
 
 ### ✨ Novità
