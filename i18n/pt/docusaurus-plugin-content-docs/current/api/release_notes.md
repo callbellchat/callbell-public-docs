@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Uma lista de todas as alterações e melhorias que foram introduzidas em nossa API. Use para verificar sempre que novos endpoints forem adicionados ou alterações forem feitas.
 
+## 10 de fevereiro de 2026
+
+### ✨ Novidades
+
+- Adicionado o endpoint [GET /plan](/api/reference/plan_api/get_plan) para obter os detalhes do plano da conta atual, incluindo os usuários ativos e a divisão de equipes.
+
 ## 6 de fevereiro de 2026
 
 ### 🛠️ Alterações
