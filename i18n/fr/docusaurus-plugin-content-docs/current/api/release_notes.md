@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Une liste de tous les changements et améliorations qui ont été introduits dans notre API. Utilisez-la pour vérifier si de nouveaux points finaux sont ajoutés ou si des modifications sont apportées.
 
+## 10 février 2026
+
+### ✨ Nouveautés
+
+- Ajout du point de terminaison [GET /plan](/api/reference/plan_api/get_plan) pour récupérer les détails du plan du compte actuel, y compris les utilisateurs actifs et la répartition des équipes.
+
 ## 6 février 2026
 
 ### 🛠️ Changements
