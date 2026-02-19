@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## February 19, 2026
+
+### ✨ What's new
+
+- Added closing reason field to `conversation_closed` webhook event.
+
 ## February 10, 2026
 
 ### ✨ What's new

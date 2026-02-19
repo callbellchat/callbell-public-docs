@@ -32,8 +32,10 @@ See [Conversation Object](/api/reference/object_types/conversation)
       "createdAt": "2022-10-12T15:57:16Z",
       "phoneNumber": "331122334455"
     },
+    "closingReason": "issue_resolved",
     "createdAt": "2023-11-20T17:14:22Z",
     "closedAt": "2023-11-20T17:14:22Z"
   }
 }
 ```
+
