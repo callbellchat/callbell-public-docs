@@ -13,7 +13,7 @@ import csatLogs from './assets/csat_logs.png'
 The **Send CSAT Survey** action allows you to send a customer satisfaction message and manage the flow according to the answer.
 
 :::info
-This action is not available for **QR** or **Twilio**  channels.
+This action is not available for **QR** or **Twilio** channels.
 :::
 
 ## How to use it
@@ -24,8 +24,9 @@ Place this action in the part of the flow that is most suitable to have the surv
 
 You will be asked to fill the CSAT question for your survey and the possible answers that will be categorized as "Promoter", "Neutral" or "Detractor". The possible answers will be sent as buttons for the customer to click and choose.
 You can also choose whether to have a scheduled fallback or not. This means that:
- - If enabled, after 23 hours the bot flow will continue and the user will not be able to anser the survey anymore;
- - If disabled, the bot flow will continue only if the user answers the the survey (with a valid answer or not).
+
+- If enabled, after 23 hours the bot flow will continue and the user will not be able to anser the survey anymore;
+- If disabled, the bot flow will continue only if the user answers the the survey (with a valid answer or not).
 
 <img src={csatBranches} width={180} />
 
