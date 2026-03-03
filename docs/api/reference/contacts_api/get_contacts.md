@@ -16,7 +16,8 @@ List all contacts belonging to the account. A filter can be specified in order t
 | `page`      | Integer  | The page of contacts. If not specified it will default to page 1.                  |
 | `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
-| `team_uuid` | string   | The uuid of the team.                                                              |
+| `team_uuid`           | string   | The uuid of the team.                                                              |
+| `include_field_types` | boolean  | When `true`, the response includes `customFieldsMetadata` with value, type and options for each custom field. |
 
 ### Example Request
 
@@ -70,6 +71,29 @@ List all contacts belonging to the account. A filter can be specified in order t
       ],
       "customFields":{
         "Stripe link": "https://stripe.com/contacts/cus124124153"
+      }
+    }
+  ]
+}
+```
+
+### Example Response (with `include_field_types=true`)
+
+```json title=response.json
+{
+  "contacts": [
+    {
+      "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
+      "name": "John Doe",
+      "customFields": {
+        "Address": "Oxford Street 123",
+        "Join Date": "2024-01-15",
+        "Preferences": "[\"Newsletter\", \"Promotions\"]"
+      },
+      "customFieldsMetadata": {
+        "Address": { "value": "Oxford Street 123", "type": "text" },
+        "Join Date": { "value": "2024-01-15", "type": "date" },
+        "Preferences": { "value": ["Newsletter", "Promotions"], "type": "checkbox", "options": ["Newsletter", "Promotions", "Updates"] }
       }
     }
   ]

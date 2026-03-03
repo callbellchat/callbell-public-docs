@@ -22,7 +22,7 @@ Creates a new contact.
 | Parameter       | Type     | Description                                                                                             |
 | :-------------- | :------- | :------------------------------------------------------------------------------------------------------ |
 | `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)                                    |
-| `custom_fields` | String{} | An object with the custom fields (e.g. `{'Billing Address': 'Main Street 1'}`)                          |
+| `custom_fields` | String{} \| Object | An object with the custom fields. Values can be strings or arrays depending on the field type (see below). |
 | `assigned_user` | String   | Email of the user that you want to assign to a contact                                                  |
 | `team_uuid`     | String   | UUID of the team that you want to assign to a contact                                                   |
 | `channel_uuid`  | String   | The message will be sent from this channel (when omitted, it will use the default main channel)         |
@@ -37,7 +37,34 @@ If you have a bot enabled, the default status is `bot_start` meaning that the bo
 :::caution
 When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
 
+For dropdown and checkbox custom fields, you must also configure the available options when creating the field. These options are displayed in the dashboard and enforced during validation.
+
 Same applies for `assigned_user` and `team_uuid`: either needs to exists in your account.
+:::
+
+:::info
+Custom field values are validated based on their field type. Invalid values will return a validation error. Here are the expected formats per type:
+
+| Type       | Value format | Example                                            |
+| :--------- | :----------- | :------------------------------------------------- |
+| `text`     | string       | `"Main Street 1"`                                  |
+| `email`    | string       | `"user@example.com"`                               |
+| `number`   | string       | `"42"`                                             |
+| `date`     | string       | `"2026-03-03"`                                     |
+| `dropdown` | string       | `"Active"` (must match one of the available options)|
+| `checkbox` | string[]     | `["Dark Mode", "Notifications"]` (must match available options) |
+
+Example:
+```json
+{
+  "custom_fields": {
+    "Billing Address": "Main Street 1",
+    "Work Email": "user@example.com",
+    "Status": "Active",
+    "Features": ["Dark Mode", "Notifications"]
+  }
+}
+```
 :::
 
 ### Example Request
