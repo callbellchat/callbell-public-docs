@@ -20,6 +20,7 @@ sidebar_position: 1
 | `conversationHref` | string                  | Link to dashboard conversation                          |
 | `tags`             | string                  | List of associated tags                                 |
 | `assignedUser`     | string                  | Email of the user that the contact is assigned to       |
-| `customFields`     | string                  | List of associated custom fields                        |
-| `team`             | [Team](./team.md)       | Team inbox currently associated to the contact          |
-| `channel`          | [Channel](./channel.md) | Channel currently associated to the contact             |
+| `customFields`         | string                  | List of associated custom fields                                                                    |
+| `customFieldsMetadata` | object                  | Custom fields with value, type and options. Only returned when `include_field_types=true` is passed. |
+| `team`                 | [Team](./team.md)       | Team inbox currently associated to the contact                                                      |
+| `channel`              | [Channel](./channel.md) | Channel currently associated to the contact                                                         |

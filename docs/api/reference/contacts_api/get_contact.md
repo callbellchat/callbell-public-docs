@@ -15,6 +15,12 @@ Get a specific contact given a `uuid`.
 | :-------- | :----- | :---------------------- |
 | `uuid`    | string | The uuid of the contact |
 
+### Optional Parameters
+
+| Parameter             | Type    | Description                                                                                                   |
+| :-------------------- | :------ | :------------------------------------------------------------------------------------------------------------ |
+| `include_field_types` | boolean | When `true`, the response includes `customFieldsMetadata` with value, type and options for each custom field. |
+
 ### Example Request
 
 <RequestTabs endpoint='contacts_api' request="get_contact"/>
@@ -45,6 +51,29 @@ Get a specific contact given a `uuid`.
         "Address": "Oxford Street 123",
         "Billing Address": "Oxford Street 123",
         "VAT": "ABC123DCE456"
+      }
+    }
+  ]
+}
+```
+
+### Example Response (with `include_field_types=true`)
+
+```json title=response.json
+{
+  "contact": [
+    {
+      "uuid": "414a6d692bd645ed803f2e7ce360d4c8",
+      "name": "John Doe",
+      "customFields": {
+        "Address": "Oxford Street 123",
+        "Birth Date": "1990-05-15",
+        "Features": "[\"Dark Mode\", \"Notifications\"]"
+      },
+      "customFieldsMetadata": {
+        "Address": { "value": "Oxford Street 123", "type": "text" },
+        "Birth Date": { "value": "1990-05-15", "type": "date" },
+        "Features": { "value": ["Dark Mode", "Notifications"], "type": "checkbox", "options": ["Dark Mode", "Notifications", "Analytics"] }
       }
     }
   ]

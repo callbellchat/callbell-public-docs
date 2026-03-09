@@ -6,6 +6,13 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## March 3, 2026
+
+### ✨ What's new
+
+- Added `include_field_types` query parameter to [GET /contacts](/api/reference/contacts_api/get_contacts) and [GET /contacts/:uuid](/api/reference/contacts_api/get_contact). When set to `true`, the response includes a `customFieldsMetadata` attribute with the typed value, field type, and available options (for dropdown and checkbox fields) for each custom field.
+- Custom field values are now validated based on their field type when [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) contacts. Supported types: `text`, `email`, `number`, `date`, `dropdown`, `checkbox`.
+
 ## February 19, 2026
 
 ### ✨ What's new
