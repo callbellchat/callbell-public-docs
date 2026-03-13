@@ -8,9 +8,9 @@ import csatBranches from './assets/csat_branches.png'
 import csatAnalytics from './assets/csat_analytics.png'
 import csatLogs from './assets/csat_logs.png'
 
-# Send CSAT Survey
+# CSAT Flow
 
-The **Send CSAT Survey** action allows you to send a customer satisfaction message and manage the flow according to the answer.
+The **CSAT flow** action allows you to send a customer satisfaction message and manage the flow according to the answer.
 
 :::info
 This action is not available for **QR** or **Twilio** channels.
@@ -38,6 +38,7 @@ The user's reply will be stored in a variable called "Last CSAT Answer" (it will
 If the user does not choose any of the valid buttons and send a random text, or does not reply at all, you will be able to know by checking the value stored in "Last CSAT Answer".
 
 ## Analytics
+
 At last, you will be able to see the results of your CSAT survey in the analytics section of the Callbell app (performance tab), as well as the response logs.
 
 <img src={csatAnalytics} width={800} />
