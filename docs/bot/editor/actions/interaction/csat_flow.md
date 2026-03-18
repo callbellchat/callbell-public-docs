@@ -12,7 +12,7 @@ import csatLogs from './assets/csat_logs.png'
 
 The **CSAT flow** action allows you to send a customer satisfaction message and manage the flow according to the answer.
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/BSrG9M4MAkI" title="Callbell - How to add a CSAT action in the bot flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/SH2gTVc4YLg?si=Z7GG8g6mVac3bBTO" title="Callbell - How to create a loyalty survey on Whatsapp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 :::info
 This action is not available for **QR** or **Twilio** channels.

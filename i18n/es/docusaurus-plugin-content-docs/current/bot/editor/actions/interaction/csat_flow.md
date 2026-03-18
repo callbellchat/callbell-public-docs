@@ -1,36 +1,48 @@
-# CSAT Flow
+---
+sidebar_position: 1
+---
 
-The **CSAT flow** action allows you to send a customer satisfaction message and manage the flow according to the answer.
+import csatActionPanel from './assets/csat_action_panel.png'
+import lastCsatAnswer from './assets/last_csat_answer.png'
+import csatBranches from './assets/csat_branches.png'
+import csatAnalytics from './assets/csat_analytics.png'
+import csatLogs from './assets/csat_logs.png'
 
+# Flujo CSAT
+
+La acción de flujo CSAT te permite enviar un mensaje de satisfacción del cliente y gestionar el flujo según la respuesta.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/CHR2DUkPD9c?si=r9WhkeASkp5ob0OL" title="Encuesta de Fidelización para WhatsApp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 :::info
-This action is not available for **QR** or **Twilio** channels.
+Esta acción no está disponible para los canales QR o Twilio.
 :::
 
-## How to use it
+Cómo usarlo
 
-Place this action in the part of the flow that is most suitable to have the survey triggered.
+Coloca esta acción en la parte del flujo que sea más adecuada para activar la encuesta.
 
 <img src={csatActionPanel} width={400} />
 
-You will be asked to fill the CSAT question for your survey and the possible answers that will be categorized as "Promoter", "Neutral" or "Detractor". The possible answers will be sent as buttons for the customer to click and choose.
-You can also choose whether to have a scheduled fallback or not. This means that:
+Se te pedirá que completes la pregunta de CSAT para tu encuesta y las posibles respuestas que serán categorizadas como "Promotor", "Neutral" o "Detractor". Las posibles respuestas se enviarán como botones para que el cliente haga clic y elija.
 
-- If enabled, after 23 hours the bot flow will continue and the user will not be able to anser the survey anymore;
-- If disabled, the bot flow will continue only if the user answers the the survey (with a valid answer or not).
+También puedes elegir si deseas tener un fallback programado o no. Esto significa que:
+
+Si está habilitado, después de 23 horas el flujo del bot continuará y el usuario ya no podrá responder la encuesta;
+
+Si está deshabilitado, el flujo del bot continuará solo si el usuario responde la encuesta (con una respuesta válida o no).
 
 <img src={csatBranches} width={500} />
 
-This is how the bot flow will look like once the action is added successfully.
+Así es como se verá el flujo del bot una vez que la acción se haya agregado correctamente.
 
 <img src={lastCsatAnswer} width={150} />
 
-The user's reply will be stored in a variable called "Last CSAT Answer" (it will vary according to your set up language).
-If the user does not choose any of the valid buttons and send a random text, or does not reply at all, you will be able to know by checking the value stored in "Last CSAT Answer".
+La respuesta del usuario se almacenará en una variable llamada "Last CSAT Answer" (variará según el idioma configurado).
+Si el usuario no selecciona ninguno de los botones válidos y envía un texto aleatorio, o no responde en absoluto, podrás saberlo revisando el valor almacenado en "Last CSAT Answer".
 
-## Analytics
+Analítica
 
-At last, you will be able to see the results of your CSAT survey in the analytics section of the Callbell app (performance tab), as well as the response logs.
+Por último, podrás ver los resultados de tu encuesta CSAT en la sección de analítica de la aplicación Callbell (pestaña de rendimiento), así como los registros de respuestas.
 
-<img src={csatAnalytics} width={800} />
-<br/>
-<img src={csatLogs} width={800} />
+<img src={csatAnalytics} width={800} /> <br/> <img src={csatLogs} width={800} />
+

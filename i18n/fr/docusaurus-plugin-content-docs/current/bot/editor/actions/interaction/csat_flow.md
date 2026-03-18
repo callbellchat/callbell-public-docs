@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 import csatActionPanel from './assets/csat_action_panel.png'
 import lastCsatAnswer from './assets/last_csat_answer.png'
 import csatBranches from './assets/csat_branches.png'
@@ -7,6 +11,8 @@ import csatLogs from './assets/csat_logs.png'
 # CSAT Flow
 
 L'action du **flux de CSAT** vous permet d'envoyer un message de satisfaction client et de gérer le flux en fonction de la réponse.
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/itjJWznhbww?si=kc-N3r5quKm7Pr5D" title="WhatsApp + Sondage de Fidélisation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 :::info
 Cette action n'est pas disponible pour les canaux **QR** ou **Twilio**.
