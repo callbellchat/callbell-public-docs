@@ -1,18 +1,6 @@
----
-sidebar_position: 1
----
-
-import csatActionPanel from './assets/csat_action_panel.png'
-import lastCsatAnswer from './assets/last_csat_answer.png'
-import csatBranches from './assets/csat_branches.png'
-import csatAnalytics from './assets/csat_analytics.png'
-import csatLogs from './assets/csat_logs.png'
-
 # CSAT Flow
 
 The **CSAT flow** action allows you to send a customer satisfaction message and manage the flow according to the answer.
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/BSrG9M4MAkI" title="Callbell - How to add a CSAT action in the bot flow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 :::info
 This action is not available for **QR** or **Twilio** channels.
