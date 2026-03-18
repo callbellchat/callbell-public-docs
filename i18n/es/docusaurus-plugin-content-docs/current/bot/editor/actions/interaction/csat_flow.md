@@ -13,6 +13,7 @@ import csatLogs from './assets/csat_logs.png'
 La acción de flujo CSAT te permite enviar un mensaje de satisfacción del cliente y gestionar el flujo según la respuesta.
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/CHR2DUkPD9c?si=r9WhkeASkp5ob0OL" title="Encuesta de Fidelización para WhatsApp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :::info
 Esta acción no está disponible para los canales QR o Twilio.
 :::
@@ -45,4 +46,3 @@ Analítica
 Por último, podrás ver los resultados de tu encuesta CSAT en la sección de analítica de la aplicación Callbell (pestaña de rendimiento), así como los registros de respuestas.
 
 <img src={csatAnalytics} width={800} /> <br/> <img src={csatLogs} width={800} />
-

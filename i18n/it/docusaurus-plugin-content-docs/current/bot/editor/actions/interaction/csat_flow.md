@@ -13,6 +13,7 @@ import csatLogs from './assets/csat_logs.png'
 L'azione **Flusso CSAT** ti permette di inviare un messaggio di soddisfazione del cliente e gestire il flusso in base alla risposta.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EJh1prZJg1Q?si=NFIcdD3UIQTylKMZ" title="Fidelizza i Tuoi Clienti su WhatsApp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :::info
 Questa azione non è disponibile per i canali **QR** o **Twilio**.
 :::

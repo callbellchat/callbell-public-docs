@@ -13,6 +13,7 @@ import csatLogs from './assets/csat_logs.png'
 A ação de **fluxo de CSAT** permite que você envie uma mensagem de satisfação do cliente e gerencie o fluxo de acordo com a resposta.
 
 <iframe width="100%" height="500" src="https://www.youtube.com/embed/imobkOhILNg?si=3NFEpvk1FRO-9H-U" title="Pesquisa de Fidelização pelo WhatsApp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 :::info
 Esta ação não está disponível para canais **QR** ou **Twilio**.
 :::
@@ -45,4 +46,3 @@ Por fim, você poderá ver os resultados de sua pesquisa de CSAT na seção de a
 <img src={csatAnalytics} width={800} />
 <br/>
 <img src={csatLogs} width={800} />
-
