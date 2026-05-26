@@ -1,3 +1,4 @@
+require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const deepl = require("deepl-node");
@@ -9,7 +10,7 @@ const OpenAI = require("openai");
 // const translator = new deepl.Translator(authKey);
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEYs,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const SYSTEM_MESSAGE = `
@@ -82,7 +83,7 @@ async function openAITranslate({ text, sourceLanguage, targetLanguage }) {
         content: `${DEEPL_LANGUAGE_MAPPING[targetLanguage]}\n${text}`,
       },
     ],
-    model: "gpt-3.5-turbo-16k",
+    model: "gpt-5",
   });
 
   return completion.choices[0].message.content;
