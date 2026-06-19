@@ -13,14 +13,19 @@ Creates a new contact.
 
 | Parameter    | Type   | Description                                                   |
 | :----------- | :----- | :------------------------------------------------------------ |
-| `identifier` | String | The identifier of the contact (e.g. phone number in WhatsApp) |
 | `source`     | Source | The source of the contact (e.g. `whatsapp`)                   |
 | `name`       | String | The name of the contact                                       |
+
+:::info
+Either `identifier` or `bsuid` must be provided. When both are provided, `identifier` (phone number) takes precedence as the conversation identifier.
+:::
 
 ### Optional Parameters
 
 | Parameter       | Type     | Description                                                                                             |
 | :-------------- | :------- | :------------------------------------------------------------------------------------------------------ |
+| `identifier`    | String   | The phone number of the contact. Required if `bsuid` is not provided.                                   |
+| `bsuid`         | String   | The WhatsApp Business Suite User ID. Required if `identifier` is not provided. Requires `channel_uuid` pointing to a WhatsApp Cloud API channel. |
 | `tags`          | String[] | A list of comma-separated values (e.g `['Call back', 'Interested']`)                                    |
 | `custom_fields` | String{} \| Object | An object with the custom fields. Values can be strings or arrays depending on the field type (see below). |
 | `assigned_user` | String   | Email of the user that you want to assign to a contact                                                  |
