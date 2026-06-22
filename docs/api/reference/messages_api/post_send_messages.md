@@ -14,16 +14,21 @@ After 24h without a reply from the customer, it is not possible to send regular 
 
 | Parameter         | Type           | Description                                |
 | :---------------- | :------------- | :----------------------------------------- |
-| `to`              | String         | Phone number or platform identifier        |
 | `from`            | String         | Channel identifier (e.g. `whatsapp`)       |
 | `type`            | MessageType    | Type of message to be sent                 |
 | `content`         | MessageContent | Content of the message                     |
 | `channel_uuid`    | String         | The message will be sent from this channel |
 
+:::info
+Either `to` or `bsuid` must be provided. When both are provided, `to` (phone number) takes precedence as the recipient identifier.
+:::
+
 ### Optional Parameters
 
 | Parameter         | Type    | Description                                                                                     |
 | :---------------- | :------ | :---------------------------------------------------------------------------------------------- |
+| `to`              | String  | Phone number or platform identifier. Required if `bsuid` is not provided.                       |
+| `bsuid`           | String  | WhatsApp Business Suite User ID. Required if `to` is not provided.                              |
 | `template_uuid`   | String  | Unique identifier of the template message                                                       |
 | `optin_contact`   | Boolean | Confirmation that the contact has opted-in for receiving messages                               |
 | `template_values` | Array   | Values for multi-variable template message                                                      |
