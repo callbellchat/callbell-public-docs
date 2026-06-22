@@ -24,3 +24,4 @@ sidebar_position: 1
 | `customFieldsMetadata` | object                  | Custom fields with value, type and options. Only returned when `include_field_types=true` is passed. |
 | `team`                 | [Team](./team.md)       | Team inbox currently associated to the contact                                                      |
 | `channel`              | [Channel](./channel.md) | Channel currently associated to the contact                                                         |
+| `bsuid`                | string                  | WhatsApp Business Suite User ID. Only present for WhatsApp Cloud API contacts with a known BSUID.   |
