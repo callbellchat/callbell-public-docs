@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## July 1, 2026
+
+### ✨ What's new
+
+- Added `note` field to the [Contact](/api/reference/object_types/contact) object type. It can now be set when [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) a contact (free-text, up to 1000 characters).
+
 ## March 3, 2026
 
 ### ✨ What's new
