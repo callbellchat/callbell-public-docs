@@ -27,6 +27,7 @@ Creates a new contact.
 | `team_uuid`     | String   | UUID of the team that you want to assign to a contact                                                   |
 | `channel_uuid`  | String   | The message will be sent from this channel (when omitted, it will use the default main channel)         |
 | `bot_status`    | String   | The status of the bot for this contact. The status of the bot. Accepts either `bot_start` or `bot_end`. |
+| `note`          | String   | A free-text note associated with the contact (up to 1000 characters).                                   |
 
 :::info
 When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.

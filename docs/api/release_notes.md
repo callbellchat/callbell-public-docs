@@ -6,6 +6,20 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## July 1, 2026
+
+### ✨ What's new
+
+- Added `note` field to the [Contact](/api/reference/object_types/contact) object type. It can now be set when [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) a contact (free-text, up to 1000 characters).
+
+## June 22, 2026
+
+### ✨ What's new
+
+- Added [GET /contacts/bsuid/:bsuid](/api/reference/contacts_api/get_contact_by_bsuid) endpoint to look up a contact by its WhatsApp Business Suite User ID (BSUID).
+- Added `bsuid` field to the [Contact](/api/reference/object_types/contact) object type, returned for WhatsApp Cloud API contacts with a known BSUID.
+- [POST /messages/send](/api/reference/messages_api/post_send_messages) now accepts a `bsuid` parameter as an alternative to `to` for identifying the recipient.
+
 ## March 3, 2026
 
 ### ✨ What's new

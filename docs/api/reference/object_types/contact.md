@@ -25,3 +25,4 @@ sidebar_position: 1
 | `team`                 | [Team](./team.md)       | Team inbox currently associated to the contact                                                      |
 | `channel`              | [Channel](./channel.md) | Channel currently associated to the contact                                                         |
 | `bsuid`                | string                  | WhatsApp Business Suite User ID. Only present for WhatsApp Cloud API contacts with a known BSUID.   |
+| `note`                 | string                  | Free-text note associated with the contact (up to 1000 characters). `null` when no note is set.    |

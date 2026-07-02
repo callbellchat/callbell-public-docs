@@ -26,6 +26,7 @@ Updates an existing contact.
 | `unassign_user` | Boolean  | `true` is you want to remove the assigned collaborator from a contact            |
 | `team_uuid`     | String   | UUID of the team that you want to assign to a contact                            |
 | `bot_status`    | String   | The status of the bot for this contact. Accepts either `bot_start` or `bot_end`. |
+| `note`          | String   | A free-text note associated with the contact (up to 1000 characters). Pass an empty string to clear the note; omit the key to leave it unchanged. |
 
 :::info
 When passing `bot_status` make sure that the bot is enabled in your account. Visit [bots](https://dash.callbell.eu/bots) in your Callbell account to create and enable one.
