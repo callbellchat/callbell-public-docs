@@ -6,6 +6,12 @@ sidebar_position: 4
 
 A list of all the changes and enhancements that were introduced in our API. Use it to check whenever new endpoints are added, or changes are made.
 
+## August 7, 2026
+
+### ✨ What's new
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) now supports cursor pagination: every response includes a `meta.next` token that can be passed back through the new `after` parameter to fetch the next batch of contacts. This makes it possible to retrieve the complete contact list, past the 10,000-contact limit of page-based pagination.
+
 ## July 1, 2026
 
 ### ✨ What's new

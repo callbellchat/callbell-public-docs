@@ -13,11 +13,33 @@ List all contacts belonging to the account. A filter can be specified in order t
 
 | Parameter   | Type     | Description                                                                        |
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
-| `page`      | Integer  | The page of contacts. If not specified it will default to page 1.                  |
+| `page`      | Integer  | The page of contacts. If not specified it will default to page 1. Pages beyond 500 are not available — use [cursor pagination](#cursor-pagination) instead. |
+| `after`     | string   | Opaque cursor taken from `meta.next` of a previous response. Returns the batch of contacts that follows it. See [Cursor pagination](#cursor-pagination). |
 | `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
 | `team_uuid`           | string   | The uuid of the team.                                                              |
 | `include_field_types` | boolean  | When `true`, the response includes `customFieldsMetadata` with value, type and options for each custom field. |
+
+### Cursor pagination
+
+Page-based pagination stops at page 500 (10,000 contacts): requests beyond that limit return a `400 Bad Request` error with the message `Pagination limit exceeded`. To walk the complete contact list, use cursor pagination instead:
+
+1. Make a request as usual: every response includes an opaque token in `meta.next`.
+2. Pass the token back through the `after` parameter to fetch the next batch of contacts.
+3. Keep following `meta.next` until it comes back `null` — that marks the last batch.
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?after=eyJ0cyI6MTc1NDM4NDQwMDAwMCwiaWQiOjEyMzQ1fQ" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+A few things to keep in mind:
+
+- Treat the token as opaque and send it back unchanged. A malformed token returns a `400 Bad Request` error with the message `Invalid pagination cursor`.
+- The `page` parameter is ignored when `after` is present.
+- Filters (`source`, `tags`, `team_uuid`) are not encoded in the token — pass the same filters along with `after` on every request.
+- Contacts are returned in the same order as page-based requests (most recent conversation first). Contacts created after the walk started are not included.
 
 ### Example Request
 
@@ -28,6 +50,7 @@ List all contacts belonging to the account. A filter can be specified in order t
 | Parameter  | Type                                             | Description         |
 | :--------- | :----------------------------------------------- | :------------------ |
 | `contacts` | [Contact[]](/api/reference/object_types/contact) | A list of contacts. |
+| `meta`     | object                                           | Pagination metadata: `page` and `pages` for page-based requests, plus `next`, the cursor pointing to the next batch (`null` on the last batch). |
 
 ### Example Response
 
@@ -73,7 +96,12 @@ List all contacts belonging to the account. A filter can be specified in order t
         "Stripe link": "https://stripe.com/contacts/cus124124153"
       }
     }
-  ]
+  ],
+  "meta": {
+    "page": 1,
+    "pages": 42,
+    "next": "eyJ0cyI6MTc1NDM4NDQwMDAwMCwiaWQiOjEyMzQ1fQ"
+  }
 }
 ```
 
