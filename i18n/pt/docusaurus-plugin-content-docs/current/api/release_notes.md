@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Uma lista de todas as alterações e melhorias que foram introduzidas em nossa API. Use para verificar sempre que novos endpoints forem adicionados ou alterações forem feitas.
 
+## 10 de setembro de 2026
+
+### 🛠️ Alterações
+
+- [POST /messages/send](/api/reference/messages_api/post_send_messages) agora retorna `402 Payment Required` com o [código de erro](/api/reference/errors#error-codes) `whatsapp_wallet_depleted_credit` quando uma mensagem de template é enviada por uma conta cujo saldo de crédito do WhatsApp está esgotado. Mensagens normais não são afetadas, e os envios de template voltam a funcionar assim que o crédito for adicionado.
+
 ## 7 de agosto de 2026
 
 ### ✨ Novidades
