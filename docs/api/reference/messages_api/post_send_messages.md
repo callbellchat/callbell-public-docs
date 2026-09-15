@@ -205,6 +205,27 @@ The placeholder replacement will be done with the value passed in the payload, s
 Hello John Doe, this is a template message example
 ```
 
+## WhatsApp Credit and Template Messages
+
+:::info
+This only concerns channels using the official **WhatsApp Business API** integration. **QR code** channels are not billed through the WhatsApp credit balance, so sends through them are never rejected for this reason.
+:::
+
+Outbound template messages are paid WhatsApp conversations. If your WhatsApp Business API conversations are billed through your Callbell WhatsApp credit balance and that balance runs out, template sends are rejected with `402 Payment Required`:
+
+```json title=response.json
+{
+  "error": "Your WhatsApp wallet is out of credit. Add credit to your wallet to keep sending outbound WhatsApp template messages.",
+  "code": "whatsapp_wallet_depleted_credit"
+}
+```
+
+The request is rejected before anything is created: no message is enqueued, no [MessageSendRequest](/api/reference/object_types/message_send_request) is returned, and no conversation is opened.
+
+Only template sends on WhatsApp Business API channels are affected. Regular messages sent inside an open messaging window, and anything sent through a QR code channel, are delivered as usual while the balance is empty.
+
+Retrying the same payload keeps failing until credit is added, so branch on the `code` attribute instead of retrying blindly. Add credit from [Billing > WhatsApp wallet](https://dash.callbell.eu/settings/billing?tab=whatsapp_wallet) in your Callbell account; sends resume as soon as the balance is topped up.
+
 ## Send Multi-variables Template Messages
 
 You can use the API to send an approved [Template](/api/reference/object_types/template) Message.
