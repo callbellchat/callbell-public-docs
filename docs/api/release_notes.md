@@ -12,6 +12,12 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 - [POST /messages/send](/api/reference/messages_api/post_send_messages) now returns `402 Payment Required` with the `whatsapp_wallet_depleted_credit` [error code](/api/reference/errors#error-codes) when a template message is sent from an account whose WhatsApp credit balance is exhausted. Regular messages are not affected, and template sends resume as soon as credit is added.
 
+## September 28, 2026
+
+### ✨ What's new
+
+- Webhook requests can now be signed with a secret that belongs to your webhook, sent in the new `X-Callbell-Signature` header. Verifying the signature lets your endpoint confirm that a request comes from Callbell without allow-listing IP addresses. Signing is optional: generate a secret from the Webhooks tab of the API Settings to turn it on. See [Verifying signatures](/api/reference/webhooks/signatures) for code samples in Ruby, Node and Python.
+
 ## August 7, 2026
 
 ### ✨ What's new
