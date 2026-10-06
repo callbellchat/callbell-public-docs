@@ -37,7 +37,7 @@ En nuestro caso, lo que queremos es enviar información desde nuestro sitio web 
 En este ejemplo, los campos adicionales están codificados de manera estática, pero pueden ser información que se envía desde tu backend.
 
 :::info
-Ten en cuenta que el campo `identifier` es obligatorio. Se utilizará como identificación del usuario que interactúa con el chat en vivo, por lo tanto, debe ser único. Si este campo no se envía, el usuario podrá interactuar con el chat y enviar y recibir mensajes, pero no se crearán campos personalizados.
+Ten en cuenta que el campo `identifier` es obligatorio. Si no se envía, el usuario podrá seguir interactuando con el chat y enviar y recibir mensajes, pero no se crearán campos personalizados. El identificador se guarda en el contacto como un campo personalizado, igual que el resto de claves de `extra_params`. No identifica al usuario ni a la conversación: el webchat reconoce a un usuario que vuelve mediante su propia cookie de sesión, por lo que enviar el mismo `identifier` desde otro navegador no reabre la misma conversación.
 :::
 
 :::info

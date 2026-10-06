@@ -37,7 +37,7 @@ In our case, what we want is to send information from our website to Callbell ap
 In this example, the extra fields are hard coded, but they can be information that are sent from your backend.
 
 :::info
-Note that the field `identifier` is mandatory. It will be used as an id to the user interacting with the webchat, therefore it must be unique. If this field is not sent, the user will be able to interact with the chat and send and receive messages, but no custom fields will be created.
+Note that the field `identifier` is mandatory. If it is not sent, the user will still be able to interact with the chat and send and receive messages, but no custom fields will be created. The identifier is saved on the contact as a custom field, like every other key in `extra_params`. It does not identify the user or the conversation: the webchat recognizes a returning user through its own session cookie, so sending the same `identifier` from another browser does not reopen the same conversation.
 :::
 
 :::info

@@ -37,7 +37,7 @@ Dans notre cas, ce que nous voulons, c'est envoyer des informations de notre sit
 Dans cet exemple, les champs supplémentaires sont codés en dur, mais ils peuvent être des informations envoyées depuis votre backend.
 
 :::info
-Remarquez que le champ `identifier` est obligatoire. Il sera utilisé comme identifiant de l'utilisateur interagissant avec le chat en direct, il doit donc être unique. Si ce champ n'est pas envoyé, l'utilisateur pourra interagir avec le chat et envoyer et recevoir des messages, mais aucun champ personnalisé ne sera créé.
+Remarquez que le champ `identifier` est obligatoire. S'il n'est pas envoyé, l'utilisateur pourra toujours interagir avec le chat et envoyer et recevoir des messages, mais aucun champ personnalisé ne sera créé. L'identifiant est enregistré sur le contact comme un champ personnalisé, au même titre que les autres clés de `extra_params`. Il n'identifie ni l'utilisateur ni la conversation : le webchat reconnaît un utilisateur qui revient grâce à son propre cookie de session, donc envoyer le même `identifier` depuis un autre navigateur ne rouvre pas la même conversation.
 :::
 
 :::info
