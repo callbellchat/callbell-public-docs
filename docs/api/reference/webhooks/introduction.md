@@ -53,22 +53,22 @@ Callbell sends each event to your endpoint as an HTTP `POST` request with a JSON
 
 A delivery succeeds when your endpoint answers with any `2xx` status code. Callbell does not read the response body, so you can return an empty body.
 
-A delivery attempt fails when your endpoint answers with a status code outside the `2xx` range, when Callbell cannot connect to it (for example because of a DNS, connection or TLS error), or when it does not answer within **[PLACEHOLDER CAL-2303: request timeout]**.
+A delivery attempt fails when your endpoint answers with a status code outside the `2xx` range, when Callbell cannot connect to it (for example because of a DNS, connection or TLS error), or when the request times out. Callbell waits up to 5 seconds to open the connection to your endpoint, and up to 10 seconds each to send the request and to receive the response.
 
-When a delivery attempt fails, Callbell retries the same event with an exponential backoff, which means that the wait between two attempts grows after each attempt. Callbell makes up to 5 delivery attempts for each event. Because a request that timed out is also retried, your endpoint can receive the same event more than once, so make sure that processing an event twice has no unwanted effect.
+When a delivery attempt fails, Callbell retries the same event with an exponential backoff, which means that the wait between two attempts grows after each attempt. Callbell makes up to 5 delivery attempts for each event, and the last attempt happens about 6 to 7 minutes after the first one. If all 5 attempts fail, Callbell drops the event and does not send it again later, even after your endpoint recovers. Because a request that timed out is also retried, your endpoint can receive the same event more than once, so make sure that processing an event twice has no unwanted effect.
 
-You can find the deliveries that failed with [GET /webhooks/events](./../webhooks_api/events.md) and the `status=failed` filter. Each failed event includes the response code and body that Callbell received, or the error that prevented the delivery.
+To recover the events that Callbell dropped, call [GET /webhooks/events](./../webhooks_api/events.md) with the `status=failed` filter. Each failed event has `success: false` and includes its payload, together with the response code and body that Callbell received or the error that prevented the delivery.
 
 ## Email notifications
 
 Callbell sends two kinds of email about a webhook that keeps failing:
 
-- **Warning email**: when an event reaches its third delivery attempt, Callbell sends a warning email to the account owner. If the webhook has a secondary email address, Callbell sends the same warning to that address too. You can set the secondary email address in the "Webhooks" tab of the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section. Callbell sends at most one warning email per webhook every 24 hours, and this limit starts over when the webhook is re-enabled.
+- **Warning email**: when your endpoint has had no successful delivery for 15 minutes, Callbell sends a warning email to the account owner. If the webhook has a secondary email address, Callbell sends the same warning to that address too. You can set the secondary email address in the "Webhooks" tab of the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section. Callbell sends at most one warning email per webhook every 24 hours, and this limit starts over when the webhook is re-enabled.
 - **Webhook disabled email**: when Callbell disables the webhook, it sends an email to the account owner only. The secondary email address does not receive this email.
 
 ## Disabled webhooks
 
-**[PLACEHOLDER CAL-2304: disable rule and threshold. Proposed wording: "Callbell disables the webhook when it has had no successful delivery for 6 hours. Delivery attempts that fail because of a timeout count as failed attempts."]**
+Callbell disables the webhook when an event fails all of its 5 delivery attempts and your endpoint has had no successful delivery for at least 6 hours. The 6 hours start with the first failed attempt after a successful delivery, whatever the cause of the failure, including a timeout. Any successful delivery resets this period, so isolated failures between successful deliveries never disable the webhook.
 
 While the webhook is disabled, Callbell does not deliver any event to your endpoint, and events that happen during that time are not sent later.
 
