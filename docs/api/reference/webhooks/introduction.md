@@ -59,16 +59,18 @@ When a delivery attempt fails, Callbell retries the same event with an exponenti
 
 To recover the events that Callbell dropped, call [GET /webhooks/events](./../webhooks_api/events.md) with the `status=failed` filter. Each failed event has `success: false` and includes its payload, together with the response code and body that Callbell received or the error that prevented the delivery.
 
+Your endpoint is **failing continuously** while Callbell has made no successful delivery to it and no more than 1 hour has passed between one failed attempt and the next. This failing period starts with the first failed attempt. Any successful delivery ends it. A failed attempt that comes more than 1 hour after the previous failed attempt starts a new failing period, so hours without any traffic to your endpoint do not count as failing time. Callbell uses this failing period to decide when to send the warning email and when to disable the webhook.
+
 ## Email notifications
 
 Callbell sends two kinds of email about a webhook that keeps failing:
 
-- **Warning email**: when your endpoint has had no successful delivery for 15 minutes, Callbell sends a warning email to the account owner. If the webhook has a secondary email address, Callbell sends the same warning to that address too. You can set the secondary email address in the "Webhooks" tab of the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section. Callbell sends at most one warning email per webhook every 24 hours, and this limit starts over when the webhook is re-enabled.
+- **Warning email**: when your endpoint has been failing continuously for 15 minutes, Callbell sends a warning email to the account owner. If the webhook has a secondary email address, Callbell sends the same warning to that address too. You can set the secondary email address in the "Webhooks" tab of the [**"API Settings"**](https://dash.callbell.eu/settings/api_settings/webhooks) section. Callbell sends at most one warning email per webhook every 24 hours, and this limit starts over when the webhook is re-enabled.
 - **Webhook disabled email**: when Callbell disables the webhook, it sends an email to the account owner only. The secondary email address does not receive this email.
 
 ## Disabled webhooks
 
-Callbell disables the webhook when an event fails all of its 5 delivery attempts and your endpoint has had no successful delivery for at least 6 hours. The 6 hours start with the first failed attempt after a successful delivery, whatever the cause of the failure, including a timeout. Any successful delivery resets this period, so isolated failures between successful deliveries never disable the webhook.
+Callbell disables the webhook when an event fails all of its 5 delivery attempts and your endpoint has been failing continuously for at least 6 hours. Every kind of failed attempt counts, including a timeout. Because any successful delivery ends the failing period, isolated failures between successful deliveries never disable the webhook.
 
 While the webhook is disabled, Callbell does not deliver any event to your endpoint, and events that happen during that time are not sent later.
 
