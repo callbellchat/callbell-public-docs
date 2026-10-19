@@ -9,6 +9,8 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 Creates a new webhook or updates an existing one.
 
+If the webhook was disabled, calling this endpoint also re-enables it, and the response returns `enabled: true`. See [Disabled webhooks](/api/reference/webhooks/introduction#disabled-webhooks) for the reasons why Callbell disables a webhook.
+
 :::caution
 
 Each account can **only** register 1 webhook.
@@ -17,10 +19,10 @@ Each account can **only** register 1 webhook.
 
 ### Required Parameters
 
-| Parameter       | Type     | Description                                                                               |
-| :-------------- | :------- | :---------------------------------------------------------------------------------------- |
-| `url`           | string   | The identifier of the contact (e.g. phone number in WhatsApp)                             |
-| `subscriptions` | string[] | Comma separated values of the events to subscribe on this webhook (e.g `message_created`) |
+| Parameter       | Type     | Description                                                                                      |
+| :-------------- | :------- | :----------------------------------------------------------------------------------------------- |
+| `url`           | string   | The URL of your endpoint, including the protocol (e.g. `https://my-app.com/my-webhook-endpoint`) |
+| `subscriptions` | string[] | Comma separated values of the events to subscribe on this webhook (e.g `message_created`)        |
 
 ### Example Request
 
@@ -30,14 +32,14 @@ Each account can **only** register 1 webhook.
 
 | Parameter | Type                                           | Description                               |
 | :-------- | :--------------------------------------------- | :---------------------------------------- |
-| `contact` | [Webhook](/api/reference/object_types/webhook) | The webhook which was created or updated. |
+| `webhook` | [Webhook](/api/reference/object_types/webhook) | The webhook which was created or updated. |
 
 ### Example Response
 
 ```json title=response.json
 {
     "webhook": {
-        "url": "https://my-app.com/my-webhook-endpoint",,
+        "url": "https://my-app.com/my-webhook-endpoint",
         "subscriptions": [
             "message_created"
         ],
