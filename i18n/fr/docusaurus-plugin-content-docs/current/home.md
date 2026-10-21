@@ -20,3 +20,7 @@ Vous souhaitez commencer rapidement avec Callbell ? [Suivez notre guide ici](/bo
 ## Référence de l'API
 
 [Cliquez ici](/api/reference/introduction) pour accéder à notre documentation de référence de l'API publique.
+
+## Assistants IA
+
+Utilisez Claude, ChatGPT ou une autre application d'IA avec les données de votre compte Callbell. [Découvrez comment les connecter](/mcp/overview).
