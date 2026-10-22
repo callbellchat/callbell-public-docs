@@ -20,3 +20,7 @@ Want to quickly get started with Callbell? [Follow our guide here](/bot/getting_
 ## API Reference
 
 [Click here](/api/reference/introduction) to access our public API reference documentation.
+
+## AI Assistants
+
+Use Claude, ChatGPT or another AI app with your Callbell data. [Read how to connect them](/mcp/overview).

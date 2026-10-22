@@ -20,3 +20,7 @@ Callbell es una bandeja de entrada _centralizada_ que permite a los equipos cola
 ## Referencia de la API
 
 [Haz clic aquí](/api/reference/introduction) para acceder a nuestra documentación de referencia de la API pública.
+
+## Asistentes de IA
+
+Usa Claude, ChatGPT u otra aplicación de IA con los datos de tu cuenta de Callbell. [Descubre cómo conectarlos](/mcp/overview).
