@@ -55,9 +55,9 @@
     "message": "Integrazione Zapier",
     "description": "The label for category Zapier Integration in sidebar tutorialSidebar"
   },
-  "sidebar.tutorialSidebar.category.AI Assistants (MCP)": {
-    "message": "Assistenti IA (MCP)",
-    "description": "The label for category AI Assistants (MCP) in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.MCP": {
+    "message": "MCP",
+    "description": "The label for category MCP in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Typeform Integration": {
     "message": "Integrazione Typeform",
