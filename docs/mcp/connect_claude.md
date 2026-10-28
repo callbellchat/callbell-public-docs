@@ -19,6 +19,12 @@ This guide connects Callbell to [Claude](https://claude.ai) as a custom connecto
 Custom connectors are available on every Claude plan (the Free plan is limited to one custom connector). On **Team** and **Enterprise** plans, only an organization Owner can add a custom connector: see [Team and Enterprise plans](#team-and-enterprise-plans) below.
 :::
 
+Watch the step-by-step video, or follow the steps below.
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+    <iframe src="https://cap.callbell.eu/embed/d9wjzmnq4r95rr6" title="Connect Claude to Callbell, step by step" frameBorder="0" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></iframe>
+</div>
+
 ## Step 1: Add the Callbell connector
 
 1. In Claude, click **Customize** in the left sidebar, then **Connectors**.

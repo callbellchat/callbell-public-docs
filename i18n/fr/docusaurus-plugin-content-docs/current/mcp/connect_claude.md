@@ -21,6 +21,12 @@ Les libellés de l'interface de Claude sont indiqués en anglais, comme sur les 
 Les connecteurs personnalisés sont disponibles avec toutes les offres Claude (l'offre Free est limitée à un connecteur personnalisé). Avec les offres **Team** et **Enterprise**, seul un Owner de l'organisation peut ajouter un connecteur personnalisé : voir [Offres Team et Enterprise](#team-and-enterprise-plans) ci-dessous.
 :::
 
+Regardez la vidéo pas à pas, ou suivez les étapes ci-dessous.
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+    <iframe src="https://cap.callbell.eu/embed/d9wjzmnq4r95rr6" title="Connecter Claude à Callbell pas à pas" frameBorder="0" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></iframe>
+</div>
+
 ## Étape 1 : ajouter le connecteur Callbell
 
 1. Dans Claude, cliquez sur **Customize** dans la barre latérale, puis sur **Connectors**.
