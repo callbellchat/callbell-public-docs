@@ -21,6 +21,12 @@ In [ChatGPT](https://chatgpt.com), you connect Callbell by adding it as a **cust
 In company workspaces, an admin or owner may need to create the Callbell plugin and publish it to the workspace first. Members then install it and connect with their own Callbell login. See [OpenAI's help article](https://help.openai.com/en/articles/12584461) for the rules of your plan.
 :::
 
+Watch the step-by-step video, or follow the steps below.
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+    <iframe src="https://cap.callbell.eu/embed/k19cbznc662mdvp" title="Connect ChatGPT to Callbell, step by step" frameBorder="0" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></iframe>
+</div>
+
 ## Step 1: Create the Callbell plugin
 
 1. In ChatGPT, click **Plugins** in the left sidebar.

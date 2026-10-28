@@ -21,6 +21,12 @@ Le etichette dell'interfaccia di Claude sono indicate in inglese, come negli scr
 I connettori personalizzati sono disponibili con tutti i piani di Claude (il piano Free è limitato a un connettore personalizzato). Con i piani **Team** ed **Enterprise**, solo un Owner dell'organizzazione può aggiungere un connettore personalizzato: vedi [Piani Team ed Enterprise](#team-and-enterprise-plans) qui sotto.
 :::
 
+Guarda il video passo passo, oppure segui i passaggi qui sotto.
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+    <iframe src="https://cap.callbell.eu/embed/d9wjzmnq4r95rr6" title="Collegare Claude a Callbell passo passo" frameBorder="0" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></iframe>
+</div>
+
 ## Passo 1: aggiungere il connettore Callbell
 
 1. In Claude, clicca su **Customize** nella barra laterale, poi su **Connectors**.

@@ -23,6 +23,12 @@ Los textos de la interfaz de ChatGPT aparecen en inglés, como en las capturas d
 En los espacios de trabajo de empresa, puede que un administrador o propietario tenga que crear primero el plugin de Callbell y publicarlo en el espacio de trabajo. Después, los miembros lo instalan y se conectan con su propio usuario de Callbell. Consulta [el artículo de ayuda de OpenAI](https://help.openai.com/en/articles/12584461) para conocer las reglas de tu plan.
 :::
 
+Mira el vídeo paso a paso o sigue los pasos que aparecen a continuación.
+
+<div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+    <iframe src="https://cap.callbell.eu/embed/k19cbznc662mdvp" title="Conectar ChatGPT a Callbell paso a paso" frameBorder="0" allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}></iframe>
+</div>
+
 ## Paso 1: crear el plugin de Callbell
 
 1. En ChatGPT, haz clic en **Plugins** en la barra lateral.
