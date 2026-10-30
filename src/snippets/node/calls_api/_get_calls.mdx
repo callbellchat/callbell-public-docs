@@ -1,0 +1,15 @@
+```js
+import axios from 'axios';
+
+const response = await axios.get('https://api.callbell.eu/v1/calls', {
+  params: {
+    'from': '2026-10-01',
+    'to': '2026-10-31'
+  },
+  headers: {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json'
+  }
+});
+
+```

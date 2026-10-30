@@ -12,6 +12,7 @@ Callbell API provides **HTTP Webhooks** for the most common application events:
 - **Conversation events**
 - **Agent events**
 - **Team events**
+- **Call events**
 
 ## How to subscribe to events
 

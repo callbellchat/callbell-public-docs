@@ -6,6 +6,15 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 30 ottobre 2026
+
+### ✨ Novità
+
+- Aggiunta la [Calls API](/api/reference/calls_api/introduction) per recuperare le chiamate WhatsApp del tuo account, con link temporanei per scaricare le registrazioni e le trascrizioni: [GET /calls](/api/reference/calls_api/get_calls) elenca le chiamate create in un intervallo di date e [GET /calls/:uuid](/api/reference/calls_api/get_call) restituisce una singola chiamata.
+- Aggiunto l'endpoint [GET /contacts/:uuid/calls](/api/reference/contacts_api/get_contact_calls) per elencare le chiamate con un contatto.
+- Aggiunto il tipo di oggetto [Call](/api/reference/object_types/call).
+- Aggiunti gli eventi webhook [`call_recording_created`](/api/reference/webhooks/call_events/call_recording_created) e [`call_transcript_created`](/api/reference/webhooks/call_events/call_transcript_created), inviati quando la registrazione o la trascrizione di una chiamata è pronta per il download.
+
 ## 10 settembre 2026
 
 ### 🛠️ Modifiche
