@@ -12,6 +12,10 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 - Ajout du champ `sender` au type d'objet [Message](/api/reference/object_types/message#sender-object), renvoyé par [GET /contacts/:uuid/messages](/api/reference/contacts_api/get_contact_messages) et par le webhook [message_created](/api/reference/webhooks/message_events/message_created). Il indique qui a envoyé chaque message : le contact, un membre de l'équipe (`agent`), l'API, un bot, une automatisation, une diffusion, l'agent IA pour entreprises de Meta ou Callbell lui-même. Pour les messages écrits par un membre de l'équipe, et pour les messages de l'API envoyés avec `assigned_user`, `sender.user` contient le `uuid`, le `name` et l'`email` de ce membre de l'équipe.
 
+### 🛠️ Changements
+
+- Pour les messages envoyés avec [POST /messages/send](/api/reference/messages_api/post_send_messages), `sender.user` indique désormais le propriétaire du compte lorsqu'il est passé explicitement comme `assigned_user`. Il reste `null` lorsqu'aucun `assigned_user` n'est passé. Les messages envoyés avant ce changement conservent `null` pour le propriétaire du compte.
+
 ## 10 septembre 2026
 
 ### 🛠️ Changements
