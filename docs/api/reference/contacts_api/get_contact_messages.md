@@ -47,7 +47,15 @@ List all messages belonging to the contact. Results are paginated and sorted by 
       "status": "sent",
       "channel": "whatsapp",
       "from": "391234567890",
-      "to": "390987654321"
+      "to": "390987654321",
+      "sender": {
+        "type": "agent",
+        "user": {
+          "uuid": "8a1f3c0e2b7d4e5f9a6b1c2d3e4f5a6b",
+          "name": "John Doe",
+          "email": "john.doe@example.com"
+        }
+      }
     },
     {
       "text": "Conversation was assigned to John Doe",
@@ -55,7 +63,11 @@ List all messages belonging to the contact. Results are paginated and sorted by 
       "status": "note",
       "channel": "whatsapp",
       "from": "390987654321",
-      "to": "390987654321"
+      "to": "390987654321",
+      "sender": {
+        "type": "system",
+        "user": null
+      }
     },
     {
       "text": "Hello there 👋",
@@ -63,7 +75,11 @@ List all messages belonging to the contact. Results are paginated and sorted by 
       "status": "received",
       "channel": "whatsapp",
       "from": "390987654321",
-      "to": "390987654321"
+      "to": "390987654321",
+      "sender": {
+        "type": "contact",
+        "user": null
+      }
     }
   ],
   "meta": {
