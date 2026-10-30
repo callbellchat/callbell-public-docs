@@ -21,6 +21,7 @@ const languages = [
 
 const endpoints = [
   "auth_api",
+  "calls_api",
   "contacts_api",
   "custom_status_api",
   "funnels_api",
