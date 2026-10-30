@@ -11,6 +11,10 @@ Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Uti
 ### ✨ Novità
 
 - Aggiunto il campo `sender` al tipo di oggetto [Message](/api/reference/object_types/message#sender-object), restituito da [GET /contacts/:uuid/messages](/api/reference/contacts_api/get_contact_messages) e dal webhook [message_created](/api/reference/webhooks/message_events/message_created). Indica chi ha inviato ogni messaggio: il contatto, un membro del team (`agent`), l'API, un bot, un'automazione, un broadcast, l'agente IA per le aziende di Meta o Callbell stesso. Per i messaggi scritti da un membro del team, e per i messaggi dell'API inviati con `assigned_user`, `sender.user` contiene `uuid`, `name` ed `email` di quel membro del team.
+- Aggiunta la [Calls API](/api/reference/calls_api/introduction) per recuperare le chiamate WhatsApp del tuo account, con link temporanei per scaricare le registrazioni e le trascrizioni: [GET /calls](/api/reference/calls_api/get_calls) elenca le chiamate create in un intervallo di date e [GET /calls/:uuid](/api/reference/calls_api/get_call) restituisce una singola chiamata.
+- Aggiunto l'endpoint [GET /contacts/:uuid/calls](/api/reference/contacts_api/get_contact_calls) per elencare le chiamate con un contatto.
+- Aggiunto il tipo di oggetto [Call](/api/reference/object_types/call).
+- Aggiunti gli eventi webhook [`call_recording_created`](/api/reference/webhooks/call_events/call_recording_created) e [`call_transcript_created`](/api/reference/webhooks/call_events/call_transcript_created), inviati quando la registrazione o la trascrizione di una chiamata è pronta per il download.
 
 ## 10 settembre 2026
 
