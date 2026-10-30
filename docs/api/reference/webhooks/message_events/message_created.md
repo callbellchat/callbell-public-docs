@@ -19,6 +19,7 @@ This event will be sent whenever a message gets **created**, for example when _r
 | `contact`     | [Contact](/api/reference/object_types/contact) | The contact associated to the message                          |
 | `createdAt`   | string                                         | Date of contact creation (ISO 8601 formatted)                  |
 | `metadata`    | Object                                         | Metadata attached to the message (if present)                  |
+| `sender`      | [Sender](/api/reference/object_types/message#sender-object) | Who sent the message (contact, agent, API, bot, automation, ...) |
 
 ### Optional Fields
 
@@ -42,6 +43,10 @@ This event will be sent whenever a message gets **created**, for example when _r
     "text": "Hello",
     "status": "received",
     "channel": "whatsapp",
+    "sender": {
+      "type": "contact",
+      "user": null
+    },
     "contact": {
       "href": "https://dash.callbell.eu/contacts/eb2b914a977e4ab896e7b886698b3eac",
       "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
