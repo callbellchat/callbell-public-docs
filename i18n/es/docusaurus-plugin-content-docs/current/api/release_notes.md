@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 30 de octubre de 2026
+
+### ✨ Novedades
+
+- Se ha añadido el campo `sender` al tipo de objeto [Message](/api/reference/object_types/message#sender-object), devuelto por [GET /contacts/:uuid/messages](/api/reference/contacts_api/get_contact_messages) y por el webhook [message_created](/api/reference/webhooks/message_events/message_created). Indica quién envió cada mensaje: el contacto, un miembro del equipo (`agent`), la API, un bot, una automatización, una difusión, el agente de IA para empresas de Meta o el propio Callbell. Para los mensajes escritos por un miembro del equipo, y para los mensajes de la API enviados con `assigned_user`, `sender.user` contiene el `uuid`, el `name` y el `email` de ese miembro del equipo.
+
 ## 10 de septiembre de 2026
 
 ### 🛠️ Cambios

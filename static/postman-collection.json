@@ -207,6 +207,95 @@
           "response": []
         },
         {
+          "name": "GET /contacts/:uuid/messages",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{CALLBELL_TOKEN}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{CALLBELL_PUBLIC_API}}/contacts/:uuid/messages",
+              "host": [
+                "{{CALLBELL_PUBLIC_API}}"
+              ],
+              "path": [
+                "contacts",
+                ":uuid",
+                "messages"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "The page of messages, defaults to 1",
+                  "disabled": true
+                }
+              ],
+              "variable": [
+                {
+                  "key": "uuid",
+                  "value": null,
+                  "description": "The UUID of the contact"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Messages with their sender",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{CALLBELL_PUBLIC_API}}/contacts/:uuid/messages",
+                  "host": [
+                    "{{CALLBELL_PUBLIC_API}}"
+                  ],
+                  "path": [
+                    "contacts",
+                    ":uuid",
+                    "messages"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "description": "The page of messages, defaults to 1",
+                      "disabled": true
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "key": "uuid",
+                      "value": null,
+                      "description": "The UUID of the contact"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"messages\": [\n    {\n      \"text\": \"Hello there how can I help you?\",\n      \"createdAt\": \"2026-10-30T10:56:36Z\",\n      \"uuid\": \"cf839626ac7949879b88bcffd41d34fe\",\n      \"status\": \"sent\",\n      \"channel\": \"whatsapp\",\n      \"from\": \"391234567890\",\n      \"to\": \"390987654321\",\n      \"sender\": {\n        \"type\": \"agent\",\n        \"user\": {\n          \"uuid\": \"8a1f3c0e2b7d4e5f9a6b1c2d3e4f5a6b\",\n          \"name\": \"John Doe\",\n          \"email\": \"john.doe@example.com\"\n        }\n      }\n    },\n    {\n      \"text\": \"Your order has shipped\",\n      \"createdAt\": \"2026-10-30T10:55:02Z\",\n      \"uuid\": \"0b6f7e2a9c3d4f1e8a5b6c7d8e9f0a1b\",\n      \"status\": \"sent\",\n      \"channel\": \"whatsapp\",\n      \"from\": \"391234567890\",\n      \"to\": \"390987654321\",\n      \"sender\": {\n        \"type\": \"api\",\n        \"user\": null\n      }\n    },\n    {\n      \"text\": \"Hello there 👋\",\n      \"createdAt\": \"2026-10-30T10:53:32Z\",\n      \"status\": \"received\",\n      \"channel\": \"whatsapp\",\n      \"from\": \"390987654321\",\n      \"to\": \"390987654321\",\n      \"sender\": {\n        \"type\": \"contact\",\n        \"user\": null\n      }\n    }\n  ],\n  \"meta\": {\n    \"page\": 1,\n    \"pages\": 1\n  }\n}"
+            }
+          ]
+        },
+        {
           "name": "DELETE /contacts/:uuid",
           "request": {
             "method": "DELETE",
