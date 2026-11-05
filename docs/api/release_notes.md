@@ -11,6 +11,10 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 ### ✨ What's new
 
 - Added a `sender` field to the [Message](/api/reference/object_types/message#sender-object) object type, returned by [GET /contacts/:uuid/messages](/api/reference/contacts_api/get_contact_messages) and by the [message_created](/api/reference/webhooks/message_events/message_created) webhook. It tells who sent each message: the contact, a team member (`agent`), the API, a bot, an automation, a broadcast, Meta's Business AI agent or Callbell itself. For messages written by a team member, and for API messages sent with `assigned_user`, `sender.user` contains the team member's `uuid`, `name` and `email`.
+- Added the [Calls API](/api/reference/calls_api/introduction) to retrieve the WhatsApp calls of your account, with temporary links to download their recordings and transcripts: [GET /calls](/api/reference/calls_api/get_calls) lists the calls created in a date range, and [GET /calls/:uuid](/api/reference/calls_api/get_call) returns a single call.
+- Added [GET /contacts/:uuid/calls](/api/reference/contacts_api/get_contact_calls) endpoint to list the calls with a contact.
+- Added the [Call](/api/reference/object_types/call) object type.
+- Added the [`call_recording_created`](/api/reference/webhooks/call_events/call_recording_created) and [`call_transcript_created`](/api/reference/webhooks/call_events/call_transcript_created) webhook events, sent when the recording or the transcript of a call is ready to download.
 
 ## September 10, 2026
 

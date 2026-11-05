@@ -1,0 +1,31 @@
+```go
+package main
+
+import (
+	"fmt"
+	"io"
+	"log"
+	"net/http"
+)
+
+func main() {
+	client := &http.Client{}
+	req, err := http.NewRequest("GET", "https://api.callbell.eu/v1/calls/9f2c41d7a6b84e0c8d3f5a1b2c3d4e5f", nil)
+	if err != nil {
+		log.Fatal(err)
+	}
+	req.Header.Set("Authorization", "Bearer test_gshuPaZoeEG6ovbc8M79w0QyM")
+	req.Header.Set("Content-Type", "application/json")
+	resp, err := client.Do(req)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer resp.Body.Close()
+	bodyText, err := io.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("%s\n", bodyText)
+}
+
+```

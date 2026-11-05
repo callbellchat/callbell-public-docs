@@ -1,0 +1,16 @@
+```python
+import requests
+
+headers = {
+    'Authorization': 'Bearer test_gshuPaZoeEG6ovbc8M79w0QyM',
+    'Content-Type': 'application/json',
+}
+
+params = {
+    'from': '2026-10-01',
+    'to': '2026-10-31',
+}
+
+response = requests.get('https://api.callbell.eu/v1/calls', params=params, headers=headers)
+
+```
