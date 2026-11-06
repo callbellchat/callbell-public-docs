@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 6 de noviembre de 2026
+
+### 🛠️ Cambios
+
+- El campo `recordingStatus` del tipo de objeto [Call](/api/reference/object_types/call) tiene un nuevo valor, `deleted`. Ahora un miembro del equipo puede eliminar la grabación y la transcripción de una llamada desde el chat. Para una llamada eliminada, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` y `mediaExpiresAt` son `null`.
+
 ## 30 de octubre de 2026
 
 ### ✨ Novedades
