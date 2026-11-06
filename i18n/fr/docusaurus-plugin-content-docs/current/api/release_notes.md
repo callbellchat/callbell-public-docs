@@ -34,6 +34,12 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 - La page [GET /contacts](/api/reference/contacts_api/get_contacts) indique désormais précisément l'ordre par défaut : les contacts sont triés par date de création de leur conversation, du plus récent au plus ancien.
 
+## 6 novembre 2026
+
+### 🛠️ Changements
+
+- Le champ `recordingStatus` du type d'objet [Call](/api/reference/object_types/call) a une nouvelle valeur, `deleted`. Un membre de l'équipe peut désormais supprimer l'enregistrement et la transcription d'un appel depuis le chat. Pour un appel supprimé, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` et `mediaExpiresAt` valent `null`.
+
 ## 30 octobre 2026
 
 ### ✨ Nouveautés

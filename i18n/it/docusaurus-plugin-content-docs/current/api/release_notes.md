@@ -34,6 +34,12 @@ Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Uti
 
 - La pagina [GET /contacts](/api/reference/contacts_api/get_contacts) ora indica con precisione l'ordinamento predefinito: i contatti sono ordinati per data di creazione della loro conversazione, dal più recente al meno recente.
 
+## 6 novembre 2026
+
+### 🛠️ Modifiche
+
+- Il campo `recordingStatus` del tipo di oggetto [Call](/api/reference/object_types/call) ha un nuovo valore, `deleted`. Ora un membro del team può eliminare la registrazione e la trascrizione di una chiamata dalla chat. Per una chiamata eliminata, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` e `mediaExpiresAt` sono `null`.
+
 ## 30 ottobre 2026
 
 ### ✨ Novità

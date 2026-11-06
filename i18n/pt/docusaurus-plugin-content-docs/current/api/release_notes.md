@@ -34,6 +34,12 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 - A página de [GET /contacts](/api/reference/contacts_api/get_contacts) agora informa com precisão a ordem padrão: os contatos são ordenados pela data de criação da conversa, do mais recente para o mais antigo.
 
+## 6 de novembro de 2026
+
+### 🛠️ Alterações
+
+- O campo `recordingStatus` do tipo de objeto [Call](/api/reference/object_types/call) tem um novo valor, `deleted`. Agora um membro da equipe pode excluir a gravação e a transcrição de uma chamada pelo chat. Para uma chamada excluída, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` e `mediaExpiresAt` são `null`.
+
 ## 30 de outubro de 2026
 
 ### ✨ Novidades
