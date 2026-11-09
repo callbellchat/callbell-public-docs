@@ -9,7 +9,7 @@ Calls API allows you to retrieve the WhatsApp calls of your account, including t
 :::info
 Recordings and transcripts are available only for calls that were recorded. Callbell keeps them for 30 days: after the date in `mediaExpiresAt`, the files are deleted and `recordingStatus` becomes `expired`.
 
-A team member can also delete the recording and the transcript of a call before this date, for example to answer an erasure request from the contact. Callbell then deletes the files at once, `recordingStatus` becomes `deleted` and `mediaExpiresAt` becomes `null`.
+A team member can also delete the recording of a call before this date, for example to answer a request from the contact. Callbell then deletes the audio file and the transcript file at once, `recordingStatus` becomes `deleted` and `mediaExpiresAt` becomes `null`. The transcript stays visible in the Callbell chat.
 :::
 
 ### Download links
