@@ -10,7 +10,7 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### 🛠️ Changes
 
-- The `recordingStatus` field of the [Call](/api/reference/object_types/call) object type has a new value, `deleted`. A team member can now delete the recording and the transcript of a call from the chat. For a deleted call, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` and `mediaExpiresAt` are `null`.
+- The `recordingStatus` field of the [Call](/api/reference/object_types/call) object type has a new value, `deleted`. A team member can now delete the recording of a call from the chat. For a deleted call, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` and `mediaExpiresAt` are `null`.
 
 ## October 30, 2026
 

@@ -10,7 +10,7 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 ### 🛠️ Alterações
 
-- O campo `recordingStatus` do tipo de objeto [Call](/api/reference/object_types/call) tem um novo valor, `deleted`. Agora um membro da equipe pode excluir a gravação e a transcrição de uma chamada pelo chat. Para uma chamada excluída, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` e `mediaExpiresAt` são `null`.
+- O campo `recordingStatus` do tipo de objeto [Call](/api/reference/object_types/call) tem um novo valor, `deleted`. Agora um membro da equipe pode excluir a gravação de uma chamada pelo chat. Para uma chamada excluída, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` e `mediaExpiresAt` são `null`.
 
 ## 30 de outubro de 2026
 

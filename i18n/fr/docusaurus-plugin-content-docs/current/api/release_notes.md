@@ -10,7 +10,7 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 ### 🛠️ Changements
 
-- Le champ `recordingStatus` du type d'objet [Call](/api/reference/object_types/call) a une nouvelle valeur, `deleted`. Un membre de l'équipe peut désormais supprimer l'enregistrement et la transcription d'un appel depuis le chat. Pour un appel supprimé, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` et `mediaExpiresAt` valent `null`.
+- Le champ `recordingStatus` du type d'objet [Call](/api/reference/object_types/call) a une nouvelle valeur, `deleted`. Un membre de l'équipe peut désormais supprimer l'enregistrement d'un appel depuis le chat. Pour un appel supprimé, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` et `mediaExpiresAt` valent `null`.
 
 ## 30 octobre 2026
 
