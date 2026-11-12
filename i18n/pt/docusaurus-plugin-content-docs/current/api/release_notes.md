@@ -16,6 +16,10 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 - Adicionado o tipo de objeto [Call](/api/reference/object_types/call).
 - Adicionados os eventos de webhook [`call_recording_created`](/api/reference/webhooks/call_events/call_recording_created) e [`call_transcript_created`](/api/reference/webhooks/call_events/call_transcript_created), enviados quando a gravação ou a transcrição de uma chamada está pronta para download.
 
+### 🛠️ Alterações
+
+- Para mensagens enviadas com [POST /messages/send](/api/reference/messages_api/post_send_messages), `sender.user` agora indica o proprietário da conta quando ele é passado explicitamente como `assigned_user`. Continua `null` quando nenhum `assigned_user` é passado. As mensagens enviadas antes desta alteração mantêm `null` para o proprietário da conta.
+
 ## 10 de setembro de 2026
 
 ### 🛠️ Alterações
