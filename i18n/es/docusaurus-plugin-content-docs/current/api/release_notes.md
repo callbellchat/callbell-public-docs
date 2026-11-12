@@ -6,6 +6,16 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 12 de noviembre de 2026
+
+### ✨ Novedades
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) ahora puede filtrar y ordenar los contactos por actividad de la conversación. Los nuevos parámetros `conversation_state`, `last_message_from`, `last_inbound_message_after`, `last_inbound_message_before` y `assigned_user` filtran por estado abierto o cerrado, por quién envió el último mensaje, por cuándo escribió el contacto por última vez y por miembro del equipo asignado (o `unassigned`). El nuevo parámetro `order` ordena por el mensaje más reciente recibido del contacto (`last_inbound_message_at`) en lugar de por la fecha de creación de la conversación. Todos funcionan con la paginación por páginas y con la paginación por cursor. Las solicitudes sin los nuevos parámetros se comportan como antes.
+
+### 🛠️ Cambios
+
+- La página de [GET /contacts](/api/reference/contacts_api/get_contacts) ahora indica con precisión el orden predeterminado: los contactos se ordenan por la fecha de creación de su conversación, de la más reciente a la más antigua.
+
 ## 30 de octubre de 2026
 
 ### ✨ Novedades

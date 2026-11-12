@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-List all contacts belonging to the account. A filter can be specified in order to get more specific results.
+List the contacts belonging to the account. By default, contacts are sorted by the creation date of their conversation, newest first. The optional parameters below filter the list by conversation activity, source, tags or team, and can change the order.
 
 ### Optional Parameters
 
@@ -18,7 +18,38 @@ List all contacts belonging to the account. A filter can be specified in order t
 | `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
 | `team_uuid`           | string   | The uuid of the team.                                                              |
+| `conversation_state`  | string   | `open` or `closed`. Returns only contacts whose conversation is in that state. |
+| `last_message_from`   | string   | `contact` returns contacts who sent the latest message of their conversation, which usually means they are waiting for a reply. `business` returns contacts whose latest message was sent from your account (a team member, a bot, a broadcast or the API). |
+| `last_inbound_message_after`  | string | An ISO 8601 date-time, for example `2026-11-12T08:00:00Z`. Returns contacts whose most recent message to you was received at or after this time. A date without a time (`2026-11-12`) means midnight UTC. Messages sent from your account do not count. |
+| `last_inbound_message_before` | string | An ISO 8601 date-time. Returns contacts whose most recent message to you was received at or before this time. Contacts who never sent a message are excluded whenever `last_inbound_message_after` or `last_inbound_message_before` is set. |
+| `assigned_user`       | string   | The email of a team member, to return only conversations assigned to them, or `unassigned`, to return only conversations with no assigned team member. |
+| `order`               | string   | `created_at` (default) sorts by the creation date of the conversation. `last_inbound_message_at` sorts by the time of the most recent message received from the contact; contacts who never sent a message come last. Both orders are newest first. |
 | `include_field_types` | boolean  | When `true`, the response includes `customFieldsMetadata` with value, type and options for each custom field. |
+
+### Filtering by conversation activity {#filtering-by-conversation-activity}
+
+The conversation filters can be combined with each other and with `source`, `tags` and `team_uuid`. For example, this request lists the open conversations whose latest message came from the contact, starting with the contact who wrote most recently:
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?conversation_state=open&last_message_from=contact&order=last_inbound_message_at" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+To list who wrote to you since 8:00 UTC today and is not assigned to anyone, use `last_inbound_message_after=2026-11-12T08:00:00Z&assigned_user=unassigned`.
+
+The `last_inbound_message_*` parameters and the `last_inbound_message_at` order only look at messages received from the contact. A reply from your team does not change them.
+
+An unsupported value returns a `400 Bad Request` error that names each invalid parameter:
+
+```json title=response.json
+{
+  "error": {
+    "conversation_state": ["must be one of: open, closed"],
+    "assigned_user": ["must be the email of a user inside the account, or unassigned"]
+  }
+}
+```
 
 ### Cursor pagination
 
@@ -38,8 +69,8 @@ A few things to keep in mind:
 
 - Treat the token as opaque and send it back unchanged. A malformed token returns a `400 Bad Request` error with the message `Invalid pagination cursor`.
 - The `page` parameter is ignored when `after` is present.
-- Filters (`source`, `tags`, `team_uuid`) are not encoded in the token — pass the same filters along with `after` on every request.
-- Contacts are returned in the same order as page-based requests (most recent conversation first). Contacts created after the walk started are not included.
+- Filters and the order are not encoded in the token — pass the same filters and the same `order` along with `after` on every request.
+- Contacts are returned in the same order as page-based requests. Contacts created after the walk started are not included. With `order=last_inbound_message_at`, a contact who writes to you during the walk moves to the top of the list, so the walk can skip that contact or return it twice.
 
 ### Example Request
 
