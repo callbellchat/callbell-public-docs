@@ -6,6 +6,16 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 12 novembre 2026
+
+### ✨ Novità
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) ora può filtrare e ordinare i contatti in base all'attività della conversazione. I nuovi parametri `conversation_state`, `last_message_from`, `last_inbound_message_after`, `last_inbound_message_before` e `assigned_user` filtrano per stato aperto o chiuso, per chi ha inviato l'ultimo messaggio, per quando il contatto ha scritto l'ultima volta e per membro del team assegnato (o `unassigned`). Il nuovo parametro `order` ordina per messaggio più recente ricevuto dal contatto (`last_inbound_message_at`) invece che per data di creazione della conversazione. Tutti funzionano con la paginazione a pagine e con la paginazione a cursore. Le richieste senza i nuovi parametri si comportano come prima.
+
+### 🛠️ Modifiche
+
+- La pagina [GET /contacts](/api/reference/contacts_api/get_contacts) ora indica con precisione l'ordinamento predefinito: i contatti sono ordinati per data di creazione della loro conversazione, dal più recente al meno recente.
+
 ## 30 ottobre 2026
 
 ### ✨ Novità
