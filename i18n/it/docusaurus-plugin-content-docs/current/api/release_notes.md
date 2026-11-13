@@ -6,6 +6,18 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 13 novembre 2026
+
+### ✨ Novità
+
+- Aggiunto [GET /tags](/api/reference/tags_api/get_tags) per elencare le etichette del tuo account, con un parametro facoltativo `search` che cerca una parte dell'etichetta senza distinguere tra maiuscole e minuscole.
+- Aggiunto [GET /custom_fields](/api/reference/custom_fields_api/get_custom_fields) per elencare i campi personalizzati del tuo account, con il loro tipo e, per i campi a tendina e a caselle di controllo, le opzioni consentite.
+- Aggiunti i tipi di oggetto [Tag](/api/reference/object_types/tag) e [Custom Field](/api/reference/object_types/custom_field).
+
+### 🛠️ Modifiche
+
+- Quando [crei](/api/reference/contacts_api/post_contacts) o [aggiorni](/api/reference/contacts_api/patch_contacts) un contatto con etichette o campi personalizzati che non esistono, l'errore `400 Bad Request` ora elenca anche fino a 10 etichette valide del tuo account in `valid_tags` o `valid_custom_fields`, a partire dalle più simili. I messaggi di errore esistenti non cambiano.
+
 ## 30 ottobre 2026
 
 ### ✨ Novità
