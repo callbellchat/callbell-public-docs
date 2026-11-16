@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 16 de noviembre de 2026
+
+### 🛠️ Cambios
+
+- [GET /tags](/api/reference/tags_api/get_tags) y [GET /custom_fields](/api/reference/custom_fields_api/get_custom_fields) ahora devuelven `meta.total`, el número total de registros. En [GET /tags](/api/reference/tags_api/get_tags) con `search`, solo cuenta las etiquetas que coinciden. Los campos existentes `meta.page` y `meta.pages` no cambian.
+
 ## 13 de noviembre de 2026
 
 ### ✨ Novedades

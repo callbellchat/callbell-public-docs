@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Un elenco di tutte le modifiche e miglioramenti introdotti nella nostra API. Utilizzalo per controllare se sono stati aggiunti nuovi endpoint o apportate modifiche.
 
+## 16 novembre 2026
+
+### 🛠️ Modifiche
+
+- [GET /tags](/api/reference/tags_api/get_tags) e [GET /custom_fields](/api/reference/custom_fields_api/get_custom_fields) ora restituiscono `meta.total`, il numero totale di record. In [GET /tags](/api/reference/tags_api/get_tags) con `search`, conta solo le etichette corrispondenti. I campi esistenti `meta.page` e `meta.pages` non cambiano.
+
 ## 13 novembre 2026
 
 ### ✨ Novità
