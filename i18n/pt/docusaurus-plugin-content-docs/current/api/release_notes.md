@@ -18,6 +18,16 @@ Uma lista de todas as alterações e melhorias que foram introduzidas em nossa A
 
 - Ao [criar](/api/reference/contacts_api/post_contacts) ou [atualizar](/api/reference/contacts_api/patch_contacts) um contato com etiquetas ou campos personalizados que não existem, o erro `400 Bad Request` agora também lista até 10 etiquetas válidas da sua conta em `valid_tags` ou `valid_custom_fields`, começando pelas mais parecidas. As mensagens de erro existentes não mudam.
 
+## 12 de novembro de 2026
+
+### ✨ Novidades
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) agora pode filtrar e ordenar os contatos pela atividade da conversa. Os novos parâmetros `conversation_state`, `last_message_from`, `last_inbound_message_after`, `last_inbound_message_before` e `assigned_user` filtram por estado aberto ou fechado, por quem enviou a última mensagem, por quando o contato escreveu pela última vez e por membro da equipe atribuído (ou `unassigned`). O novo parâmetro `order` ordena pela mensagem mais recente recebida do contato (`last_inbound_message_at`) em vez da data de criação da conversa. Todos funcionam com a paginação por páginas e com a paginação por cursor. Requisições sem os novos parâmetros se comportam como antes.
+
+### 🛠️ Alterações
+
+- A página de [GET /contacts](/api/reference/contacts_api/get_contacts) agora informa com precisão a ordem padrão: os contatos são ordenados pela data de criação da conversa, do mais recente para o mais antigo.
+
 ## 30 de outubro de 2026
 
 ### ✨ Novidades

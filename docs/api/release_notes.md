@@ -18,6 +18,16 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 - When [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) a contact with tags or custom fields that don't exist, the `400 Bad Request` error now also lists up to 10 valid labels of your account under `valid_tags` or `valid_custom_fields`, closest matches first. The existing error messages are unchanged.
 
+## November 12, 2026
+
+### ✨ What's new
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) can now filter and sort contacts by conversation activity. The new `conversation_state`, `last_message_from`, `last_inbound_message_after`, `last_inbound_message_before` and `assigned_user` parameters filter by open or closed state, by who sent the latest message, by when the contact last wrote, and by assigned team member (or `unassigned`). The new `order` parameter sorts by the most recent message received from the contact (`last_inbound_message_at`) instead of the conversation creation date. All of them work with page-based and cursor pagination. Requests without the new parameters behave as before.
+
+### 🛠️ Changes
+
+- The [GET /contacts](/api/reference/contacts_api/get_contacts) page now states the default order precisely: contacts are sorted by the creation date of their conversation, newest first.
+
 ## October 30, 2026
 
 ### ✨ What's new
