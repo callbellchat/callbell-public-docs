@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /tags
 
-List the tags of your account, ordered by label. Use these labels in the `tags` field when [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) a contact.
+List the tags of your account, ordered by label. Use these labels in the `tags` field when [creating](/api/reference/contacts_api/post_contacts) or [updating](/api/reference/contacts_api/patch_contacts) a contact. Tags are matched by their exact label, so send each label exactly as this endpoint lists it, including any leading or trailing spaces and punctuation.
 
 ### Optional Parameters
 
@@ -27,6 +27,7 @@ List the tags of your account, ordered by label. Use these labels in the `tags` 
 | `tags`       | [Tag[]](/api/reference/object_types/tag) | A list of tags.                                   |
 | `meta.page`  | number                                   | The current page.                                 |
 | `meta.pages` | number                                   | The total number of pages for the same `search`. |
+| `meta.total` | number                                   | The total number of tags for the same `search`.  |
 
 ### Example Response
 
@@ -44,7 +45,8 @@ List the tags of your account, ordered by label. Use these labels in the `tags` 
   ],
   "meta": {
     "page": 1,
-    "pages": 1
+    "pages": 1,
+    "total": 2
   }
 }
 ```

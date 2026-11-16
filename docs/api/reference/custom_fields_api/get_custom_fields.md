@@ -26,6 +26,7 @@ List the custom fields of your account, in the order they appear in your setting
 | `customFields` | [CustomField[]](/api/reference/object_types/custom_field) | A list of custom fields.        |
 | `meta.page`    | number                                                     | The current page.               |
 | `meta.pages`   | number                                                     | The total number of pages.      |
+| `meta.total`   | number                                                     | The total number of custom fields. |
 
 ### Example Response
 
@@ -47,7 +48,8 @@ List the custom fields of your account, in the order they appear in your setting
   ],
   "meta": {
     "page": 1,
-    "pages": 1
+    "pages": 1,
+    "total": 2
   }
 }
 ```
