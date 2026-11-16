@@ -38,6 +38,17 @@ If you have a bot enabled, the default status is `bot_start` meaning that the bo
 :::caution
 When passing `custom_fields` or `tags` make sure that they exist in your account. See [tags](https://dash.callbell.eu/settings/tags) and [custom_fields](https://dash.callbell.eu/settings/custom_fields) in your settings.
 
+To get the exact labels, call [GET /tags](/api/reference/tags_api/get_tags) and [GET /custom_fields](/api/reference/custom_fields_api/get_custom_fields). When a tag or custom field does not exist, the `400 Bad Request` response lists up to 10 valid labels of your account, closest matches first, under `valid_tags` or `valid_custom_fields`:
+
+```json
+{
+  "error": {
+    "custom_fields": ["ITV do not exist or are misspelled, please check before retrying"],
+    "valid_custom_fields": ["itv", "billing address"]
+  }
+}
+```
+
 For dropdown and checkbox custom fields, you must also configure the available options when creating the field. These options are displayed in the dashboard and enforced during validation.
 
 Same applies for `assigned_user` and `team_uuid`: either needs to exists in your account.
