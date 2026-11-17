@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-List the contacts belonging to the account. By default, contacts are sorted by the creation date of their conversation, newest first. The optional parameters below filter the list by conversation activity, source, tags or team, and can change the order.
+List the contacts belonging to the account. By default, contacts are sorted by the creation date of their conversation, newest first. The optional parameters below search contacts by name, filter the list by conversation activity, source, tags or team, and can change the order.
 
 ### Optional Parameters
 
@@ -15,6 +15,7 @@ List the contacts belonging to the account. By default, contacts are sorted by t
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | The page of contacts. If not specified it will default to page 1. Pages beyond 500 are not available — use [cursor pagination](#cursor-pagination) instead. |
 | `after`     | string   | Opaque cursor taken from `meta.next` of a previous response. Returns the batch of contacts that follows it. See [Cursor pagination](#cursor-pagination). |
+| `query`     | string   | Text to search for in the contact's name, up to 100 characters. The match ignores case and accents and accepts part of a word. See [Searching by name](#searching-by-name). |
 | `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
 | `team_uuid`           | string   | The uuid of the team.                                                              |
@@ -25,6 +26,20 @@ List the contacts belonging to the account. By default, contacts are sorted by t
 | `assigned_user`       | string   | The email of a team member, to return only conversations assigned to them, or `unassigned`, to return only conversations with no assigned team member. |
 | `order`               | string   | `created_at` (default) sorts by the creation date of the conversation. `last_inbound_message_at` sorts by the time of the most recent message received from the contact; contacts who never sent a message come last. Both orders are newest first. |
 | `include_field_types` | boolean  | When `true`, the response includes `customFieldsMetadata` with value, type and options for each custom field. |
+
+### Searching by name {#searching-by-name}
+
+`query` searches the name of the contact. The match ignores case and accents: `hernandez` finds "Hernández". Each word of the query can match any part of a word in the name: `riley` finds "Riley Smith", and `ey` finds "Reyes". When the query has several words, every word must appear in the name, so `riley smith` finds "Riley Smith" but not "Riley Jones". The query also matches a WhatsApp username or a phone number that starts with it. To look up one contact from a complete phone number, use [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone) instead.
+
+`query` combines with every other filter and with both pagination modes. The results keep the usual order (the conversation creation date, or the one set by `order`), not an order by relevance. For example, this request lists the open conversations of contacts called Riley:
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?query=riley&conversation_state=open" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+A query longer than 100 characters returns a `400 Bad Request` error: `{"error": {"query": ["is too long (maximum is 100 characters)"]}}`.
 
 ### Filtering by conversation activity {#filtering-by-conversation-activity}
 

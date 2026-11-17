@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-Lista os contatos pertencentes à conta. Por padrão, os contatos são ordenados pela data de criação da conversa, do mais recente para o mais antigo. Os parâmetros opcionais abaixo filtram a lista por atividade da conversa, origem, tags ou equipe, e podem alterar a ordem.
+Lista os contatos pertencentes à conta. Por padrão, os contatos são ordenados pela data de criação da conversa, do mais recente para o mais antigo. Os parâmetros opcionais abaixo buscam contatos pelo nome, filtram a lista por atividade da conversa, origem, tags ou equipe, e podem alterar a ordem.
 
 ### Parâmetros opcionais
 
@@ -15,6 +15,7 @@ Lista os contatos pertencentes à conta. Por padrão, os contatos são ordenados
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | A página de contatos. Se não for especificada, o padrão é a página 1. Páginas além da 500 não estão disponíveis — use a [paginação por cursor](#cursor-pagination). |
 | `after`     | string   | Cursor opaco obtido do `meta.next` de uma resposta anterior. Retorna o lote de contatos seguinte. Veja [Paginação por cursor](#cursor-pagination). |
+| `query`     | string   | Texto a buscar no nome do contato, com até 100 caracteres. A busca ignora maiúsculas, minúsculas e acentos e aceita parte de uma palavra. Veja [Buscar pelo nome](#searching-by-name). |
 | `source`    | Source   | O tipo de integração (ex.: `whatsapp`)                                              |
 | `tags`      | string[] | As tags correspondentes, separadas por vírgulas (ex.: `sales,lead`). As tags são _case-insensitive_. |
 | `team_uuid`           | string   | O uuid da equipe.                                                         |
@@ -25,6 +26,20 @@ Lista os contatos pertencentes à conta. Por padrão, os contatos são ordenados
 | `assigned_user`       | string   | O e-mail de um membro da equipe, para retornar apenas as conversas atribuídas a essa pessoa, ou `unassigned`, para retornar apenas as conversas sem nenhum membro da equipe atribuído. |
 | `order`               | string   | `created_at` (padrão) ordena pela data de criação da conversa. `last_inbound_message_at` ordena pelo horário da mensagem mais recente recebida do contato; contatos que nunca enviaram uma mensagem ficam por último. As duas ordens vão do mais recente para o mais antigo. |
 | `include_field_types` | boolean  | Quando `true`, a resposta inclui `customFieldsMetadata` com o valor, tipo e opções de cada campo personalizado. |
+
+### Buscar pelo nome {#searching-by-name}
+
+`query` busca no nome do contato. A busca ignora maiúsculas, minúsculas e acentos: `hernandez` encontra "Hernández". Cada palavra da busca pode corresponder a qualquer parte de uma palavra do nome: `riley` encontra "Riley Smith", e `ey` encontra "Reyes". Quando a busca tem várias palavras, todas precisam aparecer no nome, então `riley smith` encontra "Riley Smith", mas não "Riley Jones". A busca também encontra um nome de usuário do WhatsApp ou um número de telefone que comece com o texto buscado. Para encontrar um contato a partir de um número de telefone completo, use [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
+
+`query` se combina com todos os outros filtros e com os dois modos de paginação. Os resultados mantêm a ordem habitual (a data de criação da conversa, ou a definida por `order`), e não uma ordem por relevância. Por exemplo, esta requisição lista as conversas abertas dos contatos chamados Riley:
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?query=riley&conversation_state=open" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+Uma busca com mais de 100 caracteres retorna um erro `400 Bad Request`: `{"error": {"query": ["is too long (maximum is 100 characters)"]}}`.
 
 ### Filtrar por atividade da conversa {#filtering-by-conversation-activity}
 

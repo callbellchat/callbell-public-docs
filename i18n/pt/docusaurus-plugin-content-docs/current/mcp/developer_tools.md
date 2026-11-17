@@ -88,7 +88,7 @@ Estas são as ações que o assistente pode realizar no Callbell:
 
 | Ferramenta | Permissão | O que faz |
 | :-- | :-- | :-- |
-| `find_contacts` | Leitura | Busca um contato pelo número de telefone, ou lista contatos filtrados por canal, etiquetas ou equipe. Não há busca por nome. |
+| `find_contacts` | Leitura | Busca um contato pelo número de telefone, busca contatos pelo nome, ou lista contatos filtrados por canal, etiquetas ou equipe. |
 | `get_contact` | Leitura | Obtém um contato com suas etiquetas, campos personalizados, equipe, canal e status da conversa. |
 | `list_messages` | Leitura | Lê as mensagens da conversa de um contato, da mais recente para a mais antiga, incluindo as notas internas. |
 | `list_channels` | Leitura | Lista os canais conectados (WhatsApp, Instagram, Facebook Messenger e Telegram). |

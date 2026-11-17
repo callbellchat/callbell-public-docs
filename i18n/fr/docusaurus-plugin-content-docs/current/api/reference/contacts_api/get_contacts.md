@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-Liste les contacts appartenant au compte. Par défaut, les contacts sont triés par date de création de leur conversation, du plus récent au plus ancien. Les paramètres optionnels ci-dessous filtrent la liste par activité de conversation, source, tags ou équipe, et peuvent modifier l'ordre.
+Liste les contacts appartenant au compte. Par défaut, les contacts sont triés par date de création de leur conversation, du plus récent au plus ancien. Les paramètres optionnels ci-dessous recherchent des contacts par nom, filtrent la liste par activité de conversation, source, tags ou équipe, et peuvent modifier l'ordre.
 
 ### Paramètres optionnels
 
@@ -15,6 +15,7 @@ Liste les contacts appartenant au compte. Par défaut, les contacts sont triés 
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | La page de contacts. Si non spécifiée, la page 1 est utilisée par défaut. Les pages au-delà de 500 ne sont pas disponibles — utilisez plutôt la [pagination par curseur](#cursor-pagination). |
 | `after`     | string   | Curseur opaque provenant du `meta.next` d'une réponse précédente. Renvoie le lot de contacts qui le suit. Voir [Pagination par curseur](#cursor-pagination). |
+| `query`     | string   | Texte à rechercher dans le nom du contact, jusqu'à 100 caractères. La correspondance ignore la casse et les accents et accepte une partie de mot. Voir [Rechercher par nom](#searching-by-name). |
 | `source`    | Source   | Le type d'intégration (p. ex. `whatsapp`)                                           |
 | `tags`      | string[] | Les tags correspondants, séparés par des virgules (p. ex. `sales,lead`). Les tags sont _insensibles à la casse_. |
 | `team_uuid`           | string   | L'uuid de l'équipe.                                                      |
@@ -25,6 +26,20 @@ Liste les contacts appartenant au compte. Par défaut, les contacts sont triés 
 | `assigned_user`       | string   | L'adresse e-mail d'un membre de l'équipe, pour ne renvoyer que les conversations qui lui sont assignées, ou `unassigned`, pour ne renvoyer que les conversations sans membre de l'équipe assigné. |
 | `order`               | string   | `created_at` (par défaut) trie par date de création de la conversation. `last_inbound_message_at` trie par heure du message le plus récent reçu du contact ; les contacts qui n'ont jamais envoyé de message apparaissent en dernier. Les deux ordres vont du plus récent au plus ancien. |
 | `include_field_types` | boolean  | Lorsque `true`, la réponse inclut `customFieldsMetadata` avec la valeur, le type et les options de chaque champ personnalisé. |
+
+### Rechercher par nom {#searching-by-name}
+
+`query` recherche dans le nom du contact. La correspondance ignore la casse et les accents : `hernandez` trouve « Hernández ». Chaque mot de la recherche peut correspondre à n'importe quelle partie d'un mot du nom : `riley` trouve « Riley Smith », et `ey` trouve « Reyes ». Quand la recherche contient plusieurs mots, chacun doit figurer dans le nom : `riley smith` trouve donc « Riley Smith » mais pas « Riley Jones ». La recherche correspond aussi à un nom d'utilisateur WhatsApp ou à un numéro de téléphone qui commence par elle. Pour retrouver un contact à partir d'un numéro de téléphone complet, utilisez plutôt [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
+
+`query` se combine avec tous les autres filtres et avec les deux modes de pagination. Les résultats gardent l'ordre habituel (la date de création de la conversation, ou celui défini par `order`), et non un ordre de pertinence. Par exemple, cette requête liste les conversations ouvertes des contacts qui s'appellent Riley :
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?query=riley&conversation_state=open" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+Une recherche de plus de 100 caractères renvoie une erreur `400 Bad Request` : `{"error": {"query": ["is too long (maximum is 100 characters)"]}}`.
 
 ### Filtrer par activité de conversation {#filtering-by-conversation-activity}
 
