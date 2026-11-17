@@ -34,6 +34,12 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 - The [GET /contacts](/api/reference/contacts_api/get_contacts) page now states the default order precisely: contacts are sorted by the creation date of their conversation, newest first.
 
+## November 6, 2026
+
+### 🛠️ Changes
+
+- The `recordingStatus` field of the [Call](/api/reference/object_types/call) object type has a new value, `deleted`. A team member can now delete the recording of a call from the chat. For a deleted call, `recordingUrl`, `transcriptUrl`, `urlExpiresAt` and `mediaExpiresAt` are `null`.
+
 ## October 30, 2026
 
 ### ✨ What's new
