@@ -15,7 +15,7 @@ Liste les contacts appartenant au compte. Par défaut, les contacts sont triés 
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | La page de contacts. Si non spécifiée, la page 1 est utilisée par défaut. Les pages au-delà de 500 ne sont pas disponibles — utilisez plutôt la [pagination par curseur](#cursor-pagination). |
 | `after`     | string   | Curseur opaque provenant du `meta.next` d'une réponse précédente. Renvoie le lot de contacts qui le suit. Voir [Pagination par curseur](#cursor-pagination). |
-| `query`     | string   | Texte à rechercher dans le nom du contact, jusqu'à 100 caractères. La correspondance ignore la casse et accepte une partie de mot. Voir [Rechercher par nom](#searching-by-name). |
+| `query`     | string   | Texte à rechercher dans le nom du contact, jusqu'à 100 caractères. La correspondance ignore la casse et les accents et accepte une partie de mot. Voir [Rechercher par nom](#searching-by-name). |
 | `source`    | Source   | Le type d'intégration (p. ex. `whatsapp`)                                           |
 | `tags`      | string[] | Les tags correspondants, séparés par des virgules (p. ex. `sales,lead`). Les tags sont _insensibles à la casse_. |
 | `team_uuid`           | string   | L'uuid de l'équipe.                                                      |
@@ -29,7 +29,7 @@ Liste les contacts appartenant au compte. Par défaut, les contacts sont triés 
 
 ### Rechercher par nom {#searching-by-name}
 
-`query` recherche dans le nom du contact. La correspondance ignore la casse, et chaque mot de la recherche peut correspondre à n'importe quelle partie d'un mot du nom : `riley` trouve « Riley Smith », et `ey` trouve « Reyes ». Quand la recherche contient plusieurs mots, chacun doit figurer dans le nom : `riley smith` trouve donc « Riley Smith » mais pas « Riley Jones ». La recherche correspond aussi à un nom d'utilisateur WhatsApp ou à un numéro de téléphone qui commence par elle. Pour retrouver un contact à partir d'un numéro de téléphone complet, utilisez plutôt [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
+`query` recherche dans le nom du contact. La correspondance ignore la casse et les accents : `hernandez` trouve « Hernández ». Chaque mot de la recherche peut correspondre à n'importe quelle partie d'un mot du nom : `riley` trouve « Riley Smith », et `ey` trouve « Reyes ». Quand la recherche contient plusieurs mots, chacun doit figurer dans le nom : `riley smith` trouve donc « Riley Smith » mais pas « Riley Jones ». La recherche correspond aussi à un nom d'utilisateur WhatsApp ou à un numéro de téléphone qui commence par elle. Pour retrouver un contact à partir d'un numéro de téléphone complet, utilisez plutôt [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
 
 `query` se combine avec tous les autres filtres et avec les deux modes de pagination. Les résultats gardent l'ordre habituel (la date de création de la conversation, ou celui défini par `order`), et non un ordre de pertinence. Par exemple, cette requête liste les conversations ouvertes des contacts qui s'appellent Riley :
 

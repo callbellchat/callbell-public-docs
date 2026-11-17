@@ -10,7 +10,7 @@ Una lista de todos los cambios y mejoras que se han introducido en nuestra API. 
 
 ### ✨ Novedades
 
-- [GET /contacts](/api/reference/contacts_api/get_contacts) ahora puede buscar contactos por nombre con el nuevo parámetro `query`. La coincidencia no distingue mayúsculas de minúsculas y acepta parte de una palabra, y todas las palabras de la búsqueda deben aparecer en el nombre. La búsqueda también coincide con el inicio de un nombre de usuario de WhatsApp o de un número de teléfono. Se combina con los demás filtros y funciona con la paginación por páginas y por cursor.
+- [GET /contacts](/api/reference/contacts_api/get_contacts) ahora puede buscar contactos por nombre con el nuevo parámetro `query`. La coincidencia no distingue mayúsculas de minúsculas ni acentos y acepta parte de una palabra, y todas las palabras de la búsqueda deben aparecer en el nombre. La búsqueda también coincide con el inicio de un nombre de usuario de WhatsApp o de un número de teléfono. Se combina con los demás filtros y funciona con la paginación por páginas y por cursor.
 
 ## 16 de noviembre de 2026
 

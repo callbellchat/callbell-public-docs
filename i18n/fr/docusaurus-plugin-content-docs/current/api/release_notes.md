@@ -10,7 +10,7 @@ Une liste de tous les changements et améliorations qui ont été introduits dan
 
 ### ✨ Nouveautés
 
-- [GET /contacts](/api/reference/contacts_api/get_contacts) peut désormais rechercher des contacts par nom avec le nouveau paramètre `query`. La correspondance ignore la casse et accepte une partie de mot, et chaque mot de la recherche doit figurer dans le nom. La recherche correspond aussi au début d'un nom d'utilisateur WhatsApp ou d'un numéro de téléphone. Elle se combine avec les autres filtres et fonctionne avec la pagination par page et par curseur.
+- [GET /contacts](/api/reference/contacts_api/get_contacts) peut désormais rechercher des contacts par nom avec le nouveau paramètre `query`. La correspondance ignore la casse et les accents et accepte une partie de mot, et chaque mot de la recherche doit figurer dans le nom. La recherche correspond aussi au début d'un nom d'utilisateur WhatsApp ou d'un numéro de téléphone. Elle se combine avec les autres filtres et fonctionne avec la pagination par page et par curseur.
 
 ## 16 novembre 2026
 

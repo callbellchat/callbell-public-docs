@@ -15,7 +15,7 @@ Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los con
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | La página de contactos. Si no se especifica, el valor predeterminado es la página 1. Las páginas más allá de la 500 no están disponibles — usa la [paginación por cursor](#cursor-pagination) en su lugar. |
 | `after`     | string   | Cursor opaco obtenido del `meta.next` de una respuesta anterior. Devuelve el lote de contactos que le sigue. Ver [Paginación por cursor](#cursor-pagination). |
-| `query`     | string   | Texto que se busca en el nombre del contacto, de hasta 100 caracteres. La coincidencia no distingue mayúsculas de minúsculas y acepta parte de una palabra. Consulta [Buscar por nombre](#searching-by-name). |
+| `query`     | string   | Texto que se busca en el nombre del contacto, de hasta 100 caracteres. La coincidencia no distingue mayúsculas de minúsculas ni acentos y acepta parte de una palabra. Consulta [Buscar por nombre](#searching-by-name). |
 | `source`    | Source   | El tipo de integración (p. ej. `whatsapp`)                                          |
 | `tags`      | string[] | Las etiquetas coincidentes, separadas por comas (p. ej. `sales,lead`). Las etiquetas _no distinguen mayúsculas de minúsculas_. |
 | `team_uuid`           | string   | El uuid del equipo.                                                       |
@@ -29,7 +29,7 @@ Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los con
 
 ### Buscar por nombre {#searching-by-name}
 
-`query` busca en el nombre del contacto. La coincidencia no distingue mayúsculas de minúsculas, y cada palabra de la búsqueda puede coincidir con cualquier parte de una palabra del nombre: `riley` encuentra "Riley Smith", y `ey` encuentra "Reyes". Cuando la búsqueda tiene varias palabras, todas deben aparecer en el nombre, así que `riley smith` encuentra "Riley Smith" pero no "Riley Jones". La búsqueda también coincide con un nombre de usuario de WhatsApp o un número de teléfono que empiece por ella. Para buscar un contacto a partir de un número de teléfono completo, usa [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
+`query` busca en el nombre del contacto. La coincidencia no distingue mayúsculas de minúsculas ni acentos: `hernandez` encuentra "Hernández". Cada palabra de la búsqueda puede coincidir con cualquier parte de una palabra del nombre: `riley` encuentra "Riley Smith", y `ey` encuentra "Reyes". Cuando la búsqueda tiene varias palabras, todas deben aparecer en el nombre, así que `riley smith` encuentra "Riley Smith" pero no "Riley Jones". La búsqueda también coincide con un nombre de usuario de WhatsApp o un número de teléfono que empiece por ella. Para buscar un contacto a partir de un número de teléfono completo, usa [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
 
 `query` se combina con todos los demás filtros y con los dos modos de paginación. Los resultados mantienen el orden habitual (la fecha de creación de la conversación, o el indicado con `order`), no un orden por relevancia. Por ejemplo, esta solicitud lista las conversaciones abiertas de los contactos que se llaman Riley:
 

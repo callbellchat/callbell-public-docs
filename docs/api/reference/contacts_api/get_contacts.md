@@ -15,7 +15,7 @@ List the contacts belonging to the account. By default, contacts are sorted by t
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | The page of contacts. If not specified it will default to page 1. Pages beyond 500 are not available — use [cursor pagination](#cursor-pagination) instead. |
 | `after`     | string   | Opaque cursor taken from `meta.next` of a previous response. Returns the batch of contacts that follows it. See [Cursor pagination](#cursor-pagination). |
-| `query`     | string   | Text to search for in the contact's name, up to 100 characters. The match ignores case and accepts part of a word. See [Searching by name](#searching-by-name). |
+| `query`     | string   | Text to search for in the contact's name, up to 100 characters. The match ignores case and accents and accepts part of a word. See [Searching by name](#searching-by-name). |
 | `source`    | Source   | The integration type (e.g. `whatsapp`)                                             |
 | `tags`      | string[] | The matching tags, comma-separated (e.g. `sales,lead`). Tags are _case-insentive_. |
 | `team_uuid`           | string   | The uuid of the team.                                                              |
@@ -29,7 +29,7 @@ List the contacts belonging to the account. By default, contacts are sorted by t
 
 ### Searching by name {#searching-by-name}
 
-`query` searches the name of the contact. The match ignores case, and each word of the query can match any part of a word in the name: `riley` finds "Riley Smith", and `ey` finds "Reyes". When the query has several words, every word must appear in the name, so `riley smith` finds "Riley Smith" but not "Riley Jones". The query also matches a WhatsApp username or a phone number that starts with it. To look up one contact from a complete phone number, use [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone) instead.
+`query` searches the name of the contact. The match ignores case and accents: `hernandez` finds "Hernández". Each word of the query can match any part of a word in the name: `riley` finds "Riley Smith", and `ey` finds "Reyes". When the query has several words, every word must appear in the name, so `riley smith` finds "Riley Smith" but not "Riley Jones". The query also matches a WhatsApp username or a phone number that starts with it. To look up one contact from a complete phone number, use [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone) instead.
 
 `query` combines with every other filter and with both pagination modes. The results keep the usual order (the conversation creation date, or the one set by `order`), not an order by relevance. For example, this request lists the open conversations of contacts called Riley:
 

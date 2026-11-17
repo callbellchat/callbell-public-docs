@@ -10,7 +10,7 @@ A list of all the changes and enhancements that were introduced in our API. Use 
 
 ### ✨ What's new
 
-- [GET /contacts](/api/reference/contacts_api/get_contacts) can now search contacts by name with the new `query` parameter. The match ignores case and accepts part of a word, and every word of the query must appear in the name. The query also matches the start of a WhatsApp username or of a phone number. It combines with the other filters and works with page-based and cursor pagination.
+- [GET /contacts](/api/reference/contacts_api/get_contacts) can now search contacts by name with the new `query` parameter. The match ignores case and accents and accepts part of a word, and every word of the query must appear in the name. The query also matches the start of a WhatsApp username or of a phone number. It combines with the other filters and works with page-based and cursor pagination.
 
 ## November 16, 2026
 
