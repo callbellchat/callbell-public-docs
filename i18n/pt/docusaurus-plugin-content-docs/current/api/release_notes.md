@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Uma lista de todas as alterações e melhorias que foram introduzidas em nossa API. Use para verificar sempre que novos endpoints forem adicionados ou alterações forem feitas.
 
+## 17 de novembro de 2026
+
+### ✨ Novidades
+
+- [GET /contacts](/api/reference/contacts_api/get_contacts) agora pode buscar contatos pelo nome com o novo parâmetro `query`. A busca ignora maiúsculas e minúsculas e aceita parte de uma palavra, e todas as palavras da busca precisam aparecer no nome. A busca também encontra o início de um nome de usuário do WhatsApp ou de um número de telefone. Ela se combina com os outros filtros e funciona com a paginação por páginas e por cursor.
+
 ## 16 de novembro de 2026
 
 ### 🛠️ Alterações

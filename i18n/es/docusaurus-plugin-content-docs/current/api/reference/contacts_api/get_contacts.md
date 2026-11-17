@@ -7,7 +7,7 @@ import RequestTabs from "@site/src/components/Requests/RequestTabs"
 
 # GET /contacts
 
-Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los contactos se ordenan por la fecha de creación de su conversación, de la más reciente a la más antigua. Los parámetros opcionales que se indican a continuación filtran la lista por actividad de la conversación, origen, etiquetas o equipo, y pueden cambiar el orden.
+Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los contactos se ordenan por la fecha de creación de su conversación, de la más reciente a la más antigua. Los parámetros opcionales que se indican a continuación buscan contactos por nombre, filtran la lista por actividad de la conversación, origen, etiquetas o equipo, y pueden cambiar el orden.
 
 ### Parámetros opcionales
 
@@ -15,6 +15,7 @@ Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los con
 | :---------- | :------- | :--------------------------------------------------------------------------------- |
 | `page`      | Integer  | La página de contactos. Si no se especifica, el valor predeterminado es la página 1. Las páginas más allá de la 500 no están disponibles — usa la [paginación por cursor](#cursor-pagination) en su lugar. |
 | `after`     | string   | Cursor opaco obtenido del `meta.next` de una respuesta anterior. Devuelve el lote de contactos que le sigue. Ver [Paginación por cursor](#cursor-pagination). |
+| `query`     | string   | Texto que se busca en el nombre del contacto, de hasta 100 caracteres. La coincidencia no distingue mayúsculas de minúsculas y acepta parte de una palabra. Consulta [Buscar por nombre](#searching-by-name). |
 | `source`    | Source   | El tipo de integración (p. ej. `whatsapp`)                                          |
 | `tags`      | string[] | Las etiquetas coincidentes, separadas por comas (p. ej. `sales,lead`). Las etiquetas _no distinguen mayúsculas de minúsculas_. |
 | `team_uuid`           | string   | El uuid del equipo.                                                       |
@@ -25,6 +26,20 @@ Lista los contactos que pertenecen a la cuenta. De forma predeterminada, los con
 | `assigned_user`       | string   | El correo electrónico de un miembro del equipo, para devolver solo las conversaciones asignadas a esa persona, o `unassigned`, para devolver solo las conversaciones sin ningún miembro del equipo asignado. |
 | `order`               | string   | `created_at` (predeterminado) ordena por la fecha de creación de la conversación. `last_inbound_message_at` ordena por la hora del mensaje más reciente recibido del contacto; los contactos que nunca enviaron un mensaje aparecen al final. Ambos órdenes van del más reciente al más antiguo. |
 | `include_field_types` | boolean  | Cuando es `true`, la respuesta incluye `customFieldsMetadata` con el valor, tipo y opciones de cada campo personalizado. |
+
+### Buscar por nombre {#searching-by-name}
+
+`query` busca en el nombre del contacto. La coincidencia no distingue mayúsculas de minúsculas, y cada palabra de la búsqueda puede coincidir con cualquier parte de una palabra del nombre: `riley` encuentra "Riley Smith", y `ey` encuentra "Reyes". Cuando la búsqueda tiene varias palabras, todas deben aparecer en el nombre, así que `riley smith` encuentra "Riley Smith" pero no "Riley Jones". La búsqueda también coincide con un nombre de usuario de WhatsApp o un número de teléfono que empiece por ella. Para buscar un contacto a partir de un número de teléfono completo, usa [GET /contacts/phone/:phone_number](/api/reference/contacts_api/get_contact_by_phone).
+
+`query` se combina con todos los demás filtros y con los dos modos de paginación. Los resultados mantienen el orden habitual (la fecha de creación de la conversación, o el indicado con `order`), no un orden por relevancia. Por ejemplo, esta solicitud lista las conversaciones abiertas de los contactos que se llaman Riley:
+
+```bash
+curl -X GET "https://api.callbell.eu/v1/contacts?query=riley&conversation_state=open" \
+    -H "Authorization: Bearer test_gshuPaZoeEG6ovbc8M79w0QyM" \
+    -H "Content-Type: application/json"
+```
+
+Una búsqueda de más de 100 caracteres devuelve un error `400 Bad Request`: `{"error": {"query": ["is too long (maximum is 100 characters)"]}}`.
 
 ### Filtrar por actividad de la conversación {#filtering-by-conversation-activity}
 

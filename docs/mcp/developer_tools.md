@@ -88,7 +88,7 @@ These are the actions the assistant can perform in Callbell:
 
 | Tool | Permission | What it does |
 | :-- | :-- | :-- |
-| `find_contacts` | Read | Looks up a contact by phone number, or lists contacts filtered by channel, tags or team. There is no search by name. |
+| `find_contacts` | Read | Looks up a contact by phone number, searches contacts by name, or lists contacts filtered by channel, tags or team. |
 | `get_contact` | Read | Gets a contact with its tags, custom fields, team, channel and conversation status. |
 | `list_messages` | Read | Reads the messages of a contact's conversation, newest first, including internal notes. |
 | `list_channels` | Read | Lists the connected channels (WhatsApp, Instagram, Facebook Messenger and Telegram). |
