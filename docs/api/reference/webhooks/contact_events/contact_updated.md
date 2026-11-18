@@ -28,6 +28,8 @@ See [Contact Object](./../../object_types/contact.md)
     "source": "whatsapp",
     "avatarUrl": null,
     "createdAt": "2022-10-12T15:57:16Z",
+    "lastInboundMessageAt": "2022-10-12T15:58:02Z",
+    "lastMessageFrom": "contact",
     "phoneNumber": "331122334455"
   }
 }

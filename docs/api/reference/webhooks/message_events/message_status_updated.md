@@ -83,6 +83,8 @@ Represents a message deletion from the end-user, both for _"delete only for me"_
       "source": "whatsapp",
       "avatarUrl": null,
       "createdAt": "2022-10-12T15:57:16Z",
+      "lastInboundMessageAt": "2022-10-12T15:58:02Z",
+      "lastMessageFrom": "business",
       "phoneNumber": "331122334455"
     },
     "messageStatusPayload":{

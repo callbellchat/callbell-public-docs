@@ -55,6 +55,8 @@ Per elencare chi ti ha scritto dalle 8:00 UTC di oggi e non è assegnato a nessu
 
 I parametri `last_inbound_message_*` e l'ordinamento `last_inbound_message_at` considerano solo i messaggi ricevuti dal contatto. Una risposta del tuo team non li modifica.
 
+Ogni contatto della risposta include `lastInboundMessageAt`, l'ora del messaggio più recente ricevuto dal contatto (`null` se il contatto non ha mai scritto), e `lastMessageFrom`, che vale `contact` o `business` come il parametro `last_message_from` (`null` se la conversazione non ha ancora messaggi). Usali per verificare i risultati filtrati o per vedere da quanto tempo un contatto aspetta una risposta.
+
 Un valore non supportato restituisce un errore `400 Bad Request` che indica ogni parametro non valido:
 
 ```json title=response.json
@@ -113,6 +115,8 @@ Alcune cose da tenere a mente:
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": "john.doe@email.com",
+      "lastInboundMessageAt": "2026-11-18T09:12:44Z",
+      "lastMessageFrom": "contact",
       "tags": [
         "sales",
         "lead"
@@ -133,6 +137,8 @@ Alcune cose da tenere a mente:
       "href": "https://dash.callbell.eu/contacts/ff8bec9363bc4c29b8b044eabf2afebd",
       "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": null,
+      "lastInboundMessageAt": "2026-11-17T16:40:02Z",
+      "lastMessageFrom": "business",
       "tags": [
         "sales",
         "lead",

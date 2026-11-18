@@ -55,6 +55,8 @@ To list who wrote to you since 8:00 UTC today and is not assigned to anyone, use
 
 The `last_inbound_message_*` parameters and the `last_inbound_message_at` order only look at messages received from the contact. A reply from your team does not change them.
 
+Every contact in the response includes `lastInboundMessageAt`, the time of the most recent message received from the contact (`null` if the contact never wrote), and `lastMessageFrom`, which is `contact` or `business` like the `last_message_from` parameter (`null` if the conversation has no messages yet). Use them to check the filtered results or to see how long a contact has been waiting for a reply.
+
 An unsupported value returns a `400 Bad Request` error that names each invalid parameter:
 
 ```json title=response.json
@@ -113,6 +115,8 @@ A few things to keep in mind:
       "href": "https://dash.callbell.eu/contacts/414a6d692bd645ed803f2e7ce360d4c8",
       "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": "john.doe@email.com",
+      "lastInboundMessageAt": "2026-11-18T09:12:44Z",
+      "lastMessageFrom": "contact",
       "tags": [
         "sales",
         "lead"
@@ -133,6 +137,8 @@ A few things to keep in mind:
       "href": "https://dash.callbell.eu/contacts/ff8bec9363bc4c29b8b044eabf2afebd",
       "conversationHref": "https://dash.callbell.eu/chat/f3670b13446b412796238b1cd78899f9",
       "assignedUser": null,
+      "lastInboundMessageAt": "2026-11-17T16:40:02Z",
+      "lastMessageFrom": "business",
       "tags": [
         "sales",
         "lead",

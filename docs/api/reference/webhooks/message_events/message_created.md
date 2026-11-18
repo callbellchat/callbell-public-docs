@@ -56,6 +56,8 @@ This event will be sent whenever a message gets **created**, for example when _r
       "source": "whatsapp",
       "avatarUrl": null,
       "createdAt": "2022-10-12T15:57:16Z",
+      "lastInboundMessageAt": "2022-10-12T15:58:02Z",
+      "lastMessageFrom": "contact",
       "phoneNumber": "331122334455"
     },
     "messageLocation": {
