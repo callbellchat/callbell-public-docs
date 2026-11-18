@@ -8,16 +8,22 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Callbell Documentation",
   tagline: "",
-  url: "https://www.callbell.eu",
+  url: "https://docs.callbell.eu",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
+  customFields: {
+    llmsDescription: "Callbell is a shared team inbox for WhatsApp Business API, Instagram, Facebook Messenger, Telegram, TikTok and live chat. These docs cover the Callbell REST API and webhooks, the bot editor, the webchat widget, the Zapier integration and the MCP server for AI assistants.",
+  },
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "callbellchat", // Usually your GitHub org/user name.
   projectName: "callbell-public-docs", // Usually your repo name.
+
+  plugins: [require.resolve("./src/plugins/llms-txt")],
 
   themes: [
     [
