@@ -6,6 +6,12 @@ sidebar_position: 4
 
 Una lista de todos los cambios y mejoras que se han introducido en nuestra API. Úsala para verificar cuando se agregan nuevos puntos finales o se realizan cambios.
 
+## 18 de noviembre de 2026
+
+### ✨ Novedades
+
+- Se han añadido los campos `lastInboundMessageAt` y `lastMessageFrom` al tipo de objeto [Contact](/api/reference/object_types/contact). `lastInboundMessageAt` es la hora del mensaje más reciente recibido del contacto, y `lastMessageFrom` indica quién envió el último mensaje de la conversación: `contact` o `business`. Corresponden a los parámetros `last_inbound_message_after`, `last_inbound_message_before`, `last_message_from` y `order=last_inbound_message_at` de [GET /contacts](/api/reference/contacts_api/get_contacts), así que puedes comprobar los resultados filtrados y ver cuánto tiempo lleva un contacto esperando una respuesta. Los demás endpoints y webhooks que incluyen un contacto también devuelven estos campos.
+
 ## 17 de noviembre de 2026
 
 ### ✨ Novedades

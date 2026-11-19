@@ -16,6 +16,8 @@ sidebar_position: 1
 | `source`           | Source                  | Source of conversation                                  |
 | `funnelId`         | Funnel                  | Funnel currently associated to the contact/conversation |
 | `closedAt`         | string                  | Date of contact closure (ISO 8601 formatted)            |
+| `lastInboundMessageAt` | string              | Date of the most recent message received from the contact (ISO 8601 formatted). Messages sent from your account do not change it. `null` when the contact never wrote. |
+| `lastMessageFrom`  | string                  | Who sent the latest message of the conversation: `contact`, or `business` for a message sent from your account (a team member, a bot, a broadcast or the API). `null` when the conversation has no messages yet. |
 | `href`             | string                  | Link to dashboard CRM contact                           |
 | `conversationHref` | string                  | Link to dashboard conversation                          |
 | `tags`             | string                  | List of associated tags                                 |
