@@ -100,6 +100,7 @@ These are the actions the assistant can perform in Callbell:
 | `update_contact` | Write | Renames a contact, adds or removes tags, fills custom fields or moves the conversation to another team. |
 | `add_note` | Write | Adds an internal note to a conversation. Notes are visible to your team only, never to the contact. |
 | `close_conversation` | Write | Closes a contact's conversation. |
+| `report_unsupported_request` | Read | Tells Callbell about a request that the other tools cannot do, or can do only in part, so that Callbell can improve them. It sends the user's request and a short description of what is missing, and changes nothing in the account. |
 
 :::note
 The assistant can only message contacts that already exist in Callbell: it cannot start a conversation with a new phone number. Authentication templates (one-time codes) cannot be sent from an AI app.

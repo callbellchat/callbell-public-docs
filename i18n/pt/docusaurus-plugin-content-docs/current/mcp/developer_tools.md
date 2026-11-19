@@ -100,6 +100,7 @@ Estas são as ações que o assistente pode realizar no Callbell:
 | `update_contact` | Escrita | Renomeia um contato, adiciona ou remove etiquetas, preenche campos personalizados ou move a conversa para outra equipe. |
 | `add_note` | Escrita | Adiciona uma nota interna a uma conversa. As notas são visíveis só para a sua equipe, nunca para o contato. |
 | `close_conversation` | Escrita | Fecha a conversa de um contato. |
+| `report_unsupported_request` | Leitura | Informa à Callbell uma solicitação que as outras ferramentas não conseguem atender, ou só conseguem em parte, para que a Callbell possa melhorá-las. Envia a solicitação do usuário e uma breve descrição do que falta, e não altera nada na conta. |
 
 :::note
 O assistente só pode escrever para contatos que já existem no Callbell: ele não pode iniciar uma conversa com um número novo. Modelos de autenticação (códigos de uso único) não podem ser enviados por um aplicativo de IA.
