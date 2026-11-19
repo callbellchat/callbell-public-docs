@@ -88,11 +88,13 @@ Estas são as ações que o assistente pode realizar no Callbell:
 
 | Ferramenta | Permissão | O que faz |
 | :-- | :-- | :-- |
-| `find_contacts` | Leitura | Busca um contato pelo número de telefone, busca contatos pelo nome, ou lista contatos filtrados por canal, etiquetas ou equipe. |
+| `find_contacts` | Leitura | Busca um contato pelo número de telefone, busca contatos pelo nome, ou lista contatos filtrados por canal, etiquetas, equipe, status da conversa, autor da última mensagem, quando o contato escreveu pela última vez ou membro da equipe atribuído. Veja [Encontrar conversas](#finding-conversations). |
 | `get_contact` | Leitura | Obtém um contato com suas etiquetas, campos personalizados, equipe, canal e status da conversa. |
-| `list_messages` | Leitura | Lê as mensagens da conversa de um contato, da mais recente para a mais antiga, incluindo as notas internas. |
+| `list_messages` | Leitura | Lê a conversa de um contato como uma transcrição que mostra quem enviou cada mensagem, incluindo as notas internas. Cada chamada lê até 100 mensagens, começando pelas mais recentes. |
 | `list_channels` | Leitura | Lista os canais conectados (WhatsApp, Instagram, Facebook Messenger e Telegram). |
 | `list_teams` | Leitura | Lista as equipes da conta. |
+| `list_tags` | Leitura | Lista os nomes das etiquetas da conta. `find_contacts` e `update_contact` só aceitam esses nomes exatos. |
+| `list_custom_fields` | Leitura | Lista os campos personalizados da conta, com o tipo de cada campo e, para os campos de lista suspensa e de caixa de seleção, as opções permitidas. |
 | `list_templates` | Leitura | Lista os modelos do WhatsApp e o status de aprovação. |
 | `send_message` | Escrita | Envia uma mensagem do WhatsApp para um contato existente. Fora da janela de atendimento de 24 horas, só é possível enviar modelos aprovados. |
 | `update_contact` | Escrita | Renomeia um contato, adiciona ou remove etiquetas, preenche campos personalizados ou move a conversa para outra equipe. |
@@ -101,4 +103,22 @@ Estas são as ações que o assistente pode realizar no Callbell:
 
 :::note
 O assistente só pode escrever para contatos que já existem no Callbell: ele não pode iniciar uma conversa com um número novo. Modelos de autenticação (códigos de uso único) não podem ser enviados por um aplicativo de IA.
+:::
+
+## Encontrar conversas {#finding-conversations}
+
+`find_contacts` pode filtrar os contatos pelo status da conversa. O assistente usa esses filtros para responder a perguntas como "quais conversas estão aguardando resposta?" ou "quem nos escreveu hoje?" sem ler todos os contatos. Os filtros se combinam entre si e com a busca por nome, etiquetas, canal e equipe.
+
+| Filtro | Valores | Encontra |
+| :-- | :-- | :-- |
+| `conversation_state` | `open` ou `closed` | Os contatos cuja conversa está aberta, ou fechada. |
+| `last_message_from` | `contact` ou `business` | Os contatos que enviaram a última mensagem da conversa, o que geralmente significa que estão aguardando uma resposta, ou os contatos cuja última mensagem foi enviada pela sua conta (um membro da equipe, um bot, uma transmissão ou a API). |
+| `last_inbound_message_after` e `last_inbound_message_before` | Uma data e hora ISO 8601, por exemplo `2026-11-19T08:00:00Z` | Os contatos cuja mensagem mais recente enviada para você chegou nesse intervalo de tempo. As mensagens enviadas pela sua conta não contam. |
+| `assigned_user` | O e-mail de um membro da equipe, ou `unassigned` | Os contatos cuja conversa está atribuída a esse membro da equipe, ou a ninguém. |
+| `order` | `created_at` (padrão) ou `last_inbound_message_at` | Primeiro a conversa mais recente, ou primeiro o contato que escreveu mais recentemente. |
+
+Cada contato nos resultados também mostra `lastInboundMessageAt`, quando o contato escreveu para você pela última vez, e `lastMessageFrom`, `contact` ou `business`, para que o assistente saiba há quanto tempo um contato está aguardando. Os filtros funcionam como os parâmetros equivalentes de [GET /contacts](/api/reference/contacts_api/get_contacts) na API do Callbell.
+
+:::tip
+Os aplicativos de IA mantêm a lista de ferramentas que carregaram quando você se conectou. Se o assistente não usar esses filtros, abra um chat novo ou conecte o Callbell de novo para que o aplicativo carregue as ferramentas mais recentes.
 :::

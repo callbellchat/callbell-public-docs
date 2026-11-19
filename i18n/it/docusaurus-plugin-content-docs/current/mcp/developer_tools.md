@@ -88,11 +88,13 @@ Queste sono le azioni che l'assistente può eseguire in Callbell:
 
 | Strumento | Permesso | Cosa fa |
 | :-- | :-- | :-- |
-| `find_contacts` | Lettura | Cerca un contatto per numero di telefono, cerca i contatti per nome, oppure elenca i contatti filtrati per canale, tag o team. |
+| `find_contacts` | Lettura | Cerca un contatto per numero di telefono, cerca i contatti per nome, oppure elenca i contatti filtrati per canale, tag, team, stato della conversazione, autore dell'ultimo messaggio, momento in cui il contatto ha scritto l'ultima volta o membro del team assegnato. Vedi [Trovare le conversazioni](#finding-conversations). |
 | `get_contact` | Lettura | Recupera un contatto con i suoi tag, campi personalizzati, team, canale e stato della conversazione. |
-| `list_messages` | Lettura | Legge i messaggi della conversazione di un contatto, dal più recente, note interne comprese. |
+| `list_messages` | Lettura | Legge la conversazione di un contatto come una trascrizione che indica chi ha inviato ogni messaggio, note interne comprese. Ogni chiamata legge fino a 100 messaggi, partendo dai più recenti. |
 | `list_channels` | Lettura | Elenca i canali connessi (WhatsApp, Instagram, Facebook Messenger e Telegram). |
 | `list_teams` | Lettura | Elenca i team dell'account. |
+| `list_tags` | Lettura | Elenca i nomi dei tag dell'account. `find_contacts` e `update_contact` accettano solo questi nomi esatti. |
+| `list_custom_fields` | Lettura | Elenca i campi personalizzati dell'account, con il tipo di ogni campo e, per i campi a tendina e a casella di controllo, le opzioni consentite. |
 | `list_templates` | Lettura | Elenca i modelli WhatsApp e il loro stato di approvazione. |
 | `send_message` | Scrittura | Invia un messaggio WhatsApp a un contatto esistente. Fuori dalla finestra di assistenza clienti di 24 ore si possono inviare solo modelli approvati. |
 | `update_contact` | Scrittura | Rinomina un contatto, aggiunge o rimuove tag, compila campi personalizzati o sposta la conversazione su un altro team. |
@@ -101,4 +103,22 @@ Queste sono le azioni che l'assistente può eseguire in Callbell:
 
 :::note
 L'assistente può scrivere solo ai contatti che esistono già in Callbell: non può avviare una conversazione con un nuovo numero. I modelli di autenticazione (codici monouso) non possono essere inviati da un'app di IA.
+:::
+
+## Trovare le conversazioni {#finding-conversations}
+
+`find_contacts` può filtrare i contatti in base allo stato della loro conversazione. L'assistente usa questi filtri per rispondere a domande come «quali conversazioni aspettano una risposta?» o «chi ci ha scritto oggi?» senza leggere tutti i contatti. I filtri si combinano tra loro e con la ricerca per nome, tag, canale e team.
+
+| Filtro | Valori | Trova |
+| :-- | :-- | :-- |
+| `conversation_state` | `open` o `closed` | I contatti la cui conversazione è aperta, oppure chiusa. |
+| `last_message_from` | `contact` o `business` | I contatti che hanno inviato l'ultimo messaggio della loro conversazione, il che di solito significa che aspettano una risposta, oppure i contatti il cui ultimo messaggio è stato inviato dal tuo account (un membro del team, un bot, un broadcast o l'API). |
+| `last_inbound_message_after` e `last_inbound_message_before` | Una data e ora ISO 8601, per esempio `2026-11-19T08:00:00Z` | I contatti il cui messaggio più recente inviato a te è arrivato in quell'intervallo di tempo. I messaggi inviati dal tuo account non contano. |
+| `assigned_user` | L'indirizzo email di un membro del team, oppure `unassigned` | I contatti la cui conversazione è assegnata a quel membro del team, oppure a nessuno. |
+| `order` | `created_at` (predefinito) o `last_inbound_message_at` | Prima la conversazione più recente, oppure prima il contatto che ha scritto più di recente. |
+
+Ogni contatto nei risultati mostra anche `lastInboundMessageAt`, quando il contatto ti ha scritto l'ultima volta, e `lastMessageFrom`, `contact` o `business`, così l'assistente sa da quanto tempo un contatto sta aspettando. I filtri funzionano come i parametri corrispondenti di [GET /contacts](/api/reference/contacts_api/get_contacts) nell'API di Callbell.
+
+:::tip
+Le app di IA conservano l'elenco degli strumenti caricato al momento della connessione. Se l'assistente non usa questi filtri, apri una nuova chat o ricollega Callbell, così l'app carica gli strumenti più recenti.
 :::
