@@ -88,17 +88,38 @@ Voici les actions que l'assistant peut effectuer dans Callbell :
 
 | Outil | Permission | Ce qu'il fait |
 | :-- | :-- | :-- |
-| `find_contacts` | Lecture | Recherche un contact par numéro de téléphone, recherche des contacts par nom, ou liste les contacts filtrés par canal, étiquettes ou équipe. |
+| `find_contacts` | Lecture | Recherche un contact par numéro de téléphone, recherche des contacts par nom, ou liste les contacts filtrés par canal, étiquettes, équipe, état de la conversation, auteur du dernier message, date du dernier message du contact ou membre de l'équipe assigné. Voir [Trouver des conversations](#finding-conversations). |
 | `get_contact` | Lecture | Récupère un contact avec ses étiquettes, ses champs personnalisés, son équipe, son canal et l'état de sa conversation. |
-| `list_messages` | Lecture | Lit les messages de la conversation d'un contact, du plus récent au plus ancien, notes internes comprises. |
+| `list_messages` | Lecture | Lit la conversation d'un contact sous forme de transcription qui indique qui a envoyé chaque message, notes internes comprises. Chaque appel lit jusqu'à 100 messages, en partant des plus récents. |
 | `list_channels` | Lecture | Liste les canaux connectés (WhatsApp, Instagram, Facebook Messenger et Telegram). |
 | `list_teams` | Lecture | Liste les équipes du compte. |
+| `list_tags` | Lecture | Liste les noms des étiquettes du compte. `find_contacts` et `update_contact` n'acceptent que ces noms exacts. |
+| `list_custom_fields` | Lecture | Liste les champs personnalisés du compte, avec le type de chaque champ et, pour les champs de liste déroulante et de case à cocher, les options autorisées. |
 | `list_templates` | Lecture | Liste les modèles WhatsApp et leur statut d'approbation. |
 | `send_message` | Écriture | Envoie un message WhatsApp à un contact existant. En dehors de la fenêtre de service client de 24 heures, seuls les modèles approuvés peuvent être envoyés. |
 | `update_contact` | Écriture | Renomme un contact, ajoute ou retire des étiquettes, remplit des champs personnalisés ou transfère la conversation à une autre équipe. |
 | `add_note` | Écriture | Ajoute une note interne à une conversation. Les notes ne sont visibles que par votre équipe, jamais par le contact. |
 | `close_conversation` | Écriture | Ferme la conversation d'un contact. |
+| `report_unsupported_request` | Lecture | Signale à Callbell une demande que les autres outils ne peuvent pas traiter, ou seulement en partie, afin que Callbell puisse les améliorer. Il envoie la demande de l'utilisateur et une courte description de ce qui manque, et ne modifie rien dans le compte. |
 
 :::note
 L'assistant ne peut écrire qu'aux contacts qui existent déjà dans Callbell : il ne peut pas démarrer une conversation avec un nouveau numéro. Les modèles d'authentification (codes à usage unique) ne peuvent pas être envoyés depuis une application d'IA.
+:::
+
+## Trouver des conversations {#finding-conversations}
+
+`find_contacts` peut filtrer les contacts selon l'état de leur conversation. L'assistant utilise ces filtres pour répondre à des questions comme « quelles conversations attendent une réponse ? » ou « qui nous a écrit aujourd'hui ? » sans lire tous les contacts. Les filtres se combinent entre eux et avec la recherche par nom, étiquettes, canal et équipe.
+
+| Filtre | Valeurs | Trouve |
+| :-- | :-- | :-- |
+| `conversation_state` | `open` ou `closed` | Les contacts dont la conversation est ouverte, ou fermée. |
+| `last_message_from` | `contact` ou `business` | Les contacts qui ont envoyé le dernier message de leur conversation, ce qui signifie généralement qu'ils attendent une réponse, ou les contacts dont le dernier message a été envoyé depuis votre compte (un membre de l'équipe, un bot, une diffusion ou l'API). |
+| `last_inbound_message_after` et `last_inbound_message_before` | Une date et heure ISO 8601, par exemple `2026-11-19T08:00:00Z` | Les contacts dont le message le plus récent qu'ils vous ont envoyé est arrivé dans cet intervalle. Les messages envoyés depuis votre compte ne comptent pas. |
+| `assigned_user` | L'adresse e-mail d'un membre de l'équipe, ou `unassigned` | Les contacts dont la conversation est assignée à ce membre de l'équipe, ou à personne. |
+| `order` | `created_at` (par défaut) ou `last_inbound_message_at` | La conversation la plus récente d'abord, ou le contact qui a écrit le plus récemment d'abord. |
+
+Chaque contact des résultats indique aussi `lastInboundMessageAt`, la date à laquelle le contact vous a écrit pour la dernière fois, et `lastMessageFrom`, `contact` ou `business`, pour que l'assistant sache depuis combien de temps un contact attend. Les filtres fonctionnent comme les paramètres correspondants de [GET /contacts](/api/reference/contacts_api/get_contacts) dans l'API Callbell.
+
+:::tip
+Les applications d'IA gardent la liste d'outils qu'elles ont chargée lors de la connexion. Si l'assistant n'utilise pas ces filtres, ouvrez une nouvelle conversation ou reconnectez Callbell pour que l'application charge les outils les plus récents.
 :::
